@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+       Meta
+       ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Login to DevPath and continue your programming learning journey.">
+
+    <meta name="author" content="Mohamed Alwani">
+
+
+    <!-- ==========================================================
+       Page Title
+       ========================================================== -->
+
+    <title>Login | DevPath</title>
+
+
+    <!-- ==========================================================
+       Boxicons
+       ========================================================== -->
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+    <!-- ==========================================================
+       Page CSS
+       ========================================================== -->
+
+    <link rel="stylesheet" href="../Styles/loginPage.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================================
+        Header
+    =========================================================== -->
+    <header class="header">
+
+        <nav class="navbar">
+
+
+            <!-- Brand -->
+
+            <a href="../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+
+                    <i class="bx bx-code-alt"></i>
+
+                </span>
+
+
+                <span class="brand-text">
+
+                    Dev<span>Path</span>
+
+                </span>
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <ul class="nav-links">
+
+
+                <!-- Home -->
+
+                <li>
+
+                    <a href="../index.html" class="nav-link">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link ">
+
+                        Programming Basics
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="BasicsCsharb.html">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="DataStructure.html">
+
+                            <i class="bx bx-data"></i>
+
+                            Data Structure
+
+                        </a>
+
+
+                        <a href="Algorithem.html">
+
+                            <i class="bx bx-git-branch"></i>
+
+                            Algorithm
+
+                        </a>
+
+
+                        <a href="ProblemSolving.html">
+
+                            <i class="bx bx-bulb"></i>
+
+                            Problem Solving
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Front-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="HTMLPage.html">
+
+                            <i class="bx bxl-html5"></i>
+
+                            HTML
+
+                        </a>
+
+
+                        <a href="CSSPage.html">
+
+                            <i class="bx bxl-css3"></i>
+
+                            CSS
+
+                        </a>
+
+
+                        <a href="BootstrapPage.html">
+
+                            <i class="bx bxl-bootstrap"></i>
+
+                            Bootstrap
+
+                        </a>
+
+
+                        <a href="TailwindCSSPage.html">
+
+                            <i class="bx bxl-tailwind-css"></i>
+
+                            Tailwind CSS
+
+                        </a>
+
+
+                        <a href="JavaScriptPage.html">
+
+                            <i class="bx bxl-javascript"></i>
+
+                            JavaScript
+
+                        </a>
+
+
+                        <a href="React-JS_Page.html">
+
+                            <i class="bx bxl-react"></i>
+
+                            React JS
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Web Technologies -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Web Technologies
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="APIS-Page.html">
+
+                            <i class="bx bx-cloud"></i>
+
+                            API
+
+                        </a>
+
+
+                        <a href="Strapi_Back-End.Html">
+
+                            <i class="bx bx-server"></i>
+
+                            Strapi Back-End
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Back-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="BackEnd-Csharb.html">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="BackEnd-ASP.NET.html">
+
+                            <i class="bx bx-code-alt"></i>
+
+                            ASP.NET
+
+                        </a>
+
+
+                        <a href="BackEnd-SQL.html">
+
+                            <i class="bx bx-data"></i>
+
+                            SQL
+
+                        </a>
+
+
+                        <a href="BackEnd-EntityFramework.html">
+
+                            <i class="bx bx-layer"></i>
+
+                            Entity Framework
+
+                        </a>
+
+
+                        <a href="BackEnd-APIs.html">
+
+                            <i class="bx bx-transfer"></i>
+
+                            APIs
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Contact US -->
+                <a href="ContactUS.html" class="login-btn">
+
+                    Contact US
+
+                </a>
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="LoginPage.html" class="login-btn">
+
+                        <i class="bx bx-log-in"></i>
+
+                        Login
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- ==========================================================
+       Login Section
+       ========================================================== -->
+
+    <main class="login-page">
+
+        <section class="login-container">
+
+
+            <!-- ==================================================
+               Login Form Side
+               ================================================== -->
+
+            <div class="login-content">
+
+
+                <!-- Login Header -->
+
+                <div class="login-header">
+
+                    <span class="login-icon">
+                        <i class="bx bx-log-in-circle"></i>
+                    </span>
+
+                    <div>
+
+                        <p class="login-label">
+                            Welcome Back
+                        </p>
+
+                        <h1>
+                            Login
+                        </h1>
+
+                    </div>
+
+                </div>
+
+
+                <p class="login-description">
+                    Login to your DevPath account and continue
+                    your programming journey.
+                </p>
+
+
+                <!-- ==================================================
+                   Login Form
+                   ================================================== -->
+
+                <form action="../index.html" method="get" id=" loginForm" class="login-form">
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="bx bx-envelope"></i>
+
+                            <input type="email" id="email" name="email" placeholder="you@example.com"
+                                autocomplete="email" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <div class="password-label">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <a href="forget password.html" class="forgot-password">
+                                Forgot Password?
+                            </a>
+                        </div>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="bx bx-lock-alt"></i>
+
+                            <input type="password" id="password" name="password"
+                                placeholder="Enter 6 characters or more" minlength="6" autocomplete="current-password"
+                                required>
+
+                            <button type="button" class="toggle-password" id="togglePassword"
+                                aria-label="Show password">
+                                <i class="bx bx-hide"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Remember Me -->
+
+                    <div class="remember-row">
+
+                        <label class="remember-control">
+
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+
+                            <span class="custom-checkbox"></span>
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+
+                    <button type="submit" class="login-submit">
+
+                        <span>
+                            Login
+                        </span>
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                    </button>
+
+
+                    <!-- Login Message -->
+
+                    <p id="loginMessage" class="login-message" aria-live="polite"></p>
+
+
+                    <!-- Divider -->
+
+                    <div class="login-divider">
+
+                        <span></span>
+
+                        <p>
+                            Or continue with
+                        </p>
+
+                        <span></span>
+
+                    </div>
+
+
+                    <!-- Social Login -->
+
+                    <div class="social-login">
+
+
+                        <!-- Google -->
+
+                        <a href="https://www.google.co.uk/" class="social-btn google-btn" target="_blank"
+                            rel="noopener noreferrer">
+
+                            <i class="bx bxl-google"></i>
+
+                            <span>
+                                Google
+                            </span>
+
+                        </a>
+
+
+                        <!-- Facebook -->
+
+                        <a href="https://www.facebook.com/?locale=ar_AR" class="social-btn facebook-btn" target="_blank"
+                            rel="noopener noreferrer">
+
+                            <i class="bx bxl-facebook"></i>
+
+                            <span>
+                                Facebook
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Sign Up -->
+
+                    <p class="signup-text">
+
+                        Don't have an account yet?
+
+                        <a href="Sign Up.html" class="signup-link">
+                            Sign Up
+                        </a>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- ==================================================
+               Login Image Side
+               ================================================== -->
+
+            <div class="login-image">
+
+                <div class="image-overlay"></div>
+
+                <div class="image-content">
+
+                    <span class="image-badge">
+                        <i class="bx bx-code-alt"></i>
+                        DevPath
+                    </span>
+
+                    <h2>
+                        Learn.
+                        <br>
+                        Build.
+                        <br>
+                        Become Better.
+                    </h2>
+
+                    <p>
+                        Continue learning programming and
+                        build your skills with DevPath.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================================
+         Footer
+    =========================================================== -->
+    <footer class="footer">
+
+
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="BootstrapPage.html">
+                    Bootstrap
+                </a>
+
+
+                <a href="JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+
+                <a href="React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+    <!-- ==========================================================
+       Back To Top
+       ========================================================== -->
+
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+    <!-- ==========================================================
+       JavaScript
+       ========================================================== -->
+
+    <script src="../JavaScript/loginPage.js"></script>
+
+</body>
+
+</html>

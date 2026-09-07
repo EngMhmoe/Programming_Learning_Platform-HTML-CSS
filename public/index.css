@@ -1,0 +1,1356 @@
+/* ==========================================================
+   DevPath - Home Page
+   Theme: Orange / Amber
+   ========================================================== */
+
+@import url("./Styles/global.css");
+
+/* ==========================================================
+   Reset
+   ========================================================== */
+
+body {
+  min-height: 100vh;
+
+  font-family: "Inter", sans-serif;
+
+  color: var(--text);
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(249, 115, 22, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(250, 204, 21, 0.05),
+      transparent 30%
+    ),
+    var(--bg);
+
+  line-height: 1.6;
+
+  overflow-x: hidden;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+.header {
+  position: relative;
+}
+
+/* ==========================================================
+   Navbar
+   ========================================================== */
+
+.navbar {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+}
+
+/* ==========================================================
+   Hero
+   ========================================================== */
+
+.hero {
+  position: relative;
+
+  width: min(calc(100% - 48px), var(--container));
+
+  min-height: calc(100vh - 82px);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 75px 0;
+
+  isolation: isolate;
+}
+
+/* ==========================================================
+   Hero Soft Orange Glow
+   ========================================================== */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  left: -170px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background: rgba(249, 115, 22, 0.055);
+
+  filter: blur(85px);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  right: -130px;
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(249, 115, 22, 0.035);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+/* ==========================================================
+   Hero Content
+   ========================================================== */
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-badge {
+  width: fit-content;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 24px;
+
+  padding: 8px 14px;
+
+  color: var(--text-secondary);
+
+  background: rgba(249, 115, 22, 0.08);
+
+  border: 1px solid rgba(249, 115, 22, 0.2);
+
+  border-radius: 30px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  box-shadow:
+    0 8px 24px rgba(249, 115, 22, 0.05),
+    inset 0 0 20px rgba(249, 115, 22, 0.025);
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: var(--success);
+
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
+}
+
+.hero h1 {
+  max-width: 800px;
+
+  color: var(--text);
+
+  font-size: clamp(42px, 6vw, 76px);
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: var(--primary-light);
+}
+
+.hero h1 strong {
+  color: var(--white);
+}
+
+.hero-content > p {
+  max-width: 650px;
+
+  margin-top: 25px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Hero Buttons
+   ========================================================== */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.btn {
+  min-height: 48px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 11px 18px;
+
+  border: 1px solid transparent;
+
+  border-radius: var(--radius-md);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition: var(--transition);
+}
+
+.btn-primary {
+  color: var(--white);
+
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.16);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 16px 32px rgba(249, 115, 22, 0.24);
+}
+
+.btn-secondary {
+  color: var(--text-secondary);
+
+  background: rgba(255, 255, 255, 0.02);
+
+  border-color: var(--border);
+}
+
+.btn-secondary:hover {
+  color: var(--white);
+
+  background: var(--surface);
+
+  border-color: rgba(251, 146, 60, 0.28);
+
+  transform: translateY(-3px);
+}
+
+.btn i {
+  font-size: 18px;
+}
+
+/* ==========================================================
+   Hero Stats
+   ========================================================== */
+
+.hero-stats {
+  max-width: 650px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 50px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid var(--border);
+}
+
+.stat {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  padding: 0 20px;
+}
+
+.stat:first-child {
+  padding-left: 0;
+}
+
+.stat:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 2px;
+  right: 0;
+
+  width: 1px;
+  height: 34px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(251, 146, 60, 0.3),
+    transparent
+  );
+}
+
+.stat strong {
+  color: var(--white);
+
+  font-size: 21px;
+
+  font-weight: 800;
+}
+
+.stat span {
+  color: var(--text-muted);
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+/* ==========================================================
+   Hero Code
+   ========================================================== */
+
+.hero-code {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  max-width: 500px;
+
+  justify-self: end;
+
+  background: #17100b;
+
+  border: 1px solid rgba(251, 146, 60, 0.18);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-lg);
+
+  transform: rotate(2.2deg);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-code:hover {
+  transform: rotate(0deg) translateY(-5px);
+
+  border-color: rgba(251, 146, 60, 0.3);
+
+  box-shadow:
+    var(--shadow-lg),
+    0 15px 45px rgba(249, 115, 22, 0.08);
+}
+
+.code-header {
+  min-height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 17px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border-bottom: 1px solid rgba(251, 146, 60, 0.1);
+
+  color: var(--text-muted);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 11px;
+}
+
+.window-dots {
+  display: flex;
+
+  gap: 6px;
+}
+
+.window-dots span {
+  width: 8px;
+  height: 8px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.code-body {
+  min-height: 350px;
+
+  padding: 28px 24px;
+
+  color: #e7d7ca;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 13px;
+
+  line-height: 2;
+}
+
+.code-body p {
+  margin: 0;
+}
+
+.code-indent {
+  padding-left: 25px;
+}
+
+.code-purple {
+  color: #c084fc;
+}
+
+.code-blue {
+  color: #60a5fa;
+}
+
+.code-yellow {
+  color: #facc15;
+}
+
+.code-green {
+  color: #86efac;
+}
+
+.code-comment {
+  margin-top: 18px !important;
+
+  color: #78716c;
+}
+
+/* ==========================================================
+   Learning Section
+   ========================================================== */
+
+.learning {
+  width: min(calc(100% - 48px), var(--container));
+
+  margin: auto;
+
+  padding: 80px 0 95px;
+}
+
+/* ==========================================================
+   Section Heading
+   ========================================================== */
+
+.section-heading {
+  max-width: 700px;
+
+  margin: 0 auto 40px;
+
+  text-align: center;
+}
+
+.section-label {
+  width: fit-content;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  padding: 6px 11px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.07);
+
+  border: 1px solid rgba(249, 115, 22, 0.16);
+
+  border-radius: 20px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  line-height: 1.2;
+
+  box-shadow: inset 0 0 18px rgba(249, 115, 22, 0.025);
+}
+
+.section-heading h2,
+.signup-content h2 {
+  color: var(--white);
+
+  font-size: clamp(30px, 4vw, 44px);
+
+  line-height: 1.15;
+
+  letter-spacing: -1.5px;
+
+  font-weight: 800;
+}
+
+.section-heading h2 span,
+.signup-content h2 span {
+  color: var(--primary-light);
+}
+
+.section-heading p {
+  max-width: 580px;
+
+  margin: 13px auto 0;
+
+  color: var(--text-muted);
+
+  font-size: 13px;
+}
+
+/* ==========================================================
+   Learning Grid
+   ========================================================== */
+
+.learning-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+/* ==========================================================
+   Learning Card
+   ========================================================== */
+
+.learning-card {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 335px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 23px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(38, 22, 10, 0.96),
+    rgba(27, 16, 7, 0.96)
+  );
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition);
+}
+
+.learning-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  top: -65px;
+  right: -65px;
+
+  border-radius: 50%;
+
+  background: rgba(249, 115, 22, 0.07);
+
+  transition: var(--transition);
+}
+
+.learning-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(251, 146, 60, 0.28);
+
+  box-shadow: var(--shadow);
+}
+
+.learning-card:hover::before {
+  transform: scale(1.4);
+}
+
+/* ==========================================================
+   Card Icon
+   ========================================================== */
+
+.card-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.09);
+
+  border: 1px solid rgba(249, 115, 22, 0.15);
+
+  border-radius: var(--radius-md);
+
+  font-size: 21px;
+}
+
+.card-number {
+  position: absolute;
+
+  top: 22px;
+  right: 22px;
+
+  color: rgba(251, 146, 60, 0.3);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.learning-card h3 {
+  max-width: 180px;
+
+  color: var(--white);
+
+  font-size: 17px;
+
+  line-height: 1.3;
+
+  font-weight: 750;
+}
+
+.learning-card p {
+  margin-top: 10px;
+
+  color: var(--text-muted);
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+/* ==========================================================
+   Card Topics
+   ========================================================== */
+
+.card-topics {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 16px;
+}
+
+.card-topics span {
+  padding: 4px 7px;
+
+  color: var(--text-secondary);
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid rgba(251, 146, 60, 0.1);
+
+  border-radius: 6px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 8px;
+}
+
+/* ==========================================================
+   Card Link
+   ========================================================== */
+
+.card-link {
+  margin-top: auto;
+
+  padding-top: 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: var(--primary-light);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  transition: var(--transition);
+}
+
+.card-link:hover {
+  color: var(--white);
+
+  gap: 10px;
+}
+
+.card-link i {
+  font-size: 16px;
+}
+
+.disabled-link {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+.disabled-link:hover {
+  gap: 6px;
+
+  color: var(--primary-light);
+}
+
+/* ==========================================================
+   Coming Badge
+   ========================================================== */
+
+.coming-badge {
+  width: fit-content;
+
+  margin-bottom: 10px;
+
+  padding: 3px 7px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.08);
+
+  border: 1px solid rgba(249, 115, 22, 0.14);
+
+  border-radius: 20px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================
+   Start Learning Section
+   ========================================================== */
+
+.signup-section {
+  width: min(calc(100% - 48px), var(--container));
+
+  margin: 0 auto 95px;
+
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 60px;
+
+  align-items: center;
+
+  padding: 55px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    rgba(38, 22, 10, 0.98),
+    rgba(27, 16, 7, 0.98)
+  );
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-xl);
+
+  box-shadow: var(--shadow);
+}
+
+.signup-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  top: -150px;
+  left: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(249, 115, 22, 0.07);
+
+  pointer-events: none;
+}
+
+.signup-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -100px;
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(250, 204, 21, 0.035);
+
+  pointer-events: none;
+}
+
+.signup-content {
+  position: relative;
+
+  z-index: 1;
+
+  max-width: 450px;
+}
+
+.signup-content p {
+  margin-top: 16px;
+
+  color: var(--text-muted);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Signup Highlights
+   ========================================================== */
+
+.signup-highlights {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 24px;
+}
+
+.signup-highlight {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+}
+
+.signup-highlight i {
+  color: var(--primary-light);
+
+  font-size: 16px;
+}
+
+/* ==========================================================
+   Form
+   ========================================================== */
+
+.form1 {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  padding: 28px;
+
+  background: rgba(18, 11, 5, 0.58);
+
+  border: 1px solid rgba(251, 146, 60, 0.12);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.16);
+}
+
+/* ==========================================================
+   Form Heading
+   ========================================================== */
+
+.form-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid rgba(251, 146, 60, 0.09);
+}
+
+.form-heading > i {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.09);
+
+  border: 1px solid rgba(249, 115, 22, 0.14);
+
+  border-radius: 10px;
+
+  font-size: 20px;
+}
+
+.form-heading h3 {
+  color: var(--white);
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.form-heading p {
+  margin-top: 2px;
+
+  color: var(--text-muted);
+
+  font-size: 10px;
+}
+
+/* ==========================================================
+   Form Row
+   ========================================================== */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-group label {
+  color: var(--text-secondary);
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+
+  min-height: 45px;
+
+  padding: 9px 12px;
+
+  color: var(--text);
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid rgba(251, 146, 60, 0.13);
+
+  border-radius: var(--radius-md);
+
+  outline: none;
+
+  font-size: 11px;
+
+  transition: var(--transition);
+}
+
+.form-group input::placeholder {
+  color: #78716c;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: rgba(249, 115, 22, 0.55);
+
+  background: rgba(249, 115, 22, 0.035);
+
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.07);
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group select option {
+  color: var(--text);
+
+  background: var(--surface);
+}
+
+.form-submit {
+  width: 100%;
+
+  margin-top: 3px;
+
+  cursor: pointer;
+}
+
+/* ==========================================================
+   Home Responsive - 1100px
+   ========================================================== */
+
+@media screen and (max-width: 1100px) {
+  .hero {
+    gap: 45px;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 5vw, 62px);
+  }
+
+  .learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================
+   Home Responsive - 900px
+   ========================================================== */
+
+@media screen and (max-width: 900px) {
+  .hero {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding: 65px 0;
+  }
+
+  .hero-content {
+    max-width: 800px;
+
+    margin: auto;
+  }
+
+  .hero-badge {
+    margin: 0 auto 22px;
+  }
+
+  .hero-content > p {
+    margin: 22px auto 0;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    margin: 45px auto 0;
+  }
+
+  .hero-code {
+    justify-self: center;
+
+    max-width: 650px;
+  }
+
+  .signup-section {
+    grid-template-columns: 1fr;
+
+    padding: 45px;
+  }
+
+  .signup-content {
+    max-width: 700px;
+
+    text-align: center;
+
+    margin: auto;
+  }
+
+  .signup-content .section-label {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .signup-highlights {
+    align-items: center;
+  }
+}
+
+/* ==========================================================
+   Home Responsive - 760px
+   ========================================================== */
+
+@media screen and (max-width: 760px) {
+  .hero {
+    width: min(calc(100% - 28px), var(--container));
+
+    padding: 50px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 8vw, 52px);
+  }
+
+  .hero-content > p {
+    font-size: 14px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+  }
+
+  .stat {
+    padding: 0 15px;
+  }
+
+  .stat:nth-child(2)::after {
+    display: none;
+  }
+
+  .learning {
+    width: min(calc(100% - 28px), var(--container));
+
+    padding: 65px 0 75px;
+  }
+
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-card {
+    min-height: 325px;
+  }
+
+  .signup-section {
+    width: min(calc(100% - 28px), var(--container));
+
+    padding: 35px 25px;
+
+    margin-bottom: 75px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   Home Responsive - 560px
+   ========================================================== */
+
+@media screen and (max-width: 560px) {
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-code {
+    transform: rotate(1.2deg);
+  }
+
+  .hero-code:hover {
+    transform: translateY(-4px);
+  }
+
+  .code-body {
+    min-height: 300px;
+
+    padding: 22px 17px;
+
+    font-size: 11px;
+  }
+
+  .learning {
+    padding: 55px 0 65px;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .section-heading h2,
+  .signup-content h2 {
+    font-size: 31px;
+  }
+
+  .signup-section {
+    padding: 30px 18px;
+  }
+
+  .signup-highlights {
+    align-items: flex-start;
+  }
+
+  .form1 {
+    padding: 22px 16px;
+  }
+}
+
+/* ==========================================================
+   Home Responsive - 400px
+   ========================================================== */
+
+@media screen and (max-width: 400px) {
+  .hero {
+    width: calc(100% - 18px);
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-content > p {
+    font-size: 13px;
+  }
+
+  .hero-stats {
+    gap: 14px;
+  }
+
+  .stat {
+    padding: 0 10px;
+  }
+
+  .stat strong {
+    font-size: 18px;
+  }
+
+  .learning {
+    width: calc(100% - 18px);
+  }
+
+  .signup-section {
+    width: calc(100% - 18px);
+  }
+}
