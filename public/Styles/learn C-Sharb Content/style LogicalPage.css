@@ -1,0 +1,317 @@
+/* ==========================================================
+   Logical Page
+========================================================== */
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Logical Description
+========================================================== */
+
+.logical-description {
+  margin-top: 20px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Inline Link
+========================================================== */
+
+.logical-inline-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  margin: 0 3px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-radius: 5px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.logical-inline-link:hover {
+  background: rgba(249, 115, 22, 0.16);
+}
+
+/* ==========================================================
+   Logical Highlight
+========================================================== */
+
+.logical-highlight {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Logical Operators Table
+========================================================== */
+
+.logical-table-wrapper {
+  width: 100%;
+  margin-top: 25px;
+  overflow-x: auto;
+}
+
+.logical-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.logical-table th {
+  padding: 15px 18px;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.08);
+  border-bottom: 1px solid var(--border);
+  font-weight: 800;
+  text-align: left;
+}
+
+.logical-table td {
+  padding: 15px 18px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  line-height: 1.7;
+}
+
+.logical-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.logical-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.logical-table td code {
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+}
+
+/* ==========================================================
+   Logical Operator Symbol
+========================================================== */
+
+.logical-operator-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  min-height: 36px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-radius: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Logical Example
+========================================================== */
+
+.logical-example {
+  margin-top: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+   Example Header
+========================================================== */
+
+.logical-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 10px 18px;
+  background: rgba(249, 115, 22, 0.08);
+  border-bottom: 1px solid var(--border);
+}
+
+.logical-example-header span {
+  color: var(--primary-light);
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.logical-example-header i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+/* ==========================================================
+   Code
+========================================================== */
+
+.logical-example pre {
+  width: 100%;
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre;
+}
+
+.logical-example code {
+  color: inherit;
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   Code Syntax
+========================================================== */
+
+.logical-keyword {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+.logical-number {
+  color: #f97316;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   Logical Result
+========================================================== */
+
+.logical-result {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  color: var(--text-secondary);
+  background: rgba(250, 204, 21, 0.06);
+  border: 1px solid rgba(250, 204, 21, 0.14);
+  border-left: 3px solid var(--secondary);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.logical-result strong {
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+.logical-result span {
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Logical Note
+========================================================== */
+
+.logical-note {
+  margin-top: 22px;
+  padding: 18px;
+  color: var(--text-secondary);
+  background: rgba(250, 204, 21, 0.06);
+  border: 1px solid rgba(250, 204, 21, 0.14);
+  border-left: 3px solid var(--secondary);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.logical-note strong {
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+.logical-note p {
+  margin-top: 10px;
+}
+
+.logical-note a {
+  color: var(--primary-light);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logical-note a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 800px) {
+  .logical-example pre {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  .logical-table {
+    min-width: 760px;
+  }
+}
+
+@media (max-width: 560px) {
+  .logical-description {
+    font-size: 14px;
+  }
+
+  .logical-inline-link {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .logical-example-header {
+    padding: 9px 15px;
+  }
+
+  .logical-example pre {
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .logical-table th,
+  .logical-table td {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .logical-table td code {
+    font-size: 12px;
+  }
+
+  .logical-operator-symbol {
+    min-width: 48px;
+    min-height: 32px;
+    font-size: 15px;
+  }
+
+  .logical-result {
+    padding: 13px 14px;
+    font-size: 13px;
+  }
+
+  .logical-note {
+    padding: 15px;
+    font-size: 14px;
+  }
+}

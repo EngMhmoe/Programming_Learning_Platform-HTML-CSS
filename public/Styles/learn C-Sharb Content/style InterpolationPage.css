@@ -1,0 +1,205 @@
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Interpolation Page
+========================================================== */
+
+/* ==========================================================
+   Interpolation Description
+========================================================== */
+
+.interpolation-description {
+  margin-top: 20px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Inline Link
+========================================================== */
+
+.interpolation-inline-link {
+  color: var(--primary-light);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.interpolation-inline-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================
+   Interpolation Example
+========================================================== */
+
+.interpolation-example {
+  margin-top: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+   Example Header
+========================================================== */
+
+.interpolation-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 10px 18px;
+  background: rgba(249, 115, 22, 0.08);
+  border-bottom: 1px solid var(--border);
+}
+
+.interpolation-example-header span {
+  color: var(--primary-light);
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.interpolation-example-header i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+/* ==========================================================
+   Code
+========================================================== */
+
+.interpolation-example pre {
+  width: 100%;
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre;
+}
+
+.interpolation-example code {
+  color: inherit;
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   Code Syntax
+========================================================== */
+
+.interpolation-keyword {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+.interpolation-string {
+  color: #a3e635;
+  font-weight: 600;
+}
+
+.interpolation-variable {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.interpolation-method {
+  color: #008cff;
+  font-weight: 800;
+}
+
+.interpolation-operator {
+  color: #a3e635;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Interpolation Note
+========================================================== */
+
+.interpolation-note {
+  margin-top: 22px;
+  padding: 18px;
+  color: var(--text-secondary);
+  background: rgba(250, 204, 21, 0.06);
+  border: 1px solid rgba(250, 204, 21, 0.14);
+  border-left: 3px solid var(--secondary);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.interpolation-note strong {
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+.interpolation-note p {
+  margin-top: 10px;
+}
+
+/* ==========================================================
+   Interpolation Symbol
+========================================================== */
+
+.interpolation-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  min-height: 28px;
+  margin: 0 3px;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.14);
+  border-radius: 5px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 800px) {
+  .interpolation-example pre {
+    padding: 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .interpolation-description {
+    font-size: 14px;
+  }
+
+  .interpolation-example-header {
+    padding: 9px 15px;
+  }
+
+  .interpolation-example pre {
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .interpolation-note {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .interpolation-symbol {
+    min-width: 27px;
+    min-height: 25px;
+    font-size: 13px;
+  }
+}

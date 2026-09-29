@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Learn how to access characters in C# strings using indexes, IndexOf(), and Substring()." />
+
+    <meta name="author" content="mohamed Alwani" />
+
+    <meta name="keywords" content="C#, C# Strings, Access Strings, IndexOf, Substring, Programming, DevPath" />
+
+    <title>C# Access Strings | DevPath</title>
+
+    <link rel="icon" href="../../photos/photo6.jpg">
+
+
+    <!-- ==================================================
+         Google Fonts
+    =================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ==================================================
+         Boxicons
+    =================================================== -->
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+    <!-- ==================================================
+         Shared Learning Page Styles
+         ================================================== -->
+
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+    <!-- Page Specific Styles -->
+    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style AccessStringsPage.css">
+
+
+</head>
+
+<body>
+
+    <!-- ==================================================
+         Header
+         ================================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <ul class="nav-links">
+
+
+                <li>
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html" class="current">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Web Technologies
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/APIS-Page.html">
+                            <i class="bx bx-cloud"></i>
+                            API
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class="bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-Csharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-APIs.html">
+                            <i class="bx bx-transfer"></i>
+                            APIs
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+                    <a href="../../Pages/ContactUS.html" class="login-btn">
+                        Contact US
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+                </li>
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         Main Learning Page
+         ================================================== -->
+
+    <main class="learning-page">
+
+
+        <!-- ==================================================
+             Sidebar
+             ================================================== -->
+
+        <aside class="learning-sidebar">
+
+
+            <!-- Sidebar Header -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-icon">
+
+                    <i class="bx bx-code-curly"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+
+                        Programming Basics
+
+                    </span>
+
+
+                    <h2>
+
+                        C# Tutorial
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Introduction
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-book-open"></i>
+
+                    Introduction
+
+                </h3>
+
+
+                <a href="HomePage.html" class="sidebar-link">
+
+                    <i class="bx bx-home-alt"></i>
+
+                    C# Home
+
+                </a>
+
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    C# Intro
+
+                </a>
+
+
+                <a href="GetStartedPage.html" class="sidebar-link">
+
+                    <i class="bx bx-play-circle"></i>
+
+                    C# Get Started
+
+                </a>
+
+
+                <a href="SyntaxPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-alt"></i>
+
+                    C# Syntax
+
+                </a>
+
+
+                <a href="OutputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Output
+
+                </a>
+
+
+                <a href="CommentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-comment-detail"></i>
+
+                    C# Comments
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Variables
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-data"></i>
+
+                    Variables
+
+                </h3>
+
+
+                <a href="VariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-data"></i>
+
+                    C# Variables
+
+                </a>
+
+
+                <a href="ConstantsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-alt"></i>
+
+                    C# Constants
+
+                </a>
+
+
+                <a href="DisplayVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-show"></i>
+
+                    C# Display Variables
+
+                </a>
+
+
+                <a href="MultipleVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Multiple Variables
+
+                </a>
+
+
+                <a href="IdentifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-purchase-tag"></i>
+
+                    C# Identifiers
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Data Types
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-category"></i>
+
+                    Data Types
+
+                </h3>
+
+
+                <a href="DataTypesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-category"></i>
+
+                    C# Data Types
+
+                </a>
+
+
+                <a href="TypeCastingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Type Casting
+
+                </a>
+
+
+                <a href="UserInputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-edit-alt"></i>
+
+                    C# User Input
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Operators
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-calculator"></i>
+
+                    Operators
+
+                </h3>
+
+
+                <a href="ArithmeticPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calculator"></i>
+
+                    C# Arithmetic
+
+                </a>
+
+
+                <a href="AssignmentPage.html" class="sidebar-link">
+
+                    <i class="bx bx-equalizer"></i>
+
+                    C# Assignment
+
+                </a>
+
+
+                <a href="ComparisonPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Comparison
+
+                </a>
+
+
+                <a href="LogicalPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Logical
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Math
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-math"></i>
+
+                    Math
+
+                </h3>
+
+
+                <a href="MathPage.html" class="sidebar-link">
+
+                    <i class="bx bx-math"></i>
+
+                    C# Math
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Strings
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-text"></i>
+
+                    Strings
+
+                </h3>
+
+
+                <a href="StringsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-text"></i>
+
+                    C# Strings
+
+                </a>
+
+
+                <a href="ConcatenationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-link"></i>
+
+                    C# Concatenation
+
+                </a>
+
+
+                <a href="InterpolationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-curly"></i>
+
+                    C# Interpolation
+
+                </a>
+
+
+                <a href="AccessStringsPage.html" class="sidebar-link active">
+
+                    <i class="bx bx-search-alt"></i>
+
+                    C# Access Strings
+
+                </a>
+
+
+                <a href="SpecialCharactersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Special Characters
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Booleans
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    Booleans
+
+                </h3>
+
+
+                <a href="BooleansPage.html" class="sidebar-link">
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    C# Booleans
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 If...Else
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-question-mark"></i>
+
+                    If...Else
+
+                </h3>
+
+
+                <a href="IFPage.html" class="sidebar-link">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# if
+
+                </a>
+
+
+                <a href="ElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                    C# Else
+
+                </a>
+
+
+                <a href="ElseIfPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Else if
+
+                </a>
+
+
+                <a href="ShortHandIfElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Short Hand if...else
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Control Flow
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-git-branch"></i>
+
+                    Control Flow
+
+                </h3>
+
+
+                <a href="SwitchPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Switch
+
+                </a>
+
+
+                <a href="WhileLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-refresh"></i>
+
+                    C# While Loop
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 For Loop
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-repeat"></i>
+
+                    For Loop
+
+                </h3>
+
+
+                <a href="ForLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-repeat"></i>
+
+                    C# For Loop
+
+                </a>
+
+
+                <a href="ForeachLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Foreach Loop
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Loop Control
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-transfer"></i>
+
+                    Loop Control
+
+                </h3>
+
+
+                <a href="BreakAndContinuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Break / Continue
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Arrays
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    Arrays
+
+                </h3>
+
+
+                <a href="ArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    C# Arrays
+
+                </a>
+
+
+                <a href="LoopThroughAnArrayPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-check"></i>
+
+                    C# Loop Through an Array
+
+                </a>
+
+
+                <a href="SortArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-sort"></i>
+
+                    C# Sort Arrays
+
+                </a>
+
+
+                <a href="MultidimensionalArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid"></i>
+
+                    C# Multidimensional Arrays
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Methods
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-function"></i>
+
+                    Methods
+
+                </h3>
+
+
+                <a href="MethodsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-function"></i>
+
+                    C# Methods
+
+                </a>
+
+
+                <a href="MethodParametersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Parameters
+
+                </a>
+
+
+                <a href="DefaultParameterPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cog"></i>
+
+                    C# Default Parameter
+
+                </a>
+
+
+                <a href="ReturnValuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-log-out"></i>
+
+                    C# Return Values
+
+                </a>
+
+
+                <a href="NamedArgumentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-label"></i>
+
+                    C# Named Arguments
+
+                </a>
+
+
+                <a href="MethodOverloadingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Method Overloading
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Classes
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-cube"></i>
+
+                    Classes
+
+                </h3>
+
+
+                <a href="OOPPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube"></i>
+
+                    C# OOP
+
+                </a>
+
+
+                <a href="ClassesAndObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube-alt"></i>
+
+                    C# Classes and Objects
+
+                </a>
+
+
+                <a href="MultipleObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-copy"></i>
+
+                    C# Multiple Objects
+
+                </a>
+
+
+                <a href="ClassesMembersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Class Members
+
+                </a>
+
+
+                <a href="ConstructorsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-buildings"></i>
+
+                    C# Constructors
+
+                </a>
+
+
+                <a href="AccessModifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-open-alt"></i>
+
+                    C# Access Modifiers
+
+                </a>
+
+
+                <a href="PropertiesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Properties
+
+                </a>
+
+
+                <a href="InheritancePage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Inheritance
+
+                </a>
+
+
+                <a href="PolymorphismPage.html" class="sidebar-link">
+
+                    <i class="bx bx-shape-polygon"></i>
+
+                    C# Polymorphism
+
+                </a>
+
+
+                <a href="AbstractionPage.html" class="sidebar-link">
+
+                    <i class="bx bx-hide"></i>
+
+                    C# Abstraction
+
+                </a>
+
+
+                <a href="InterfacePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Interface
+
+                </a>
+
+
+                <a href="MultipleInterfacesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Multiple Interfaces
+
+                </a>
+
+
+                <a href="EnumsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ol"></i>
+
+                    C# Enums
+
+                </a>
+
+
+                <a href="FilesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-file"></i>
+
+                    C# Files
+
+                </a>
+
+
+                <a href="ExceptionsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-error"></i>
+
+                    C# Exceptions
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 How To
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-wrench"></i>
+
+                    How To
+
+                </h3>
+
+
+                <a href="AddTwoNumbersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-plus-circle"></i>
+
+                    C# Add Two Numbers
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Examples
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-code-block"></i>
+
+                    Examples
+
+                </h3>
+
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-block"></i>
+
+                    C# Examples
+
+                </a>
+
+
+                <a href="CompilerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Compiler
+
+                </a>
+
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-task"></i>
+
+                    C# Exercises
+
+                </a>
+
+
+                <a href="QuizPage.html" class="sidebar-link">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# Quiz
+
+                </a>
+
+
+                <a href="ServerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-server"></i>
+
+                    C# Server
+
+                </a>
+
+
+                <a href="SyllabusPage.html" class="sidebar-link">
+
+                    <i class="bx bx-book"></i>
+
+                    C# Syllabus
+
+                </a>
+
+
+                <a href="StudyPlanPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calendar"></i>
+
+                    C# Study Plan
+
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+
+                    <i class="bx bx-certification"></i>
+
+                    C# Certificate
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ==================================================
+             Tutorial Content
+             ================================================== -->
+
+        <section class="tutorial-content">
+
+
+            <!-- ==================================================
+                 Tutorial Header
+                 ================================================== -->
+
+            <div class="tutorial-header">
+
+                <span class="section-badge">
+                    <i class="bx bx-search-alt"></i>
+                    C# Programming
+                </span>
+
+                <h1>
+                    C# Access Strings
+                </h1>
+
+                <p>
+                    Learn how to access characters in C# strings
+                    using indexes, IndexOf(), and Substring().
+                </p>
+
+
+                <div class="tutorial-actions">
+
+                    <a href="InterpolationPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="SpecialCharactersPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 Access Strings
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-search-alt"></i>
+                        Strings
+                    </span>
+
+                    <h2>
+                        Access Strings
+                    </h2>
+
+                    <p>
+                        You can access the characters in a string by
+                        referring to its index number inside square brackets.
+                    </p>
+
+                </div>
+
+
+                <p class="access-strings-description">
+
+                    This example prints the
+                    <strong>first character</strong>
+                    in
+                    <strong>myString</strong>:
+
+                </p>
+
+
+                <!-- Example 01 -->
+
+                <div class="access-strings-example">
+
+                    <div class="access-strings-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="access-strings-keyword">string</span> myString = <span class="access-strings-string">"Hello"</span>;
+
+Console.<span class="access-strings-method">WriteLine</span>(myString[<span class="access-strings-number">0</span>]); <span class="access-strings-comment">// Outputs "H"</span></code></pre>
+
+                </div>
+
+
+                <!-- Note -->
+
+                <div class="access-strings-note">
+
+                    <strong>Note:</strong>
+
+                    String indexes start with 0:
+                    [0] is the first character.
+                    [1] is the second character, etc.
+
+                </div>
+
+
+                <p class="access-strings-description">
+
+                    This example prints the
+                    <strong>second character</strong>
+                    (1) in
+                    <strong>myString</strong>:
+
+                </p>
+
+
+                <!-- Example 02 -->
+
+                <div class="access-strings-example">
+
+                    <div class="access-strings-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="access-strings-keyword">string</span> myString = <span class="access-strings-string">"Hello"</span>;
+
+Console.<span class="access-strings-method">WriteLine</span>(myString[<span class="access-strings-number">1</span>]); <span class="access-strings-comment">// Outputs "e"</span></code></pre>
+
+                </div>
+
+
+                <p class="access-strings-description">
+
+                    You can also find the index position of a specific
+                    character in a string, by using the
+                    <span class="access-strings-inline">IndexOf()</span>
+                    method:
+
+                </p>
+
+
+                <!-- Example 03 -->
+
+                <div class="access-strings-example">
+
+                    <div class="access-strings-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="access-strings-keyword">string</span> myString = <span class="access-strings-string">"Hello"</span>;
+
+Console.<span class="access-strings-method">WriteLine</span>(myString.<span class="access-strings-method">IndexOf</span>(<span class="access-strings-string">"e"</span>)); <span class="access-strings-comment">// Outputs "1"</span></code></pre>
+
+                </div>
+
+
+                <p class="access-strings-description">
+
+                    Another useful method is
+                    <span class="access-strings-inline">Substring()</span>,
+                    which extracts the characters from a string, starting
+                    from the specified character position/index, and returns
+                    a new string.
+
+                    This method is often used together with
+                    <span class="access-strings-inline">IndexOf()</span>
+                    to get the specific character position:
+
+                </p>
+
+
+                <!-- Example 04 -->
+
+                <div class="access-strings-example">
+
+                    <div class="access-strings-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="access-strings-comment">// Full name</span>
+<span class="access-strings-keyword">string</span> name = <span class="access-strings-string">"Mohamed"</span>;
+
+<span class="access-strings-comment">// Location of the letter h</span>
+<span class="access-strings-keyword">int</span> charPos = name.<span class="access-strings-method">IndexOf</span>(<span class="access-strings-string">"h"</span>);
+
+<span class="access-strings-comment">// Get last name</span>
+<span class="access-strings-keyword">string</span> lastName = name.<span class="access-strings-method">Substring</span>(charPos);
+
+<span class="access-strings-comment">// Print the result</span>
+Console.<span class="access-strings-method">WriteLine</span>(lastName);</code></pre>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+     Exercise
+     ================================================== -->
+
+            <section class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        C# Exercises
+                    </h2>
+
+                    <p>
+                        Many chapters in this tutorial end with exercises
+                        where you can check your level of knowledge.
+                    </p>
+
+                </div>
+
+
+                <div class="exercise-preview" data-correct-answer="H">
+
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Exercise Example
+                            </span>
+
+                            <h3>
+                                Complete the C# Code
+                            </h3>
+
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <p class="exercise-question">
+
+                        Complete the code to access the <span>first character</span>
+                        of the string.
+
+                    </p>
+
+
+                    <div class="exercise-code">
+
+                        <code>
+
+                <span>
+                    string myString = "Hello";
+                    <br>
+                    <br>
+                    Console.WriteLine(myString[
+                </span>
+
+                <span class="exercise-answer-slot"
+                    id="exerciseAnswer">
+                    ?
+                </span>
+
+                <span>
+                    ]);
+                </span>
+
+            </code>
+
+                    </div>
+
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="H">
+
+                            H
+
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="0">
+
+                            0
+
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="1">
+
+                            1
+
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="5">
+
+                            5
+
+                        </button>
+
+                    </div>
+
+
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite">
+                    </p>
+
+                </div>
+
+
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+
+                        See All C# Exercises
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                    </a>
+
+                </div>
+
+
+            </section>
+
+            <!-- ==================================================
+                 Bottom Navigation
+                 ================================================== -->
+
+            <div class="tutorial-bottom-actions">
+
+                <a href="InterpolationPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="SpecialCharactersPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         Footer
+         ================================================== -->
+    <footer class="footer">
+
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+
+                    Programming Basics
+
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+
+                    C#
+
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+
+                    Data Structure
+
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+
+                    Algorithm
+
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+
+                    Problem Solving
+
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+
+                    Front-End
+
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+
+                    HTML
+
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+
+                    CSS
+
+                </a>
+
+
+                <a href="../../Pages/BootstrapPage.html">
+
+                    Bootstrap
+
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+
+                    JavaScript
+
+                </a>
+
+
+                <a href="../../Pages/React-JS_Page.html">
+
+                    React JS
+
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+
+                    More
+
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+
+                    Login
+
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+
+                    About Platform
+
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+
+                    Contact US
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==========================================================
+         Back To Top
+    =========================================================== -->
+
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0">
+
+    </i>
+
+
+
+    <!-- ==========================================================
+         Global JavaScript
+    =========================================================== -->
+
+    <script src="../../JavaScript/global.js"></script>
+
+</body>
+
+</html>

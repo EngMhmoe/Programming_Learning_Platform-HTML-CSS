@@ -1,0 +1,220 @@
+/* ==========================================================
+   Identifiers Page
+========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Identifiers Description
+========================================================== */
+
+.identifiers-description {
+  margin-top: 20px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.identifiers-description p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Identifier Inline
+========================================================== */
+
+.identifier-inline {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  margin: 0 3px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-radius: 5px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Identifiers List
+========================================================== */
+
+.identifiers-list {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.identifiers-list li {
+  position: relative;
+  padding: 15px 18px 15px 42px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.045);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.identifiers-list li::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 18px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 5px rgba(249, 115, 22, 0.08);
+}
+
+/* ==========================================================
+   Identifiers Note
+========================================================== */
+
+.identifiers-note {
+  margin-top: 22px;
+  padding: 18px;
+  color: var(--text-secondary);
+  background: rgba(250, 204, 21, 0.06);
+  border: 1px solid rgba(250, 204, 21, 0.14);
+  border-left: 3px solid var(--secondary);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.identifiers-note strong {
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Identifiers Example
+========================================================== */
+
+.identifiers-example {
+  margin-top: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+   Identifiers Example Header
+========================================================== */
+
+.identifiers-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 10px 18px;
+  background: rgba(249, 115, 22, 0.08);
+  border-bottom: 1px solid var(--border);
+}
+
+.identifiers-example-header span {
+  color: var(--primary-light);
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.identifiers-example-header i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+/* ==========================================================
+   Identifiers Code
+========================================================== */
+
+.identifiers-example pre {
+  width: 100%;
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre;
+}
+
+.identifiers-example code {
+  color: inherit;
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   Code Syntax Colors
+========================================================== */
+
+.identifier-keyword {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+.identifier-operator {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.identifier-number {
+  color: #f97316;
+  font-weight: 700;
+}
+
+.identifier-semicolon {
+  color: #22c55e;
+  font-weight: 700;
+}
+
+.identifier-comment {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 800px) {
+  .identifiers-example pre {
+    padding: 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .identifiers-example-header {
+    padding: 9px 15px;
+  }
+
+  .identifiers-example pre {
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .identifiers-list li {
+    padding: 14px 15px 14px 38px;
+    font-size: 14px;
+  }
+
+  .identifier-inline {
+    font-size: 13px;
+  }
+}

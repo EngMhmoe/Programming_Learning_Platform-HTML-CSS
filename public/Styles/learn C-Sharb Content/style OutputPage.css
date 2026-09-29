@@ -1,0 +1,254 @@
+/* ==========================================================
+   Shared Learning Content Styles
+========================================================== */
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Output Example
+========================================================== */
+
+.output-example {
+  margin-top: 25px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+   Output Example Header
+========================================================== */
+
+.output-example-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 48px;
+
+  padding: 10px 18px;
+
+  background: rgba(249, 115, 22, 0.08);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.output-example-header span {
+  color: var(--primary-light);
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+/* ==========================================================
+   Output Example Code
+========================================================== */
+
+.output-example pre {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  white-space: pre;
+}
+
+.output-example code {
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: inherit;
+}
+
+/* ==========================================================
+   Output Code - Method
+========================================================== */
+
+.output-method {
+  color: #008cff;
+
+  font-weight: 700;
+}
+
+/* ==========================================================
+   Output Code - String
+========================================================== */
+
+.output-string {
+  color: #22c55e;
+
+  font-weight: 500;
+}
+
+/* ==========================================================
+   Output Code - Number
+========================================================== */
+
+.output-number {
+  color: var(--text);
+}
+
+.output-number-value {
+  color: #f97316;
+
+  font-weight: 700;
+}
+
+/* ==========================================================
+   Output Note
+========================================================== */
+
+.output-note {
+  margin-top: 22px;
+
+  padding: 16px 18px;
+
+  color: var(--text-secondary);
+
+  background: rgba(249, 115, 22, 0.06);
+
+  border-left: 3px solid var(--primary);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Output Information
+========================================================== */
+
+.output-info {
+  margin-top: 18px;
+
+  padding: 18px;
+
+  color: var(--text-secondary);
+
+  background: rgba(239, 68, 68, 0.06);
+
+  border: 1px solid rgba(239, 68, 68, 0.14);
+
+  border-radius: var(--radius-md);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.output-info code {
+  padding: 3px 7px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border-radius: 5px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+/* ==========================================================
+   Tutorial Navigation
+========================================================== */
+
+.tutorial-navigation {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 30px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid var(--border);
+}
+
+/* ==========================================================
+   Tutorial Navigation Buttons
+========================================================== */
+
+.tutorial-navigation .tutorial-button {
+  min-width: 145px;
+}
+
+/* ==========================================================
+   Responsive - Output Examples
+========================================================== */
+
+@media (max-width: 800px) {
+  .output-example pre {
+    padding: 18px;
+
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================
+   Responsive - Mobile
+========================================================== */
+
+@media (max-width: 560px) {
+  .output-example-header {
+    padding: 9px 15px;
+  }
+
+  .output-example pre {
+    padding: 16px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .output-note,
+  .output-info {
+    padding: 15px;
+
+    font-size: 14px;
+  }
+
+  .tutorial-navigation {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .tutorial-navigation .tutorial-button {
+    width: 100%;
+  }
+}

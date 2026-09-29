@@ -1,0 +1,188 @@
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Access Strings Page
+========================================================== */
+
+/* ==========================================================
+   Description
+========================================================== */
+
+.access-strings-description {
+  margin-top: 20px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.access-strings-description strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Inline Code
+========================================================== */
+
+.access-strings-inline {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  margin: 0 3px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-radius: 5px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Example
+========================================================== */
+
+.access-strings-example {
+  margin-top: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+   Example Header
+========================================================== */
+
+.access-strings-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 10px 18px;
+  background: rgba(249, 115, 22, 0.08);
+  border-bottom: 1px solid var(--border);
+}
+
+.access-strings-example-header span {
+  color: var(--primary-light);
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.access-strings-example-header i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+/* ==========================================================
+   Code
+========================================================== */
+
+.access-strings-example pre {
+  width: 100%;
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre;
+}
+
+.access-strings-example code {
+  color: inherit;
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   Code Syntax
+========================================================== */
+
+.access-strings-keyword {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+.access-strings-string {
+  color: #a3e635;
+  font-weight: 600;
+}
+
+.access-strings-number {
+  color: #f97316;
+  font-weight: 600;
+}
+
+.access-strings-method {
+  color: #008cff;
+  font-weight: 700;
+}
+
+.access-strings-comment {
+  color: #808080;
+}
+
+/* ==========================================================
+   Note
+========================================================== */
+
+.access-strings-note {
+  margin-top: 22px;
+  padding: 18px;
+  color: var(--text-secondary);
+  background: rgba(250, 204, 21, 0.06);
+  border: 1px solid rgba(250, 204, 21, 0.14);
+  border-left: 3px solid var(--secondary);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.access-strings-note strong {
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 800px) {
+  .access-strings-example pre {
+    padding: 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .access-strings-description {
+    font-size: 14px;
+  }
+
+  .access-strings-inline {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .access-strings-example-header {
+    padding: 9px 15px;
+  }
+
+  .access-strings-example pre {
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .access-strings-note {
+    padding: 15px;
+    font-size: 14px;
+  }
+}

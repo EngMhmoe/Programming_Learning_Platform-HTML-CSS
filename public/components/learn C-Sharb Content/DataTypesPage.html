@@ -1,0 +1,2820 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Learn C# Data Types and understand how different data types store different kinds of values." />
+
+    <meta name="author" content="Mohamed Alwani" />
+
+    <meta name="keywords" content="C#, C# Data Types, int, long, float, double, bool, char, string" />
+
+    <title>C# Data Types | DevPath</title>
+
+    <link rel="icon" href="../../photos/photo6.jpg" />
+
+
+    <!-- ==================================================
+         Google Fonts
+         ================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ==================================================
+         Boxicons
+         ================================================== -->
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+    <!-- ==================================================
+         Shared Learning Pages CSS
+         ================================================== -->
+
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+
+    <!-- ==================================================
+         Data Types Page CSS
+         ================================================== -->
+    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style DataTypesPage.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================================
+        Start Header => مشترك
+    =========================================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+
+            <!-- Brand -->
+
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+
+                    <i class="bx bx-code-alt"></i>
+
+                </span>
+
+
+                <span class="brand-text">
+
+                    Dev<span>Path</span>
+
+                </span>
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <ul class="nav-links">
+
+
+                <!-- Home -->
+
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <!-- Programming Basics -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link active">
+
+                        Programming Basics
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="../../Pages/BasicsCsharb.html" class="current">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="../../Pages/DataStructure.html">
+
+                            <i class="bx bx-data"></i>
+
+                            Data Structure
+
+                        </a>
+
+
+                        <a href="../../Pages/Algorithem.html">
+
+                            <i class="bx bx-git-branch"></i>
+
+                            Algorithm
+
+                        </a>
+
+
+                        <a href="../../Pages/ProblemSolving.html">
+
+                            <i class="bx bx-bulb"></i>
+
+                            Problem Solving
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Front-End -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Front-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="../../Pages/HTMLPage.html">
+
+                            <i class="bx bxl-html5"></i>
+
+                            HTML
+
+                        </a>
+
+
+                        <a href="../../Pages/CSSPage.html">
+
+                            <i class="bx bxl-css3"></i>
+
+                            CSS
+
+                        </a>
+
+
+                        <a href="../../Pages/BootstrapPage.html">
+
+                            <i class="bx bxl-bootstrap"></i>
+
+                            Bootstrap
+
+                        </a>
+
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+
+                            <i class="bx bxl-tailwind-css"></i>
+
+                            Tailwind CSS
+
+                        </a>
+
+
+                        <a href="../../Pages/JavaScriptPage.html">
+
+                            <i class="bx bxl-javascript"></i>
+
+                            JavaScript
+
+                        </a>
+
+
+                        <a href="../../Pages/React-JS_Page.html">
+
+                            <i class="bx bxl-react"></i>
+
+                            React JS
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Web Technologies -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Web Technologies
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="../../Pages/APIS-Page.html">
+
+                            <i class="bx bx-cloud"></i>
+
+                            API
+
+                        </a>
+
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+
+                            <i class="bx bx-server"></i>
+
+                            Strapi Back-End
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Back-End -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Back-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="../../Pages/BackEnd-Csharb.html">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+
+                            <i class="bx bx-code-alt"></i>
+
+                            ASP.NET
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+
+                            <i class="bx bx-data"></i>
+
+                            SQL
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+
+                            <i class="bx bx-layer"></i>
+
+                            Entity Framework
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-APIs.html">
+
+                            <i class="bx bx-transfer"></i>
+
+                            APIs
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Contact US -->
+
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+
+                    Contact US
+
+                </a>
+
+
+                <!-- Login -->
+
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+
+                        <i class="bx bx-log-in"></i>
+
+                        Login
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ==========================================================
+        End Header
+    =========================================================== -->
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- ==========================================================
+        Start Learning Page
+    =========================================================== -->
+
+    <main class="learning-page">
+
+
+        <!-- ======================================================
+            Start Sidebar => مشترك
+        ======================================================= -->
+
+        <aside class="learning-sidebar">
+
+
+            <!-- ==================================================
+                 Sidebar Header
+            =================================================== -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-icon">
+
+                    <i class="bx bx-code-curly"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Programming Basics
+                    </span>
+
+                    <h2>
+                        C# Tutorial
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Introduction
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-book-open"></i>
+
+                    Introduction
+
+                </h3>
+
+
+                <a href="HomePage.html" class="sidebar-link">
+
+                    <i class="bx bx-home-alt"></i>
+
+                    C# Home
+
+                </a>
+
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    C# Intro
+
+                </a>
+
+
+                <a href="GetStartedPage.html" class="sidebar-link">
+
+                    <i class="bx bx-play-circle"></i>
+
+                    C# Get Started
+
+                </a>
+
+
+                <a href="SyntaxPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-alt"></i>
+
+                    C# Syntax
+
+                </a>
+
+
+                <a href="OutputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Output
+
+                </a>
+
+
+                <a href="CommentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-comment-detail"></i>
+
+                    C# Comments
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Variables
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-data"></i>
+
+                    Variables
+
+                </h3>
+
+
+                <a href="VariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-data"></i>
+
+                    C# Variables
+
+                </a>
+
+
+                <a href="ConstantsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-alt"></i>
+
+                    C# Constants
+
+                </a>
+
+
+                <a href="DisplayVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-show"></i>
+
+                    C# Display Variables
+
+                </a>
+
+
+                <a href="MultipleVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Multiple Variables
+
+                </a>
+
+
+                <a href="IdentifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-purchase-tag"></i>
+
+                    C# Identifiers
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Data Types
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-category"></i>
+
+                    Data Types
+
+                </h3>
+
+
+                <a href="DataTypesPage.html" class="sidebar-link active">
+
+                    <i class="bx bx-category"></i>
+
+                    C# Data Types
+
+                </a>
+
+
+                <a href="TypeCastingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Type Casting
+
+                </a>
+
+
+                <a href="UserInputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-edit-alt"></i>
+
+                    C# User Input
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Operators
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-calculator"></i>
+
+                    Operators
+
+                </h3>
+
+
+                <a href="ArithmeticPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calculator"></i>
+
+                    C# Arithmetic
+
+                </a>
+
+
+                <a href="AssignmentPage.html" class="sidebar-link">
+
+                    <i class="bx bx-equalizer"></i>
+
+                    C# Assignment
+
+                </a>
+
+
+                <a href="ComparisonPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Comparison
+
+                </a>
+
+
+                <a href="LogicalPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Logical
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Math
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-math"></i>
+
+                    Math
+
+                </h3>
+
+
+                <a href="MathPage.html" class="sidebar-link">
+
+                    <i class="bx bx-math"></i>
+
+                    C# Math
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Strings
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-text"></i>
+
+                    Strings
+
+                </h3>
+
+
+                <a href="StringsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-text"></i>
+
+                    C# Strings
+
+                </a>
+
+
+                <a href="ConcatenationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-link"></i>
+
+                    C# Concatenation
+
+                </a>
+
+
+                <a href="InterpolationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-curly"></i>
+
+                    C# Interpolation
+
+                </a>
+
+
+                <a href="AccessStringsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-search-alt"></i>
+
+                    C# Access Strings
+
+                </a>
+
+
+                <a href="SpecialCharactersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Special Characters
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Booleans
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    Booleans
+
+                </h3>
+
+
+                <a href="BooleansPage.html" class="sidebar-link">
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    C# Booleans
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# If...Else
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-git-branch"></i>
+
+                    If...Else
+
+                </h3>
+
+
+                <a href="IFPage.html" class="sidebar-link">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# if
+
+                </a>
+
+
+                <a href="ElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                    C# Else
+
+                </a>
+
+
+                <a href="ElseIfPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Else if
+
+                </a>
+
+
+                <a href="ShortHandIfElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Short Hand if...else
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Switch / While
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-git-branch"></i>
+
+                    Control Flow
+
+                </h3>
+
+
+                <a href="SwitchPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Switch
+
+                </a>
+
+
+                <a href="WhileLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-refresh"></i>
+
+                    C# While Loop
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# For Loop
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-repeat"></i>
+
+                    For Loop
+
+                </h3>
+
+
+                <a href="ForLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-repeat"></i>
+
+                    C# For Loop
+
+                </a>
+
+
+                <a href="ForeachLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Foreach Loop
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Break / Continue
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-transfer"></i>
+
+                    Loop Control
+
+                </h3>
+
+
+                <a href="BreakAndContinuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Break / Continue
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Arrays
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    Arrays
+
+                </h3>
+
+
+                <a href="ArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    C# Arrays
+
+                </a>
+
+
+                <a href="LoopThroughAnArrayPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-check"></i>
+
+                    C# Loop Through an Array
+
+                </a>
+
+
+                <a href="SortArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-sort"></i>
+
+                    C# Sort Arrays
+
+                </a>
+
+
+                <a href="MultidimensionalArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid"></i>
+
+                    C# Multidimensional Arrays
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Methods
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-function"></i>
+
+                    Methods
+
+                </h3>
+
+
+                <a href="MethodsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-function"></i>
+
+                    C# Methods
+
+                </a>
+
+
+                <a href="MethodParametersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Parameters
+
+                </a>
+
+
+                <a href="DefaultParameterPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cog"></i>
+
+                    C# Default Parameter
+
+                </a>
+
+
+                <a href="ReturnValuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-log-out"></i>
+
+                    C# Return Values
+
+                </a>
+
+
+                <a href="NamedArgumentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-label"></i>
+
+                    C# Named Arguments
+
+                </a>
+
+
+                <a href="MethodOverloadingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Method Overloading
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Classes
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-cube"></i>
+
+                    Classes
+
+                </h3>
+
+
+                <a href="OOPPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube"></i>
+
+                    C# OOP
+
+                </a>
+
+
+                <a href="ClassesAndObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube-alt"></i>
+
+                    C# Classes and Objects
+
+                </a>
+
+
+                <a href="MultipleObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-copy"></i>
+
+                    C# Multiple Objects
+
+                </a>
+
+
+                <a href="ClassesMembersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Class Members
+
+                </a>
+
+
+                <a href="ConstructorsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-buildings"></i>
+
+                    C# Constructors
+
+                </a>
+
+
+                <a href="AccessModifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-open-alt"></i>
+
+                    C# Access Modifiers
+
+                </a>
+
+
+                <a href="PropertiesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Properties
+
+                </a>
+
+
+                <a href="InheritancePage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Inheritance
+
+                </a>
+
+
+                <a href="PolymorphismPage.html" class="sidebar-link">
+
+                    <i class="bx bx-shape-polygon"></i>
+
+                    C# Polymorphism
+
+                </a>
+
+
+                <a href="AbstractionPage.html" class="sidebar-link">
+
+                    <i class="bx bx-hide"></i>
+
+                    C# Abstraction
+
+                </a>
+
+
+                <a href="InterfacePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Interface
+
+                </a>
+
+
+                <a href="MultipleInterfacesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Multiple Interfaces
+
+                </a>
+
+
+                <a href="EnumsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ol"></i>
+
+                    C# Enums
+
+                </a>
+
+
+                <a href="FilesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-file"></i>
+
+                    C# Files
+
+                </a>
+
+
+                <a href="ExceptionsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-error"></i>
+
+                    C# Exceptions
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# How To
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-wrench"></i>
+
+                    How To
+
+                </h3>
+
+
+                <a href="AddTwoNumbersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-plus-circle"></i>
+
+                    C# Add Two Numbers
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 C# Examples
+            =================================================== -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-code-block"></i>
+
+                    Examples
+
+                </h3>
+
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-block"></i>
+
+                    C# Examples
+
+                </a>
+
+
+                <a href="CompilerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Compiler
+
+                </a>
+
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-task"></i>
+
+                    C# Exercises
+
+                </a>
+
+
+                <a href="QuizPage.html" class="sidebar-link">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# Quiz
+
+                </a>
+
+
+                <a href="ServerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-server"></i>
+
+                    C# Server
+
+                </a>
+
+
+                <a href="SyllabusPage.html" class="sidebar-link">
+
+                    <i class="bx bx-book"></i>
+
+                    C# Syllabus
+
+                </a>
+
+
+                <a href="StudyPlanPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calendar"></i>
+
+                    C# Study Plan
+
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+
+                    <i class="bx bx-certification"></i>
+
+                    C# Certificate
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ======================================================
+             End Sidebar
+        ======================================================= -->
+
+
+        <!-- ======================================================
+             Start Tutorial Content
+        ======================================================= -->
+
+        <section class="tutorial-content">
+
+
+            <!-- ==================================================
+                Tutorial Header => مشترك
+            =================================================== -->
+
+            <div class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-code-curly"></i>
+
+                    C# Programming
+
+                </span>
+
+
+                <h1>
+
+                    C# Data Types
+
+                </h1>
+
+
+                <p>
+
+                    Learn the most common data types used in C#
+                    and understand how each type stores different
+                    kinds of values.
+
+                </p>
+
+
+                <div class="tutorial-actions">
+
+                    <a href="IdentifiersPage.html" class="tutorial-button secondary">
+
+                        <i class="bx bx-left-arrow-alt"></i>
+
+                        Previous
+
+                    </a>
+
+
+                    <a href="TypeCastingPage.html" class="tutorial-button primary">
+
+                        Next
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 Start Data Types Introduction
+            =================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-data"></i>
+
+                        Data Types
+
+                    </span>
+
+
+                    <h2>
+
+                        C# Data Types
+
+                    </h2>
+
+
+                    <p>
+
+                        As explained in the variables chapter,
+                        a variable in C# must be a specified data type.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Basic Data Types Example
+                =================================================== -->
+
+                <div class="data-types-example">
+
+                    <div class="data-types-example-header">
+
+                        <span>
+
+                            Example
+
+                        </span>
+
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="data-type-keyword">int</span> myNum = <span class="data-type-number">6</span><span class="data-type-semicolon">;</span>
+<span class="data-type-keyword">double</span> myDoubleNum = <span class="data-type-number">5.85D</span><span class="data-type-semicolon">;</span>
+<span class="data-type-keyword">char</span> myLetter = <span class="data-type-string">'A'</span><span class="data-type-semicolon">;</span>
+<span class="data-type-keyword">bool</span> myBool = <span class="data-type-boolean">true</span><span class="data-type-semicolon">;</span>
+<span class="data-type-keyword">string</span> myText = <span class="data-type-string">"Hello"</span><span class="data-type-semicolon">;</span></code></pre>
+
+                </div>
+
+
+                <p class="data-types-description">
+
+                    A data type specifies the size and type of variable values.
+
+                </p>
+
+
+                <p class="data-types-description">
+
+                    It is important to use the correct data type for the
+                    corresponding variable to avoid errors, save time and
+                    memory, and make your code more maintainable and readable.
+                    The most common data types are:
+
+                </p>
+
+
+                <!-- ==================================================
+                     Data Types Table
+                =================================================== -->
+
+                <div class="data-types-table-wrapper">
+
+                    <table class="data-types-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Data Type
+                                </th>
+
+                                <th>
+                                    Size
+                                </th>
+
+                                <th>
+                                    Description
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="data-type-inline">
+                                        int
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    4 bytes
+                                </td>
+
+                                <td>
+                                    Stores whole numbers from
+                                    -2,147,483,648 to 2,147,483,647
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="data-type-inline">
+                                        long
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    8 bytes
+                                </td>
+
+                                <td>
+                                    Stores whole numbers from
+                                    -9,223,372,036,854,775,808 to
+                                    9,223,372,036,854,775,807
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="data-type-inline">
+                                        float
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    4 bytes
+                                </td>
+
+                                <td>
+                                    Stores fractional numbers.
+                                    Sufficient for storing 6 to 7 decimal digits.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="data-type-inline">
+                                        double
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    8 bytes
+                                </td>
+
+                                <td>
+                                    Stores fractional numbers.
+                                    Sufficient for storing 15 decimal digits.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="data-type-inline">
+                                        bool
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    1 byte
+                                </td>
+
+                                <td>
+                                    Stores true or false values.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="data-type-inline">
+                                        char
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    2 bytes
+                                </td>
+
+                                <td>
+                                    Stores a single character or letter,
+                                    surrounded by single quotes.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="data-type-inline">
+                                        string
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    2 bytes per character
+                                </td>
+
+                                <td>
+                                    Stores a sequence of characters,
+                                    surrounded by double quotes.
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Start Numbers
+            =================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-calculator"></i>
+
+                        Numbers
+
+                    </span>
+
+
+                    <h2>
+
+                        Numbers
+
+                    </h2>
+
+
+                    <p>
+
+                        Number types are divided into two groups:
+                        integer types and floating point types.
+
+                    </p>
+
+                </div>
+
+
+                <div class="data-types-subsection">
+
+                    <h3>
+
+                        Integer Types
+
+                    </h3>
+
+
+                    <p>
+
+                        Integer types store whole numbers, positive or
+                        negative, such as 123 or -456, without decimals.
+                        Valid types are
+
+                        <span class="data-type-inline">
+                            int
+                        </span>
+
+                        and
+
+                        <span class="data-type-inline">
+                            long
+                        </span>.
+
+                        Which type you should use depends on the numeric value.
+
+                    </p>
+
+                </div>
+
+
+                <div class="data-types-subsection">
+
+                    <h3>
+
+                        Floating Point Types
+
+                    </h3>
+
+
+                    <p>
+
+                        Floating point types represent numbers with a
+                        fractional part, containing one or more decimals.
+                        Valid types are
+
+                        <span class="data-type-inline">
+                            float
+                        </span>
+
+                        and
+
+                        <span class="data-type-inline">
+                            double
+                        </span>.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Numbers Note
+                =================================================== -->
+
+                <div class="data-types-note">
+
+                    <strong>
+
+                        Note:
+
+                    </strong>
+
+
+                    Even though there are many numeric types in C#,
+                    the most used for numbers are
+
+                    <span class="data-type-inline">
+                        int
+                    </span>
+
+                    for whole numbers and
+
+                    <span class="data-type-inline">
+                        double
+                    </span>
+
+                    for floating point numbers.
+
+                    However, we will describe them all as you continue to read.
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Start Integer Types
+            =================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-hash"></i>
+
+                        Integer Types
+
+                    </span>
+
+
+                    <h2>
+
+                        Integer Types
+
+                    </h2>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Int
+                =================================================== -->
+
+                <div class="data-types-subsection">
+
+                    <h3>
+
+                        Int
+
+                    </h3>
+
+
+                    <p>
+
+                        The
+
+                        <span class="data-type-inline">
+                            int
+                        </span>
+
+                        data type can store whole numbers from
+                        -2147483648 to 2147483647.
+
+                        In general, and in this tutorial, the
+
+                        <span class="data-type-inline">
+                            int
+                        </span>
+
+                        data type is the preferred data type when
+                        creating variables with a numeric value.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Int Example
+                =================================================== -->
+
+                <div class="data-types-example">
+
+                    <div class="data-types-example-header">
+
+                        <span>
+                            Int Example
+                        </span>
+
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="data-type-keyword">int</span> myNum = <span class="data-type-number">10000</span><span class="data-type-semicolon">;</span>
+
+Console.<span class="data-type-method">WriteLine</span>(myNum)<span class="data-type-semicolon">;</span></code></pre>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Long
+                =================================================== -->
+
+                <div class="data-types-subsection">
+
+                    <h3>
+
+                        Long
+
+                    </h3>
+
+
+                    <p>
+
+                        The
+
+                        <span class="data-type-inline">
+                            long
+                        </span>
+
+                        data type can store whole numbers from
+                        -9223372036854775808 to 9223372036854775807.
+
+                        This is used when
+
+                        <span class="data-type-inline">
+                            int
+                        </span>
+
+                        is not large enough to store the value.
+
+                        Note that you should end the value with an
+
+                        <strong>L</strong>.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Long Example
+                =================================================== -->
+
+                <div class="data-types-example">
+
+                    <div class="data-types-example-header">
+
+                        <span>
+                            Long Example
+                        </span>
+
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="data-type-keyword">long</span> myNum = <span class="data-type-number">15000000000L</span><span class="data-type-semicolon">;</span>
+
+Console.<span class="data-type-method">WriteLine</span>(myNum)<span class="data-type-semicolon">;</span></code></pre>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Start Floating Point Types
+            =================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-line-chart"></i>
+
+                        Floating Point
+
+                    </span>
+
+
+                    <h2>
+
+                        Floating Point Types
+
+                    </h2>
+
+
+                    <p>
+
+                        You should use a floating point type whenever
+                        you need a number with a decimal, such as
+                        9.99 or 3.14515.
+
+                    </p>
+
+                </div>
+
+
+                <p class="data-types-description">
+
+                    The
+
+                    <span class="data-type-inline">
+                        float
+                    </span>
+
+                    and
+
+                    <span class="data-type-inline">
+                        double
+                    </span>
+
+                    data types can store fractional numbers.
+
+                    Note that you should end the value with an
+                    <strong>F</strong> for floats and
+                    <strong>D</strong> for doubles.
+
+                </p>
+
+
+                <!-- ==================================================
+                     Float Example
+                =================================================== -->
+
+                <div class="data-types-example">
+
+                    <div class="data-types-example-header">
+
+                        <span>
+                            Float Example
+                        </span>
+
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="data-type-keyword">float</span> myNum = <span class="data-type-number">5.75F</span><span class="data-type-semicolon">;</span>
+
+Console.<span class="data-type-method">WriteLine</span>(myNum)<span class="data-type-semicolon">;</span></code></pre>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Double Example
+                =================================================== -->
+
+                <div class="data-types-example">
+
+                    <div class="data-types-example-header">
+
+                        <span>
+                            Double Example
+                        </span>
+
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="data-type-keyword">double</span> myNum = <span class="data-type-number">19.99D</span><span class="data-type-semicolon">;</span>
+
+Console.<span class="data-type-method">WriteLine</span>(myNum)<span class="data-type-semicolon">;</span></code></pre>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Float or Double Note
+                =================================================== -->
+
+                <div class="data-types-note">
+
+                    <strong>
+                        Use float or double?
+                    </strong>
+
+
+                    <p>
+
+                        The precision of a floating point value indicates
+                        how many digits the value can have after the decimal
+                        point.
+
+                        The precision of
+
+                        <span class="data-type-inline">
+                            float
+                        </span>
+
+                        is six or seven decimal digits, while
+
+                        <span class="data-type-inline">
+                            double
+                        </span>
+
+                        variables have a precision of about 15 digits.
+
+                        Therefore, it is safer to use
+
+                        <span class="data-type-inline">
+                            double
+                        </span>
+
+                        for most calculations.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Scientific Numbers
+                =================================================== -->
+
+                <div class="data-types-subsection">
+
+                    <h3>
+
+                        Scientific Numbers
+
+                    </h3>
+
+
+                    <p>
+
+                        A floating point number can also be a scientific
+                        number with an "e" to indicate the power of 10.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Scientific Numbers Example
+                =================================================== -->
+
+                <div class="data-types-example">
+
+                    <div class="data-types-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="data-type-keyword">float</span> f1 = <span class="data-type-number">35e3F</span><span class="data-type-semicolon">;</span>
+<span class="data-type-keyword">double</span> d1 = <span class="data-type-number">12E4D</span><span class="data-type-semicolon">;</span>
+
+Console.<span class="data-type-method">WriteLine</span>(f1)<span class="data-type-semicolon">;</span>
+Console.<span class="data-type-method">WriteLine</span>(d1)<span class="data-type-semicolon">;</span></code></pre>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Start Booleans
+            =================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        Booleans
+
+                    </span>
+
+
+                    <h2>
+
+                        Booleans
+
+                    </h2>
+
+
+                    <p>
+
+                        A boolean data type is declared with the
+
+                        <span class="data-type-inline">
+                            bool
+                        </span>
+
+                        keyword and can only take the values
+
+                        <span class="data-type-inline">
+                            true
+                        </span>
+
+                        or
+
+                        <span class="data-type-inline">
+                            false
+                        </span>.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Boolean Example
+                =================================================== -->
+
+                <div class="data-types-example">
+
+                    <div class="data-types-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="data-type-keyword">bool</span> isCSharpFun = <span class="data-type-boolean">true</span><span class="data-type-semicolon">;</span>
+<span class="data-type-keyword">bool</span> isFishTasty = <span class="data-type-boolean">false</span><span class="data-type-semicolon">;</span>
+
+Console.<span class="data-type-method">WriteLine</span>(isCSharpFun)<span class="data-type-semicolon">;</span>
+Console.<span class="data-type-method">WriteLine</span>(isFishTasty)<span class="data-type-semicolon">;</span></code></pre>
+
+                </div>
+
+
+                <p class="data-types-description">
+
+                    Boolean values are mostly used for conditional testing,
+                    which you will learn more about in a later chapter.
+
+                </p>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Start Characters
+            =================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-font"></i>
+
+                        Characters
+
+                    </span>
+
+
+                    <h2>
+
+                        Characters
+
+                    </h2>
+
+
+                    <p>
+
+                        The
+
+                        <span class="data-type-inline">
+                            char
+                        </span>
+
+                        data type is used to store a single character.
+
+                        The character must be surrounded by single quotes,
+                        like 'A' or 'c'.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+                     Character Example
+                =================================================== -->
+
+                <div class="data-types-example">
+
+                    <div class="data-types-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="data-type-keyword">char</span> myGrade = <span class="data-type-string">'B'</span><span class="data-type-semicolon">;</span>
+
+Console.<span class="data-type-method">WriteLine</span>(myGrade)<span class="data-type-semicolon">;</span></code></pre>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Start Strings
+            =================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-text"></i>
+
+                        Strings
+
+                    </span>
+
+
+                    <h2>
+
+                        Strings
+
+                    </h2>
+
+
+                    <p>
+
+                        The
+
+                        <span class="data-type-inline">
+                            string
+                        </span>
+
+                        data type is used to store a sequence of
+                        characters (text).
+
+                        String values must be surrounded by double quotes.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+                     String Example
+                =================================================== -->
+
+                <div class="data-types-example">
+
+                    <div class="data-types-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="data-type-keyword">string</span> greeting = <span class="data-type-string">"Hello World"</span><span class="data-type-semicolon">;</span>
+
+Console.<span class="data-type-method">WriteLine</span>(greeting)<span class="data-type-semicolon">;</span></code></pre>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+     Exercises => مشترك
+=================================================== -->
+            <section class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-task"></i>
+
+                        Practice
+
+                    </span>
+
+
+                    <h2>
+
+                        C# Exercises
+
+                    </h2>
+
+
+                    <p>
+
+                        Many chapters in this tutorial end with exercises
+                        where you can check your level of knowledge.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+         Exercise Example
+    =================================================== -->
+
+                <div class="exercise-preview" data-correct-answer="char">
+
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+
+                                Exercise Example
+
+                            </span>
+
+
+                            <h3>
+
+                                Complete the C# Code
+
+                            </h3>
+
+                        </div>
+
+
+                        <span class="exercise-number">
+
+                            01
+
+                        </span>
+
+                    </div>
+
+
+                    <p class="exercise-question">
+
+                        Complete the code by choosing the correct
+                        <span>data type</span> used to store a single character.
+
+                    </p>
+
+
+                    <!-- ==================================================
+             Code Example
+        =================================================== -->
+
+                    <div class="exercise-code">
+
+                        <code>
+
+                <span>
+                    <span class="exercise-answer-slot"
+                        id="exerciseAnswer">
+
+                        ?
+
+                    </span>
+                </span>
+
+
+                <span>
+
+                    myGrade = 'B';
+
+                </span>
+
+            </code>
+
+                    </div>
+
+
+                    <!-- ==================================================
+             Answer Options
+        =================================================== -->
+
+                    <div class="exercise-options">
+
+
+                        <button type="button" class="exercise-option" data-answer="char">
+
+                            char
+
+                        </button>
+
+
+                        <button type="button" class="exercise-option" data-answer="string">
+
+                            string
+
+                        </button>
+
+
+                        <button type="button" class="exercise-option" data-answer="bool">
+
+                            bool
+
+                        </button>
+
+
+                        <button type="button" class="exercise-option" data-answer="int">
+
+                            int
+
+                        </button>
+
+
+                    </div>
+
+
+                    <!-- ==================================================
+             Answer Result
+        =================================================== -->
+
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite">
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+         All Exercises Button
+    =================================================== -->
+
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+
+                        See All C# Exercises
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Bottom Navigation => مشترك
+            =================================================== -->
+
+            <div class="tutorial-bottom-actions">
+
+
+                <a href="IdentifiersPage.html" class="tutorial-button secondary">
+
+                    <i class="bx bx-left-arrow-alt"></i>
+
+                    Previous
+
+                </a>
+
+
+                <a href="TypeCastingPage.html" class="tutorial-button primary">
+
+                    Next
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                </a>
+
+            </div>
+
+
+        </section>
+
+        <!-- ======================================================
+             End Tutorial Content
+        ======================================================= -->
+
+    </main>
+
+    <!-- ==========================================================
+         End Learning Page
+    =========================================================== -->
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- ==========================================================
+        Start Footer => مشترك
+    =========================================================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/BootstrapPage.html">
+                    Bootstrap
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ==========================================================
+        End Footer
+    =========================================================== -->
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0">
+    </i>
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- ==========================================================
+        Global JavaScript => مشترك
+    =========================================================== -->
+
+    <script src="../../JavaScript/global.js"></script>
+
+
+</body>
+
+</html>

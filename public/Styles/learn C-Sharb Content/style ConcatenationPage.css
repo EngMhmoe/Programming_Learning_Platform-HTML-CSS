@@ -1,0 +1,217 @@
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Concatenation Page
+========================================================== */
+
+/* ==========================================================
+   Concatenation Description
+========================================================== */
+
+.concatenation-description {
+  margin-top: 20px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.concatenation-description strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Inline Code
+========================================================== */
+
+.concatenation-inline {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  margin: 0 3px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-radius: 5px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Concatenation Example
+========================================================== */
+
+.concatenation-example {
+  margin-top: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+   Example Header
+========================================================== */
+
+.concatenation-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 10px 18px;
+  background: rgba(249, 115, 22, 0.08);
+  border-bottom: 1px solid var(--border);
+}
+
+.concatenation-example-header span {
+  color: var(--primary-light);
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.concatenation-example-header i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+/* ==========================================================
+   Code
+========================================================== */
+
+.concatenation-example pre {
+  width: 100%;
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre;
+}
+
+.concatenation-example code {
+  color: inherit;
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   Code Syntax
+========================================================== */
+
+.concatenation-keyword {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+.concatenation-string {
+  color: #a3e635;
+  font-weight: 600;
+}
+
+.concatenation-number {
+  color: #f97316;
+  font-weight: 600;
+}
+
+.concatenation-comment {
+  color: #808080;
+}
+
+/* ==========================================================
+   Concatenation Note
+========================================================== */
+
+.concatenation-note {
+  margin-top: 22px;
+  padding: 18px;
+  color: var(--text-secondary);
+  background: rgba(250, 204, 21, 0.06);
+  border: 1px solid rgba(250, 204, 21, 0.14);
+  border-left: 3px solid var(--secondary);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.concatenation-note strong {
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Warning
+========================================================== */
+
+.concatenation-warning {
+  margin-top: 25px;
+  padding: 18px;
+  color: var(--text-secondary);
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.14);
+  border-left: 3px solid #ef4444;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.concatenation-warning strong {
+  color: #ef4444;
+  font-weight: 900;
+}
+
+.concatenation-warning p {
+  margin-top: 10px;
+}
+
+.concatenation-warning .concatenation-inline {
+  margin: 0 2px;
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 800px) {
+  .concatenation-example pre {
+    padding: 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .concatenation-description {
+    font-size: 14px;
+  }
+
+  .concatenation-inline {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .concatenation-example-header {
+    padding: 9px 15px;
+  }
+
+  .concatenation-example pre {
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .concatenation-note {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .concatenation-warning {
+    padding: 15px;
+    font-size: 14px;
+  }
+}

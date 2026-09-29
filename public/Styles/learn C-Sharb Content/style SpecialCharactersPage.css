@@ -1,0 +1,232 @@
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Special Characters Page
+========================================================== */
+
+/* ==========================================================
+   Description
+========================================================== */
+
+.special-characters-description {
+  margin-top: 20px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.special-characters-description strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Inline Code
+========================================================== */
+
+.special-characters-inline {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  margin: 0 3px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border: 1px solid rgba(251, 146, 60, 0.12);
+  border-radius: 5px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Code Example
+========================================================== */
+
+.special-characters-example {
+  margin-top: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+   Example Header
+========================================================== */
+
+.special-characters-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 10px 18px;
+  background: rgba(249, 115, 22, 0.08);
+  border-bottom: 1px solid var(--border);
+}
+
+.special-characters-example-header span {
+  color: var(--primary-light);
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.special-characters-example-header i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+/* ==========================================================
+   Code
+========================================================== */
+
+.special-characters-example pre {
+  width: 100%;
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre;
+}
+
+.special-characters-example code {
+  color: inherit;
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   Code Syntax
+========================================================== */
+
+.special-characters-keyword {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+.special-characters-string {
+  color: #a3e635;
+  font-weight: 600;
+}
+
+.special-characters-number {
+  color: #f97316;
+  font-weight: 600;
+}
+
+.special-characters-method {
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+.special-characters-comment {
+  color: #808080;
+}
+
+/* ==========================================================
+   Tables
+========================================================== */
+
+.special-characters-table-wrapper {
+  width: 100%;
+  margin-top: 25px;
+  overflow-x: auto;
+}
+
+.special-characters-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.special-characters-table th {
+  padding: 15px 18px;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.08);
+  border-bottom: 1px solid var(--border);
+  font-weight: 800;
+  text-align: left;
+}
+
+.special-characters-table td {
+  padding: 15px 18px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  line-height: 1.7;
+}
+
+.special-characters-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.special-characters-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.special-characters-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.special-characters-table td code {
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 800px) {
+  .special-characters-example pre {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  .special-characters-table {
+    min-width: 620px;
+  }
+}
+
+/* ==========================================================
+   Mobile
+========================================================== */
+
+@media (max-width: 560px) {
+  .special-characters-description {
+    font-size: 14px;
+  }
+
+  .special-characters-inline {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .special-characters-example-header {
+    padding: 9px 15px;
+  }
+
+  .special-characters-example pre {
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .special-characters-table th,
+  .special-characters-table td {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .special-characters-table td code {
+    font-size: 12px;
+  }
+}

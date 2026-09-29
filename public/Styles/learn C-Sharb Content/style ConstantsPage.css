@@ -1,0 +1,319 @@
+/* ==========================================================
+   Constants Page
+========================================================== */
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Constants Description
+========================================================== */
+.constants-description {
+  margin-top: 20px;
+
+  color: var(--text-secondary);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Constant Inline
+========================================================== */
+
+.constant-inline {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 3px 8px;
+
+  margin: 0 3px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(251, 146, 60, 0.12);
+
+  border-radius: 5px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Constants List
+========================================================== */
+
+.constants-list {
+  display: grid;
+
+  gap: 12px;
+
+  margin: 22px 0 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.constants-list li {
+  position: relative;
+
+  padding: 15px 18px 15px 42px;
+
+  color: var(--text-secondary);
+
+  background: rgba(249, 115, 22, 0.045);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-md);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.constants-list li::before {
+  content: "";
+
+  position: absolute;
+
+  top: 24px;
+
+  left: 18px;
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+
+  box-shadow: 0 0 0 5px rgba(249, 115, 22, 0.08);
+}
+
+/* ==========================================================
+   Constants Subsection
+========================================================== */
+
+.constants-subsection {
+  margin-top: 30px;
+}
+
+.constants-subsection h3 {
+  margin-bottom: 10px;
+
+  color: var(--text);
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+.constants-subsection p {
+  color: var(--text-muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Constants Code Example
+========================================================== */
+
+.constants-example {
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+   Constants Example Header
+========================================================== */
+
+.constants-example-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 48px;
+
+  padding: 10px 18px;
+
+  background: rgba(249, 115, 22, 0.08);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.constants-example-header span {
+  color: var(--primary-light);
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.constants-example-header i {
+  color: var(--primary-light);
+
+  font-size: 18px;
+}
+
+/* ==========================================================
+   Constants Code
+========================================================== */
+
+.constants-example pre {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  white-space: pre;
+}
+
+.constants-example code {
+  color: inherit;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: inherit;
+}
+
+/* ==========================================================
+   Code Syntax Colors
+========================================================== */
+
+.constant-keyword {
+  color: var(--primary-light);
+
+  font-weight: 800;
+}
+
+.constant-operator {
+  color: var(--secondary);
+
+  font-weight: 700;
+}
+
+.constant-number {
+  color: #f97316;
+
+  font-weight: 700;
+}
+
+.constant-semicolon {
+  color: #22c55e;
+
+  font-weight: 700;
+}
+
+.constant-comment {
+  color: var(--text-muted);
+
+  font-style: italic;
+}
+
+/* ==========================================================
+   Constants Note
+========================================================== */
+
+.constants-note {
+  margin-top: 22px;
+
+  padding: 18px;
+
+  color: var(--text-secondary);
+
+  background: rgba(250, 204, 21, 0.06);
+
+  border: 1px solid rgba(250, 204, 21, 0.14);
+
+  border-left: 3px solid var(--secondary);
+
+  border-radius: var(--radius-md);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.constants-note strong {
+  color: var(--secondary);
+
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 800px) {
+  .constants-example pre {
+    padding: 18px;
+
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .constants-example-header {
+    padding: 9px 15px;
+  }
+
+  .constants-example pre {
+    padding: 16px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .constants-list li {
+    padding: 14px 15px 14px 38px;
+
+    font-size: 14px;
+  }
+
+  .constant-inline {
+    font-size: 13px;
+  }
+
+  .constants-subsection h3 {
+    font-size: 20px;
+  }
+}

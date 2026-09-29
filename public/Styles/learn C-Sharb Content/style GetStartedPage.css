@@ -1,0 +1,314 @@
+/* ==========================================================
+   DevPath - C# Get Started Page
+   Page-Specific Styles Only
+========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Get Started Heading
+========================================================== */
+
+.get-started-heading {
+  margin-bottom: 22px;
+}
+
+.get-started-heading .section-label {
+  margin-bottom: 7px;
+}
+
+.get-started-heading h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+/* ==========================================================
+   Get Started Content
+========================================================== */
+
+.get-started-card > p,
+.installation-card > p,
+.code-section-card > p,
+.w3schools-card > p {
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.get-started-card > p:last-child,
+.installation-card > p:last-child,
+.code-section-card > p:last-child,
+.w3schools-card > p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   IDE Link
+========================================================== */
+
+.get-started-card a {
+  color: var(--primary-light);
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.get-started-card a:hover {
+  color: var(--secondary);
+}
+
+/* ==========================================================
+   Installation Images
+========================================================== */
+
+.installation-image {
+  width: 100%;
+  margin: 25px 0;
+  padding: 18px;
+  overflow: hidden;
+  background: rgba(18, 11, 5, 0.65);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.installation-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+/* ==========================================================
+   Get Started Code Example
+========================================================== */
+
+.get-started-code {
+  margin: 25px 0;
+  overflow: hidden;
+  background: #0d0804;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+   Code Header
+========================================================== */
+
+.get-started-code-header {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 17px;
+  background: #17100b;
+  border-bottom: 1px solid var(--border);
+}
+
+.get-started-code-header span {
+  width: 11px;
+  height: 11px;
+  display: block;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.get-started-code-header span:nth-child(1) {
+  background: #ef4444;
+}
+
+.get-started-code-header span:nth-child(2) {
+  background: #f97316;
+}
+
+.get-started-code-header span:nth-child(3) {
+  background: #22c55e;
+}
+
+.get-started-code-header strong {
+  margin-left: 8px;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   Code
+========================================================== */
+
+.get-started-code pre {
+  margin: 0;
+  padding: 24px;
+  overflow-x: auto;
+  color: #f8fafc;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  line-height: 1.9;
+  font-weight: 600;
+}
+
+.get-started-code code {
+  color: #f8fafc;
+}
+
+.code-keyword {
+  color: #c084fc;
+}
+
+.code-string {
+  color: #22c55e;
+}
+
+/* ==========================================================
+   Console Result
+========================================================== */
+.console-result {
+  margin: 28px 0;
+  padding: 20px;
+  overflow: hidden;
+  background: rgba(38, 22, 10, 0.72);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.console-window {
+  padding: 22px;
+  overflow-x: auto;
+  color: #f8fafc;
+  background: #000;
+  border-radius: var(--radius-md);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.console-window p {
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.console-window p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   W3Schools Section
+========================================================== */
+
+.w3schools-card {
+  margin-top: 25px;
+}
+
+/* ==========================================================
+   Final Code Example
+========================================================== */
+
+.final-code-card {
+  margin-top: 25px;
+}
+
+/* ==========================================================
+   Result Box
+========================================================== */
+
+.result-box {
+  margin-top: 25px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(18, 11, 5, 0.65);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.result-box span {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.result-box strong {
+  padding: 15px 18px;
+  color: var(--text);
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 17px;
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 900px) {
+  .get-started-heading h2 {
+    font-size: 27px;
+  }
+
+  .get-started-code pre {
+    font-size: 14px;
+  }
+
+  .installation-image {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 560px) {
+  .get-started-heading h2 {
+    font-size: 24px;
+  }
+
+  .get-started-card > p,
+  .installation-card > p,
+  .code-section-card > p,
+  .w3schools-card > p {
+    font-size: 14px;
+  }
+
+  .get-started-code-header {
+    min-height: 44px;
+    padding: 0 12px;
+  }
+
+  .get-started-code-header span {
+    width: 9px;
+    height: 9px;
+  }
+
+  .get-started-code-header strong {
+    font-size: 10px;
+  }
+
+  .get-started-code pre {
+    padding: 18px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .console-result {
+    padding: 12px;
+  }
+
+  .console-window {
+    padding: 16px;
+  }
+
+  .console-window p {
+    font-size: 12px;
+  }
+
+  .result-box {
+    padding: 16px;
+  }
+
+  .result-box strong {
+    font-size: 14px;
+  }
+}

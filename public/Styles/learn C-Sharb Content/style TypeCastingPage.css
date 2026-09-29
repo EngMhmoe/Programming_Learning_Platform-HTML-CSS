@@ -1,0 +1,457 @@
+/* ==========================================================
+
+   Type Casting Page
+
+========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+
+   Type Casting Description
+
+========================================================== */
+
+.type-casting-description {
+  margin-top: 20px;
+
+  color: var(--text-secondary);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* ==========================================================
+
+   Type Casting List
+
+========================================================== */
+
+.type-casting-list {
+  margin-top: 20px;
+
+  padding-left: 25px;
+
+  color: var(--text-muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.type-casting-list li {
+  margin-bottom: 12px;
+}
+
+.type-casting-list strong {
+  color: var(--text);
+}
+
+/* ==========================================================
+
+   Casting Flow
+
+========================================================== */
+
+.casting-flow {
+  margin-top: 25px;
+
+  padding: 20px;
+
+  background: rgba(249, 115, 22, 0.04);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+}
+
+.casting-flow.explicit {
+  margin-top: 15px;
+}
+
+.casting-flow-title {
+  margin-bottom: 15px;
+
+  color: var(--text);
+
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+.casting-flow-items {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.casting-flow-items i {
+  color: var(--primary-light);
+
+  font-size: 18px;
+}
+
+.casting-type {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 6px 10px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(251, 146, 60, 0.12);
+
+  border-radius: 5px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+/* ==========================================================
+
+   Type Casting Example
+
+========================================================== */
+
+.type-casting-example {
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+
+   Type Casting Example Header
+
+========================================================== */
+
+.type-casting-example-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 48px;
+
+  padding: 10px 18px;
+
+  background: rgba(249, 115, 22, 0.08);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.type-casting-example-header span {
+  color: var(--primary-light);
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.type-casting-example-header i {
+  color: var(--primary-light);
+
+  font-size: 18px;
+}
+
+/* ==========================================================
+
+   Type Casting Code
+
+========================================================== */
+
+.type-casting-example pre {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  white-space: pre;
+}
+
+.type-casting-example code {
+  color: inherit;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: inherit;
+}
+
+/* ==========================================================
+
+   Code Syntax Colors
+
+========================================================== */
+
+.type-casting-keyword {
+  color: var(--primary-light);
+
+  font-weight: 800;
+}
+
+.type-casting-number {
+  color: #f97316;
+
+  font-weight: 700;
+}
+
+.type-casting-boolean {
+  color: var(--primary-light);
+
+  font-weight: 700;
+}
+
+.type-casting-method {
+  color: var(--secondary);
+
+  font-weight: 700;
+}
+
+.type-casting-comment {
+  color: var(--text-muted);
+
+  font-style: italic;
+}
+
+/* ==========================================================
+
+   Type Casting Inline
+
+========================================================== */
+
+.type-casting-inline {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 3px 8px;
+
+  margin: 0 3px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(251, 146, 60, 0.12);
+
+  border-radius: 5px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+/* ==========================================================
+
+   Type Conversion Methods
+
+========================================================== */
+
+.conversion-methods {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.conversion-method {
+  padding: 18px;
+
+  background: rgba(249, 115, 22, 0.04);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-md);
+}
+
+.conversion-method-name {
+  display: inline-block;
+
+  color: var(--primary-light);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.conversion-method p {
+  margin-top: 8px;
+
+  color: var(--text-muted);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* ==========================================================
+
+   Type Casting Note
+
+========================================================== */
+
+.type-casting-note {
+  margin-top: 22px;
+
+  padding: 18px;
+
+  color: var(--text-secondary);
+
+  background: rgba(250, 204, 21, 0.06);
+
+  border: 1px solid rgba(250, 204, 21, 0.14);
+
+  border-left: 3px solid var(--secondary);
+
+  border-radius: var(--radius-md);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.type-casting-note strong {
+  color: var(--secondary);
+
+  font-weight: 800;
+}
+
+.type-casting-note p {
+  margin-top: 10px;
+}
+
+.type-casting-note a {
+  color: var(--primary-light);
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.type-casting-note a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================
+
+   Responsive
+
+========================================================== */
+
+@media (max-width: 800px) {
+  .type-casting-example pre {
+    padding: 18px;
+
+    font-size: 14px;
+  }
+
+  .conversion-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .casting-flow-items {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .type-casting-example-header {
+    padding: 9px 15px;
+  }
+
+  .type-casting-example pre {
+    padding: 16px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .type-casting-description {
+    font-size: 14px;
+  }
+
+  .type-casting-list {
+    font-size: 14px;
+  }
+
+  .casting-flow {
+    padding: 15px;
+  }
+
+  .casting-flow-items {
+    gap: 6px;
+  }
+
+  .casting-type {
+    padding: 5px 8px;
+
+    font-size: 12px;
+  }
+
+  .casting-flow-items i {
+    font-size: 15px;
+  }
+
+  .conversion-method {
+    padding: 15px;
+  }
+
+  .conversion-method-name {
+    font-size: 13px;
+  }
+
+  .type-casting-note {
+    padding: 15px;
+
+    font-size: 14px;
+  }
+}

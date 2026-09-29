@@ -1,0 +1,321 @@
+/* ==========================================================
+
+   User Input Page
+
+========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+
+   User Input Description
+
+========================================================== */
+
+.user-input-description {
+  margin-top: 20px;
+
+  color: var(--text-secondary);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* ==========================================================
+
+   Inline Code
+
+========================================================== */
+
+.user-input-inline {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 3px 8px;
+
+  margin: 0 3px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(251, 146, 60, 0.12);
+
+  border-radius: 5px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+/* ==========================================================
+
+   User Input Example
+
+========================================================== */
+
+.user-input-example {
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+
+   Example Header
+
+========================================================== */
+
+.user-input-example-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 48px;
+
+  padding: 10px 18px;
+
+  background: rgba(249, 115, 22, 0.08);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.user-input-example-header span {
+  color: var(--primary-light);
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.user-input-example-header i {
+  color: var(--primary-light);
+
+  font-size: 18px;
+}
+
+/* ==========================================================
+
+   Code
+
+========================================================== */
+
+.user-input-example pre {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  white-space: pre;
+}
+
+.user-input-example code {
+  color: inherit;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: inherit;
+}
+
+/* ==========================================================
+
+   Code Syntax
+
+========================================================== */
+
+.user-input-keyword {
+  color: var(--primary-light);
+
+  font-weight: 800;
+}
+
+.user-input-method {
+  color: var(--secondary);
+
+  font-weight: 700;
+}
+
+.user-input-string {
+  color: #f97316;
+
+  font-weight: 600;
+}
+
+.user-input-comment {
+  color: var(--text-muted);
+
+  font-style: italic;
+}
+
+/* ==========================================================
+
+   User Input Note
+
+========================================================== */
+
+.user-input-note {
+  margin-top: 22px;
+
+  padding: 18px;
+
+  color: var(--text-secondary);
+
+  background: rgba(250, 204, 21, 0.06);
+
+  border: 1px solid rgba(250, 204, 21, 0.14);
+
+  border-left: 3px solid var(--secondary);
+
+  border-radius: var(--radius-md);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.user-input-note strong {
+  color: var(--secondary);
+
+  font-weight: 800;
+}
+
+.user-input-note p {
+  margin-top: 10px;
+}
+
+.user-input-note a {
+  color: var(--primary-light);
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.user-input-note a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================
+
+   Error Example
+
+========================================================== */
+
+.error-example .user-input-example-header {
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.error-example .user-input-example-header i {
+  color: #ef4444;
+}
+
+/* ==========================================================
+
+   Error Message
+
+========================================================== */
+
+.user-input-error-message {
+  margin-top: 20px;
+
+  padding: 15px 18px;
+
+  overflow-x: auto;
+
+  color: #f87171;
+
+  background: rgba(239, 68, 68, 0.07);
+
+  border: 1px solid rgba(239, 68, 68, 0.18);
+
+  border-left: 3px solid #ef4444;
+
+  border-radius: var(--radius-md);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* ==========================================================
+
+   Responsive
+
+========================================================== */
+
+@media (max-width: 800px) {
+  .user-input-example pre {
+    padding: 18px;
+
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .user-input-description {
+    font-size: 14px;
+  }
+
+  .user-input-inline {
+    font-size: 12px;
+
+    padding: 3px 6px;
+  }
+
+  .user-input-example-header {
+    padding: 9px 15px;
+  }
+
+  .user-input-example pre {
+    padding: 16px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .user-input-note {
+    padding: 15px;
+
+    font-size: 14px;
+  }
+
+  .user-input-error-message {
+    padding: 13px 15px;
+
+    font-size: 12px;
+  }
+}
