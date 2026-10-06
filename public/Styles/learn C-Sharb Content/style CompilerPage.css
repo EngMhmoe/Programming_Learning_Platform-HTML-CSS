@@ -1,0 +1,477 @@
+/* ==========================================================
+   Compiler Page
+   ========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Compiler Description
+   ========================================================== */
+
+.compiler-description {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.compiler-description:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Compiler List
+   ========================================================== */
+
+.compiler-list {
+  margin: 20px 0 0;
+  padding-left: 24px;
+}
+
+.compiler-list li {
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.compiler-list li:last-child {
+  margin-bottom: 0;
+}
+
+.compiler-list strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Compiler Example
+   ========================================================== */
+
+.compiler-example {
+  margin-top: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+   Compiler Example Header
+   ========================================================== */
+
+.compiler-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 10px 18px;
+  background: rgba(249, 115, 22, 0.08);
+  border-bottom: 1px solid var(--border);
+}
+
+.compiler-example-header span {
+  color: var(--primary-light);
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.compiler-example-header i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+/* ==========================================================
+   Compiler Example Code
+   ========================================================== */
+
+.compiler-example pre {
+  width: 100%;
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre;
+}
+
+.compiler-example code {
+  color: inherit;
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   C# Code Highlighting
+   ========================================================== */
+
+.compiler-keyword {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+.compiler-type {
+  color: #f97316;
+  font-weight: 700;
+}
+
+.compiler-class {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.compiler-method {
+  color: #008cff;
+  font-weight: 700;
+}
+
+.compiler-string {
+  color: #a3e635;
+}
+
+.compiler-comment {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.compiler-number {
+  color: #a3e635;
+  font-weight: 700;
+}
+
+/* ==========================================================
+   Compiler Editor
+   ========================================================== */
+
+.compiler-editor {
+  margin-top: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================
+   Compiler Editor Header
+   ========================================================== */
+
+.compiler-editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  min-height: 52px;
+  padding: 10px 18px;
+  background: rgba(249, 115, 22, 0.08);
+  border-bottom: 1px solid var(--border);
+}
+
+.compiler-editor-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-light);
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.compiler-editor-title i {
+  font-size: 18px;
+}
+
+.compiler-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Compiler Input
+   ========================================================== */
+
+.compiler-input {
+  display: block;
+  width: 100%;
+  min-height: 330px;
+  padding: 22px;
+  resize: vertical;
+  overflow: auto;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.2);
+  border: 0;
+  outline: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  line-height: 1.8;
+  tab-size: 4;
+}
+
+.compiler-input::selection {
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.3);
+}
+
+/* ==========================================================
+   Compiler Editor Actions
+   ========================================================== */
+
+.compiler-editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ==========================================================
+   Compiler Buttons
+   ========================================================== */
+
+.compiler-run-button,
+.compiler-clear-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 15px;
+  border-radius: var(--radius-md);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.compiler-run-button {
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.24);
+}
+
+.compiler-run-button:hover {
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.18);
+  border-color: rgba(249, 115, 22, 0.34);
+}
+
+.compiler-clear-button {
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+}
+
+.compiler-clear-button:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.compiler-run-button i,
+.compiler-clear-button i {
+  font-size: 18px;
+}
+
+.compiler-run-button:active,
+.compiler-clear-button:active {
+  transform: translateY(1px);
+}
+
+/* ==========================================================
+   Compiler Output
+   ========================================================== */
+
+.compiler-output {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+/* ==========================================================
+   Compiler Output Header
+   ========================================================== */
+
+.compiler-output-header {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px 18px;
+  background: rgba(249, 115, 22, 0.07);
+  border-bottom: 1px solid var(--border);
+}
+
+.compiler-output-header span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--primary-light);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.compiler-output-header i {
+  font-size: 17px;
+}
+
+/* ==========================================================
+   Compiler Output Content
+   ========================================================== */
+
+.compiler-output pre {
+  width: 100%;
+  min-height: 90px;
+  margin: 0;
+  padding: 18px;
+  overflow-x: auto;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.18);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ==========================================================
+   Compiler Note
+   ========================================================== */
+
+.compiler-note {
+  margin-top: 0;
+  padding: 18px;
+  color: var(--text-secondary);
+  background: rgba(250, 204, 21, 0.06);
+  border: 1px solid rgba(250, 204, 21, 0.14);
+  border-left: 3px solid var(--secondary);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.compiler-note strong {
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Focus
+   ========================================================== */
+
+.compiler-run-button:focus-visible,
+.compiler-clear-button:focus-visible,
+.compiler-input:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .compiler-example pre {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  .compiler-input {
+    min-height: 300px;
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  .compiler-output pre {
+    padding: 18px;
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================
+   Small Screens
+   ========================================================== */
+
+@media (max-width: 560px) {
+  .compiler-description {
+    font-size: 15px;
+  }
+
+  .compiler-list {
+    padding-left: 20px;
+  }
+
+  .compiler-list li {
+    font-size: 15px;
+  }
+
+  .compiler-example-header {
+    padding: 9px 15px;
+  }
+
+  .compiler-example pre {
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .compiler-editor-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  .compiler-editor-actions {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 12px 15px;
+  }
+
+  .compiler-run-button,
+  .compiler-clear-button {
+    width: 100%;
+  }
+
+  .compiler-input {
+    min-height: 280px;
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .compiler-output-header {
+    padding: 9px 15px;
+  }
+
+  .compiler-output pre {
+    min-height: 80px;
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .compiler-note {
+    padding: 16px;
+    font-size: 14px;
+  }
+}

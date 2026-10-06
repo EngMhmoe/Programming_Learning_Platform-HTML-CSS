@@ -1,720 +1,352 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-}
-body {
-  background-color: #29353e;
+/* ==========================================================
+   Properties Page
+   ========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Description
+   ========================================================== */
+
+.properties-description {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
 }
 
-.nav {
-  position: fixed;
-  background-color: #29353e;
+.properties-description:last-child {
+  margin-bottom: 0;
 }
-.nav1 {
+
+/* ==========================================================
+   Inline Code
+   ========================================================== */
+
+.properties-inline {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 3px 8px;
+  margin: 0 3px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(251, 146, 60, 0.12);
+
+  border-radius: 5px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Lists
+   ========================================================== */
+
+.properties-list {
+  margin: 20px 0 0;
+  padding-left: 24px;
+}
+
+.properties-list li {
+  margin-bottom: 12px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.properties-list li:last-child {
+  margin-bottom: 0;
+}
+
+.properties-list strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Code Examples
+   ========================================================== */
+
+.properties-example {
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.properties-example-header {
   display: flex;
-  margin: 8px 35px;
-}
-.nav1 .Home {
-  text-decoration: none;
-  margin-right: 0px;
-}
-.nav1 .Home main {
-  color: rgb(0, 203, 203);
-  text-shadow: 1.5px 1.4px red;
-  font-family: sans-serif;
-  font-size: 33px;
-  font-weight: bold;
-}
-.nav1 input {
-  margin: auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  padding: 5px 20px;
-  border-radius: 30px;
-}
-.nav1 .signup {
-  background-color: rgb(0, 186, 0);
-  color: white;
-  text-decoration: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  padding: 5px 20px;
-  border-radius: 40px;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 48px;
+
+  padding: 10px 18px;
+
+  background: rgba(249, 115, 22, 0.08);
+
+  border-bottom: 1px solid var(--border);
 }
 
-.nav2 {
-  margin-top: 10px;
+.properties-example-header span {
+  color: var(--primary-light);
+
+  font-size: 14px;
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.properties-example-header i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+.properties-example pre {
+  width: 100%;
+
+  margin: 0;
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+
+  white-space: pre;
+}
+
+.properties-example code {
+  color: inherit;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   C# Syntax Highlighting
+   ========================================================== */
+
+.properties-keyword {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+.properties-type {
+  color: #f97316;
+  font-weight: 700;
+}
+
+.properties-class {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.properties-method {
+  color: #008cff;
+  font-weight: 700;
+}
+
+.properties-string {
+  color: #a3e635;
+}
+
+.properties-comment {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ==========================================================
+   Explanation
+   ========================================================== */
+
+.properties-explanation {
+  margin-top: 25px;
+}
+
+.properties-explanation h3 {
+  margin-bottom: 14px;
+
+  color: var(--text);
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.properties-explanation p {
+  margin-bottom: 16px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.properties-explanation p:last-child {
+  margin-bottom: 0;
+}
+
+.properties-explanation strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Output
+   ========================================================== */
+
+.properties-output {
   display: flex;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  width: 150%;
-  height: 35px;
-  background-color: #161b20;
-}
-.nav2 .C {
-  color: white;
-  text-decoration: none;
-  font-size: 30px;
-  margin-left: 75px;
-  padding: 0px 12px;
-  padding-top: 0px;
-  background-color: rgb(0, 163, 0);
-}
-.nav2 .DS {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-left: 90px;
-  margin-right: 90px;
-  padding-top: 5px;
-}
-.nav2 .Alogo {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 5px;
-}
-.nav2 .proSolv {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 5px;
-}
-.nav2 .html {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 8px;
-}
-.nav2 .css {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 8px;
-}
-.nav2 .JS {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 8px;
-}
-.nav2 .Angular {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 8px;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 22px;
+
+  padding: 14px 18px;
+
+  background: rgba(34, 197, 94, 0.06);
+
+  border: 1px solid rgba(34, 197, 94, 0.14);
+
+  border-left: 3px solid #22c55e;
+
+  border-radius: var(--radius-md);
 }
 
-.contentALL {
-  border: 2px solid none;
-  background-color: #29353e;
-  width: 18%;
-  height: 105%;
-  overflow-y: scroll;
-  margin-top: 95px;
-  padding-bottom: 200px;
-}
-.content1 h1 {
-  color: white;
-  font-family: sans-serif;
-  font-size: 30px;
-  padding-top: 15px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-}
-.content1 .ul1 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content1 .ul1 a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content1 .ul1 a li {
-  padding-left: 30px;
-}
-.content1 .ul1 a .lihover:hover {
-  background-color: rgb(75, 75, 75);
+.properties-output-title {
+  color: #22c55e;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
-.content1 .ul2 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content1 .ul2 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content1 .ul2 a li {
-  padding-left: 30px;
-}
-.content1 .ul2 a .lihover:hover {
-  background-color: rgb(75, 75, 75);
-}
-.content1 .ul2 .variables a li {
-  padding-left: 55px;
+.properties-output code {
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  font-weight: 700;
 }
 
-.content1 .ul11 a .liColor {
-  background-color: rgb(0, 163, 0);
-  color: white;
-}
-.content1 .ul10 a .lihover:hover {
-  background-color: rgb(75, 75, 75);
-}
-.content1 .ul4 a .Operators1:hover {
-  background-color: rgb(97, 97, 97);
-}
-.content1 .ul3,
-.ul5,
-.ul7,
-.ul9,
-.ul11 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content1 .ul3 a,
-.ul5 a,
-.ul7 a,
-.ul9 a,
-.ul11 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content1 .ul3 a li,
-.ul5 a li,
-.ul7 a li,
-.ul9 a li,
-.ul11 a li {
-  padding-left: 30px;
-}
-.content1 .ul3 a .lihover:hover,
-.ul5 a li:hover,
-.ul7 a li:hover,
-.ul9 a li:hover,
-.ul11 a li:hover {
-  background-color: rgb(75, 75, 75);
+/* ==========================================================
+   Notes
+   ========================================================== */
+
+.properties-note {
+  margin-top: 22px;
+
+  padding: 18px;
+
+  color: var(--text-secondary);
+
+  background: rgba(250, 204, 21, 0.06);
+
+  border: 1px solid rgba(250, 204, 21, 0.14);
+
+  border-left: 3px solid var(--secondary);
+
+  border-radius: var(--radius-md);
+
+  font-size: 15px;
+  line-height: 1.8;
 }
 
-.content1 .ul4,
-.ul6,
-.ul8,
-.ul10,
-.ul12 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content1 .ul4 a,
-.ul6 a,
-.ul8 a,
-.ul10 a,
-.ul12 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content1 .ul4 a li,
-.ul6 a li,
-.ul8 a li,
-.ul10 a li,
-.ul12 a li {
-  padding-left: 30px;
-}
-.content1.ul8 a li:hover,
-.ul12 a li:hover {
-  background-color: rgb(75, 75, 75);
-}
-.content1 .ul6 .Strings,
-.ul8 .If,
-.ul10 .for,
-.ul12 .Arrays {
-  background-color: #29353e;
-}
-.content1 .ul4 .Operators a li,
-.ul6 .Strings a li,
-.ul8 .If a li,
-.ul10 .for a li,
-.ul12 .Arrays a li {
-  padding-left: 55px;
+.properties-note strong {
+  color: var(--secondary);
+  font-weight: 800;
 }
 
-.content2 .ul3 a .liColor {
-  background-color: rgb(0, 163, 0);
-  color: white;
+/* ==========================================================
+   Exercise Code
+   ========================================================== */
+
+.page-exercise-code {
+  margin-top: 22px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
 }
 
-.content2 h1 {
-  color: white;
-  font-family: sans-serif;
-  font-size: 30px;
-  padding-top: 50px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-}
-.content2 .ul1,
-.ul3 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content2 .ul1 a,
-.ul3 a {
-  text-decoration: none;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content2 .ul1 a li,
-.ul3 a li {
-  padding-left: 30px;
-  font-size: 20px;
-  color: white;
-}
-.content2 .ul1 a li:hover,
-.ul3 a li:hover {
-  background-color: rgb(75, 75, 75);
-}
-.content2 .Ul3 {
-  text-transform: capitalize;
-}
-.content2 .Ul3 a {
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  margin-left: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content2 .Ul3 a li {
-  list-style-type: none;
-  padding-left: 30px;
+.page-exercise-code pre {
+  width: 100%;
+
+  margin: 0;
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
-.content2 .ul2,
-.ul4 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content2 .ul2 a,
-.ul4 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content2 .ul2 a li,
-.ul4 a li {
-  padding-left: 30px;
-}
-.content2 .ul2 a li:hover,
-.ul4 a li:hover {
-  background-color: rgb(75, 75, 75);
-}
-.content2 .ul2 .CalANobj,
-.ul4 .interface {
-  background-color: #29353e;
-}
-.content2 .ul2 .CalANobj a li,
-.ul4 .interface a li {
-  padding-left: 55px;
+.page-exercise-code code {
+  font-family: "JetBrains Mono", monospace;
 }
 
-.content3 h1 {
-  color: white;
-  font-family: sans-serif;
-  font-size: 30px;
-  padding-top: 50px;
-  padding-left: 10px;
-  margin-bottom: 10px;
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .properties-example pre,
+  .page-exercise-code pre {
+    padding: 18px;
+    font-size: 14px;
+  }
 }
 
-.content3 .ul1,
-.ul3 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content3 .ul1 a,
-.ul3 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content3 .ul1 a li,
-.ul3 a li {
-  padding-left: 30px;
-}
+@media (max-width: 560px) {
+  .properties-example-header {
+    padding: 9px 15px;
+  }
 
-.content3 .ul2 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content3 .ul2 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content3 .ul2 a li {
-  padding-left: 30px;
-}
-.content3 .ul2 a li:hover {
-  background-color: rgb(75, 75, 75);
-}
-.content3 .ul2 .Methods {
-  background-color: #29353e;
-}
-.content3 .ul2 .Methods a li {
-  padding-left: 55px;
-}
+  .properties-example pre,
+  .page-exercise-code pre {
+    padding: 16px;
 
-.content4 h1 {
-  color: white;
-  font-family: sans-serif;
-  font-size: 30px;
-  padding-top: 50px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-}
+    font-size: 13px;
+    line-height: 1.7;
+  }
 
-.content4 .ul1 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content4 .ul1 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content4 .ul1 a li {
-  padding-left: 30px;
-}
-.content4 .ul1 a li:hover {
-  background-color: rgb(75, 75, 75);
-}
+  .properties-inline {
+    font-size: 13px;
+  }
 
-.content5 h1 {
-  color: white;
-  font-family: sans-serif;
-  font-size: 30px;
-  padding-top: 50px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-}
-
-.content5 .ul1 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content5 .ul1 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content5 .ul1 a li {
-  padding-left: 30px;
-}
-.content5 .ul1 a li:hover {
-  background-color: rgb(75, 75, 75);
-}
-
-.contentBody {
-  clear: both;
-  padding: 0px 80px;
-  padding-top: 170px;
-  margin-left: 170px;
-}
-
-.contentBody .h1TypeCasting {
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 50px;
-  text-transform: capitalize;
-  color: gold;
-  text-shadow: 3px 3px red;
-  margin-left: 70px;
-}
-.contentBody .link1 {
-  margin-top: 25px;
-  margin-left: 75px;
-  margin-right: 0px;
-}
-.contentBody .link1 .btn1 {
-  margin-right: 75%;
-  background-color: rgb(0, 163, 0);
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-transform: capitalize;
-  padding: 10px 15px;
-  border: 1px solid rgb(0, 163, 0);
-  border-radius: 6px;
-  cursor: pointer;
-}
-.contentBody .link1 .btn2 {
-  background-color: rgb(0, 163, 0);
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-transform: capitalize;
-  padding: 10px 15px;
-  border: 1px solid rgb(0, 163, 0);
-  border-radius: 6px;
-  cursor: pointer;
-}
-.contentBody .h1 {
-  color: white;
-  margin-left: 70px;
-  font-size: 45px;
-  margin-top: 25px;
-}
-.contentBody .p1,
-.p2,
-.p3,
-.p4,
-.p5,
-.p6,
-.p7,
-.p8,
-.p9,
-.p10,
-.p11,
-.p12,
-.p13,
-.p14,
-.p15,
-.p16,
-.p17 {
-  color: white;
-  margin-left: 70px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 22px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.contentBody .examplesCCode {
-  background-color: #3d4d59;
-  margin-top: 35px;
-  margin-left: 40px;
-  margin-bottom: 20px;
-  padding: 20px 15px;
-  padding-bottom: 25px;
-  border-radius: 6px;
-}
-.contentBody .examplesCCode h1 {
-  color: white;
-  font-family: "Times New Roman", Times, serif;
-  text-transform: capitalize;
-  font-size: 35px;
-  margin-bottom: 20px;
-}
-.contentBody .examplesCCode .WRiteCode {
-  background-color: #161f25;
-  padding: 15px;
-  border-left: 4px solid red;
-}
-.contentBody ul {
-  color: white;
-  font-size: 21px;
-  margin-left: 130px;
-  line-height: 30px;
-}
-
-.contentBody .P2 {
-  color: black;
-  width: 106.7%;
-  background-color: rgb(227, 227, 165);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 21px;
-  margin-top: 25px;
-  padding: 30px;
-  padding-left: 70px;
-  margin-bottom: 30px;
-}
-
-.contentBody .clearBoth1 {
-  height: 250px;
-  clear: both;
-  display: flex;
-  text-align: center;
-  color: white;
-  margin-left: 70px;
-  margin-right: 30px;
-  background-color: rgb(0, 183, 255);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 15px;
-}
-.contentBody .clearBoth1 .class1 {
-  width: 50%;
-  float: left;
-  background-color: white;
-  color: black;
-  margin-right: 15px;
-  padding: 15px 0px;
-  line-height: 45px;
-}
-.contentBody .clearBoth1 .objects1 {
-  width: 50%;
-  float: right;
-  background-color: white;
-  color: black;
-  margin-left: 15px;
-  padding: 15px 0px;
-  line-height: 45px;
-}
-.contentBody .clearBoth1 h1 {
-  font-size: 35px;
-  color: rgb(255, 123, 0);
-}
-.contentBody .clearBoth1 p {
-  font-size: 22px;
-}
-
-.contentBody .p6 a {
-  color: white;
-}
-
-.contentBody .P2 a {
-  color: black;
-}
-
-.contentBody .p6 a,
-.P2 a:hover {
-  color: green;
-}
-
-.contentBody table {
-  width: 90%;
-  color: white;
-  font-size: 22px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  margin-top: 25px;
-  margin-left: 65px;
-  padding: 10px 0px;
-  padding-bottom: 0px;
-  border: 2px solid #39464d;
-}
-
-.contentBody .ExampleExercisesC {
-  width: 92%;
-  background-color: rgb(19, 0, 49);
-  color: white;
-  margin: 25px 70px;
-  padding: 35px 25px;
-  border-radius: 15px;
-}
-.contentBody .ExampleExercisesC h1 {
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  text-transform: capitalize;
-  font-size: 50px;
-}
-.contentBody .ExampleExercisesC p {
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 25px;
-}
-.contentBody .ExampleExercisesC a button {
-  margin-left: 39%;
-  background-color: rgb(0, 163, 0);
-  color: white;
-  text-decoration: none;
-  text-transform: capitalize;
-  font-size: 25px;
-  font-weight: bold;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-transform: capitalize;
-  padding: 17px 25px;
-  margin-top: 80px;
-  border: 1px solid rgb(0, 163, 0);
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  background-color: black;
-  color: white;
-  padding: 30px 0px;
-}
-footer main {
-  color: rgb(0, 203, 203);
-  text-shadow: 1.5px 1.4px red;
-  font-family: sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-footer .Tutorials {
-  margin-top: 80px;
-}
-footer .Tutorials h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-transform: capitalize;
-  font-size: 50px;
-  margin-bottom: 20px;
-}
-footer .Tutorials .LinkS {
-  line-height: 35px;
-}
-footer .Tutorials .LinkS a {
-  text-decoration: none;
-  color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 25px;
-  cursor: pointer;
-}
-footer .Tutorials .LinkS a:hover {
-  color: gold;
-}
-
-footer .Links a {
-  margin-left: 45px;
-  margin-right: 45px;
-  font-size: 60px;
-}
-
-footer p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 32px;
-  padding: 0px 125px;
-  margin-top: 60px;
-}
-footer #start {
-  width: 93%;
-  text-align: end;
-  scrollbar-width: 10px;
-  scroll-behavior: smooth;
-  font-size: 50px;
-  cursor: pointer;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  display: none;
+  .properties-list {
+    padding-left: 20px;
+  }
 }

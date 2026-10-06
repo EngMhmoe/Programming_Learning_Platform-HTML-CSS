@@ -1,0 +1,360 @@
+/* ==========================================================
+   Interface Page
+   ========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Description
+   ========================================================== */
+
+.interface-description {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.interface-description:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Inline Code
+   ========================================================== */
+
+.interface-inline {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 3px 8px;
+  margin: 0 3px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(251, 146, 60, 0.12);
+
+  border-radius: 5px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Lists
+   ========================================================== */
+
+.interface-list {
+  margin: 20px 0 0;
+  padding-left: 24px;
+}
+
+.interface-list li {
+  margin-bottom: 12px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.interface-list li:last-child {
+  margin-bottom: 0;
+}
+
+.interface-list strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Code Examples
+   ========================================================== */
+
+.interface-example {
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.interface-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 48px;
+
+  padding: 10px 18px;
+
+  background: rgba(249, 115, 22, 0.08);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.interface-example-header span {
+  color: var(--primary-light);
+
+  font-size: 14px;
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.interface-example-header i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+.interface-example pre {
+  width: 100%;
+
+  margin: 0;
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+
+  white-space: pre;
+}
+
+.interface-example code {
+  color: inherit;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   C# Syntax Highlighting
+   ========================================================== */
+
+.interface-keyword {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+.interface-type {
+  color: #f97316;
+  font-weight: 700;
+}
+
+.interface-class {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.interface-method {
+  color: #008cff;
+  font-weight: 700;
+}
+
+.interface-string {
+  color: #a3e635;
+}
+
+.interface-comment {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ==========================================================
+   Explanation
+   ========================================================== */
+
+.interface-explanation {
+  margin-top: 25px;
+}
+
+.interface-explanation h3 {
+  margin-bottom: 14px;
+
+  color: var(--text);
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.interface-explanation p {
+  margin-bottom: 16px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.interface-explanation p:last-child {
+  margin-bottom: 0;
+}
+
+.interface-explanation strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Notes
+   ========================================================== */
+
+.interface-note {
+  margin-top: 22px;
+
+  padding: 18px;
+
+  color: var(--text-secondary);
+
+  background: rgba(250, 204, 21, 0.06);
+
+  border: 1px solid rgba(250, 204, 21, 0.14);
+
+  border-left: 3px solid var(--secondary);
+
+  border-radius: var(--radius-md);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.interface-note strong {
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Compiler Error
+   ========================================================== */
+
+.interface-error {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-top: 22px;
+
+  padding: 18px;
+
+  background: rgba(239, 68, 68, 0.06);
+
+  border: 1px solid rgba(239, 68, 68, 0.14);
+
+  border-left: 3px solid #ef4444;
+
+  border-radius: var(--radius-md);
+}
+
+.interface-error-title {
+  color: #ef4444;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+}
+
+.interface-error code {
+  padding: 12px 14px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  color: var(--text);
+
+  border-radius: 6px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+}
+
+/* ==========================================================
+   Exercise Code
+   ========================================================== */
+
+.page-exercise-code {
+  margin-top: 22px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+}
+
+.page-exercise-code pre {
+  width: 100%;
+
+  margin: 0;
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.page-exercise-code code {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .interface-example pre,
+  .page-exercise-code pre {
+    padding: 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .interface-example-header {
+    padding: 9px 15px;
+  }
+
+  .interface-example pre,
+  .page-exercise-code pre {
+    padding: 16px;
+
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .interface-inline {
+    font-size: 13px;
+  }
+
+  .interface-list {
+    padding-left: 20px;
+  }
+}

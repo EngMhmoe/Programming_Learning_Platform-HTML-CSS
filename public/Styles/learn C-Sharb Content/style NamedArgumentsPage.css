@@ -1,663 +1,367 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-}
-body {
-  background-color: #29353e;
+/* ==========================================================
+   Named Arguments Page
+   ========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Start Description
+   ========================================================== */
+
+.named-arguments-description {
+  color: var(--text-secondary);
+
+  font-size: 16px;
+
+  line-height: 1.8;
 }
 
-.nav {
-  position: fixed;
-  background-color: #29353e;
+/* ==========================================================
+   Start Inline Code
+   ========================================================== */
+
+.named-arguments-inline {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 3px 8px;
+
+  margin: 0 3px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(251, 146, 60, 0.12);
+
+  border-radius: 5px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 14px;
+
+  font-weight: 800;
 }
-.nav1 {
+
+/* ==========================================================
+   Start Example
+   ========================================================== */
+
+.named-arguments-example {
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.named-arguments-example-header {
   display: flex;
-  margin: 8px 35px;
-}
-.nav1 .Home {
-  text-decoration: none;
-  margin-right: 0px;
-}
-.nav1 .Home main {
-  color: rgb(0, 203, 203);
-  text-shadow: 1.5px 1.4px red;
-  font-family: sans-serif;
-  font-size: 33px;
-  font-weight: bold;
-}
-.nav1 input {
-  margin: auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  padding: 5px 20px;
-  border-radius: 30px;
-}
-.nav1 .signup {
-  background-color: rgb(0, 186, 0);
-  color: white;
-  text-decoration: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  padding: 5px 20px;
-  border-radius: 40px;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 48px;
+
+  padding: 10px 18px;
+
+  background: rgba(249, 115, 22, 0.08);
+
+  border-bottom: 1px solid var(--border);
 }
 
-.nav2 {
+.named-arguments-example-header span {
+  color: var(--primary-light);
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.named-arguments-example-header i {
+  color: var(--primary-light);
+
+  font-size: 18px;
+}
+
+.named-arguments-example pre {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  white-space: pre;
+}
+
+.named-arguments-example code {
+  color: inherit;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: inherit;
+}
+
+/* ==========================================================
+   Start Code Syntax
+   ========================================================== */
+
+.named-arguments-keyword {
+  color: var(--primary-light);
+
+  font-weight: 800;
+}
+
+.named-arguments-operator {
+  color: var(--secondary);
+
+  font-weight: 700;
+}
+
+.named-arguments-number {
+  color: #f97316;
+
+  font-weight: 700;
+}
+
+.named-arguments-semicolon {
+  color: #22c55e;
+
+  font-weight: 700;
+}
+
+.named-arguments-comment {
+  color: var(--text-muted);
+
+  font-style: italic;
+}
+
+.named-arguments-parentheses {
+  color: #a3e635;
+
+  font-weight: 700;
+}
+
+.named-arguments-statement {
+  color: var(--text);
+}
+
+.named-arguments-brace {
+  color: #a3e635;
+
+  font-weight: 700;
+}
+
+.named-arguments-class {
+  color: #fff;
+
+  font-weight: 600;
+}
+
+.named-arguments-dot {
+  color: #a3e635;
+
+  font-weight: 700;
+}
+
+.named-arguments-method {
+  color: #008cff;
+
+  font-weight: 700;
+}
+
+.named-arguments-string {
+  color: #a3e635;
+}
+
+.named-arguments-type {
+  color: var(--primary-light);
+
+  font-weight: 800;
+}
+
+.named-arguments-parameter {
+  color: var(--text);
+
+  font-weight: 600;
+}
+
+/* ==========================================================
+   Start Explanation
+   ========================================================== */
+
+.named-arguments-explanation {
   margin-top: 10px;
-  display: flex;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  width: 150%;
-  height: 35px;
-  background-color: #161b20;
-}
-.nav2 .C {
-  color: white;
-  text-decoration: none;
-  font-size: 30px;
-  margin-left: 75px;
-  padding: 0px 12px;
-  padding-top: 0px;
-  background-color: rgb(0, 163, 0);
-}
-.nav2 .DS {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-left: 90px;
-  margin-right: 90px;
-  padding-top: 5px;
-}
-.nav2 .Alogo {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 5px;
-}
-.nav2 .proSolv {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 5px;
-}
-.nav2 .html {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 8px;
-}
-.nav2 .css {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 8px;
-}
-.nav2 .JS {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 8px;
-}
-.nav2 .Angular {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  margin-right: 90px;
-  padding-top: 8px;
 }
 
-.contentALL {
-  border: 2px solid none;
-  background-color: #29353e;
-  width: 18%;
-  height: 105%;
-  overflow-y: scroll;
-  margin-top: 95px;
-  padding-bottom: 200px;
-}
-.content1 h1 {
-  color: white;
-  font-family: sans-serif;
-  font-size: 30px;
-  padding-top: 15px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-}
-.content1 .ul1 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content1 .ul1 a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content1 .ul1 a li {
-  padding-left: 30px;
-}
-.content1 .ul1 a .lihover:hover {
-  background-color: rgb(75, 75, 75);
+.named-arguments-explanation p {
+  margin-bottom: 16px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+
+  line-height: 1.8;
 }
 
-.content1 .ul2 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content1 .ul2 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content1 .ul2 a li {
-  padding-left: 30px;
-}
-.content1 .ul2 a .lihover:hover {
-  background-color: rgb(75, 75, 75);
-}
-.content1 .ul2 .variables a li {
-  padding-left: 55px;
+.named-arguments-explanation p:last-child {
+  margin-bottom: 0;
 }
 
-.content1 .ul11 a .liColor {
-  background-color: rgb(0, 163, 0);
-  color: white;
-}
-.content1 .ul10 a .lihover:hover {
-  background-color: rgb(75, 75, 75);
-}
-.content1 .ul4 a .Operators1:hover {
-  background-color: rgb(97, 97, 97);
-}
-.content1 .ul3,
-.ul5,
-.ul7,
-.ul9,
-.ul11 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content1 .ul3 a,
-.ul5 a,
-.ul7 a,
-.ul9 a,
-.ul11 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content1 .ul3 a li,
-.ul5 a li,
-.ul7 a li,
-.ul9 a li,
-.ul11 a li {
-  padding-left: 30px;
-}
-.content1 .ul3 a .lihover:hover,
-.ul5 a li:hover,
-.ul7 a li:hover,
-.ul9 a li:hover,
-.ul11 a li:hover {
-  background-color: rgb(75, 75, 75);
+.named-arguments-explanation strong {
+  color: var(--text);
+
+  font-weight: 800;
 }
 
-.content1 .ul4,
-.ul6,
-.ul8,
-.ul10,
-.ul12 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content1 .ul4 a,
-.ul6 a,
-.ul8 a,
-.ul10 a,
-.ul12 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content1 .ul4 a li,
-.ul6 a li,
-.ul8 a li,
-.ul10 a li,
-.ul12 a li {
-  padding-left: 30px;
-}
-.content1.ul8 a li:hover,
-.ul12 a li:hover {
-  background-color: rgb(75, 75, 75);
-}
-.content1 .ul6 .Strings,
-.ul8 .If,
-.ul10 .for,
-.ul12 .Arrays {
-  background-color: #29353e;
-}
-.content1 .ul4 .Operators a li,
-.ul6 .Strings a li,
-.ul8 .If a li,
-.ul10 .for a li,
-.ul12 .Arrays a li {
-  padding-left: 55px;
+/* ==========================================================
+   Start Note
+   ========================================================== */
+
+.named-arguments-note {
+  margin-top: 22px;
+
+  padding: 18px;
+
+  color: var(--text-secondary);
+
+  background: rgba(250, 204, 21, 0.06);
+
+  border: 1px solid rgba(250, 204, 21, 0.14);
+
+  border-left: 3px solid var(--secondary);
+
+  border-radius: var(--radius-md);
+
+  font-size: 15px;
+
+  line-height: 1.8;
 }
 
-.content2 h1 {
-  color: white;
-  font-family: sans-serif;
-  font-size: 30px;
-  padding-top: 50px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-}
-.content2 .ul1,
-.ul3 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content2 .ul1 a,
-.ul3 a {
-  text-decoration: none;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content2 .ul1 a li,
-.ul3 a li {
-  padding-left: 30px;
-  font-size: 20px;
-  color: white;
-}
-.content2 .ul1 a li:hover,
-.ul3 a li:hover {
-  background-color: rgb(75, 75, 75);
-}
-.content2 .Ul3 {
-  text-transform: capitalize;
-}
-.content2 .Ul3 a {
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  margin-left: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content2 .Ul3 a li {
-  list-style-type: none;
-  padding-left: 30px;
+.named-arguments-note strong {
+  color: var(--secondary);
+
+  font-weight: 800;
 }
 
-.content2 .ul2,
-.ul4 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content2 .ul2 a,
-.ul4 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content2 .ul2 a li,
-.ul4 a li {
-  padding-left: 30px;
-}
-.content2 .ul2 a li:hover,
-.ul4 a li:hover {
-  background-color: rgb(75, 75, 75);
-}
-.content2 .ul2 .CalANobj,
-.ul4 .interface {
-  background-color: #29353e;
-}
-.content2 .ul2 .CalANobj a li,
-.ul4 .interface a li {
-  padding-left: 55px;
+/* ==========================================================
+   Start Exercise Code
+   ========================================================== */
+
+.page-exercise-code {
+  margin-top: 22px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
 }
 
-.content3 .ul2 {
-  background-color: rgb(97, 97, 97);
-}
-.content3 .ul2 .Methods li {
-  background-color: rgb(75, 75, 75);
-}
-.content3 .ul2 a .liColor {
-  background-color: rgb(0, 163, 0);
-  color: white;
+.page-exercise-code pre {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 16px;
+
+  line-height: 1.8;
 }
 
-.content3 h1 {
-  color: white;
-  font-family: sans-serif;
-  font-size: 30px;
-  padding-top: 50px;
-  padding-left: 10px;
-  margin-bottom: 10px;
+.page-exercise-code code {
+  font-family: "JetBrains Mono", monospace;
 }
 
-.content3 .ul1,
-.ul3 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content3 .ul1 a,
-.ul3 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content3 .ul1 a li,
-.ul3 a li {
-  padding-left: 30px;
-}
-.content3 .ul1 a li:hover,
-.ul3 a li:hover {
-  background-color: rgb(75, 75, 75);
+/* ==========================================================
+   Start Exercise Blank
+   ========================================================== */
+
+.named-arguments-blank {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 35px;
+
+  padding: 1px 8px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px dashed var(--primary);
+
+  border-radius: 5px;
+
+  font-weight: 900;
 }
 
-.content3 .ul2 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content3 .ul2 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content3 .ul2 a li {
-  padding-left: 30px;
-}
-.content3 .ul2 .Methods {
-  background-color: #29353e;
-}
-.content3 .ul2 .Methods a li {
-  padding-left: 55px;
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .named-arguments-example pre,
+  .page-exercise-code pre {
+    padding: 18px;
+
+    font-size: 14px;
+  }
 }
 
-.content4 h1 {
-  color: white;
-  font-family: sans-serif;
-  font-size: 30px;
-  padding-top: 50px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-}
+@media (max-width: 560px) {
+  .named-arguments-example-header {
+    padding: 9px 15px;
+  }
 
-.content4 .ul1 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content4 .ul1 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content4 .ul1 a li {
-  padding-left: 30px;
-}
-.content4 .ul1 a li:hover {
-  background-color: rgb(75, 75, 75);
-}
+  .named-arguments-example pre,
+  .page-exercise-code pre {
+    padding: 16px;
 
-.content5 h1 {
-  color: white;
-  font-family: sans-serif;
-  font-size: 30px;
-  padding-top: 50px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-}
+    font-size: 13px;
 
-.content5 .ul1 {
-  line-height: 30px;
-  text-transform: capitalize;
-}
-.content5 .ul1 a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.content5 .ul1 a li {
-  padding-left: 30px;
-}
-.content5 .ul1 a li:hover {
-  background-color: rgb(75, 75, 75);
-}
+    line-height: 1.7;
+  }
 
-.contentBody {
-  clear: both;
-  padding: 0px 80px;
-  padding-top: 170px;
-  margin-left: 170px;
-}
-
-.contentBody .h1TypeCasting {
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 50px;
-  text-transform: capitalize;
-  color: gold;
-  text-shadow: 3px 3px red;
-  margin-left: 70px;
-}
-.contentBody .link1 {
-  margin-top: 25px;
-  margin-left: 75px;
-  margin-right: 0px;
-}
-.contentBody .link1 .btn1 {
-  margin-right: 75%;
-  background-color: rgb(0, 163, 0);
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-transform: capitalize;
-  padding: 10px 15px;
-  border: 1px solid rgb(0, 163, 0);
-  border-radius: 6px;
-  cursor: pointer;
-}
-.contentBody .link1 .btn2 {
-  background-color: rgb(0, 163, 0);
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-transform: capitalize;
-  padding: 10px 15px;
-  border: 1px solid rgb(0, 163, 0);
-  border-radius: 6px;
-  cursor: pointer;
-}
-.contentBody .h1 {
-  color: white;
-  margin-left: 70px;
-  font-size: 45px;
-  margin-top: 25px;
-}
-.contentBody .p1,
-.p2,
-.p3,
-.p4,
-.p5,
-.p6,
-.p7,
-.p8,
-.p9,
-.p10,
-.p11,
-.p12,
-.p13,
-.p14,
-.p15,
-.p16,
-.p17 {
-  color: white;
-  margin-left: 70px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 22px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.contentBody .examplesCCode {
-  background-color: #3d4d59;
-  margin-top: 35px;
-  margin-left: 40px;
-  margin-bottom: 20px;
-  padding: 20px 15px;
-  padding-bottom: 25px;
-  border-radius: 6px;
-}
-.contentBody .examplesCCode h1 {
-  color: white;
-  font-family: "Times New Roman", Times, serif;
-  text-transform: capitalize;
-  font-size: 35px;
-  margin-bottom: 20px;
-}
-.contentBody .examplesCCode .WRiteCode {
-  background-color: #161f25;
-  padding: 15px;
-  border-left: 4px solid red;
-}
-.contentBody ul {
-  color: white;
-  font-size: 21px;
-  margin-left: 130px;
-  line-height: 30px;
-}
-
-.contentBody .P2 {
-  color: black;
-  width: 106.7%;
-  background-color: rgb(227, 227, 165);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 21px;
-  margin-top: 25px;
-  padding: 30px;
-  padding-left: 70px;
-  margin-bottom: 30px;
-}
-
-.contentBody .ExampleExercisesC {
-  width: 92%;
-  background-color: rgb(19, 0, 49);
-  color: white;
-  margin: 25px 70px;
-  padding: 35px 25px;
-  border-radius: 15px;
-}
-.contentBody .ExampleExercisesC h1 {
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  text-transform: capitalize;
-  font-size: 50px;
-}
-.contentBody .ExampleExercisesC p {
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 25px;
-}
-.contentBody .ExampleExercisesC a button {
-  margin-left: 39%;
-  background-color: rgb(0, 163, 0);
-  color: white;
-  text-decoration: none;
-  text-transform: capitalize;
-  font-size: 25px;
-  font-weight: bold;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-transform: capitalize;
-  padding: 17px 25px;
-  margin-top: 80px;
-  border: 1px solid rgb(0, 163, 0);
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  background-color: black;
-  color: white;
-  padding: 30px 0px;
-}
-footer main {
-  color: rgb(0, 203, 203);
-  text-shadow: 1.5px 1.4px red;
-  font-family: sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-footer .Tutorials {
-  margin-top: 80px;
-}
-footer .Tutorials h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-transform: capitalize;
-  font-size: 50px;
-  margin-bottom: 20px;
-}
-footer .Tutorials .LinkS {
-  line-height: 35px;
-}
-footer .Tutorials .LinkS a {
-  text-decoration: none;
-  color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 25px;
-  cursor: pointer;
-}
-footer .Tutorials .LinkS a:hover {
-  color: gold;
-}
-
-footer .Links a {
-  margin-left: 45px;
-  margin-right: 45px;
-  font-size: 60px;
-}
-
-footer p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 32px;
-  padding: 0px 125px;
-  margin-top: 60px;
-}
-footer #start {
-  width: 93%;
-  text-align: end;
-  scrollbar-width: 10px;
-  scroll-behavior: smooth;
-  font-size: 50px;
-  cursor: pointer;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  display: none;
+  .named-arguments-inline {
+    font-size: 13px;
+  }
 }

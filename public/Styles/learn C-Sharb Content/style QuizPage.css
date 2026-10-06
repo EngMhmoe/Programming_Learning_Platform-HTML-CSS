@@ -1,0 +1,437 @@
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Quiz Description
+========================================================== */
+
+.quiz-description {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+/* ==========================================================
+   Quiz Score Card
+========================================================== */
+
+.quiz-score-card {
+  margin-bottom: 24px;
+}
+
+.quiz-score-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.quiz-score-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.quiz-score-content strong {
+  display: block;
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.quiz-score-percent {
+  color: var(--primary-light);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.quiz-score-track {
+  width: 100%;
+  height: 8px;
+  margin-top: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+}
+
+.quiz-score-bar {
+  width: 0;
+  height: 100%;
+  background: var(--primary-light);
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+/* ==========================================================
+   Exercise Preview
+========================================================== */
+
+.exercise-preview {
+  margin-top: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.exercise-preview.hidden {
+  display: none;
+}
+
+.exercise-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 70px;
+  padding: 14px 18px;
+  background: rgba(249, 115, 22, 0.06);
+  border-bottom: 1px solid var(--border);
+}
+
+.exercise-preview-header > div {
+  min-width: 0;
+}
+
+.section-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.exercise-preview-header h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.exercise-number {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* ==========================================================
+   Exercise Code
+========================================================== */
+
+.page-exercise-code {
+  margin: 20px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.page-exercise-code pre {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  line-height: 1.8;
+  white-space: pre;
+}
+
+.page-exercise-code code {
+  color: inherit;
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+.quiz-keyword {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+.quiz-number {
+  color: #a3e635;
+  font-weight: 700;
+}
+
+.quiz-string {
+  color: #a3e635;
+}
+
+.quiz-method {
+  color: #008cff;
+  font-weight: 700;
+}
+
+/* ==========================================================
+   Exercise Question
+========================================================== */
+
+.exercise-question {
+  margin: 0;
+  padding: 0 20px 20px;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.exercise-question strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Exercise Options
+========================================================== */
+
+.exercise-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0 20px 20px;
+}
+
+.exercise-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 10px 15px;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: var(--radius-md);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.exercise-option:hover:not(:disabled) {
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.14);
+  border-color: rgba(249, 115, 22, 0.3);
+  transform: translateY(-1px);
+}
+
+.exercise-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.exercise-option.correct {
+  color: #a3e635;
+  background: rgba(163, 230, 53, 0.08);
+  border-color: rgba(163, 230, 53, 0.35);
+}
+
+.exercise-option.wrong {
+  color: #fb7185;
+  background: rgba(244, 63, 94, 0.08);
+  border-color: rgba(244, 63, 94, 0.35);
+}
+
+/* ==========================================================
+   Exercise Result
+========================================================== */
+
+.exercise-result {
+  display: none;
+  margin: 0 20px 20px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.exercise-result.correct-result {
+  display: block;
+  color: #a3e635;
+  background: rgba(163, 230, 53, 0.07);
+  border: 1px solid rgba(163, 230, 53, 0.16);
+  border-left: 3px solid #a3e635;
+}
+
+.exercise-result.wrong-result {
+  display: block;
+  color: #fb7185;
+  background: rgba(244, 63, 94, 0.07);
+  border: 1px solid rgba(244, 63, 94, 0.16);
+  border-left: 3px solid #fb7185;
+}
+
+/* ==========================================================
+   Answered Question
+========================================================== */
+
+.exercise-preview.answered {
+  border-color: rgba(249, 115, 22, 0.2);
+}
+
+/* ==========================================================
+   Final Quiz Result
+========================================================== */
+
+.quiz-final-result {
+  display: none;
+  margin-top: 30px;
+  padding: 30px 20px;
+  text-align: center;
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: var(--radius-lg);
+}
+
+.quiz-final-result.show {
+  display: block;
+}
+
+.quiz-final-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 15px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 50%;
+}
+
+.quiz-final-icon i {
+  font-size: 30px;
+}
+
+.quiz-final-result > span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary-light);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.quiz-final-result h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.quiz-final-result p {
+  margin: 10px 0 0;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   Focus
+========================================================== */
+
+.exercise-option:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 800px) {
+  .page-exercise-code {
+    margin: 18px;
+  }
+
+  .page-exercise-code pre {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  .exercise-question {
+    padding: 0 18px 18px;
+  }
+
+  .exercise-options {
+    padding: 0 18px 18px;
+  }
+
+  .exercise-result {
+    margin: 0 18px 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .quiz-score-content strong {
+    font-size: 20px;
+  }
+
+  .quiz-score-percent {
+    font-size: 18px;
+  }
+
+  .exercise-preview-header {
+    align-items: flex-start;
+    padding: 14px 15px;
+  }
+
+  .exercise-preview-header h3 {
+    font-size: 16px;
+  }
+
+  .page-exercise-code {
+    margin: 16px;
+  }
+
+  .page-exercise-code pre {
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .exercise-question {
+    padding: 0 16px 16px;
+    font-size: 15px;
+  }
+
+  .exercise-options {
+    grid-template-columns: 1fr;
+    padding: 0 16px 16px;
+  }
+
+  .exercise-option {
+    width: 100%;
+  }
+
+  .exercise-result {
+    margin: 0 16px 16px;
+    font-size: 14px;
+  }
+
+  .quiz-final-result {
+    padding: 25px 16px;
+  }
+
+  .quiz-final-result h3 {
+    font-size: 28px;
+  }
+}

@@ -2,914 +2,2138 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn C-sharp of IF" /> <!-- project description -->
-    <meta name="author" content="mohamed Alwani" /> <!-- author name -->
-    <meta name="keyWords" content="C,C#" /> <!-- keyWords project description  -->
 
-    <title>Learn C-sharp of IF</title> <!-- project name -->
-    <link rel="icon"
-        href="C:\Users\DELL\Desktop\Full Stack  Developer\Front_end\Project3 html , css , js\photos\photo6.jpg">
-    <!-- icon -->
+    <meta name="description" content="Learn C# If statements with DevPath.">
 
-    <!-- Link page learn C#-->
-    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style IFPage.css" />
+    <meta name="author" content="Mohamed Alwani">
 
-    <!-- Link boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="keywords" content="C#, If, If Statement, Conditions, Conditional Statements, C Sharp">
+
+    <title>C# If Statements | DevPath</title>
+
+    <!-- ==========================================================
+         Favicon
+         ========================================================== -->
+
+    <link rel="icon" href="../../photos/photo6.jpg">
+
+    <!-- ==========================================================
+         Google Fonts
+         ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================================
+         Boxicons
+         ========================================================== -->
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- ==========================================================
+        Learning Page CSS
+    =========================================================== -->
+
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+    <!-- ==========================================================
+         IF Page Styles
+         ========================================================== -->
+
+    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style IFPage.css">
+
 </head>
 
+
 <body>
-    <div class="nav">
-        <nav class="nav1">
-            <a href="Home.html" class="Home">
-                <main>Taalem</main>
+
+
+    <!-- ==========================================================
+        Start Header
+    =========================================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+
+            <!-- Brand -->
+
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+
+                    <i class="bx bx-code-alt"></i>
+
+                </span>
+
+
+                <span class="brand-text">
+
+                    Dev<span>Path</span>
+
+                </span>
+
             </a>
 
-            <a href="Login.html" class="signup" style="margin-left: 85%;">sign up</a>
+
+            <!-- Navigation -->
+
+            <ul class="nav-links">
+
+
+                <!-- Home -->
+
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <!-- Programming Basics -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link active">
+
+                        Programming Basics
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="../../Pages/BasicsCsharb.html" class="current">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="../../Pages/DataStructure.html">
+
+                            <i class="bx bx-data"></i>
+
+                            Data Structure
+
+                        </a>
+
+
+                        <a href="../../Pages/Algorithem.html">
+
+                            <i class="bx bx-git-branch"></i>
+
+                            Algorithm
+
+                        </a>
+
+
+                        <a href="../../Pages/ProblemSolving.html">
+
+                            <i class="bx bx-bulb"></i>
+
+                            Problem Solving
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Front-End -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Front-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="../../Pages/HTMLPage.html">
+
+                            <i class="bx bxl-html5"></i>
+
+                            HTML
+
+                        </a>
+
+
+                        <a href="../../Pages/CSSPage.html">
+
+                            <i class="bx bxl-css3"></i>
+
+                            CSS
+
+                        </a>
+
+
+                        <a href="../../Pages/BootstrapPage.html">
+
+                            <i class="bx bxl-bootstrap"></i>
+
+                            Bootstrap
+
+                        </a>
+
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+
+                            <i class="bx bxl-tailwind-css"></i>
+
+                            Tailwind CSS
+
+                        </a>
+
+
+                        <a href="../../Pages/JavaScriptPage.html">
+
+                            <i class="bx bxl-javascript"></i>
+
+                            JavaScript
+
+                        </a>
+
+
+                        <a href="../../Pages/React-JS_Page.html">
+
+                            <i class="bx bxl-react"></i>
+
+                            React JS
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Web Technologies -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Web Technologies
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="../../Pages/APIS-Page.html">
+
+                            <i class="bx bx-cloud"></i>
+
+                            API
+
+                        </a>
+
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+
+                            <i class="bx bx-server"></i>
+
+                            Strapi Back-End
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Back-End -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Back-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+
+                        <a href="../../Pages/BackEnd-Csharb.html">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+
+                            <i class="bx bx-code-alt"></i>
+
+                            ASP.NET
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+
+                            <i class="bx bx-data"></i>
+
+                            SQL
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+
+                            <i class="bx bx-layer"></i>
+
+                            Entity Framework
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-APIs.html">
+
+                            <i class="bx bx-transfer"></i>
+
+                            APIs
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Contact US -->
+
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+
+                    Contact US
+
+                </a>
+
+
+                <!-- Login -->
+
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+
+                        <i class="bx bx-log-in"></i>
+
+                        Login
+
+                    </a>
+
+                </li>
+
+            </ul>
+
         </nav>
 
+    </header>
+
+    <!-- ==========================================================
+        End Header
+    =========================================================== -->
 
 
-        <nav class="nav2">
-            <a href="Learn Csharb.html" class="C">C#</a>
+    <!-- ==========================================================
+        Start Learning Page
+    =========================================================== -->
 
-            <a href="#" class="DS">Data Structure</a>
-
-            <a href="#" class="Alogo">Algorithm</a>
-
-            <a href="#" class="proSolv">Problem Solving</a>
-
-            <a href="#" class="html">Html</a>
-
-            <a href="#" class="css">CSS</a>
-
-            <a href="#" class="JS">JavaScript</a>
-
-            <a href="#" class="Angular">Angular16</a>
-        </nav>
-    </div>
+    <main class="learning-page">
 
 
+        <!-- ======================================================
+            Start Sidebar
+        ======================================================= -->
+
+        <aside class="learning-sidebar">
 
 
+            <!-- Sidebar Header -->
 
+            <div class="sidebar-header">
 
+                <div class="sidebar-icon">
 
+                    <i class="bx bx-code-curly"></i>
 
-
-
-    <div class="contentALL" id="contentALL" style="position: fixed;">
-
-        <div class="content1">
-            <h1>C# Tutorial</h1>
-            <ul class="ul1">
-                <a href="Learn Csharb.html">
-                    <li class="lihover">C# HOME</li>
-                </a>
-
-                <a href="Learn C-sharp of intro.html">
-                    <li class="lihover">C# Intro</li>
-                </a>
-
-                <a href="Learn C-sharp of Get Started.html">
-                    <li class="lihover">C# Get Started</li>
-                </a>
-
-                <a href="Learn C-sharp of Syntax.html">
-                    <li class="lihover">C# Syntax</li>
-                </a>
-
-                <a href="Learn C-sharp of Output.html">
-                    <li class="lihover">C# Output</li>
-                </a>
-
-                <a href="Learn C-sharp of Comments.html">
-                    <li class="lihover">C# comments</li>
-                </a>
-
-            </ul>
-
-
-
-
-
-            <ul class="ul2">
-                <a href="#">
-                    <li>C# Variables</li>
-                </a>
-
-                <div class="variables">
-                    <a href="Learn C-sharp of Variables.html">
-                        <li class="lihover">Variables</li>
-                    </a>
-                    <a href="Learn C-sharp of Constants.html">
-                        <li class="lihover">Constants</li>
-                    </a>
-                    <a href="Learn C-sharp of Display.html">
-                        <li class="lihover">Display Variables</li>
-                    </a>
-                    <a href="Learn C-sharp of intro Multiple.html">
-                        <li class="lihover">Multiple Variables</li>
-                    </a>
-                    <a href="Learn C-sharp of Identifiers.html">
-                        <li class="lihover">identifiers</li>
-                    </a>
                 </div>
-            </ul>
 
 
+                <div>
 
+                    <span>
+                        Programming Basics
+                    </span>
 
+                    <h2>
+                        C# Tutorial
+                    </h2>
 
-            <ul class="ul3">
-                <a href="Learn C-sharp of DataTypes.html">
-                    <li class="lihover">C# Data Types</li>
-                </a>
-
-                <a href="Learn C-sharp of TypeCasting.html">
-                    <li class="lihover">C# Type Casting</li>
-                </a>
-
-                <a href="Learn C-sharp of UserInput.html">
-                    <li class="lihover">C# User Input</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul4">
-                <a href="#">
-                    <li class="Operators1">C# Operators</li>
-                </a>
-
-                <div class="Operators">
-                    <a href="Learn C-sharp of Arithmetic.html">
-                        <li>Arithmetic</li>
-                    </a>
-                    <a href="Learn C-sharp of Assignment.html">
-                        <li>Assignment</li>
-                    </a>
-                    <a href="Learn C-sharp of Comparison.html">
-                        <li>comparison</li>
-                    </a>
-                    <a href="Learn C-sharp of Logical.html">
-                        <li>Logical</li>
-                    </a>
                 </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul5">
-                <a href="Learn C-sharp of Math.html">
-                    <li>C# Math</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul6">
-                <a href="#">
-                    <li>C# Strings</li>
-                </a>
-
-                <div class="Strings">
-                    <a href="Learn C-sharp of Strings.html">
-                        <li li class="lihover">Strings</li>
-                    </a>
-                    <a href="Learn C-sharp of Concatenation.html">
-                        <li class="lihover">Concatenation</li>
-                    </a>
-                    <a href="Learn C-sharp of Interpolation.html">
-                        <li class="lihover">interpolation</li>
-                    </a>
-                    <a href="Learn C-sharp of AccessStrings.html">
-                        <li class="lihover">Access Strings</li>
-                    </a>
-                    <a href="Learn C-sharp of SpecialCharacters.html">
-                        <li class="lihover">special characters</li>
-                    </a>
-                </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul7">
-                <a href="Learn C-sharp of Booleans.html">
-                    <li>C# Booleans</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul8">
-                <a href="#">
-                    <li>C# If...Else</li>
-                </a>
-
-                <div class="If">
-                    <a href="Learn C-sharp of IF.html">
-                        <li class="liColor">if</li>
-                    </a>
-                    <a href="Learn C-sharp of Else.html">
-                        <li class="lihover">Else</li>
-                    </a>
-                    <a href="Learn C-sharp of ElseIf.html">
-                        <li class="lihover">Else if</li>
-                    </a>
-                    <a href="Learn C-sharp of ShortHandIfElse.html">
-                        <li class="lihover">short hand if..else</li>
-                    </a>
-                </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul9">
-                <a href="Learn C-sharp of Switch.html">
-                    <li>C# Switch</li>
-                </a>
-
-                <a href="Learn C-sharp of WhileLoop.html">
-                    <li>C# While LooP</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul10">
-                <a href="#">
-                    <li>C# For LooP</li>
-                </a>
-
-                <div class="for">
-                    <a href="Learn C-sharp of ForLoop.html">
-                        <li>for LooP</li>
-                    </a>
-                    <a href="Learn C-sharp of ForeachLoop.html">
-                        <li>Foreach LooP</li>
-                    </a>
-                </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul11">
-                <a href="Learn C-sharp of BreakAndContinue.html">
-                    <li>C# Break/Continue</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul12">
-                <a href="#">
-                    <li>C# Arrays</li>
-                </a>
-
-                <div class="Arrays">
-                    <a href="Learn C-sharp of Arrays.html">
-                        <li>Arrays</li>
-                    </a>
-                    <a href="Learn C-sharp of LoopThroughAnArray.html">
-                        <li>LooP through an array</li>
-                    </a>
-                    <a href="Learn C-sharp of SortArrays.html">
-                        <li>sort Arrays</li>
-                    </a>
-                    <a href="Learn C-sharp of MultidimensionalArrays.html">
-                        <li>Multidimensional Arrays</li>
-                    </a>
-                </div>
-            </ul>
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <div class="content3">
-            <h1>C# Methods</h1>
-
-            <ul class="ul1">
-                <a href="Learn C-sharp of Methods.html">
-                    <li>C# Methods</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul2">
-                <a href="#">
-                    <li>C# Methods</li>
-                </a>
-
-                <div class="Methods">
-                    <a href="Learn C-sharp of MethodParameters.html">
-                        <li>parameters</li>
-                    </a>
-
-                    <a href="Learn C-sharp of DefaultParameter.html">
-                        <li>default parameter</li>
-                    </a>
-
-                    <a href="Learn C-sharp of ReturnValue.html">
-                        <li>return values</li>
-                    </a>
-
-                    <a href="Learn C-sharp of NamedArguments.html">
-                        <li>named arguments</li>
-                    </a>
-                </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul3">
-                <a href="Learn C-sharp of MethodOverloading.html">
-                    <li>C# Method overloading</li>
-                </a>
-            </ul>
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <div class="content2">
-            <h1>C# Classes</h1>
-
-
-
-
-
-            <ul class="ul1">
-                <a href="Learn C-sharp of OOP.html">
-                    <li>C# OOP</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul2">
-                <a href="#">
-                    <li>C# classes/objects</li>
-                </a>
-
-                <div class="CalANobj">
-                    <a href="Learn C-sharp of ClassesAndObjects.html">
-                        <li>classes and objects</li>
-                    </a>
-
-                    <a href="Learn C-sharp of MultipleObjects.html">
-                        <li>Multiple objects</li>
-                    </a>
-                </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul3" style="line-height: 30px;">
-                <a href="Learn C-sharp of ClassesMembers.html">
-                    <li>C# class members</li>
-                </a>
-
-                <a href="Learn C-sharp of Constructors.html">
-                    <li>C# constructors</li>
-                </a>
-
-                <a href="Learn C-sharp of AccessModifiers.html">
-                    <li>C# access modifiers</li>
-                </a>
-
-                <a href="Learn C-sharp of Properties.html">
-                    <li>C# properties</li>
-                </a>
-
-                <a href="Learn C-sharp of Inheritance.html">
-                    <li>C# inheritance</li>
-                </a>
-
-                <a href="Learn C-sharp of Polymorphism.html">
-                    <li>C# polymorphism</li>
-                </a>
-
-                <a href="Learn C-sharp of Abstraction.html">
-                    <li>C# abstraction</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul4">
-                <a href="#">
-                    <li>C# interface</li>
-                </a>
-
-                <div class="interface">
-                    <a href="Learn C-sharp of Interface.html">
-                        <li>interface</li>
-                    </a>
-
-                    <a href="Learn C-sharp of MultipleInterfaces.html">
-                        <li>Multiple interface</li>
-                    </a>
-                </div>
-            </ul>
-
-            <ul class="ul5">
-                <a href="Learn C-sharp of Enums.html">
-                    <li>C# enums</li>
-                </a>
-
-                <a href="Learn C-sharp of Files.html">
-                    <li>C# Files</li>
-                </a>
-
-                <a href="Learn C-sharp of Exceptions.html">
-                    <li>C# Exceptions</li>
-                </a>
-            </ul>
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <div class="content4">
-            <h1>C# how to</h1>
-
-            <ul class="ul1">
-                <a href="Learn C-sharp of AddTwoNumbers.html">
-                    <li>add tow numbers</li>
-                </a>
-            </ul>
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <div class="content5">
-            <h1>C# examples</h1>
-
-            <ul class="ul1">
-                <a href="Learn C-sharp of Examples.html">
-                    <li>C# examples</li>
-                </a>
-
-                <a href="Learn C-sharp of Compiler.html">
-                    <li>C# compiler</li>
-                </a>
-
-                <a href="Learn C-sharp of Exercises.html">
-                    <li>C# exercises</li>
-                </a>
-
-                <a href="Learn C-sharp of Quiz.html">
-                    <li>C# quiz</li>
-                </a>
-
-                <a href="Learn C-sharp of Server.html">
-                    <li>C# server</li>
-                </a>
-
-                <a href="Learn C-sharp of Syllabus.html">
-                    <li>C# syllabus</li>
-                </a>
-
-                <a href="Learn C-sharp of StudyPlan.html">
-                    <li>C# study plan</li>
-                </a>
-
-                <a href="Learn C-sharp of Certificate.html">
-                    <li>C# certificate</li>
-                </a>
-            </ul>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="contentBody">
-
-
-
-
-
-
-        <h1 class="h1TypeCasting">C# If ... Else</h1>
-
-
-
-
-
-
-        <div class="link1">
-            <a href="Learn C-sharp of Booleans.html"><button class="btn1">
-                    < previous </button></a>
-
-            <a href="Learn C-sharp of Else.html"><button class="btn2">next ></button></a>
-        </div>
-
-
-
-
-
-        <hr style="margin-top: 30px; margin-left: 45px;">
-
-
-
-
-
-
-        <h1 class="h1">C# Conditions and If Statements</h1>
-
-        <p class="p1">
-            C# supports the usual logical conditions from mathematics:
-        </p>
-
-        <ul class="ul">
-            <li>
-                Less than: <span style="color: orange;">a < b</span>
-            </li>
-
-            <li>
-                Less than or equal to: <span style="color: orange;">a <= b</span>
-            </li>
-
-            <li>
-                Greater than: <span style="color: orange;">a > b</span>
-            </li>
-
-            <li>
-                Greater than or equal to: <span style="color: orange;">a >= b</span>
-            </li>
-
-            <li>
-                Equal to <span style="color: orange;">a == b</span>
-            </li>
-
-            <li>
-                Not Equal to: <span style="color: orange;">a != b</span>
-            </li>
-        </ul>
-
-        <p class="p2">
-            You can use these conditions to perform different actions for different decisions.
-        </p>
-
-        <p class="p3">
-            C# has the following conditional statements:
-        </p>
-
-        <ul class="ul">
-            <li>
-                Use <span style="color: orange;">if</span> to specify a block of code to be executed, if a specified
-                condition is true
-            </li>
-
-            <li>
-                Use <span style="color: orange;">else</span> to specify a block of code to be executed, if the same
-                condition is false
-            </li>
-
-            <li>
-                Use <span style="color: orange;">else</span> if to specify a new condition to test, if the first
-                condition is false
-            </li>
-
-            <li>
-                Use <span style="color: orange;">switch</span> to specify many alternative blocks of code to be executed
-            </li>
-        </ul>
-
-
-
-
-
-
-        <hr style="margin-top: 30px; margin-left: 45px;">
-
-
-
-
-
-        <h1 class="h1">The if Statement</h1>
-
-        <p class="p4">
-            Use the <span style="color: orange;">if</span> statement to specify a block of C# code to be executed if a
-            condition is <span style="color: orange;">True</span>.
-        </p>
-
-        <div class="examplesCCode">
-            <h1 class="H1">Syntax</h1>
-
-
-
-            <div class="WRiteCode"
-                style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; font-size: 21px;">
-
-                <span style="color: rgb(255, 106, 0);">if</span> &nbsp;<span style="color: greenyellow;">( <span
-                        style="color: white;">condition</span> )</span>
-                <br>
-                <span style="color: greenyellow;">
-                    {
-                    <br>
-                    &nbsp; &nbsp; <span style="color: gray;">// block of code to be executed if the condition is
-                        True</span>
-                    <br>
-                    }
-                </span>
 
             </div>
-        </div>
 
 
+            <!-- C# Introduction -->
 
-        <div class="P2" style="margin-top: 35px;">
-            Note that <span style="color: red;">if</span> is in lowercase letters. Uppercase letters (If or IF) will
-            generate an error.
-        </div>
+            <div class="sidebar-section">
 
-        <p class="p5" style="font-size: 21px;">
-            In the example below, we test two values to find out if 20 is greater than 18. If the condition is <span
-                style="color: orange;">True</span>, print some text:
-        </p>
+                <h3>
 
-        <div class="examplesCCode">
-            <h1 class="H1">Example</h1>
+                    <i class="bx bx-book-open"></i>
+
+                    Introduction
+
+                </h3>
 
 
+                <a href="HomePage.html" class="sidebar-link">
 
-            <div class="WRiteCode"
-                style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; font-size: 21px;">
+                    <i class="bx bx-home-alt"></i>
 
-                <span style="color: rgb(255, 106, 0);">if</span> &nbsp;<span style="color: greenyellow;">( <span
-                        style="color: white;"> <span style="color: orange;">20</span> > <span
-                            style="color: orange;">18</span></span> )</span>
-                <br>
-                <span style="color: greenyellow;">
-                    {
-                    <br>
-                    &nbsp; &nbsp;<span style="color: white;">Console</span><span
-                        style="color: greenyellow;">.</span><span style="color: #008cff;">WriteLine</span><span
-                        style="color: greenyellow;">("20 is greater than 18");</span>
-                    <br>
-                    }
-                </span>
+                    C# Home
 
-            </div>
-        </div>
+                </a>
 
 
-        <p class="p6">We can also test variables:</p>
+                <a href="IntroductionPage.html" class="sidebar-link">
 
-        <div class="examplesCCode">
-            <h1 class="H1">Example</h1>
+                    <i class="bx bx-info-circle"></i>
+
+                    C# Intro
+
+                </a>
 
 
+                <a href="GetStartedPage.html" class="sidebar-link">
 
-            <div class="WRiteCode"
-                style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; font-size: 21px;">
-                <span style="color: rgb(255, 106, 0);">int</span> x = <span style="color: rgb(255, 106, 0);">20</span>
-                <span style="color: greenyellow;">;</span>
-                <br>
-                <span style="color: rgb(255, 106, 0);">int</span> y = <span style="color: rgb(255, 106, 0);">18</span>
-                <span style="color: greenyellow;">;</span>
+                    <i class="bx bx-play-circle"></i>
 
-                <br>
+                    C# Get Started
 
-                <span style="color: rgb(255, 106, 0);">if</span> &nbsp;<span style="color: greenyellow;">( <span
-                        style="color: white;"> x > y </span> )</span>
-                <br>
-                <span style="color: greenyellow;">
-                    {
-                    <br>
-                    &nbsp; &nbsp;<span style="color: white;">Console</span><span
-                        style="color: greenyellow;">.</span><span style="color: #008cff;">WriteLine</span><span
-                        style="color: greenyellow;">("x is greater than y");</span>
-                    <br>
-                    }
-                </span>
+                </a>
+
+
+                <a href="SyntaxPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-alt"></i>
+
+                    C# Syntax
+
+                </a>
+
+
+                <a href="OutputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Output
+
+                </a>
+
+
+                <a href="CommentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-comment-detail"></i>
+
+                    C# Comments
+
+                </a>
 
             </div>
+
+
+            <!-- C# Variables -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-data"></i>
+
+                    Variables
+
+                </h3>
+
+
+                <a href="VariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-data"></i>
+
+                    C# Variables
+
+                </a>
+
+
+                <a href="ConstantsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-alt"></i>
+
+                    C# Constants
+
+                </a>
+
+
+                <a href="DisplayVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-show"></i>
+
+                    C# Display Variables
+
+                </a>
+
+
+                <a href="MultipleVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Multiple Variables
+
+                </a>
+
+
+                <a href="IdentifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-purchase-tag"></i>
+
+                    C# Identifiers
+
+                </a>
+
+            </div>
+
+
+            <!-- C# Data Types -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-category"></i>
+
+                    Data Types
+
+                </h3>
+
+
+                <a href="DataTypesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-category"></i>
+
+                    C# Data Types
+
+                </a>
+
+
+                <a href="TypeCastingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Type Casting
+
+                </a>
+
+
+                <a href="UserInputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-edit-alt"></i>
+
+                    C# User Input
+
+                </a>
+
+            </div>
+
+
+            <!-- C# Operators -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-calculator"></i>
+
+                    Operators
+
+                </h3>
+
+
+                <a href="ArithmeticPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calculator"></i>
+
+                    C# Arithmetic
+
+                </a>
+
+
+                <a href="AssignmentPage.html" class="sidebar-link">
+
+                    <i class="bx bx-equalizer"></i>
+
+                    C# Assignment
+
+                </a>
+
+
+                <a href="ComparisonPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Comparison
+
+                </a>
+
+
+                <a href="LogicalPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Logical
+
+                </a>
+
+            </div>
+
+
+            <!-- C# Math -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-math"></i>
+
+                    Math
+
+                </h3>
+
+
+                <a href="MathPage.html" class="sidebar-link">
+
+                    <i class="bx bx-math"></i>
+
+                    C# Math
+
+                </a>
+
+            </div>
+
+
+            <!-- C# Strings -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-text"></i>
+
+                    Strings
+
+                </h3>
+
+
+                <a href="StringsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-text"></i>
+
+                    C# Strings
+
+                </a>
+
+
+                <a href="ConcatenationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-link"></i>
+
+                    C# Concatenation
+
+                </a>
+
+
+                <a href="InterpolationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-curly"></i>
+
+                    C# Interpolation
+
+                </a>
+
+
+                <a href="AccessStringsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-search-alt"></i>
+
+                    C# Access Strings
+
+                </a>
+
+
+                <a href="SpecialCharactersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Special Characters
+
+                </a>
+
+            </div>
+
+
+            <!-- C# Booleans -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    Booleans
+
+                </h3>
+
+
+                <a href="BooleansPage.html" class="sidebar-link">
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    C# Booleans
+
+                </a>
+
+            </div>
+
+
+            <!-- C# If...Else -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-git-branch"></i>
+
+                    If...Else
+
+                </h3>
+
+
+                <a href="IFPage.html" class="sidebar-link active">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# if
+
+                </a>
+
+
+                <a href="ElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                    C# Else
+
+                </a>
+
+
+                <a href="ElseIfPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Else if
+
+                </a>
+
+
+                <a href="ShortHandIfElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Short Hand if...else
+
+                </a>
+
+            </div>
+
+
+            <!-- C# Switch / While -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-git-branch"></i>
+
+                    Control Flow
+
+                </h3>
+
+
+                <a href="SwitchPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Switch
+
+                </a>
+
+
+                <a href="WhileLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-refresh"></i>
+
+                    C# While Loop
+
+                </a>
+
+            </div>
+
+
+            <!-- C# For Loop -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-repeat"></i>
+
+                    For Loop
+
+                </h3>
+
+
+                <a href="ForLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-repeat"></i>
+
+                    C# For Loop
+
+                </a>
+
+
+                <a href="ForeachLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Foreach Loop
+
+                </a>
+
+            </div>
+
+
+            <!-- C# Break / Continue -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-transfer"></i>
+
+                    Loop Control
+
+                </h3>
+
+
+                <a href="BreakAndContinuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Break / Continue
+
+                </a>
+
+            </div>
+
+
+            <!-- C# Arrays -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    Arrays
+
+                </h3>
+
+
+                <a href="ArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    C# Arrays
+
+                </a>
+
+
+                <a href="LoopThroughAnArrayPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-check"></i>
+
+                    C# Loop Through an Array
+
+                </a>
+
+
+                <a href="SortArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-sort"></i>
+
+                    C# Sort Arrays
+
+                </a>
+
+
+                <a href="MultidimensionalArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid"></i>
+
+                    C# Multidimensional Arrays
+
+                </a>
+
+            </div>
+
+
+            <!-- C# Methods -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-function"></i>
+
+                    Methods
+
+                </h3>
+
+
+                <a href="MethodsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-function"></i>
+
+                    C# Methods
+
+                </a>
+
+
+                <a href="MethodParametersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Parameters
+
+                </a>
+
+
+                <a href="DefaultParameterPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cog"></i>
+
+                    C# Default Parameter
+
+                </a>
+
+
+                <a href="ReturnValuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-log-out"></i>
+
+                    C# Return Values
+
+                </a>
+
+
+                <a href="NamedArgumentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-label"></i>
+
+                    C# Named Arguments
+
+                </a>
+
+
+                <a href="MethodOverloadingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Method Overloading
+
+                </a>
+
+            </div>
+
+
+            <!-- C# Classes -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-cube"></i>
+
+                    Classes
+
+                </h3>
+
+
+                <a href="OOPPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube"></i>
+
+                    C# OOP
+
+                </a>
+
+
+                <a href="ClassesAndObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube-alt"></i>
+
+                    C# Classes and Objects
+
+                </a>
+
+
+                <a href="MultipleObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-copy"></i>
+
+                    C# Multiple Objects
+
+                </a>
+
+
+                <a href="ClassesMembersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Class Members
+
+                </a>
+
+
+                <a href="ConstructorsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-buildings"></i>
+
+                    C# Constructors
+
+                </a>
+
+
+                <a href="AccessModifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-open-alt"></i>
+
+                    C# Access Modifiers
+
+                </a>
+
+
+                <a href="PropertiesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Properties
+
+                </a>
+
+
+                <a href="InheritancePage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Inheritance
+
+                </a>
+
+
+                <a href="PolymorphismPage.html" class="sidebar-link">
+
+                    <i class="bx bx-shape-polygon"></i>
+
+                    C# Polymorphism
+
+                </a>
+
+
+                <a href="AbstractionPage.html" class="sidebar-link">
+
+                    <i class="bx bx-hide"></i>
+
+                    C# Abstraction
+
+                </a>
+
+
+                <a href="InterfacePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Interface
+
+                </a>
+
+
+                <a href="MultipleInterfacesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Multiple Interfaces
+
+                </a>
+
+
+                <a href="EnumsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ol"></i>
+
+                    C# Enums
+
+                </a>
+
+
+                <a href="FilesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-file"></i>
+
+                    C# Files
+
+                </a>
+
+
+                <a href="ExceptionsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-error"></i>
+
+                    C# Exceptions
+
+                </a>
+
+            </div>
+
+
+            <!-- C# How To -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-wrench"></i>
+
+                    How To
+
+                </h3>
+
+
+                <a href="AddTwoNumbersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-plus-circle"></i>
+
+                    C# Add Two Numbers
+
+                </a>
+
+            </div>
+
+
+            <!-- C# Examples -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-code-block"></i>
+
+                    Examples
+
+                </h3>
+
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-block"></i>
+
+                    C# Examples
+
+                </a>
+
+
+                <a href="CompilerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Compiler
+
+                </a>
+
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-task"></i>
+
+                    C# Exercises
+
+                </a>
+
+
+                <a href="QuizPage.html" class="sidebar-link">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# Quiz
+
+                </a>
+
+
+                <a href="ServerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-server"></i>
+
+                    C# Server
+
+                </a>
+
+
+                <a href="SyllabusPage.html" class="sidebar-link">
+
+                    <i class="bx bx-book"></i>
+
+                    C# Syllabus
+
+                </a>
+
+
+                <a href="StudyPlanPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calendar"></i>
+
+                    C# Study Plan
+
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+
+                    <i class="bx bx-certification"></i>
+
+                    C# Certificate
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- ======================================================
+             End Sidebar
+        ======================================================= -->
+
+
+        <!-- ======================================================
+             Start Tutorial Content
+        ======================================================= -->
+
+        <section class="tutorial-content">
+
+
+            <!-- ==================================================
+                Tutorial Header => مشترك
+            =================================================== -->
+
+            <div class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-code-curly"></i>
+
+                    C# Programming
+
+                </span>
+
+
+                <h1>
+                    C# If Statements
+                </h1>
+
+
+                <p>
+                    Learn how to use if statements in C# to execute
+                    code when a specified condition is true.
+                </p>
+
+
+                <div class="tutorial-actions">
+
+                    <a href="BooleansPage.html" class="tutorial-button secondary">
+
+                        <i class="bx bx-left-arrow-alt"></i>
+
+                        Previous
+
+                    </a>
+
+
+                    <a href="ElsePage.html" class="tutorial-button primary">
+
+                        Next
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 Conditions
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-git-branch"></i>
+
+                        Conditions
+
+                    </span>
+
+
+                    <h2>
+                        C# Conditions and If Statements
+                    </h2>
+
+
+                    <p>
+                        Conditions allow your program to make decisions
+                        based on whether an expression is true or false.
+                    </p>
+
+                </div>
+
+
+                <div class="if-description">
+
+                    <p>
+                        C# supports common comparison conditions that
+                        can be used to compare values.
+                    </p>
+
+                </div>
+
+
+                <ul class="if-list">
+
+                    <li>
+
+                        Less than:
+
+                        <span class="if-inline">
+                            a &lt; b
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        Less than or equal to:
+
+                        <span class="if-inline">
+                            a &lt;= b
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        Greater than:
+
+                        <span class="if-inline">
+                            a &gt; b
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        Greater than or equal to:
+
+                        <span class="if-inline">
+                            a &gt;= b
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        Equal to:
+
+                        <span class="if-inline">
+                            a == b
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        Not equal to:
+
+                        <span class="if-inline">
+                            a != b
+                        </span>
+
+                    </li>
+
+                </ul>
+
+
+                <div class="if-note">
+
+                    <strong>
+                        Note:
+                    </strong>
+
+                    These comparison operators produce a Boolean
+                    result: either <span class="if-inline">true</span>
+                    or <span class="if-inline">false</span>.
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Conditional Statements
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-git-branch"></i>
+
+                        Conditional Statements
+
+                    </span>
+
+
+                    <h2>
+                        Conditional Statements in C#
+                    </h2>
+
+
+                    <p>
+                        C# provides several statements for controlling
+                        which blocks of code should be executed.
+                    </p>
+
+                </div>
+
+
+                <ul class="if-list">
+
+                    <li>
+
+                        Use
+
+                        <span class="if-inline">
+                            if
+                        </span>
+
+                        to execute a block of code when a condition is true.
+
+                    </li>
+
+
+                    <li>
+
+                        Use
+
+                        <span class="if-inline">
+                            else
+                        </span>
+
+                        to execute a block of code when the condition is false.
+
+                    </li>
+
+
+                    <li>
+
+                        Use
+
+                        <span class="if-inline">
+                            else if
+                        </span>
+
+                        to test another condition when the previous
+                        condition is false.
+
+                    </li>
+
+
+                    <li>
+
+                        Use
+
+                        <span class="if-inline">
+                            switch
+                        </span>
+
+                        when you need to choose between multiple
+                        alternative cases.
+
+                    </li>
+
+                </ul>
+
+
+                <div class="if-note">
+
+                    <strong>
+                        Important:
+                    </strong>
+
+                    This page focuses on the
+                    <span class="if-inline">if</span>
+                    statement. The
+                    <span class="if-inline">else</span>,
+                    <span class="if-inline">else if</span>,
+                    and
+                    <span class="if-inline">switch</span>
+                    statements are covered in their own lessons.
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 The if Statement
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-question-mark"></i>
+
+                        If Statement
+
+                    </span>
+
+
+                    <h2>
+                        The if Statement
+                    </h2>
+
+
+                    <p>
+                        Use the
+                        <span class="if-inline">if</span>
+                        statement to specify a block of C# code
+                        that should be executed when a condition is true.
+                    </p>
+
+                </div>
+
+
+                <!-- Syntax -->
+
+                <div class="if-example">
+
+                    <div class="if-example-header">
+
+                        <span>
+                            Syntax
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="if-keyword">if</span> <span class="if-parentheses">(</span><span class="if-condition">condition</span><span class="if-parentheses">)</span>
+<span class="if-brace">{</span>
+    <span class="if-comment">// block of code to be executed if the condition is true</span>
+<span class="if-brace">}</span></code></pre>
+
+                </div>
+
+
+                <div class="if-note">
+
+                    <strong>
+                        Note:
+                    </strong>
+
+                    The
+                    <span class="if-inline">if</span>
+                    keyword must be written in lowercase.
+                    C# is case-sensitive, so
+                    <span class="if-inline">If</span>
+                    or
+                    <span class="if-inline">IF</span>
+                    will cause an error.
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Example
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-code"></i>
+
+                        Example
+
+                    </span>
+
+
+                    <h2>
+                        Checking a Condition
+                    </h2>
+
+
+                    <p>
+                        In the example below, we check whether 20 is
+                        greater than 18. If the condition is true,
+                        a message is printed to the console.
+                    </p>
+
+                </div>
+
+
+                <div class="if-example">
+
+                    <div class="if-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="if-keyword">if</span> <span class="if-parentheses">(</span><span class="if-number">20</span> <span class="if-operator">&gt;</span> <span class="if-number">18</span><span class="if-parentheses">)</span>
+<span class="if-brace">{</span>
+    <span class="if-class">Console</span><span class="if-dot">.</span><span class="if-method">WriteLine</span><span class="if-parentheses">(</span><span class="if-string">"20 is greater than 18"</span><span class="if-parentheses">)</span><span class="if-semicolon">;</span>
+<span class="if-brace">}</span></code></pre>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Variables Example
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-data"></i>
+
+                        Variables
+
+                    </span>
+
+
+                    <h2>
+                        Using Variables in an if Statement
+                    </h2>
+
+
+                    <p>
+                        You can also compare variables inside an
+                        <span class="if-inline">if</span>
+                        statement.
+                    </p>
+
+                </div>
+
+
+                <div class="if-example">
+
+                    <div class="if-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="if-keyword">int</span> x <span class="if-operator">=</span> <span class="if-number">20</span><span class="if-semicolon">;</span>
+<span class="if-keyword">int</span> y <span class="if-operator">=</span> <span class="if-number">18</span><span class="if-semicolon">;</span>
+
+<span class="if-keyword">if</span> <span class="if-parentheses">(</span>x <span class="if-operator">&gt;</span> y<span class="if-parentheses">)</span>
+<span class="if-brace">{</span>
+    <span class="if-class">Console</span><span class="if-dot">.</span><span class="if-method">WriteLine</span><span class="if-parentheses">(</span><span class="if-string">"x is greater than y"</span><span class="if-parentheses">)</span><span class="if-semicolon">;</span>
+<span class="if-brace">}</span></code></pre>
+
+                </div>
+
+
+                <div class="if-subsection">
+
+                    <h3>
+                        Example Explained
+                    </h3>
+
+
+                    <p>
+                        In the example above, we create two variables,
+                        <span class="if-inline">x</span>
+                        and
+                        <span class="if-inline">y</span>.
+                        We then use the
+                        <span class="if-inline">&gt;</span>
+                        operator to check whether
+                        <span class="if-inline">x</span>
+                        is greater than
+                        <span class="if-inline">y</span>.
+                        Since
+                        <span class="if-inline">x</span>
+                        is 20 and
+                        <span class="if-inline">y</span>
+                        is 18, the condition is true and the message
+                        is displayed.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Exercise
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-task"></i>
+
+                        Practice
+
+                    </span>
+
+
+                    <h2>
+                        Test Your Knowledge
+                    </h2>
+
+
+                    <p>
+                        Complete the C# code by choosing the comparison
+                        operator that checks whether
+                        <span class="if-inline">x</span>
+                        is greater than
+                        <span class="if-inline">y</span>.
+                    </p>
+
+                </div>
+
+
+                <div class="exercise-preview" data-correct-answer="&gt;">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                C# Exercise
+                            </span>
+
+
+                            <h3>
+                                Complete the C# Code
+                            </h3>
+
+                        </div>
+
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <p class="exercise-question">
+
+                        Which operator should replace the blank?
+
+                    </p>
+
+
+                    <div class="if-exercise-code">
+
+                        <pre><code>int x = 20;
+int y = 18;
+
+if (x <span class="exercise-blank">?</span> y)
+{
+    Console.WriteLine("x is greater than y");
+}</code></pre>
+
+                    </div>
+
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="&gt;">
+
+                            &gt;
+
+                        </button>
+
+
+                        <button type="button" class="exercise-option" data-answer="&lt;">
+
+                            &lt;
+
+                        </button>
+
+
+                        <button type="button" class="exercise-option" data-answer="==">
+
+                            ==
+
+                        </button>
+
+
+                        <button type="button" class="exercise-option" data-answer="!=">
+
+                            !=
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="exercise-result" id="exerciseResult"></div>
+
+                </div>
+
+
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+
+                        See All C# Exercises
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                Bottom Navigation => مشترك
+            =================================================== -->
+
+            <div class="tutorial-bottom-actions">
+
+                <a href="BooleansPage.html" class="tutorial-button secondary">
+
+                    <i class="bx bx-left-arrow-alt"></i>
+
+                    Previous
+
+                </a>
+
+
+                <a href="ElsePage.html" class="tutorial-button primary">
+
+                    Next
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================================
+        Start Footer
+    =========================================================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+                <a href="../../index.html" class="brand">
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/BootstrapPage.html">
+                    Bootstrap
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
         </div>
 
-        <p class="p7">Example explained</p>
 
-        <p class="p8" style="font-size: 21px;">
-            In the example above we use two variables, x and y, to test whether x is greater than y (using the <span
-                style="color: orange;">></span> operator). <br> As x is 20, and y is 18, and we know that 20 is greater
-            than 18, we print to the screen that "x is greater than y".
-        </p>
+        <div class="footer-bottom">
 
+            <p>
 
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
 
-
-
-
-        <hr style="margin-top: 30px; margin-left: 45px;">
-
-
-
-
-
-
-        <div class="ExampleExercisesC">
-            <h1>exercise?</h1>
-
-
-            <p style="margin-top: 25px;">
-                Drag and drop the correct operator to check if <span style="color: red;">x</span> is greater than <span
-                    style="color: red;">y</span>.
             </p>
 
-
-            <a href="#" target="_blank"><button>submit answer >></button></a>
         </div>
-    </div>
-
-
-
-
-
-
-
-    <hr style="margin: 50px 0px; margin-bottom: 250px;">
-
-
-
-
-
-
-
-
-
-    <footer style="position: absolute;">
-
-
-
-
-
-        <main>Taalem.com</main>
-
-
-        <div class="Tutorials">
-
-            <div class="LinkS" style="width: 50%; float: left;">
-                <h1 style="margin-bottom: 45px;">top tutorials</h1>
-
-                <a href="Learn Csharb.html" class="C">C# Tutorial</a>
-                <br>
-                <a href="#" class="DS">Data Structure Tutorial</a>
-                <br>
-                <a href="#" class="Alogo">Algorithm Tutorial</a>
-                <br>
-                <a href="#" class="proSolv">Problem Solving Tutorial</a>
-                <br>
-                <a href="#" class="html">HTML Tutorial</a>
-                <br>
-                <a href="#" class="css">CSS Tutorial</a>
-                <br>
-                <a href="#" class="JS">JavaScript Tutorial</a>
-                <br>
-                <a href="#" class="Angular">Angular16 Tutorial</a>
-            </div>
-
-
-
-            <div class="Examples" style="margin-top: 100px;margin-bottom: 100px">
-
-                <div class="LinkS">
-                    <h1 style="margin-bottom: 45px;">top examples</h1>
-
-                    <a href="Learn C-sharp of Examples.html" class="C">C# Examples</a>
-                    <br>
-                    <a href="#" class="DS">Data Structure Examples</a>
-                    <br>
-                    <a href="#" class="Alogo">Algorithm Examples</a>
-                    <br>
-                    <a href="#" class="proSolv">Problem Solving Examples</a>
-                    <br>
-                    <a href="#" class="html">HTML Examples</a>
-                    <br>
-                    <a href="#" class="css">CSS Examples</a>
-                    <br>
-                    <a href="#" class="JS">JavaScript Examples</a>
-                    <br>
-                    <a href="#" class="Angular">Angular16 Examples</a>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="Links">
-            <a href="https://www.facebook.com/?locale=ar_AR" class="Facebook"><i class='bx bxl-facebook-square'
-                    style="color: rgb(0, 136, 255);"></i></i></a>
-            <a href="https://www.tiktok.com/foryou" class="TikTok"><i class='bx bxl-tiktok' style='color:wheat'></i></a>
-            <a href="https://www.instagram.com/" class="instagram"><i class='bx bxl-instagram-alt'
-                    style='color:rgba(255,0,105,0.79)'></i></a>
-            <a href="https://web.whatsapp.com/" class="WhatSapp"><i class='bx bxl-whatsapp-square'
-                    style='color:#0bf164'></i></a>
-        </div>
-
-
-        <p><mark>Taalem</mark> is optimized for learning and training. Examples might be simplified to improve reading
-            and learning. Tutorials, examples are constantly reviewed to avid errors, but we cannot warrant full
-            correctness of all content. While using <mark>taalam</mark>, you agree to have read and accepted our terms
-            of use, cookie and privacy policy.</p>
-
-
-        <i class='bx bxs-up-arrow-square' style='color:#ff00ee' id="start"></i>
-
-
-
-
 
     </footer>
 
+    <!-- ==========================================================
+        End Footer
+    =========================================================== -->
 
 
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
 
 
+    <!-- ==========================================================
+        Global JavaScript
+    =========================================================== -->
 
+    <script src="../../JavaScript/global.js"></script>
 
-
-
-
-
-
-
-
-    <SCript
-        src="C:\Users\DELL\Desktop\Full Stack  Developer\Front_end\Project3 html , css , js\JavaScript\JSLearnCsharb.js"></SCript>
 </body>
+
+</html>

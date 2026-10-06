@@ -4,20 +4,1948 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn C-sharp of ClassesAndObjects" /> <!-- project description -->
-    <meta name="author" content="mohamed Alwani" /> <!-- author name -->
-    <meta name="keyWords" content="C,C#" /> <!-- keyWords project description  -->
 
-    <title>Learn C-sharp of Enums</title> <!-- project name -->
+    <meta name="description" content="Learn C# enums with DevPath.">
+    <meta name="author" content="mohamed Alwani">
+    <meta name="keywords" content="C#, Enums, Enumeration, OOP, C Sharp">
 
-    <link rel="icon"
-        href="C:\Users\DELL\Desktop\Full Stack  Developer\Front_end\Project3 html , css , js\photos\photo6.jpg">
+    <title>C# Enums | DevPath</title>
 
-    <!-- Link page learn C#-->
-    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style EnumsPage.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="../../photos/photo6.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Shared Learning Page Styles -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style EnumsPage.css">
+
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
 </head>
 
 <body>
-    EnumsPage
+
+    <!-- ==================================================
+         Header
+         ================================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <ul class="nav-links">
+
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link active">
+
+                        Programming Basics
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html" class="current">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="../../Pages/DataStructure.html">
+
+                            <i class="bx bx-data"></i>
+
+                            Data Structure
+
+                        </a>
+
+
+                        <a href="../../Pages/Algorithem.html">
+
+                            <i class="bx bx-git-branch"></i>
+
+                            Algorithm
+
+                        </a>
+
+
+                        <a href="../../Pages/ProblemSolving.html">
+
+                            <i class="bx bx-bulb"></i>
+
+                            Problem Solving
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Front-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+
+                            <i class="bx bxl-html5"></i>
+
+                            HTML
+
+                        </a>
+
+
+                        <a href="../../Pages/CSSPage.html">
+
+                            <i class="bx bxl-css3"></i>
+
+                            CSS
+
+                        </a>
+
+
+                        <a href="../../Pages/BootstrapPage.html">
+
+                            <i class="bx bxl-bootstrap"></i>
+
+                            Bootstrap
+
+                        </a>
+
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+
+                            <i class="bx bxl-tailwind-css"></i>
+
+                            Tailwind CSS
+
+                        </a>
+
+
+                        <a href="../../Pages/JavaScriptPage.html">
+
+                            <i class="bx bxl-javascript"></i>
+
+                            JavaScript
+
+                        </a>
+
+
+                        <a href="../../Pages/React-JS_Page.html">
+
+                            <i class="bx bxl-react"></i>
+
+                            React JS
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Web Technologies
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/APIS-Page.html">
+
+                            <i class="bx bx-cloud"></i>
+
+                            API
+
+                        </a>
+
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+
+                            <i class="bx bx-server"></i>
+
+                            Strapi Back-End
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Back-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-Csharb.html">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+
+                            <i class="bx bx-code-alt"></i>
+
+                            ASP.NET
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+
+                            <i class="bx bx-data"></i>
+
+                            SQL
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+
+                            <i class="bx bx-layer"></i>
+
+                            Entity Framework
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-APIs.html">
+
+                            <i class="bx bx-transfer"></i>
+
+                            APIs
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <a href="../../Pages/ContactUS.html" class="login-btn">
+                        Contact US
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+
+                        <i class="bx bx-log-in"></i>
+
+                        Login
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==========================================================
+         Learning Page
+         ========================================================== -->
+
+    <main class="learning-page">
+
+
+        <!-- ======================================================
+             Sidebar
+             ====================================================== -->
+
+        <aside class="learning-sidebar">
+
+
+            <!-- Sidebar Header -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-icon">
+
+                    <i class="bx bx-code-curly"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Programming Basics
+                    </span>
+
+                    <h2>
+                        C# Tutorial
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Introduction -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-book-open"></i>
+
+                    Introduction
+
+                </h3>
+
+
+                <a href="HomePage.html" class="sidebar-link">
+
+                    <i class="bx bx-home-alt"></i>
+
+                    C# Home
+
+                </a>
+
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    C# Intro
+
+                </a>
+
+
+                <a href="GetStartedPage.html" class="sidebar-link">
+
+                    <i class="bx bx-play-circle"></i>
+
+                    C# Get Started
+
+                </a>
+
+
+                <a href="SyntaxPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-alt"></i>
+
+                    C# Syntax
+
+                </a>
+
+
+                <a href="OutputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Output
+
+                </a>
+
+
+                <a href="CommentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-comment-detail"></i>
+
+                    C# Comments
+
+                </a>
+
+            </div>
+
+
+            <!-- Variables -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-data"></i>
+
+                    Variables
+
+                </h3>
+
+
+                <a href="VariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-data"></i>
+
+                    C# Variables
+
+                </a>
+
+
+                <a href="ConstantsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-alt"></i>
+
+                    C# Constants
+
+                </a>
+
+
+                <a href="DisplayVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-show"></i>
+
+                    C# Display Variables
+
+                </a>
+
+
+                <a href="MultipleVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Multiple Variables
+
+                </a>
+
+
+                <a href="IdentifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-purchase-tag"></i>
+
+                    C# Identifiers
+
+                </a>
+
+            </div>
+
+
+            <!-- Data Types -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-category"></i>
+
+                    Data Types
+
+                </h3>
+
+
+                <a href="DataTypesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-category"></i>
+
+                    C# Data Types
+
+                </a>
+
+
+                <a href="TypeCastingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Type Casting
+
+                </a>
+
+
+                <a href="UserInputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-edit-alt"></i>
+
+                    C# User Input
+
+                </a>
+
+            </div>
+
+
+            <!-- Operators -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-calculator"></i>
+
+                    Operators
+
+                </h3>
+
+
+                <a href="ArithmeticPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calculator"></i>
+
+                    C# Arithmetic
+
+                </a>
+
+
+                <a href="AssignmentPage.html" class="sidebar-link">
+
+                    <i class="bx bx-equalizer"></i>
+
+                    C# Assignment
+
+                </a>
+
+
+                <a href="ComparisonPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Comparison
+
+                </a>
+
+
+                <a href="LogicalPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Logical
+
+                </a>
+
+            </div>
+
+
+            <!-- Math -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-math"></i>
+
+                    Math
+
+                </h3>
+
+
+                <a href="MathPage.html" class="sidebar-link">
+
+                    <i class="bx bx-math"></i>
+
+                    C# Math
+
+                </a>
+
+            </div>
+
+
+            <!-- Strings -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-text"></i>
+
+                    Strings
+
+                </h3>
+
+
+                <a href="StringsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-text"></i>
+
+                    C# Strings
+
+                </a>
+
+
+                <a href="ConcatenationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-link"></i>
+
+                    C# Concatenation
+
+                </a>
+
+
+                <a href="InterpolationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-curly"></i>
+
+                    C# Interpolation
+
+                </a>
+
+
+                <a href="AccessStringsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-search-alt"></i>
+
+                    C# Access Strings
+
+                </a>
+
+
+                <a href="SpecialCharactersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Special Characters
+
+                </a>
+
+            </div>
+
+
+            <!-- Booleans -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    Booleans
+
+                </h3>
+
+
+                <a href="BooleansPage.html" class="sidebar-link">
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    C# Booleans
+
+                </a>
+
+            </div>
+
+
+            <!-- If...Else -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-git-branch"></i>
+
+                    If...Else
+
+                </h3>
+
+
+                <a href="IFPage.html" class="sidebar-link">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# if
+
+                </a>
+
+
+                <a href="ElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                    C# Else
+
+                </a>
+
+
+                <a href="ElseIfPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Else if
+
+                </a>
+
+
+                <a href="ShortHandIfElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Short Hand if...else
+
+                </a>
+
+            </div>
+
+
+            <!-- Control Flow -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-git-branch"></i>
+
+                    Control Flow
+
+                </h3>
+
+
+                <a href="SwitchPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Switch
+
+                </a>
+
+
+                <a href="WhileLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-refresh"></i>
+
+                    C# While Loop
+
+                </a>
+
+            </div>
+
+
+            <!-- For Loop -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-repeat"></i>
+
+                    For Loop
+
+                </h3>
+
+
+                <a href="ForLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-repeat"></i>
+
+                    C# For Loop
+
+                </a>
+
+
+                <a href="ForeachLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Foreach Loop
+
+                </a>
+
+            </div>
+
+
+            <!-- Loop Control -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-transfer"></i>
+
+                    Loop Control
+
+                </h3>
+
+
+                <a href="BreakAndContinuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Break / Continue
+
+                </a>
+
+            </div>
+
+
+            <!-- Arrays -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    Arrays
+
+                </h3>
+
+
+                <a href="ArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    C# Arrays
+
+                </a>
+
+
+                <a href="LoopThroughAnArrayPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-check"></i>
+
+                    C# Loop Through an Array
+
+                </a>
+
+
+                <a href="SortArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-sort"></i>
+
+                    C# Sort Arrays
+
+                </a>
+
+
+                <a href="MultidimensionalArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid"></i>
+
+                    C# Multidimensional Arrays
+
+                </a>
+
+            </div>
+
+
+            <!-- Methods -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-function"></i>
+
+                    Methods
+
+                </h3>
+
+
+                <a href="MethodsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-function"></i>
+
+                    C# Methods
+
+                </a>
+
+
+                <a href="MethodParametersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Parameters
+
+                </a>
+
+
+                <a href="DefaultParameterPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cog"></i>
+
+                    C# Default Parameter
+
+                </a>
+
+
+                <a href="ReturnValuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-log-out"></i>
+
+                    C# Return Values
+
+                </a>
+
+
+                <a href="NamedArgumentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-label"></i>
+
+                    C# Named Arguments
+
+                </a>
+
+
+                <a href="MethodOverloadingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Method Overloading
+
+                </a>
+
+            </div>
+
+
+            <!-- Classes -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-cube"></i>
+
+                    Classes
+
+                </h3>
+
+
+                <a href="OOPPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube"></i>
+
+                    C# OOP
+
+                </a>
+
+
+                <a href="ClassesAndObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube-alt"></i>
+
+                    C# Classes and Objects
+
+                </a>
+
+
+                <a href="MultipleObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-copy"></i>
+
+                    C# Multiple Objects
+
+                </a>
+
+
+                <a href="ClassesMembersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Class Members
+
+                </a>
+
+
+                <a href="ConstructorsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-buildings"></i>
+
+                    C# Constructors
+
+                </a>
+
+
+                <a href="AccessModifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-open-alt"></i>
+
+                    C# Access Modifiers
+
+                </a>
+
+
+                <a href="PropertiesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Properties
+
+                </a>
+
+
+                <a href="InheritancePage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Inheritance
+
+                </a>
+
+
+                <a href="PolymorphismPage.html" class="sidebar-link">
+
+                    <i class="bx bx-shape-polygon"></i>
+
+                    C# Polymorphism
+
+                </a>
+
+
+                <a href="AbstractionPage.html" class="sidebar-link">
+
+                    <i class="bx bx-hide"></i>
+
+                    C# Abstraction
+
+                </a>
+
+
+                <a href="InterfacePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Interface
+
+                </a>
+
+
+                <a href="MultipleInterfacesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Multiple Interfaces
+
+                </a>
+
+
+                <a href="EnumsPage.html" class="sidebar-link active">
+
+                    <i class="bx bx-list-ol"></i>
+
+                    C# Enums
+
+                </a>
+
+
+                <a href="FilesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-file"></i>
+
+                    C# Files
+
+                </a>
+
+
+                <a href="ExceptionsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-error"></i>
+
+                    C# Exceptions
+
+                </a>
+
+            </div>
+
+
+            <!-- How To -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-wrench"></i>
+
+                    How To
+
+                </h3>
+
+
+                <a href="AddTwoNumbersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-plus-circle"></i>
+
+                    C# Add Two Numbers
+
+                </a>
+
+            </div>
+
+
+            <!-- Examples -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-code-block"></i>
+
+                    Examples
+
+                </h3>
+
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-block"></i>
+
+                    C# Examples
+
+                </a>
+
+
+                <a href="CompilerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Compiler
+
+                </a>
+
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-task"></i>
+
+                    C# Exercises
+
+                </a>
+
+
+                <a href="QuizPage.html" class="sidebar-link">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# Quiz
+
+                </a>
+
+
+                <a href="ServerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-server"></i>
+
+                    C# Server
+
+                </a>
+
+
+                <a href="SyllabusPage.html" class="sidebar-link">
+
+                    <i class="bx bx-book"></i>
+
+                    C# Syllabus
+
+                </a>
+
+
+                <a href="StudyPlanPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calendar"></i>
+
+                    C# Study Plan
+
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+
+                    <i class="bx bx-certification"></i>
+
+                    C# Certificate
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ======================================================
+             Main Content
+             ====================================================== -->
+
+        <section class="tutorial-content">
+
+
+            <!-- ==================================================
+                 Tutorial Header
+                 ================================================== -->
+
+            <div class="tutorial-header">
+
+                <span class="section-badge">
+                    <i class="bx bx-code-alt"></i>
+                    C# Programming
+                </span>
+
+                <h1>
+                    C# Enums
+                </h1>
+
+                <p>
+                    Learn how to use enums in C# to define a set of named constants
+                    and make your code easier to read and understand.
+                </p>
+
+
+                <div class="tutorial-actions">
+
+                    <a href="MultipleInterfacesPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="FilesPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 What Are Enums?
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-list-ol"></i>
+                        C# Enums
+                    </span>
+
+                    <h2>
+                        What Are Enums?
+                    </h2>
+
+                </div>
+
+
+                <p class="enums-description">
+                    An <strong>enum</strong>, short for enumeration, is a special type
+                    in C# that allows you to define a collection of named constants.
+                </p>
+
+
+                <p class="enums-description">
+                    Instead of using numbers such as
+                    <span class="enums-inline">0</span>,
+                    <span class="enums-inline">1</span>,
+                    or
+                    <span class="enums-inline">2</span>,
+                    you can use meaningful names such as
+                    <span class="enums-inline">Low</span>,
+                    <span class="enums-inline">Medium</span>,
+                    and
+                    <span class="enums-inline">High</span>.
+                </p>
+
+
+                <div class="enums-note">
+
+                    <strong>Why use enums?</strong>
+
+                    Enums make your code more readable and help represent a fixed
+                    set of related values.
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Create An Enum
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-plus-circle"></i>
+                        Create
+                    </span>
+
+                    <h2>
+                        Create an Enum
+                    </h2>
+
+                </div>
+
+
+                <p class="enums-description">
+                    You can create an enum by using the
+                    <span class="enums-inline">enum</span>
+                    keyword followed by the enum name and its values.
+                </p>
+
+
+                <div class="enums-example">
+
+                    <div class="enums-example-header">
+
+                        <span>
+                            C# Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="enums-keyword">enum</span> <span class="enums-type">Level</span>
+{
+    <span class="enums-class">Low</span>,
+    <span class="enums-class">Medium</span>,
+    <span class="enums-class">High</span>
+}</code></pre>
+
+                </div>
+
+
+                <div class="enums-explanation">
+
+                    <h3>
+                        How It Works
+                    </h3>
+
+                    <p>
+                        The enum named <strong>Level</strong> contains three named
+                        values: <strong>Low</strong>, <strong>Medium</strong>,
+                        and <strong>High</strong>.
+                    </p>
+
+                    <p>
+                        By default, the first enum value has the numeric value
+                        <strong>0</strong>, the second has <strong>1</strong>,
+                        and so on.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Access Enum Values
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-pointer"></i>
+                        Access
+                    </span>
+
+                    <h2>
+                        Access Enum Values
+                    </h2>
+
+                </div>
+
+
+                <p class="enums-description">
+                    To access an enum value, use the enum name followed by a dot
+                    and the name of the value.
+                </p>
+
+
+                <div class="enums-example">
+
+                    <div class="enums-example-header">
+
+                        <span>
+                            C# Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="enums-keyword">enum</span> <span class="enums-type">Level</span>
+{
+    <span class="enums-class">Low</span>,
+    <span class="enums-class">Medium</span>,
+    <span class="enums-class">High</span>
+}
+
+<span class="enums-type">Level</span> level = <span class="enums-type">Level</span>.<span class="enums-class">Medium</span>;
+
+<span class="enums-method">Console</span>.<span class="enums-method">WriteLine</span>(level);</code></pre>
+
+                </div>
+
+
+                <div class="enums-explanation">
+
+                    <h3>
+                        Output
+                    </h3>
+
+                    <p>
+                        The output will be:
+                    </p>
+
+                    <div class="enums-output">
+                        Medium
+                    </div>
+
+                    <p>
+                        The variable <strong>level</strong> stores the enum value
+                        <strong>Medium</strong>.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Enum Numeric Values
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-sort-alt-2"></i>
+                        Values
+                    </span>
+
+                    <h2>
+                        Enum Numeric Values
+                    </h2>
+
+                </div>
+
+
+                <p class="enums-description">
+                    By default, enum members are assigned integer values starting
+                    from <strong>0</strong>.
+                </p>
+
+
+                <div class="enums-example">
+
+                    <div class="enums-example-header">
+
+                        <span>
+                            C# Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="enums-keyword">enum</span> <span class="enums-type">Level</span>
+{
+    <span class="enums-class">Low</span>,
+    <span class="enums-class">Medium</span>,
+    <span class="enums-class">High</span>
+}
+
+<span class="enums-method">Console</span>.<span class="enums-method">WriteLine</span>((<span class="enums-type">int</span>)<span class="enums-type">Level</span>.<span class="enums-class">Low</span>);
+<span class="enums-method">Console</span>.<span class="enums-method">WriteLine</span>((<span class="enums-type">int</span>)<span class="enums-type">Level</span>.<span class="enums-class">Medium</span>);
+<span class="enums-method">Console</span>.<span class="enums-method">WriteLine</span>((<span class="enums-type">int</span>)<span class="enums-type">Level</span>.<span class="enums-class">High</span>);</code></pre>
+
+                </div>
+
+
+                <div class="enums-explanation">
+
+                    <h3>
+                        Output
+                    </h3>
+
+                    <div class="enums-output">
+                        0<br>
+                        1<br>
+                        2
+                    </div>
+
+                    <p>
+                        You can convert an enum member to an integer by using
+                        explicit casting.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Assign Custom Values
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-edit"></i>
+                        Custom Values
+                    </span>
+
+                    <h2>
+                        Assign Custom Values
+                    </h2>
+
+                </div>
+
+
+                <p class="enums-description">
+                    You can also assign your own numeric values to enum members.
+                </p>
+
+
+                <div class="enums-example">
+
+                    <div class="enums-example-header">
+
+                        <span>
+                            C# Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="enums-keyword">enum</span> <span class="enums-type">Level</span>
+{
+    <span class="enums-class">Low</span> = <span class="enums-number">1</span>,
+    <span class="enums-class">Medium</span> = <span class="enums-number">5</span>,
+    <span class="enums-class">High</span> = <span class="enums-number">10</span>
+}</code></pre>
+
+                </div>
+
+
+                <ul class="enums-list">
+
+                    <li>
+                        <strong>Low</strong> has the value
+                        <strong>1</strong>.
+                    </li>
+
+                    <li>
+                        <strong>Medium</strong> has the value
+                        <strong>5</strong>.
+                    </li>
+
+                    <li>
+                        <strong>High</strong> has the value
+                        <strong>10</strong>.
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Why Use Enums?
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bulb"></i>
+                        Benefits
+                    </span>
+
+                    <h2>
+                        Why Use Enums?
+                    </h2>
+
+                </div>
+
+
+                <ul class="enums-list">
+
+                    <li>
+                        Enums make code more
+                        <strong>readable</strong>.
+                    </li>
+
+                    <li>
+                        They represent a
+                        <strong>fixed set of related values</strong>.
+                    </li>
+
+                    <li>
+                        They make code easier to
+                        <strong>understand and maintain</strong>.
+                    </li>
+
+                    <li>
+                        They can replace unclear numeric values with
+                        <strong>meaningful names</strong>.
+                    </li>
+
+                </ul>
+
+
+                <div class="enums-note">
+
+                    <strong>Example:</strong>
+
+                    Instead of writing
+                    <span class="enums-inline">1</span>
+                    to represent a status, you can write
+                    <span class="enums-inline">Status.Active</span>,
+                    which makes the code much clearer.
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Practice
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Test Your Knowledge
+                    </h2>
+
+                    <p>
+                        Look at the C# code and choose the correct output.
+                    </p>
+
+                </div>
+
+
+                <div class="exercise-preview" data-correct-answer="1">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                C# Exercise
+                            </span>
+
+                            <h3>
+                                What Will This Code Print?
+                            </h3>
+
+                        </div>
+
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <p class="exercise-question">
+                        What is the output of the following C# code?
+                    </p>
+
+
+                    <div class="page-exercise-code">
+
+                        <pre><code><span class="enums-keyword">enum</span> <span class="enums-type">Level</span>
+{
+    <span class="enums-class">Low</span>,
+    <span class="enums-class">Medium</span>,
+    <span class="enums-class">High</span>
+}
+
+<span class="enums-type">Level</span> level = <span class="enums-type">Level</span>.<span class="enums-class">Medium</span>;
+
+<span class="enums-method">Console</span>.<span class="enums-method">WriteLine</span>((<span class="enums-type">int</span>)level);</code></pre>
+
+                    </div>
+
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="0">
+                            0
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="1">
+                            1
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="2">
+                            2
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Medium">
+                            Medium
+                        </button>
+
+                    </div>
+
+
+                    <div class="exercise-result" id="exerciseResult"></div>
+
+                </div>
+
+
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All C# Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Page Navigation
+                 ================================================== -->
+
+            <div class="tutorial-bottom-actions">
+
+                <a href="MultipleInterfacesPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="FilesPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================================
+         Footer
+         ========================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <a href="../../index.html" class="brand">
+
+                    <span class="brand-icon">
+                        <i class="bx bx-code-alt"></i>
+                    </span>
+
+                    <span class="brand-text">
+                        Dev<span>Path</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Learn programming step by step and build the skills you need
+                    for your development journey.
+                </p>
+
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="bx bxl-tiktok"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="bx bxl-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Front-End
+                </h3>
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+                <a href="../../Pages/BootstrapPage.html">
+                    Bootstrap
+                </a>
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    More
+                </h3>
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================================
+         Back To Top
+         ========================================================== -->
+
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0">
+    </i>
+
+
+    <!-- Global JavaScript -->
+    <script src="../../JavaScript/global.js"></script>
+
 </body>
+
+</html>

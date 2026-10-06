@@ -2,22 +2,2796 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn C-sharp of ClassesAndObjects" /> <!-- project description -->
-    <meta name="author" content="mohamed Alwani" /> <!-- author name -->
-    <meta name="keyWords" content="C,C#" /> <!-- keyWords project description  -->
 
-    <title>Learn C-sharp of Syllabus</title> <!-- project name -->
+    <meta name="description"
+        content="Follow the complete C# learning syllabus from beginner concepts to object-oriented programming, files, exceptions, exercises, and certification.">
 
-    <link rel="icon"
-        href="C:\Users\DELL\Desktop\Full Stack  Developer\Front_end\Project3 html , css , js\photos\photo6.jpg">
+    <meta name="author" content="mohamed Alwani">
 
-    <!-- Link page learn C#-->
-    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style SyllabusPage.css" />
+    <meta name="keyWords" content="C#, C Sharp, C# Syllabus, C# Tutorial, Learn C#">
+
+    <title>
+        C# Syllabus | DevPath
+    </title>
+
+
+    <!-- ==================================================
+         Favicon
+         ================================================== -->
+
+    <link rel="icon" href="../../photos/photo6.jpg">
+
+
+    <!-- ==================================================
+         Google Fonts
+         ================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ==================================================
+         Shared Learning CSS
+         ================================================== -->
+
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+
+    <!-- ==================================================
+         Page CSS
+         ================================================== -->
+
+    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style SyllabusPage.css">
+
+
+    <!-- ==================================================
+         Boxicons
+         ================================================== -->
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
 </head>
 
+
 <body>
-    SyllabusPage
+
+
+    <!-- ==================================================
+         Start Header
+         ================================================== -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <ul class="nav-links">
+
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- Programming Basics -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link active">
+
+                        Programming Basics
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html" class="current">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="../../Pages/DataStructure.html">
+
+                            <i class="bx bx-data"></i>
+
+                            Data Structure
+
+                        </a>
+
+
+                        <a href="../../Pages/Algorithem.html">
+
+                            <i class="bx bx-git-branch"></i>
+
+                            Algorithm
+
+                        </a>
+
+
+                        <a href="../../Pages/ProblemSolving.html">
+
+                            <i class="bx bx-bulb"></i>
+
+                            Problem Solving
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Front-End -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Front-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+
+                            <i class="bx bxl-html5"></i>
+
+                            HTML
+
+                        </a>
+
+
+                        <a href="../../Pages/CSSPage.html">
+
+                            <i class="bx bxl-css3"></i>
+
+                            CSS
+
+                        </a>
+
+
+                        <a href="../../Pages/BootstrapPage.html">
+
+                            <i class="bx bxl-bootstrap"></i>
+
+                            Bootstrap
+
+                        </a>
+
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+
+                            <i class="bx bxl-tailwind-css"></i>
+
+                            Tailwind CSS
+
+                        </a>
+
+
+                        <a href="../../Pages/JavaScriptPage.html">
+
+                            <i class="bx bxl-javascript"></i>
+
+                            JavaScript
+
+                        </a>
+
+
+                        <a href="../../Pages/React-JS_Page.html">
+
+                            <i class="bx bxl-react"></i>
+
+                            React JS
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Web Technologies -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Web Technologies
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/APIS-Page.html">
+
+                            <i class="bx bx-cloud"></i>
+
+                            API
+
+                        </a>
+
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+
+                            <i class="bx bx-server"></i>
+
+                            Strapi Back-End
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Back-End -->
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Back-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-Csharb.html">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+
+                            <i class="bx bx-code-alt"></i>
+
+                            ASP.NET
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+
+                            <i class="bx bx-data"></i>
+
+                            SQL
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+
+                            <i class="bx bx-layer"></i>
+
+                            Entity Framework
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-APIs.html">
+
+                            <i class="bx bx-transfer"></i>
+
+                            APIs
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Contact -->
+
+                <li>
+
+                    <a href="../../Pages/ContactUS.html" class="login-btn">
+                        Contact US
+                    </a>
+
+                </li>
+
+
+                <!-- Login -->
+
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+
+                        <i class="bx bx-log-in"></i>
+
+                        Login
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         End Header
+         ================================================== -->
+
+
+
+    <!-- ==================================================
+         Start Learning Page
+         ================================================== -->
+    <main class="learning-page">
+
+
+        <!-- ==================================================
+             Start Sidebar
+             ================================================== -->
+        <aside class="learning-sidebar">
+
+
+            <!-- Sidebar Header -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-icon">
+
+                    <i class="bx bx-code-curly"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Programming Basics
+                    </span>
+
+                    <h2>
+                        C# Tutorial
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Introduction -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-book-open"></i>
+
+                    Introduction
+
+                </h3>
+
+
+                <a href="HomePage.html" class="sidebar-link">
+
+                    <i class="bx bx-home-alt"></i>
+
+                    C# Home
+
+                </a>
+
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    C# Intro
+
+                </a>
+
+
+                <a href="GetStartedPage.html" class="sidebar-link">
+
+                    <i class="bx bx-play-circle"></i>
+
+                    C# Get Started
+
+                </a>
+
+
+                <a href="SyntaxPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-alt"></i>
+
+                    C# Syntax
+
+                </a>
+
+
+                <a href="OutputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Output
+
+                </a>
+
+
+                <a href="CommentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-comment-detail"></i>
+
+                    C# Comments
+
+                </a>
+
+            </div>
+
+
+            <!-- Variables -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-data"></i>
+
+                    Variables
+
+                </h3>
+
+
+                <a href="VariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-data"></i>
+
+                    C# Variables
+
+                </a>
+
+
+                <a href="ConstantsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-alt"></i>
+
+                    C# Constants
+
+                </a>
+
+
+                <a href="DisplayVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-show"></i>
+
+                    C# Display Variables
+
+                </a>
+
+
+                <a href="MultipleVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Multiple Variables
+
+                </a>
+
+
+                <a href="IdentifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-purchase-tag"></i>
+
+                    C# Identifiers
+
+                </a>
+
+            </div>
+
+
+            <!-- Data Types -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-category"></i>
+
+                    Data Types
+
+                </h3>
+
+
+                <a href="DataTypesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-category"></i>
+
+                    C# Data Types
+
+                </a>
+
+
+                <a href="TypeCastingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Type Casting
+
+                </a>
+
+
+                <a href="UserInputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-edit-alt"></i>
+
+                    C# User Input
+
+                </a>
+
+            </div>
+
+
+            <!-- Operators -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-calculator"></i>
+
+                    Operators
+
+                </h3>
+
+
+                <a href="ArithmeticPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calculator"></i>
+
+                    C# Arithmetic
+
+                </a>
+
+
+                <a href="AssignmentPage.html" class="sidebar-link">
+
+                    <i class="bx bx-equalizer"></i>
+
+                    C# Assignment
+
+                </a>
+
+
+                <a href="ComparisonPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Comparison
+
+                </a>
+
+
+                <a href="LogicalPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Logical
+
+                </a>
+
+            </div>
+
+
+            <!-- Math -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-math"></i>
+
+                    Math
+
+                </h3>
+
+
+                <a href="MathPage.html" class="sidebar-link">
+
+                    <i class="bx bx-math"></i>
+
+                    C# Math
+
+                </a>
+
+            </div>
+
+
+            <!-- Strings -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-text"></i>
+
+                    Strings
+
+                </h3>
+
+
+                <a href="StringsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-text"></i>
+
+                    C# Strings
+
+                </a>
+
+
+                <a href="ConcatenationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-link"></i>
+
+                    C# Concatenation
+
+                </a>
+
+
+                <a href="InterpolationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-curly"></i>
+
+                    C# Interpolation
+
+                </a>
+
+
+                <a href="AccessStringsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-search-alt"></i>
+
+                    C# Access Strings
+
+                </a>
+
+
+                <a href="SpecialCharactersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Special Characters
+
+                </a>
+
+            </div>
+
+
+            <!-- Booleans -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    Booleans
+
+                </h3>
+
+
+                <a href="BooleansPage.html" class="sidebar-link">
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    C# Booleans
+
+                </a>
+
+            </div>
+
+
+            <!-- If...Else -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-git-branch"></i>
+
+                    If...Else
+
+                </h3>
+
+
+                <a href="IFPage.html" class="sidebar-link">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# if
+
+                </a>
+
+
+                <a href="ElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                    C# Else
+
+                </a>
+
+
+                <a href="ElseIfPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Else if
+
+                </a>
+
+
+                <a href="ShortHandIfElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Short Hand if...else
+
+                </a>
+
+            </div>
+
+
+            <!-- Control Flow -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-git-branch"></i>
+
+                    Control Flow
+
+                </h3>
+
+
+                <a href="SwitchPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Switch
+
+                </a>
+
+
+                <a href="WhileLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-refresh"></i>
+
+                    C# While Loop
+
+                </a>
+
+            </div>
+
+
+            <!-- For Loop -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-repeat"></i>
+
+                    For Loop
+
+                </h3>
+
+
+                <a href="ForLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-repeat"></i>
+
+                    C# For Loop
+
+                </a>
+
+
+                <a href="ForeachLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Foreach Loop
+
+                </a>
+
+            </div>
+
+
+            <!-- Loop Control -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-transfer"></i>
+
+                    Loop Control
+
+                </h3>
+
+
+                <a href="BreakAndContinuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Break / Continue
+
+                </a>
+
+            </div>
+
+
+            <!-- Arrays -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    Arrays
+
+                </h3>
+
+
+                <a href="ArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    C# Arrays
+
+                </a>
+
+
+                <a href="LoopThroughAnArrayPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-check"></i>
+
+                    C# Loop Through an Array
+
+                </a>
+
+
+                <a href="SortArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-sort"></i>
+
+                    C# Sort Arrays
+
+                </a>
+
+
+                <a href="MultidimensionalArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid"></i>
+
+                    C# Multidimensional Arrays
+
+                </a>
+
+            </div>
+
+
+            <!-- Methods -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-function"></i>
+
+                    Methods
+
+                </h3>
+
+
+                <a href="MethodsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-function"></i>
+
+                    C# Methods
+
+                </a>
+
+
+                <a href="MethodParametersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Parameters
+
+                </a>
+
+
+                <a href="DefaultParameterPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cog"></i>
+
+                    C# Default Parameter
+
+                </a>
+
+
+                <a href="ReturnValuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-log-out"></i>
+
+                    C# Return Values
+
+                </a>
+
+
+                <a href="NamedArgumentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-label"></i>
+
+                    C# Named Arguments
+
+                </a>
+
+
+                <a href="MethodOverloadingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Method Overloading
+
+                </a>
+
+            </div>
+
+
+            <!-- Classes -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-cube"></i>
+
+                    Classes
+
+                </h3>
+
+
+                <a href="OOPPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube"></i>
+
+                    C# OOP
+
+                </a>
+
+
+                <a href="ClassesAndObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube-alt"></i>
+
+                    C# Classes and Objects
+
+                </a>
+
+
+                <a href="MultipleObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-copy"></i>
+
+                    C# Multiple Objects
+
+                </a>
+
+
+                <a href="ClassesMembersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Class Members
+
+                </a>
+
+
+                <a href="ConstructorsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-buildings"></i>
+
+                    C# Constructors
+
+                </a>
+
+
+                <a href="AccessModifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-open-alt"></i>
+
+                    C# Access Modifiers
+
+                </a>
+
+
+                <a href="PropertiesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Properties
+
+                </a>
+
+
+                <a href="InheritancePage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Inheritance
+
+                </a>
+
+
+                <a href="PolymorphismPage.html" class="sidebar-link">
+
+                    <i class="bx bx-shape-polygon"></i>
+
+                    C# Polymorphism
+
+                </a>
+
+
+                <a href="AbstractionPage.html" class="sidebar-link">
+
+                    <i class="bx bx-hide"></i>
+
+                    C# Abstraction
+
+                </a>
+
+
+                <a href="InterfacePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Interface
+
+                </a>
+
+
+                <a href="MultipleInterfacesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Multiple Interfaces
+
+                </a>
+
+
+                <a href="EnumsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ol"></i>
+
+                    C# Enums
+
+                </a>
+
+
+                <a href="FilesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-file"></i>
+
+                    C# Files
+
+                </a>
+
+
+                <a href="ExceptionsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-error"></i>
+
+                    C# Exceptions
+
+                </a>
+
+            </div>
+
+
+            <!-- How To -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-wrench"></i>
+
+                    How To
+
+                </h3>
+
+
+                <a href="AddTwoNumbersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-plus-circle"></i>
+
+                    C# Add Two Numbers
+
+                </a>
+
+            </div>
+
+
+            <!-- Examples -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-code-block"></i>
+
+                    Examples
+
+                </h3>
+
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-block"></i>
+
+                    C# Examples
+
+                </a>
+
+
+                <a href="CompilerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Compiler
+
+                </a>
+
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-task"></i>
+
+                    C# Exercises
+
+                </a>
+
+
+                <a href="QuizPage.html" class="sidebar-link">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# Quiz
+
+                </a>
+
+
+                <a href="ServerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-server"></i>
+
+                    C# Server
+
+                </a>
+
+
+                <a href="SyllabusPage.html" class="sidebar-link active">
+
+                    <i class="bx bx-book"></i>
+
+                    C# Syllabus
+
+                </a>
+
+
+                <a href="StudyPlanPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calendar"></i>
+
+                    C# Study Plan
+
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+
+                    <i class="bx bx-certification"></i>
+
+                    C# Certificate
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==================================================
+             End Sidebar
+             ================================================== -->
+
+
+
+        <!-- ==================================================
+             Start Tutorial Content
+             ================================================== -->
+
+        <section class="tutorial-content">
+
+
+            <!-- ==================================================
+                 Tutorial Header
+                 ================================================== -->
+
+            <div class="tutorial-header">
+
+
+                <span class="section-badge">
+
+                    <i class="bx bx-book-open"></i>
+
+                    C# Programming
+
+                </span>
+
+
+                <h1>
+                    C# Syllabus
+                </h1>
+
+
+                <p>
+                    Follow the complete C# learning path from the basics
+                    to object-oriented programming, files, exceptions,
+                    exercises, and certification.
+                </p>
+
+
+                <div class="tutorial-actions">
+
+
+                    <a href="ServerPage.html" class="tutorial-button secondary">
+
+                        <i class="bx bx-left-arrow-alt"></i>
+
+                        Previous
+
+                    </a>
+
+
+                    <a href="StudyPlanPage.html" class="tutorial-button primary">
+
+                        Next
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 Introduction
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-info-circle"></i>
+
+                        Introduction
+
+                    </span>
+
+
+                    <h2>
+                        C# Learning Path
+                    </h2>
+
+                </div>
+
+
+                <p class="syllabus-description">
+
+                    This syllabus gives you a clear path for learning
+                    C# step by step. It starts with the basic language
+                    concepts and gradually moves to more advanced topics
+                    such as methods, classes, inheritance, interfaces,
+                    files, and exceptions.
+
+                </p>
+
+
+                <p class="syllabus-description">
+
+                    The path is designed for beginners, so you can move
+                    through the topics in order instead of trying to learn
+                    everything at the same time.
+
+                </p>
+
+
+                <div class="syllabus-note">
+
+                    <strong>
+                        Learning Tip:
+                    </strong>
+
+                    Do not rush through the topics. Understand each
+                    concept, practice it with code, and then move to
+                    the next topic.
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 Learning Outcomes
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-target-lock"></i>
+
+                        Goals
+
+                    </span>
+
+
+                    <h2>
+                        Learning Outcomes
+                    </h2>
+
+                </div>
+
+
+                <p class="syllabus-description">
+
+                    After completing the C# learning path, you should be
+                    able to understand the core concepts of C# and write
+                    and run C# programs.
+
+                </p>
+
+
+                <div class="syllabus-outcomes">
+
+
+                    <div class="syllabus-outcome">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            Understand C# and set up a development environment.
+                        </span>
+
+                    </div>
+
+
+                    <div class="syllabus-outcome">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            Work with syntax, variables, data types, and operators.
+                        </span>
+
+                    </div>
+
+
+                    <div class="syllabus-outcome">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            Use conditions, loops, and control structures.
+                        </span>
+
+                    </div>
+
+
+                    <div class="syllabus-outcome">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            Create and use methods to organize code.
+                        </span>
+
+                    </div>
+
+
+                    <div class="syllabus-outcome">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            Understand classes, objects, inheritance,
+                            and other OOP concepts.
+                        </span>
+
+                    </div>
+
+
+                    <div class="syllabus-outcome">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            Handle errors and work with exceptions.
+                        </span>
+
+                    </div>
+
+
+                    <div class="syllabus-outcome">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            Write and run complete C# programs.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 Activities
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-task"></i>
+
+                        Practice
+
+                    </span>
+
+
+                    <h2>
+                        Learning Activities
+                    </h2>
+
+                </div>
+
+
+                <p class="syllabus-description">
+
+                    Learning programming is not only about reading lessons.
+                    You should also practice what you learn.
+
+                </p>
+
+
+                <div class="syllabus-activities">
+
+
+                    <div class="syllabus-activity">
+
+                        <div class="syllabus-activity-icon">
+
+                            <i class="bx bx-book-content"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Lessons
+                            </h3>
+
+                            <p>
+                                Learn the concepts step by step through
+                                the C# lessons.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="syllabus-activity">
+
+                        <div class="syllabus-activity-icon">
+
+                            <i class="bx bx-code-alt"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Exercises
+                            </h3>
+
+                            <p>
+                                Practice the concepts by solving C#
+                                programming exercises.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="syllabus-activity">
+
+                        <div class="syllabus-activity-icon">
+
+                            <i class="bx bx-help-circle"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Quizzes
+                            </h3>
+
+                            <p>
+                                Test your understanding after studying
+                                the different topics.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 Modules
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-list-ol"></i>
+
+                        Curriculum
+
+                    </span>
+
+
+                    <h2>
+                        C# Modules
+                    </h2>
+
+                </div>
+
+
+                <p class="syllabus-description">
+
+                    Follow the modules below in order. Each group builds
+                    on the knowledge from the previous group.
+
+                </p>
+
+
+                <div class="syllabus-modules">
+
+
+                    <!-- ==================================================
+                         Module 01
+                         ================================================== -->
+
+                    <div class="syllabus-module">
+
+                        <span class="module-number">
+                            01
+                        </span>
+
+
+                        <div class="module-content">
+
+                            <h3>
+                                Introduction
+                            </h3>
+
+                            <p>
+                                Start with C#, get your environment ready,
+                                and understand the basic syntax and output.
+                            </p>
+
+
+                            <div class="module-links">
+
+                                <a href="HomePage.html">
+                                    C# Home
+                                </a>
+
+                                <a href="IntroductionPage.html">
+                                    Introduction
+                                </a>
+
+                                <a href="GetStartedPage.html">
+                                    Get Started
+                                </a>
+
+                                <a href="SyntaxPage.html">
+                                    Syntax
+                                </a>
+
+                                <a href="OutputPage.html">
+                                    Output
+                                </a>
+
+                                <a href="CommentsPage.html">
+                                    Comments
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         Module 02
+                         ================================================== -->
+
+                    <div class="syllabus-module">
+
+                        <span class="module-number">
+                            02
+                        </span>
+
+
+                        <div class="module-content">
+
+                            <h3>
+                                Variables & Data Types
+                            </h3>
+
+                            <p>
+                                Learn how to store, display, identify,
+                                and work with different types of data.
+                            </p>
+
+
+                            <div class="module-links">
+
+                                <a href="VariablesPage.html">
+                                    Variables
+                                </a>
+
+                                <a href="ConstantsPage.html">
+                                    Constants
+                                </a>
+
+                                <a href="DisplayVariablesPage.html">
+                                    Display Variables
+                                </a>
+
+                                <a href="MultipleVariablesPage.html">
+                                    Multiple Variables
+                                </a>
+
+                                <a href="IdentifiersPage.html">
+                                    Identifiers
+                                </a>
+
+                                <a href="DataTypesPage.html">
+                                    Data Types
+                                </a>
+
+                                <a href="TypeCastingPage.html">
+                                    Type Casting
+                                </a>
+
+                                <a href="UserInputPage.html">
+                                    User Input
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         Module 03
+                         ================================================== -->
+
+                    <div class="syllabus-module">
+
+                        <span class="module-number">
+                            03
+                        </span>
+
+
+                        <div class="module-content">
+
+                            <h3>
+                                Operators & Math
+                            </h3>
+
+                            <p>
+                                Learn how to perform calculations,
+                                assignments, comparisons, and logical
+                                operations.
+                            </p>
+
+
+                            <div class="module-links">
+
+                                <a href="ArithmeticPage.html">
+                                    Arithmetic
+                                </a>
+
+                                <a href="AssignmentPage.html">
+                                    Assignment
+                                </a>
+
+                                <a href="ComparisonPage.html">
+                                    Comparison
+                                </a>
+
+                                <a href="LogicalPage.html">
+                                    Logical
+                                </a>
+
+                                <a href="MathPage.html">
+                                    Math
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         Module 04
+                         ================================================== -->
+
+                    <div class="syllabus-module">
+
+                        <span class="module-number">
+                            04
+                        </span>
+
+
+                        <div class="module-content">
+
+                            <h3>
+                                Strings & Booleans
+                            </h3>
+
+                            <p>
+                                Work with text, string operations,
+                                special characters, and Boolean values.
+                            </p>
+
+
+                            <div class="module-links">
+
+                                <a href="StringsPage.html">
+                                    Strings
+                                </a>
+
+                                <a href="ConcatenationPage.html">
+                                    Concatenation
+                                </a>
+
+                                <a href="InterpolationPage.html">
+                                    Interpolation
+                                </a>
+
+                                <a href="AccessStringsPage.html">
+                                    Access Strings
+                                </a>
+
+                                <a href="SpecialCharactersPage.html">
+                                    Special Characters
+                                </a>
+
+                                <a href="BooleansPage.html">
+                                    Booleans
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         Module 05
+                         ================================================== -->
+
+                    <div class="syllabus-module">
+
+                        <span class="module-number">
+                            05
+                        </span>
+
+
+                        <div class="module-content">
+
+                            <h3>
+                                Conditions & Control Flow
+                            </h3>
+
+                            <p>
+                                Learn how your program can make decisions
+                                and repeat actions.
+                            </p>
+
+
+                            <div class="module-links">
+
+                                <a href="IFPage.html">
+                                    If
+                                </a>
+
+                                <a href="ElsePage.html">
+                                    Else
+                                </a>
+
+                                <a href="ElseIfPage.html">
+                                    Else If
+                                </a>
+
+                                <a href="ShortHandIfElsePage.html">
+                                    Short Hand If Else
+                                </a>
+
+                                <a href="SwitchPage.html">
+                                    Switch
+                                </a>
+
+                                <a href="WhileLoopPage.html">
+                                    While Loop
+                                </a>
+
+                                <a href="ForLoopPage.html">
+                                    For Loop
+                                </a>
+
+                                <a href="ForeachLoopPage.html">
+                                    Foreach Loop
+                                </a>
+
+                                <a href="BreakAndContinuePage.html">
+                                    Break / Continue
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         Module 06
+                         ================================================== -->
+
+                    <div class="syllabus-module">
+
+                        <span class="module-number">
+                            06
+                        </span>
+
+
+                        <div class="module-content">
+
+                            <h3>
+                                Arrays
+                            </h3>
+
+                            <p>
+                                Learn how to store multiple values and
+                                work with array elements.
+                            </p>
+
+
+                            <div class="module-links">
+
+                                <a href="ArraysPage.html">
+                                    Arrays
+                                </a>
+
+                                <a href="LoopThroughAnArrayPage.html">
+                                    Loop Through an Array
+                                </a>
+
+                                <a href="SortArraysPage.html">
+                                    Sort Arrays
+                                </a>
+
+                                <a href="MultidimensionalArraysPage.html">
+                                    Multidimensional Arrays
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         Module 07
+                         ================================================== -->
+
+                    <div class="syllabus-module">
+
+                        <span class="module-number">
+                            07
+                        </span>
+
+
+                        <div class="module-content">
+
+                            <h3>
+                                Methods
+                            </h3>
+
+                            <p>
+                                Learn how to create reusable blocks of code
+                                and pass data to methods.
+                            </p>
+
+
+                            <div class="module-links">
+
+                                <a href="MethodsPage.html">
+                                    Methods
+                                </a>
+
+                                <a href="MethodParametersPage.html">
+                                    Parameters
+                                </a>
+
+                                <a href="DefaultParameterPage.html">
+                                    Default Parameter
+                                </a>
+
+                                <a href="ReturnValuePage.html">
+                                    Return Values
+                                </a>
+
+                                <a href="NamedArgumentsPage.html">
+                                    Named Arguments
+                                </a>
+
+                                <a href="MethodOverloadingPage.html">
+                                    Method Overloading
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         Module 08
+                         ================================================== -->
+
+                    <div class="syllabus-module">
+
+                        <span class="module-number">
+                            08
+                        </span>
+
+
+                        <div class="module-content">
+
+                            <h3>
+                                Object-Oriented Programming
+                            </h3>
+
+                            <p>
+                                Learn the main OOP concepts used to organize
+                                larger C# applications.
+                            </p>
+
+
+                            <div class="module-links">
+
+                                <a href="OOPPage.html">
+                                    OOP
+                                </a>
+
+                                <a href="ClassesAndObjectsPage.html">
+                                    Classes & Objects
+                                </a>
+
+                                <a href="MultipleObjectsPage.html">
+                                    Multiple Objects
+                                </a>
+
+                                <a href="ClassesMembersPage.html">
+                                    Class Members
+                                </a>
+
+                                <a href="ConstructorsPage.html">
+                                    Constructors
+                                </a>
+
+                                <a href="AccessModifiersPage.html">
+                                    Access Modifiers
+                                </a>
+
+                                <a href="PropertiesPage.html">
+                                    Properties
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         Module 09
+                         ================================================== -->
+
+                    <div class="syllabus-module">
+
+                        <span class="module-number">
+                            09
+                        </span>
+
+
+                        <div class="module-content">
+
+                            <h3>
+                                Advanced OOP
+                            </h3>
+
+                            <p>
+                                Continue with inheritance, polymorphism,
+                                abstraction, interfaces, and enums.
+                            </p>
+
+
+                            <div class="module-links">
+
+                                <a href="InheritancePage.html">
+                                    Inheritance
+                                </a>
+
+                                <a href="PolymorphismPage.html">
+                                    Polymorphism
+                                </a>
+
+                                <a href="AbstractionPage.html">
+                                    Abstraction
+                                </a>
+
+                                <a href="InterfacePage.html">
+                                    Interface
+                                </a>
+
+                                <a href="MultipleInterfacesPage.html">
+                                    Multiple Interfaces
+                                </a>
+
+                                <a href="EnumsPage.html">
+                                    Enums
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         Module 10
+                         ================================================== -->
+
+                    <div class="syllabus-module">
+
+                        <span class="module-number">
+                            10
+                        </span>
+
+
+                        <div class="module-content">
+
+                            <h3>
+                                Files & Exceptions
+                            </h3>
+
+                            <p>
+                                Learn how to work with files and handle
+                                errors in your C# programs.
+                            </p>
+
+
+                            <div class="module-links">
+
+                                <a href="FilesPage.html">
+                                    Files
+                                </a>
+
+                                <a href="ExceptionsPage.html">
+                                    Exceptions
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 Practice Path
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-rocket"></i>
+
+                        Practice Path
+
+                    </span>
+
+
+                    <h2>
+                        Practice After Learning
+                    </h2>
+
+                </div>
+
+
+                <p class="syllabus-description">
+
+                    After completing the lessons, use the practical
+                    sections of DevPath to reinforce what you have learned.
+
+                </p>
+
+
+                <div class="syllabus-practice-grid">
+
+
+                    <a href="ExamplesPage.html" class="syllabus-practice-card">
+
+                        <i class="bx bx-code-curly"></i>
+
+                        <h3>
+                            Examples
+                        </h3>
+
+                        <p>
+                            Study practical C# examples and solutions.
+                        </p>
+
+                        <span>
+                            Open Examples
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a href="ExercisesPage.html" class="syllabus-practice-card">
+
+                        <i class="bx bx-task"></i>
+
+                        <h3>
+                            Exercises
+                        </h3>
+
+                        <p>
+                            Practice your programming skills with exercises.
+                        </p>
+
+                        <span>
+                            Open Exercises
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a href="QuizPage.html" class="syllabus-practice-card">
+
+                        <i class="bx bx-help-circle"></i>
+
+                        <h3>
+                            Quiz
+                        </h3>
+
+                        <p>
+                            Test your knowledge with C# questions.
+                        </p>
+
+                        <span>
+                            Take Quiz
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a href="CompilerPage.html" class="syllabus-practice-card">
+
+                        <i class="bx bx-terminal"></i>
+
+                        <h3>
+                            Compiler
+                        </h3>
+
+                        <p>
+                            Write and run C# code using the online compiler.
+                        </p>
+
+                        <span>
+                            Open Compiler
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 Server & Lab
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-server"></i>
+
+                        Lab
+
+                    </span>
+
+
+                    <h2>
+                        Sandbox and Lab Environment
+                    </h2>
+
+                </div>
+
+
+                <p class="syllabus-description">
+
+                    C# is best learned by writing and testing code.
+                    Use the compiler and server environment to practice
+                    what you learn instead of only reading the lessons.
+
+                </p>
+
+
+                <div class="syllabus-lab">
+
+
+                    <div class="syllabus-lab-item">
+
+                        <i class="bx bx-edit-alt"></i>
+
+                        <div>
+
+                            <h3>
+                                Write Code
+                            </h3>
+
+                            <p>
+                                Create and edit your C# code.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="syllabus-lab-item">
+
+                        <i class="bx bx-play-circle"></i>
+
+                        <div>
+
+                            <h3>
+                                Run Code
+                            </h3>
+
+                            <p>
+                                Execute your code and check the result.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="syllabus-lab-item">
+
+                        <i class="bx bx-cloud"></i>
+
+                        <div>
+
+                            <h3>
+                                Work Online
+                            </h3>
+
+                            <p>
+                                Use an online environment to practice
+                                and work with projects.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <a href="ServerPage.html" class="syllabus-action">
+
+                    Learn About C# Server
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                </a>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 Certification
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-certification"></i>
+
+                        Certification
+
+                    </span>
+
+
+                    <h2>
+                        C# Certification
+                    </h2>
+
+                </div>
+
+
+                <p class="syllabus-description">
+
+                    After completing the learning path, you can review
+                    your knowledge through the quiz and exercises before
+                    moving toward certification.
+
+                </p>
+
+
+                <div class="syllabus-certification">
+
+
+                    <div class="syllabus-certification-icon">
+
+                        <i class="bx bx-award"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Ready to Test Your Knowledge?
+                        </h3>
+
+                        <p>
+                            Finish the lessons, practice with exercises,
+                            take the quiz, and then review your complete
+                            learning path.
+                        </p>
+
+
+                        <a href="CertificatePage.html" class="syllabus-action">
+
+                            C# Certificate
+
+                            <i class="bx bx-right-arrow-alt"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 Final Note
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+
+                <div class="syllabus-note">
+
+
+                    <strong>
+                        Final Tip:
+                    </strong>
+
+                    The best way to learn C# is to follow the topics
+                    in order, write code yourself, solve exercises,
+                    and test your understanding with quizzes.
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 Bottom Navigation
+                 ================================================== -->
+
+            <div class="tutorial-bottom-actions">
+
+
+                <a href="ServerPage.html" class="tutorial-button secondary">
+
+                    <i class="bx bx-left-arrow-alt"></i>
+
+                    Previous
+
+                </a>
+
+
+                <a href="StudyPlanPage.html" class="tutorial-button primary">
+
+                    Next
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         End Learning Page
+         ================================================== -->
+
+
+
+    <!-- ==================================================
+         Start Footer
+         ================================================== -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+                <a href="../../index.html" class="brand">
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/BootstrapPage.html">
+                    Bootstrap
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================================
+         Back To Top
+         ========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0">
+    </i>
+
+
+
+    <!-- ==================================================
+         Global JavaScript
+         ================================================== -->
+
+    <script src="../../JavaScript/global.js"></script>
+
 </body>
+
+</html>

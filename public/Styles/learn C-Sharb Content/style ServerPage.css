@@ -1,0 +1,536 @@
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Server Description
+   ========================================================== */
+
+.server-description {
+  color: var(--text-secondary);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+
+.server-description:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Server Inline
+   ========================================================== */
+
+.server-inline {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 3px 8px;
+
+  margin: 0 3px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(251, 146, 60, 0.12);
+
+  border-radius: 5px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Server Note
+   ========================================================== */
+
+.server-note {
+  margin-top: 22px;
+
+  padding: 18px;
+
+  color: var(--text-secondary);
+
+  background: rgba(250, 204, 21, 0.06);
+
+  border: 1px solid rgba(250, 204, 21, 0.14);
+
+  border-left: 3px solid var(--secondary);
+
+  border-radius: var(--radius-md);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.server-note strong {
+  color: var(--secondary);
+
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Server List
+   ========================================================== */
+
+.server-list {
+  margin: 20px 0 0;
+
+  padding-left: 24px;
+}
+
+.server-list li {
+  margin-bottom: 14px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.server-list li:last-child {
+  margin-bottom: 0;
+}
+
+.server-list strong {
+  color: var(--text);
+
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Server Features
+   ========================================================== */
+
+.server-features {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+
+  margin-top: 22px;
+}
+
+.server-feature {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.server-feature:hover {
+  border-color: rgba(249, 115, 22, 0.22);
+
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-2px);
+}
+
+.server-feature-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 42px;
+
+  height: 42px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(249, 115, 22, 0.15);
+
+  border-radius: var(--radius-md);
+}
+
+.server-feature-icon i {
+  font-size: 21px;
+}
+
+.server-feature h3 {
+  margin: 0 0 7px;
+
+  color: var(--text);
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.server-feature p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   Server Steps
+   ========================================================== */
+
+.server-steps {
+  display: grid;
+
+  gap: 14px;
+
+  margin-top: 22px;
+}
+
+.server-step {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 16px;
+
+  padding: 18px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+}
+
+.server-step-number {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 42px;
+
+  height: 42px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(249, 115, 22, 0.15);
+
+  border-radius: 50%;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.server-step h3 {
+  margin: 0 0 6px;
+
+  color: var(--text);
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.server-step p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   Server Example
+   ========================================================== */
+
+.server-example {
+  margin-top: 22px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.server-example-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 48px;
+
+  padding: 10px 18px;
+
+  background: rgba(249, 115, 22, 0.08);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.server-example-header span {
+  color: var(--primary-light);
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.server-example-header i {
+  color: var(--primary-light);
+
+  font-size: 18px;
+}
+
+.server-example pre {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  white-space: pre;
+}
+
+.server-example code {
+  color: inherit;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: inherit;
+}
+
+.server-keyword {
+  color: var(--primary-light);
+
+  font-weight: 800;
+}
+
+.server-type {
+  color: #f97316;
+
+  font-weight: 700;
+}
+
+.server-string {
+  color: #a3e635;
+}
+
+/* ==========================================================
+   Server Explanation
+   ========================================================== */
+
+.server-explanation {
+  margin-top: 25px;
+}
+
+.server-explanation h3 {
+  margin-bottom: 14px;
+
+  color: var(--text);
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.server-explanation p {
+  margin-bottom: 16px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.server-explanation p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Server Comparison
+   ========================================================== */
+
+.server-comparison {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+
+  margin-top: 22px;
+}
+
+.server-comparison-column {
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+}
+
+.server-comparison-column h3 {
+  margin: 0 0 16px;
+
+  color: var(--primary-light);
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.server-comparison-column ul {
+  margin: 0;
+
+  padding-left: 22px;
+}
+
+.server-comparison-column li {
+  margin-bottom: 10px;
+
+  color: var(--text-secondary);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.server-comparison-column li:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .server-features {
+    grid-template-columns: 1fr;
+  }
+
+  .server-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .server-example pre {
+    padding: 18px;
+
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .server-description {
+    font-size: 15px;
+  }
+
+  .server-list {
+    padding-left: 20px;
+  }
+
+  .server-list li {
+    font-size: 15px;
+  }
+
+  .server-feature {
+    padding: 16px;
+  }
+
+  .server-step {
+    padding: 16px;
+  }
+
+  .server-step-number {
+    width: 38px;
+
+    height: 38px;
+
+    font-size: 12px;
+  }
+
+  .server-step h3 {
+    font-size: 16px;
+  }
+
+  .server-step p {
+    font-size: 14px;
+  }
+
+  .server-example-header {
+    padding: 9px 15px;
+  }
+
+  .server-example pre {
+    padding: 16px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .server-inline {
+    font-size: 13px;
+  }
+
+  .server-note {
+    padding: 16px;
+
+    font-size: 14px;
+  }
+}

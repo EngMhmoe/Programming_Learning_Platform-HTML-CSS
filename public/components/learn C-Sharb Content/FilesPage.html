@@ -2,22 +2,1998 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn C-sharp of ClassesAndObjects" /> <!-- project description -->
-    <meta name="author" content="mohamed Alwani" /> <!-- author name -->
-    <meta name="keyWords" content="C,C#" /> <!-- keyWords project description  -->
 
-    <title>Learn C-sharp of Files</title> <!-- project name -->
+    <meta name="description" content="Learn how to work with files in C# using the System.IO namespace.">
+    <meta name="author" content="mohamed Alwani">
+    <meta name="keywords" content="C#, Files, File Handling, System.IO, Read File, Write File, C Sharp">
 
-    <link rel="icon"
-        href="C:\Users\DELL\Desktop\Full Stack  Developer\Front_end\Project3 html , css , js\photos\photo6.jpg">
+    <title>C# Files | DevPath</title>
 
-    <!-- Link page learn C#-->
-    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style FilesPage.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="../../photos/photo6.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Shared Learning Page Styles -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style FilesPage.css">
+
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
 </head>
 
 <body>
-    FilesPage
+
+    <!-- ==========================================================
+         Header
+         ========================================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <ul class="nav-links">
+
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link active">
+
+                        Programming Basics
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html" class="current">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="../../Pages/DataStructure.html">
+
+                            <i class="bx bx-data"></i>
+
+                            Data Structure
+
+                        </a>
+
+
+                        <a href="../../Pages/Algorithem.html">
+
+                            <i class="bx bx-git-branch"></i>
+
+                            Algorithm
+
+                        </a>
+
+
+                        <a href="../../Pages/ProblemSolving.html">
+
+                            <i class="bx bx-bulb"></i>
+
+                            Problem Solving
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Front-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+
+                            <i class="bx bxl-html5"></i>
+
+                            HTML
+
+                        </a>
+
+
+                        <a href="../../Pages/CSSPage.html">
+
+                            <i class="bx bxl-css3"></i>
+
+                            CSS
+
+                        </a>
+
+
+                        <a href="../../Pages/BootstrapPage.html">
+
+                            <i class="bx bxl-bootstrap"></i>
+
+                            Bootstrap
+
+                        </a>
+
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+
+                            <i class="bx bxl-tailwind-css"></i>
+
+                            Tailwind CSS
+
+                        </a>
+
+
+                        <a href="../../Pages/JavaScriptPage.html">
+
+                            <i class="bx bxl-javascript"></i>
+
+                            JavaScript
+
+                        </a>
+
+
+                        <a href="../../Pages/React-JS_Page.html">
+
+                            <i class="bx bxl-react"></i>
+
+                            React JS
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Web Technologies
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/APIS-Page.html">
+
+                            <i class="bx bx-cloud"></i>
+
+                            API
+
+                        </a>
+
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+
+                            <i class="bx bx-server"></i>
+
+                            Strapi Back-End
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+
+                        Back-End
+
+                        <i class="bx bx-chevron-down"></i>
+
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-Csharb.html">
+
+                            <i class="bx bx-code-curly"></i>
+
+                            C#
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+
+                            <i class="bx bx-code-alt"></i>
+
+                            ASP.NET
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+
+                            <i class="bx bx-data"></i>
+
+                            SQL
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+
+                            <i class="bx bx-layer"></i>
+
+                            Entity Framework
+
+                        </a>
+
+
+                        <a href="../../Pages/BackEnd-APIs.html">
+
+                            <i class="bx bx-transfer"></i>
+
+                            APIs
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <a href="../../Pages/ContactUS.html" class="login-btn">
+                        Contact US
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+
+                        <i class="bx bx-log-in"></i>
+
+                        Login
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ==========================================================
+         Learning Page
+         ========================================================== -->
+
+    <main class="learning-page">
+
+
+        <!-- ======================================================
+             Sidebar
+             ====================================================== -->
+
+        <aside class="learning-sidebar">
+
+
+            <!-- Sidebar Header -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-icon">
+
+                    <i class="bx bx-code-curly"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Programming Basics
+                    </span>
+
+                    <h2>
+                        C# Tutorial
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Introduction -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-book-open"></i>
+
+                    Introduction
+
+                </h3>
+
+
+                <a href="HomePage.html" class="sidebar-link">
+
+                    <i class="bx bx-home-alt"></i>
+
+                    C# Home
+
+                </a>
+
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    C# Intro
+
+                </a>
+
+
+                <a href="GetStartedPage.html" class="sidebar-link">
+
+                    <i class="bx bx-play-circle"></i>
+
+                    C# Get Started
+
+                </a>
+
+
+                <a href="SyntaxPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-alt"></i>
+
+                    C# Syntax
+
+                </a>
+
+
+                <a href="OutputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Output
+
+                </a>
+
+
+                <a href="CommentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-comment-detail"></i>
+
+                    C# Comments
+
+                </a>
+
+            </div>
+
+
+            <!-- Variables -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-data"></i>
+
+                    Variables
+
+                </h3>
+
+
+                <a href="VariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-data"></i>
+
+                    C# Variables
+
+                </a>
+
+
+                <a href="ConstantsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-alt"></i>
+
+                    C# Constants
+
+                </a>
+
+
+                <a href="DisplayVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-show"></i>
+
+                    C# Display Variables
+
+                </a>
+
+
+                <a href="MultipleVariablesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Multiple Variables
+
+                </a>
+
+
+                <a href="IdentifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-purchase-tag"></i>
+
+                    C# Identifiers
+
+                </a>
+
+            </div>
+
+
+            <!-- Data Types -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-category"></i>
+
+                    Data Types
+
+                </h3>
+
+
+                <a href="DataTypesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-category"></i>
+
+                    C# Data Types
+
+                </a>
+
+
+                <a href="TypeCastingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Type Casting
+
+                </a>
+
+
+                <a href="UserInputPage.html" class="sidebar-link">
+
+                    <i class="bx bx-edit-alt"></i>
+
+                    C# User Input
+
+                </a>
+
+            </div>
+
+
+            <!-- Operators -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-calculator"></i>
+
+                    Operators
+
+                </h3>
+
+
+                <a href="ArithmeticPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calculator"></i>
+
+                    C# Arithmetic
+
+                </a>
+
+
+                <a href="AssignmentPage.html" class="sidebar-link">
+
+                    <i class="bx bx-equalizer"></i>
+
+                    C# Assignment
+
+                </a>
+
+
+                <a href="ComparisonPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Comparison
+
+                </a>
+
+
+                <a href="LogicalPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Logical
+
+                </a>
+
+            </div>
+
+
+            <!-- Math -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-math"></i>
+
+                    Math
+
+                </h3>
+
+
+                <a href="MathPage.html" class="sidebar-link">
+
+                    <i class="bx bx-math"></i>
+
+                    C# Math
+
+                </a>
+
+            </div>
+
+
+            <!-- Strings -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-text"></i>
+
+                    Strings
+
+                </h3>
+
+
+                <a href="StringsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-text"></i>
+
+                    C# Strings
+
+                </a>
+
+
+                <a href="ConcatenationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-link"></i>
+
+                    C# Concatenation
+
+                </a>
+
+
+                <a href="InterpolationPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-curly"></i>
+
+                    C# Interpolation
+
+                </a>
+
+
+                <a href="AccessStringsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-search-alt"></i>
+
+                    C# Access Strings
+
+                </a>
+
+
+                <a href="SpecialCharactersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Special Characters
+
+                </a>
+
+            </div>
+
+
+            <!-- Booleans -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    Booleans
+
+                </h3>
+
+
+                <a href="BooleansPage.html" class="sidebar-link">
+
+                    <i class="bx bx-toggle-left"></i>
+
+                    C# Booleans
+
+                </a>
+
+            </div>
+
+
+            <!-- If...Else -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-git-branch"></i>
+
+                    If...Else
+
+                </h3>
+
+
+                <a href="IFPage.html" class="sidebar-link">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# if
+
+                </a>
+
+
+                <a href="ElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                    C# Else
+
+                </a>
+
+
+                <a href="ElseIfPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Else if
+
+                </a>
+
+
+                <a href="ShortHandIfElsePage.html" class="sidebar-link">
+
+                    <i class="bx bx-code"></i>
+
+                    C# Short Hand if...else
+
+                </a>
+
+            </div>
+
+
+            <!-- Control Flow -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-git-branch"></i>
+
+                    Control Flow
+
+                </h3>
+
+
+                <a href="SwitchPage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Switch
+
+                </a>
+
+
+                <a href="WhileLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-refresh"></i>
+
+                    C# While Loop
+
+                </a>
+
+            </div>
+
+
+            <!-- For Loop -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-repeat"></i>
+
+                    For Loop
+
+                </h3>
+
+
+                <a href="ForLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-repeat"></i>
+
+                    C# For Loop
+
+                </a>
+
+
+                <a href="ForeachLoopPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Foreach Loop
+
+                </a>
+
+            </div>
+
+
+            <!-- Loop Control -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-transfer"></i>
+
+                    Loop Control
+
+                </h3>
+
+
+                <a href="BreakAndContinuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Break / Continue
+
+                </a>
+
+            </div>
+
+
+            <!-- Arrays -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    Arrays
+
+                </h3>
+
+
+                <a href="ArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid-alt"></i>
+
+                    C# Arrays
+
+                </a>
+
+
+                <a href="LoopThroughAnArrayPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-check"></i>
+
+                    C# Loop Through an Array
+
+                </a>
+
+
+                <a href="SortArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-sort"></i>
+
+                    C# Sort Arrays
+
+                </a>
+
+
+                <a href="MultidimensionalArraysPage.html" class="sidebar-link">
+
+                    <i class="bx bx-grid"></i>
+
+                    C# Multidimensional Arrays
+
+                </a>
+
+            </div>
+
+
+            <!-- Methods -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-function"></i>
+
+                    Methods
+
+                </h3>
+
+
+                <a href="MethodsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-function"></i>
+
+                    C# Methods
+
+                </a>
+
+
+                <a href="MethodParametersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Parameters
+
+                </a>
+
+
+                <a href="DefaultParameterPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cog"></i>
+
+                    C# Default Parameter
+
+                </a>
+
+
+                <a href="ReturnValuePage.html" class="sidebar-link">
+
+                    <i class="bx bx-log-out"></i>
+
+                    C# Return Values
+
+                </a>
+
+
+                <a href="NamedArgumentsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-label"></i>
+
+                    C# Named Arguments
+
+                </a>
+
+
+                <a href="MethodOverloadingPage.html" class="sidebar-link">
+
+                    <i class="bx bx-layer"></i>
+
+                    C# Method Overloading
+
+                </a>
+
+            </div>
+
+
+            <!-- Classes -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-cube"></i>
+
+                    Classes
+
+                </h3>
+
+
+                <a href="OOPPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube"></i>
+
+                    C# OOP
+
+                </a>
+
+
+                <a href="ClassesAndObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-cube-alt"></i>
+
+                    C# Classes and Objects
+
+                </a>
+
+
+                <a href="MultipleObjectsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-copy"></i>
+
+                    C# Multiple Objects
+
+                </a>
+
+
+                <a href="ClassesMembersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ul"></i>
+
+                    C# Class Members
+
+                </a>
+
+
+                <a href="ConstructorsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-buildings"></i>
+
+                    C# Constructors
+
+                </a>
+
+
+                <a href="AccessModifiersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-lock-open-alt"></i>
+
+                    C# Access Modifiers
+
+                </a>
+
+
+                <a href="PropertiesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-slider-alt"></i>
+
+                    C# Properties
+
+                </a>
+
+
+                <a href="InheritancePage.html" class="sidebar-link">
+
+                    <i class="bx bx-git-branch"></i>
+
+                    C# Inheritance
+
+                </a>
+
+
+                <a href="PolymorphismPage.html" class="sidebar-link">
+
+                    <i class="bx bx-shape-polygon"></i>
+
+                    C# Polymorphism
+
+                </a>
+
+
+                <a href="AbstractionPage.html" class="sidebar-link">
+
+                    <i class="bx bx-hide"></i>
+
+                    C# Abstraction
+
+                </a>
+
+
+                <a href="InterfacePage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer"></i>
+
+                    C# Interface
+
+                </a>
+
+
+                <a href="MultipleInterfacesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-transfer-alt"></i>
+
+                    C# Multiple Interfaces
+
+                </a>
+
+
+                <a href="EnumsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-list-ol"></i>
+
+                    C# Enums
+
+                </a>
+
+
+                <a href="FilesPage.html" class="sidebar-link active">
+
+                    <i class="bx bx-file"></i>
+
+                    C# Files
+
+                </a>
+
+
+                <a href="ExceptionsPage.html" class="sidebar-link">
+
+                    <i class="bx bx-error"></i>
+
+                    C# Exceptions
+
+                </a>
+
+            </div>
+
+
+            <!-- How To -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-wrench"></i>
+
+                    How To
+
+                </h3>
+
+
+                <a href="AddTwoNumbersPage.html" class="sidebar-link">
+
+                    <i class="bx bx-plus-circle"></i>
+
+                    C# Add Two Numbers
+
+                </a>
+
+            </div>
+
+
+            <!-- Examples -->
+
+            <div class="sidebar-section">
+
+                <h3>
+
+                    <i class="bx bx-code-block"></i>
+
+                    Examples
+
+                </h3>
+
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-code-block"></i>
+
+                    C# Examples
+
+                </a>
+
+
+                <a href="CompilerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-terminal"></i>
+
+                    C# Compiler
+
+                </a>
+
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+
+                    <i class="bx bx-task"></i>
+
+                    C# Exercises
+
+                </a>
+
+
+                <a href="QuizPage.html" class="sidebar-link">
+
+                    <i class="bx bx-question-mark"></i>
+
+                    C# Quiz
+
+                </a>
+
+
+                <a href="ServerPage.html" class="sidebar-link">
+
+                    <i class="bx bx-server"></i>
+
+                    C# Server
+
+                </a>
+
+
+                <a href="SyllabusPage.html" class="sidebar-link">
+
+                    <i class="bx bx-book"></i>
+
+                    C# Syllabus
+
+                </a>
+
+
+                <a href="StudyPlanPage.html" class="sidebar-link">
+
+                    <i class="bx bx-calendar"></i>
+
+                    C# Study Plan
+
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+
+                    <i class="bx bx-certification"></i>
+
+                    C# Certificate
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ======================================================
+             Main Content
+             ====================================================== -->
+
+        <section class="tutorial-content">
+
+
+            <!-- ==================================================
+                 Tutorial Header
+                 ================================================== -->
+
+            <div class="tutorial-header">
+
+                <span class="section-badge">
+                    <i class="bx bx-code-alt"></i>
+                    C# Programming
+                </span>
+
+                <h1>
+                    C# Files
+                </h1>
+
+                <p>
+                    Learn how to create, write, read, and manage files in C#
+                    using the System.IO namespace.
+                </p>
+
+
+                <div class="tutorial-actions">
+
+                    <a href="EnumsPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="ExceptionsPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 What Are Files?
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-file"></i>
+                        Files
+                    </span>
+
+                    <h2>
+                        What Are Files?
+                    </h2>
+
+                </div>
+
+
+                <p class="files-description">
+
+                    Files are used to store data permanently on a computer.
+                    C# provides several classes for working with files and folders.
+
+                </p>
+
+
+                <p class="files-description">
+
+                    Most file operations in C# are available through the
+                    <span class="files-inline">System.IO</span>
+                    namespace.
+
+                </p>
+
+
+                <div class="files-note">
+
+                    <strong>Common file operations:</strong>
+
+                    You can create, write, read, copy, move, and delete files
+                    using C#.
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 System.IO
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-folder-open"></i>
+                        System.IO
+                    </span>
+
+                    <h2>
+                        The System.IO Namespace
+                    </h2>
+
+                </div>
+
+
+                <p class="files-description">
+
+                    The
+                    <span class="files-inline">System.IO</span>
+                    namespace contains classes that allow you to work with
+                    files, directories, streams, and other input/output operations.
+
+                </p>
+
+
+                <div class="files-example">
+
+                    <div class="files-example-header">
+
+                        <span>
+                            C# Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="files-keyword">using</span> <span class="files-type">System.IO</span>;</code></pre>
+
+                </div>
+
+
+                <div class="files-explanation">
+
+                    <h3>
+                        Why Use System.IO?
+                    </h3>
+
+                    <p>
+                        Without importing the namespace, you may need to use the
+                        complete class names such as
+                        <strong>System.IO.File</strong>.
+                    </p>
+
+                    <p>
+                        Using the namespace makes file-related code shorter
+                        and easier to read.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Create A File
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-file-plus"></i>
+                        Create
+                    </span>
+
+                    <h2>
+                        Create a File
+                    </h2>
+
+                </div>
+
+
+                <p class="files-description">
+
+                    You can use
+                    <span class="files-inline">File.Create()</span>
+                    to create a new file.
+
+                </p>
+
+
+                <div class="files-example">
+
+                    <div class="files-example-header">
+
+                        <span>
+                            C# Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="files-keyword">using</span> <span class="files-type">System.IO</span>;
+
+<span class="files-type">File</span>.<span class="files-method">Create</span>(<span class="files-string">"example.txt"</span>);</code></pre>
+
+                </div>
+
+
+                <div class="files-explanation">
+
+                    <h3>
+                        How It Works
+                    </h3>
+
+                    <p>
+                        The
+                        <strong>File.Create()</strong>
+                        method creates a file named
+                        <strong>example.txt</strong>.
+                    </p>
+
+                    <p>
+                        If the file already exists, it is overwritten.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Write To A File
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-edit"></i>
+                        Write
+                    </span>
+
+                    <h2>
+                        Write to a File
+                    </h2>
+
+                </div>
+
+
+                <p class="files-description">
+
+                    The
+                    <span class="files-inline">File.WriteAllText()</span>
+                    method creates a file and writes text into it.
+
+                </p>
+
+
+                <div class="files-example">
+
+                    <div class="files-example-header">
+
+                        <span>
+                            C# Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="files-keyword">using</span> <span class="files-type">System.IO</span>;
+
+<span class="files-type">File</span>.<span class="files-method">WriteAllText</span>(
+    <span class="files-string">"example.txt"</span>,
+    <span class="files-string">"Hello from C#!"</span>
+);</code></pre>
+
+                </div>
+
+
+                <div class="files-explanation">
+
+                    <h3>
+                        What Happens?
+                    </h3>
+
+                    <p>
+                        The method creates
+                        <strong>example.txt</strong>
+                        if it does not exist.
+                    </p>
+
+                    <p>
+                        It then writes the specified text into the file.
+                        If the file already contains text, the existing content
+                        is replaced.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Read A File
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-book-open"></i>
+                        Read
+                    </span>
+
+                    <h2>
+                        Read a File
+                    </h2>
+
+                </div>
+
+
+                <p class="files-description">
+
+                    You can use
+                    <span class="files-inline">File.ReadAllText()</span>
+                    to read all text from a file.
+
+                </p>
+
+
+                <div class="files-example">
+
+                    <div class="files-example-header">
+
+                        <span>
+                            C# Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="files-keyword">string</span> content =
+    <span class="files-type">File</span>.<span class="files-method">ReadAllText</span>(<span class="files-string">"example.txt"</span>);
+
+<span class="files-type">Console</span>.<span class="files-method">WriteLine</span>(content);</code></pre>
+
+                </div>
+
+
+                <div class="files-explanation">
+
+                    <h3>
+                        How It Works
+                    </h3>
+
+                    <p>
+                        The
+                        <strong>ReadAllText()</strong>
+                        method reads all the text stored inside the file.
+                    </p>
+
+                    <p>
+                        The returned text is stored in the
+                        <strong>content</strong>
+                        variable.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Check If File Exists
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-circle"></i>
+                        Check
+                    </span>
+
+                    <h2>
+                        Check If a File Exists
+                    </h2>
+
+                </div>
+
+
+                <p class="files-description">
+
+                    Before reading or deleting a file, you can check whether
+                    the file exists by using
+                    <span class="files-inline">File.Exists()</span>.
+
+                </p>
+
+
+                <div class="files-example">
+
+                    <div class="files-example-header">
+
+                        <span>
+                            C# Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="files-keyword">if</span> (<span class="files-type">File</span>.<span class="files-method">Exists</span>(<span class="files-string">"example.txt"</span>))
+{
+    <span class="files-type">Console</span>.<span class="files-method">WriteLine</span>(<span class="files-string">"File exists."</span>);
+}</code></pre>
+
+                </div>
+
+
+                <div class="files-note">
+
+                    <strong>Important:</strong>
+
+                    Checking whether a file exists can help prevent errors when
+                    working with files that may not be available.
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Delete A File
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-trash"></i>
+                        Delete
+                    </span>
+
+                    <h2>
+                        Delete a File
+                    </h2>
+
+                </div>
+
+
+                <p class="files-description">
+
+                    The
+                    <span class="files-inline">File.Delete()</span>
+                    method removes a file from the computer.
+
+                </p>
+
+
+                <div class="files-example">
+
+                    <div class="files-example-header">
+
+                        <span>
+                            C# Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+
+                    <pre><code><span class="files-type">File</span>.<span class="files-method">Delete</span>(<span class="files-string">"example.txt"</span>);</code></pre>
+
+                </div>
+
+
+                <div class="files-explanation">
+
+                    <h3>
+                        Safe Deletion
+                    </h3>
+
+                    <p>
+                        It is often useful to check whether the file exists
+                        before trying to delete it.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Practice
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Test Your Knowledge
+                    </h2>
+
+                    <p>
+                        Complete the C# code by choosing the correct method.
+                    </p>
+
+                </div>
+
+
+                <div class="exercise-preview" data-correct-answer="ReadAllText">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                C# Exercise
+                            </span>
+
+                            <h3>
+                                Choose the Correct Method
+                            </h3>
+
+                        </div>
+
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <p class="exercise-question">
+                        Which method should be used to read all text from a file?
+                    </p>
+
+
+                    <div class="page-exercise-code">
+
+                        <pre><code><span class="files-keyword">string</span> content =
+    <span class="files-type">File</span>.<span class="files-method">__________</span>(<span class="files-string">"example.txt"</span>);</code></pre>
+
+                    </div>
+
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="WriteAllText">
+                            WriteAllText
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="ReadAllText">
+                            ReadAllText
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Create">
+                            Create
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Delete">
+                            Delete
+                        </button>
+
+                    </div>
+
+
+                    <div class="exercise-result" id="exerciseResult"></div>
+
+                </div>
+
+
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All C# Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Page Navigation
+                 ================================================== -->
+
+            <div class="tutorial-bottom-actions">
+
+                <a href="EnumsPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="ExceptionsPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================================
+         Footer
+         ========================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <a href="../../index.html" class="brand">
+
+                    <span class="brand-icon">
+                        <i class="bx bx-code-alt"></i>
+                    </span>
+
+                    <span class="brand-text">
+                        Dev<span>Path</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Learn programming step by step and build the skills you need
+                    for your development journey.
+                </p>
+
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="bx bxl-tiktok"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="bx bxl-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Front-End
+                </h3>
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+                <a href="../../Pages/BootstrapPage.html">
+                    Bootstrap
+                </a>
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    More
+                </h3>
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================================
+         Back To Top
+         ========================================================== -->
+
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0">
+    </i>
+
+
+    <!-- Global JavaScript -->
+    <script src="../../JavaScript/global.js"></script>
+
 </body>
+
+</html>

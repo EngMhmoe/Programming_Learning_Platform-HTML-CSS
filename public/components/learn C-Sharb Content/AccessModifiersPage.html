@@ -4,1189 +4,1602 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn C-sharp of AccessModifiers" /> <!-- project description -->
-    <meta name="author" content="mohamed Alwani" /> <!-- author name -->
-    <meta name="keyWords" content="C,C#" /> <!-- keyWords project description  -->
 
-    <title>Learn C-sharp of AccessModifiers</title> <!-- project name -->
-    <link rel="icon"
-        href="C:\Users\DELL\Desktop\Full Stack  Developer\Front_end\Project3 html , css , js\photos\photo6.jpg">
-    <!-- icon -->
+    <meta name="description" content="Learn C# access modifiers with DevPath.">
+    <meta name="keywords"
+        content="C#, Access Modifiers, Public, Private, Protected, Internal, Encapsulation, OOP, C Sharp">
 
-    <!-- Link page learn C#-->
-    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style AccessModifiersPage.css" />
+    <title>C# Access Modifiers | DevPath</title>
 
-    <!-- Link boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../../photos/photo6.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Shared Learning Page CSS -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style AccessModifiersPage.css">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="nav">
-        <nav class="nav1">
-            <a href="Home.html" class="Home">
-                <main>Taalem</main>
+
+    <!-- ==================================================
+         Header
+         ================================================== -->
+
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
             </a>
 
-            <a href="Login.html" class="signup" style="margin-left: 85%;">sign up</a>
+            <ul class="nav-links">
+
+                <li>
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html" class="current">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                    </div>
+
+                </li>
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Web Technologies
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/APIS-Page.html">
+                            <i class="bx bx-cloud"></i>
+                            API
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class="bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+
+                </li>
+
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-Csharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-APIs.html">
+                            <i class="bx bx-transfer"></i>
+                            APIs
+                        </a>
+
+                    </div>
+
+                </li>
+
+                <li>
+                    <a href="../../Pages/ContactUS.html" class="login-btn">
+                        Contact US
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
         </nav>
+    </header>
 
 
+    <!-- ==================================================
+         Main Learning Page
+         ================================================== -->
 
-        <nav class="nav2">
-            <a href="Learn Csharb.html" class="C">C#</a>
+    <main class="learning-page">
 
-            <a href="#" class="DS">Data Structure</a>
+        <!-- ==================================================
+             Sidebar
+             ================================================== -->
 
-            <a href="#" class="Alogo">Algorithm</a>
+        <aside class="learning-sidebar">
 
-            <a href="#" class="proSolv">Problem Solving</a>
+            <!-- Sidebar Header -->
 
-            <a href="#" class="html">Html</a>
+            <div class="sidebar-header">
 
-            <a href="#" class="css">CSS</a>
-
-            <a href="#" class="JS">JavaScript</a>
-
-            <a href="#" class="Angular">Angular16</a>
-        </nav>
-    </div>
-
-
-
-
-
-
-
-
-
-
-    <div class="contentALL" id="contentALL" style="position: fixed;">
-
-        <div class="content1">
-            <h1>C# Tutorial</h1>
-            <ul class="ul1">
-                <a href="Learn Csharb.html">
-                    <li class="lihover">C# HOME</li>
-                </a>
-
-                <a href="Learn C-sharp of intro.html">
-                    <li class="lihover">C# Intro</li>
-                </a>
-
-                <a href="Learn C-sharp of Get Started.html">
-                    <li class="lihover">C# Get Started</li>
-                </a>
-
-                <a href="Learn C-sharp of Syntax.html">
-                    <li class="lihover">C# Syntax</li>
-                </a>
-
-                <a href="Learn C-sharp of Output.html">
-                    <li class="lihover">C# Output</li>
-                </a>
-
-                <a href="Learn C-sharp of Comments.html">
-                    <li class="lihover">C# comments</li>
-                </a>
-
-            </ul>
-
-
-
-
-
-            <ul class="ul2">
-                <a href="#">
-                    <li>C# Variables</li>
-                </a>
-
-                <div class="variables">
-                    <a href="Learn C-sharp of Variables.html">
-                        <li class="lihover">Variables</li>
-                    </a>
-                    <a href="Learn C-sharp of Constants.html">
-                        <li class="lihover">Constants</li>
-                    </a>
-                    <a href="Learn C-sharp of Display.html">
-                        <li class="lihover">Display Variables</li>
-                    </a>
-                    <a href="Learn C-sharp of intro Multiple.html">
-                        <li class="lihover">Multiple Variables</li>
-                    </a>
-                    <a href="Learn C-sharp of Identifiers.html">
-                        <li class="lihover">identifiers</li>
-                    </a>
+                <div class="sidebar-icon">
+                    <i class="bx bx-code-curly"></i>
                 </div>
-            </ul>
 
+                <div>
 
-
-
-
-            <ul class="ul3">
-                <a href="Learn C-sharp of DataTypes.html">
-                    <li class="lihover">C# Data Types</li>
-                </a>
-
-                <a href="Learn C-sharp of TypeCasting.html">
-                    <li class="lihover">C# Type Casting</li>
-                </a>
-
-                <a href="Learn C-sharp of UserInput.html">
-                    <li class="lihover">C# User Input</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul4">
-                <a href="#">
-                    <li class="Operators1">C# Operators</li>
-                </a>
-
-                <div class="Operators">
-                    <a href="Learn C-sharp of Arithmetic.html">
-                        <li>Arithmetic</li>
-                    </a>
-                    <a href="Learn C-sharp of Assignment.html">
-                        <li>Assignment</li>
-                    </a>
-                    <a href="Learn C-sharp of Comparison.html">
-                        <li>comparison</li>
-                    </a>
-                    <a href="Learn C-sharp of Logical.html">
-                        <li>Logical</li>
-                    </a>
-                </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul5">
-                <a href="Learn C-sharp of Math.html">
-                    <li>C# Math</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul6">
-                <a href="#">
-                    <li>C# Strings</li>
-                </a>
-
-                <div class="Strings">
-                    <a href="Learn C-sharp of Strings.html">
-                        <li li class="lihover">Strings</li>
-                    </a>
-                    <a href="Learn C-sharp of Concatenation.html">
-                        <li class="lihover">Concatenation</li>
-                    </a>
-                    <a href="Learn C-sharp of Interpolation.html">
-                        <li class="lihover">interpolation</li>
-                    </a>
-                    <a href="Learn C-sharp of AccessStrings.html">
-                        <li class="lihover">Access Strings</li>
-                    </a>
-                    <a href="Learn C-sharp of SpecialCharacters.html">
-                        <li class="lihover">special characters</li>
-                    </a>
-                </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul7">
-                <a href="Learn C-sharp of Booleans.html">
-                    <li>C# Booleans</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul8">
-                <a href="#">
-                    <li>C# If...Else</li>
-                </a>
-
-                <div class="If">
-                    <a href="Learn C-sharp of IF.html">
-                        <li class="lihover">if</li>
-                    </a>
-                    <a href="Learn C-sharp of Else.html">
-                        <li class="lihover">Else</li>
-                    </a>
-                    <a href="Learn C-sharp of ElseIf.html">
-                        <li class="lihover">Else if</li>
-                    </a>
-                    <a href="Learn C-sharp of ShortHandIfElse.html">
-                        <li class="lihover">short hand if..else</li>
-                    </a>
-                </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul9">
-                <a href="Learn C-sharp of Switch.html">
-                    <li>C# Switch</li>
-                </a>
-
-                <a href="Learn C-sharp of WhileLoop.html">
-                    <li>C# While LooP</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul10">
-                <a href="#">
-                    <li>C# For LooP</li>
-                </a>
-
-                <div class="for">
-                    <a href="Learn C-sharp of ForLoop.html">
-                        <li class="lihover">for LooP</li>
-                    </a>
-                    <a href="Learn C-sharp of ForeachLoop.html">
-                        <li class="lihover">Foreach LooP</li>
-                    </a>
-                </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul11">
-                <a href="Learn C-sharp of BreakAndContinue.html">
-                    <li>C# Break/Continue</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul12">
-                <a href="#">
-                    <li>C# Arrays</li>
-                </a>
-
-                <div class="Arrays">
-                    <a href="Learn C-sharp of Arrays.html">
-                        <li>Arrays</li>
-                    </a>
-                    <a href="Learn C-sharp of LoopThroughAnArray.html">
-                        <li>LooP through an array</li>
-                    </a>
-                    <a href="Learn C-sharp of SortArrays.html">
-                        <li>sort Arrays</li>
-                    </a>
-                    <a href="Learn C-sharp of MultidimensionalArrays.html">
-                        <li>Multidimensional Arrays</li>
-                    </a>
-                </div>
-            </ul>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-        <div class="content3">
-            <h1>C# Methods</h1>
-
-            <ul class="ul1">
-                <a href="Learn C-sharp of Methods.html">
-                    <li>C# Methods</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul2">
-                <a href="#">
-                    <li>C# Methods</li>
-                </a>
-
-                <div class="Methods">
-                    <a href="Learn C-sharp of MethodParameters.html">
-                        <li>parameters</li>
-                    </a>
-
-                    <a href="Learn C-sharp of DefaultParameter.html">
-                        <li>default parameter</li>
-                    </a>
-
-                    <a href="Learn C-sharp of ReturnValue.html">
-                        <li>return values</li>
-                    </a>
-
-                    <a href="Learn C-sharp of NamedArguments.html">
-                        <li>named arguments</li>
-                    </a>
-                </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul3">
-                <a href="Learn C-sharp of MethodOverloading.html">
-                    <li>C# Method overloading</li>
-                </a>
-            </ul>
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <div class="content2">
-            <h1>C# Classes</h1>
-
-
-
-
-
-            <ul class="ul1">
-                <a href="Learn C-sharp of OOP.html">
-                    <li>C# OOP</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul2">
-                <a href="#">
-                    <li>C# classes/objects</li>
-                </a>
-
-                <div class="CalANobj">
-                    <a href="Learn C-sharp of ClassesAndObjects.html">
-                        <li>classes and objects</li>
-                    </a>
-
-                    <a href="Learn C-sharp of MultipleObjects.html">
-                        <li>Multiple objects</li>
-                    </a>
-                </div>
-            </ul>
-
-
-
-
-
-            <ul class="ul3" style="line-height: 30px;">
-                <a href="Learn C-sharp of ClassesMembers.html">
-                    <li>C# class members</li>
-                </a>
-
-                <a href="Learn C-sharp of Constructors.html">
-                    <li>C# constructors</li>
-                </a>
-
-                <a href="Learn C-sharp of AccessModifiers.html">
-                    <li class="liColor">C# access modifiers</li>
-                </a>
-
-                <a href="Learn C-sharp of Properties.html">
-                    <li>C# properties</li>
-                </a>
-
-                <a href="Learn C-sharp of Inheritance.html">
-                    <li>C# inheritance</li>
-                </a>
-
-                <a href="Learn C-sharp of Polymorphism.html">
-                    <li>C# polymorphism</li>
-                </a>
-
-                <a href="Learn C-sharp of Abstraction.html">
-                    <li>C# abstraction</li>
-                </a>
-            </ul>
-
-
-
-
-
-            <ul class="ul4">
-                <a href="#">
-                    <li>C# interface</li>
-                </a>
-
-                <div class="interface">
-                    <a href="Learn C-sharp of Interface.html">
-                        <li>interface</li>
-                    </a>
-
-                    <a href="Learn C-sharp of MultipleInterfaces.html">
-                        <li>Multiple interface</li>
-                    </a>
-                </div>
-            </ul>
-
-            <ul class="ul5">
-                <a href="Learn C-sharp of Enums.html">
-                    <li>C# enums</li>
-                </a>
-
-                <a href="Learn C-sharp of Files.html">
-                    <li>C# Files</li>
-                </a>
-
-                <a href="Learn C-sharp of Exceptions.html">
-                    <li>C# Exceptions</li>
-                </a>
-            </ul>
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <div class="content4">
-            <h1>C# how to</h1>
-
-            <ul class="ul1">
-                <a href="Learn C-sharp of AddTwoNumbers.html">
-                    <li>add tow numbers</li>
-                </a>
-            </ul>
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <div class="content5">
-            <h1>C# examples</h1>
-
-            <ul class="ul1">
-                <a href="Learn C-sharp of Examples.html">
-                    <li>C# examples</li>
-                </a>
-
-                <a href="Learn C-sharp of Compiler.html">
-                    <li>C# compiler</li>
-                </a>
-
-                <a href="Learn C-sharp of Exercises.html">
-                    <li>C# exercises</li>
-                </a>
-
-                <a href="Learn C-sharp of Quiz.html">
-                    <li>C# quiz</li>
-                </a>
-
-                <a href="Learn C-sharp of Server.html">
-                    <li>C# server</li>
-                </a>
-
-                <a href="Learn C-sharp of Syllabus.html">
-                    <li>C# syllabus</li>
-                </a>
-
-                <a href="Learn C-sharp of StudyPlan.html">
-                    <li>C# study plan</li>
-                </a>
-
-                <a href="Learn C-sharp of Certificate.html">
-                    <li>C# certificate</li>
-                </a>
-            </ul>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="contentBody">
-
-
-
-
-
-
-        <h1 class="h1TypeCasting">C# Access Modifiers</h1>
-
-
-
-
-
-
-        <div class="link1">
-            <a href="Learn C-sharp of Constructors.html"><button class="btn1">
-                    < previous </button></a>
-
-            <a href="Learn C-sharp of Properties.html"><button class="btn2">next ></button></a>
-        </div>
-
-
-
-
-
-        <hr style="margin-top: 30px; margin-left: 45px;">
-
-
-
-
-
-
-        <h1 class="h1">Access Modifiers</h1>
-
-        <p class="p1">
-            By now, you are quite familiar with the <span style="color: orange;">public</span> keyword that appears in
-            many of our examples:
-        </p>
-
-        <div class="examplesCCode">
-
-            <div class="WRiteCode"
-                style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; font-size: 21px;">
-
-                <span style="color: orange;">public</span> <span style="color: rgb(217, 142, 1);">string</span> color ;
-
-            </div>
-
-        </div>
-
-        <p class="p2">
-            The <span style="color: orange;">public</span> keyword is an <span style="font-weight: bold;">access
-                modifier</span>, which is used to set the access level/visibility for classes, fields, methods and
-            properties.
-        </p>
-
-        <p class="p3">
-            C# has the following access modifiers:
-        </p>
-
-        <table>
-            <tr>
-                <th style="text-align: start;  padding-bottom: 10px;">
-                    <span style="margin-left: 20px;">Modifier</span>
-
-                    <span style="margin-left: 155px;">Description</span>
-                </th>
-            </tr>
-
-
-
-            <tr style="background-color: #39464d;">
-                <td style=" padding: 10px 0px; ;padding-left: 20px;">
-                    <span style="color: orange;">public</span>
-
-                    <span style="margin-left: 182px;">The code is accessible for all classes</span>
-                </td>
-            </tr>
-
-
-
-            <tr>
-                <td style=" padding: 10px 0px; ;padding-left: 20px;">
-                    <span style="font-size: 25px; color: orange;">private</span>
-
-                    <span style="margin-left: 160px;">The code is only accessible within the same class</span>
-                </td>
-            </tr>
-
-
-
-            <tr style="background-color: #39464d;">
-                <td style=" padding: 10px 0px; ;padding-left: 20px;">
-                    <span style="font-size: 25px; color: orange;">protected</span>
-
-                    <span style="margin-left: 130px;">
-                        The code is accessible within the same class, or in a class that is inherited from that class.
-                        <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        You will learn more about inheritance in a later chapte
+                    <span>
+                        Programming Basics
                     </span>
-                </td>
-            </tr>
 
+                    <h2>
+                        C# Tutorial
+                    </h2>
 
-
-            <tr style="background-color: #39464d;">
-                <td style=" padding: 10px 0px; ;padding-left: 20px;">
-                    <span style="font-size: 25px; color: orange;">internal</span>
-
-                    <span style="margin-left: 155px;">
-                        The code is only accessible within its own assembly, but not from another assembly. You <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;will
-                        learn more about this in a later chapter
-                    </span>
-                </td>
-            </tr>
-        </table>
-
-        <p class="p4">
-            There's also two combinations: <span style="color: orange;">protected internal</span> and <span
-                style="color: orange;">private protected</span>.
-        </p>
-
-        <p class="p5">
-            For now, lets focus on <span style="color: orange;">public</span> and <span
-                style="color: orange;">private</span> modifiers.
-        </p>
-
-        <!-- <p class="P2">
-            Note that the constructor name must <span style="font-weight: bold;">match the class name</span>, and it cannot have a <span style="font-weight: bold;">return type</span> (like <span style="color: red;">void</span> or <span style="color: red;">int</span>).
-
-            <br>
-            <br>
-
-            Also note that the constructor is called when the object is created.
-
-            <br>
-            <br>
-
-            All classes have constructors by default: if you do not create a class constructor yourself, C# creates one for you. However, then you are not able to set initial values for fields.
-
-            <br>
-            <br>
-
-            <span style="font-weight: bold;">Constructors save time!</span> Take a look at the last example on this page to really understand why.
-        </p> -->
-
-
-
-
-
-
-
-
-
-
-        <hr style="margin-top: 30px; margin-left: 45px;">
-
-
-
-
-
-
-
-
-        <h1 class="h1">Private Modifier</h1>
-
-        <p class="p6">
-            If you declare a field with a <span style="color: orange;">private</span> access modifier, it can only be
-            accessed within the same class:
-        </p>
-
-
-        <div class="examplesCCode">
-            <h1 class="H1">Example</h1>
-
-
-
-            <div class="WRiteCode"
-                style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; font-size: 21px;">
-
-                <span style="color: rgb(255, 106, 0);">class</span> <span style="color: orange;">Car</span>
-
-                <br>
-
-                <span style="color: greenyellow;">
-                    {
-                    <br>
-
-                    &nbsp; &nbsp; &nbsp;<span style="color: orange;">private String</span> <span
-                        style="color: white;">model</span> "Mustang";
-                </span>
-
-                <br>
-                <br>
-
-                &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 106, 0);">static void</span> <span
-                    style="color: #008cff;">Main</span><span style="color: greenyellow;">( <span
-                        style="color: orange;">string</span>[ ] <span style="color: white;">args</span>)</span>
-
-                <br>
-
-                <span style="color: greenyellow;">
-                    &nbsp; &nbsp; &nbsp;{
-                    <br>
-
-                    &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: orange;">Car</span> <span
-                        style="color: white;">myObj = </span> <span style="color: rgb(255, 106, 0);;">new</span> <span
-                        style="color: orange;">Car</span> <span style="color: greenyellow;">( ) ;</span>
-
-                    <br>
-
-                    &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: white;">Console</span><span
-                        style="color: greenyellow;">.</span><span style="color: orange">WriteLine</span>( <span
-                        style="color: white;">myObj.model</span> ) ;
-
-                    <br>
-                    &nbsp; &nbsp; &nbsp;}
-
-                    <br>
-
-                    }
-                </span>
-            </div>
-
-            <p class="p1" style="margin-left: 0px;">
-                The output will be:
-            </p>
-
-            <p class="p2" style="margin-left: 0px; background-color: black; padding: 5px 15px;">Mustang</p>
-
-        </div>
-
-        <p class="p7">
-            If you try to access it outside the class, an error will occur:
-        </p>
-
-
-
-
-        <div class="examplesCCode" style="background-color: rgb(221, 166, 207);">
-            <h1 class="H1" style="color: black;">Example</h1>
-
-
-
-            <div class="WRiteCode"
-                style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; font-size: 21px;">
-
-                <span style="color: rgb(255, 106, 0);">class</span> <span style="color: orange;">Car</span>
-
-                <br>
-
-                <span style="color: greenyellow;">
-                    {
-                    <br>
-
-                    &nbsp; &nbsp; &nbsp;<span style="color: orange;">private String</span> <span
-                        style="color: white;">model</span> "Mustang";
-
-                    <br>
-                    }
-                </span>
-
-                <br>
-                <br>
-
-                <span style="color: rgb(255, 106, 0);">class</span> <span style="color: orange;">Program</span>
-
-                <br>
-
-                <span style="color: greenyellow;">
-                    {
-
-                    <br>
-                </span>
-
-                &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 106, 0);">static void</span> <span
-                    style="color: #008cff;">Main</span><span style="color: greenyellow;">( <span
-                        style="color: orange;">string</span>[ ] <span style="color: white;">args</span>)</span>
-
-                <br>
-
-                <span style="color: greenyellow;">
-                    &nbsp; &nbsp; &nbsp;{
-                    <br>
-
-                    &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: orange;">Car</span> <span
-                        style="color: white;">myObj = </span> <span style="color: rgb(255, 106, 0);;">new</span> <span
-                        style="color: orange;">Car</span> <span style="color: greenyellow;">( ) ;</span>
-
-                    <br>
-
-                    &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: white;">Console</span><span
-                        style="color: greenyellow;">.</span><span style="color: orange">WriteLine</span>( <span
-                        style="color: white;">myObj.model</span> ) ;
-
-                    <br>
-                    &nbsp; &nbsp; &nbsp;}
-
-                    <br>
-
-                    }
-                </span>
-            </div>
-
-            <p class="p1" style="margin-left: 0px; color: black;">
-                The output will be:
-            </p>
-
-            <p class="p2" style="margin-left: 0px; background-color: black; padding: 5px 15px;">
-                'Car.model' is inaccessible due to its protection level
-                <br>
-                The field 'Car.model' is assigned but its value is never used
-            </p>
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-        <hr style="margin-top: 30px; margin-left: 45px;">
-
-
-
-
-
-
-
-
-        <h1 class="h1">Public Modifier</h1>
-
-        <p class="p8">
-            If you declare a field with a <span style="color: orange;">public</span> access modifier, it is accessible
-            for all classes:
-        </p>
-
-
-        <div class="examplesCCode">
-            <h1 class="H1">Example</h1>
-
-
-
-            <div class="WRiteCode"
-                style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; font-size: 21px;">
-
-                <span style="color: rgb(255, 106, 0);">class</span> <span style="color: orange;">Car</span>
-
-                <br>
-
-                <span style="color: greenyellow;">
-                    {
-                    <br>
-
-                    &nbsp; &nbsp; &nbsp;<span style="color: orange;">private String</span> <span
-                        style="color: white;">model</span> "Mustang";
-
-                    <br>
-                    }
-                </span>
-
-                <br>
-                <br>
-
-                <span style="color: rgb(255, 106, 0);">class</span> <span style="color: orange;">Program</span>
-
-                <br>
-
-                <span style="color: greenyellow;">
-                    {
-
-                    <br>
-                </span>
-
-                &nbsp; &nbsp; &nbsp;<span style="color: rgb(255, 106, 0);">static void</span> <span
-                    style="color: #008cff;">Main</span><span style="color: greenyellow;">( <span
-                        style="color: orange;">string</span>[ ] <span style="color: white;">args</span>)</span>
-
-                <br>
-
-                <span style="color: greenyellow;">
-                    &nbsp; &nbsp; &nbsp;{
-                    <br>
-
-                    &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: orange;">Car</span> <span
-                        style="color: white;">myObj = </span> <span style="color: rgb(255, 106, 0);;">new</span> <span
-                        style="color: orange;">Car</span> <span style="color: greenyellow;">( ) ;</span>
-
-                    <br>
-
-                    &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: white;">Console</span><span
-                        style="color: greenyellow;">.</span><span style="color: orange">WriteLine</span>( <span
-                        style="color: white;">myObj.model</span> ) ;
-
-                    <br>
-                    &nbsp; &nbsp; &nbsp;}
-
-                    <br>
-
-                    }
-                </span>
-            </div>
-
-            <p class="p1" style="margin-left: 0px;">
-                The output will be:
-            </p>
-
-            <p class="p2" style="margin-left: 0px; background-color: black; padding: 5px 15px;">Mustang</p>
-
-        </div>
-
-        <p class="P2">
-            Why Access Modifiers?
-
-            <br>
-            <br>
-
-            To control the visibility of class members (the security level of each individual class and class member).
-
-            <br>
-            <br>
-
-            To achieve <span style="font-weight: bold;">"Encapsulation"</span> - which is the process of making sure
-            that "sensitive" data is hidden from users. This is done by declaring fields as <span
-                style="color: red;">private</span>. You will learn more about this in the next chapter.
-        </p>
-
-        <p class="p9">
-            <span style="font-weight: bold;">Note:</span> By default, all members of a class are <span
-                style="color: orange;">private</span> if you don't specify an access modifier:
-        </p>
-
-        <div class="examplesCCode">
-            <h1 class="H1">Example</h1>
-
-
-
-            <div class="WRiteCode"
-                style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; font-size: 21px;">
-
-                <span style="color: rgb(255, 106, 0);">class</span> <span style="color: orange;">Car</span>
-
-                <br>
-
-                <span style="color: greenyellow;">
-                    {
-                    <br>
-
-                    &nbsp; &nbsp; &nbsp;<span style="color: orange;">String</span> <span
-                        style="color: white;">model</span> ;
-
-                    &nbsp; &nbsp; &nbsp; <span style="color: gray;">// private</span>
-
-                    <br>
-
-                    &nbsp; &nbsp; &nbsp;<span style="color: orange;">String</span> <span
-                        style="color: white;">year</span> ;
-
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: gray;">// private</span>
-
-                    <br>
-                    }
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <hr style="margin-top: 30px; margin-left: 45px;">
-
-
-
-
-
-
-
-
-
-
-        <div class="ExampleExercisesC">
-            <h1>exercise?</h1>
-
-
-            <p style="margin-top: 25px;">
-                What is the purpose of access modifiers in C#?
-            </p>
-
-
-            <a href="#" target="_blank"><button>submit answer >></button></a>
-        </div>
-    </div>
-
-
-
-
-
-
-
-    <hr style="margin: 50px 0px; margin-bottom: 250px;">
-
-
-
-
-
-
-
-
-
-    <footer style="position: absolute;">
-
-
-
-
-
-        <main>Taalem.com</main>
-
-
-        <div class="Tutorials">
-
-            <div class="LinkS" style="width: 50%; float: left;">
-                <h1 style="margin-bottom: 45px;">top tutorials</h1>
-
-                <a href="Learn Csharb.html" class="C">C# Tutorial</a>
-                <br>
-                <a href="#" class="DS">Data Structure Tutorial</a>
-                <br>
-                <a href="#" class="Alogo">Algorithm Tutorial</a>
-                <br>
-                <a href="#" class="proSolv">Problem Solving Tutorial</a>
-                <br>
-                <a href="#" class="html">HTML Tutorial</a>
-                <br>
-                <a href="#" class="css">CSS Tutorial</a>
-                <br>
-                <a href="#" class="JS">JavaScript Tutorial</a>
-                <br>
-                <a href="#" class="Angular">Angular16 Tutorial</a>
-            </div>
-
-
-
-            <div class="Examples" style="margin-top: 100px;margin-bottom: 100px">
-
-                <div class="LinkS">
-                    <h1 style="margin-bottom: 45px;">top examples</h1>
-
-                    <a href="Learn C-sharp of Examples.html" class="C">C# Examples</a>
-                    <br>
-                    <a href="#" class="DS">Data Structure Examples</a>
-                    <br>
-                    <a href="#" class="Alogo">Algorithm Examples</a>
-                    <br>
-                    <a href="#" class="proSolv">Problem Solving Examples</a>
-                    <br>
-                    <a href="#" class="html">HTML Examples</a>
-                    <br>
-                    <a href="#" class="css">CSS Examples</a>
-                    <br>
-                    <a href="#" class="JS">JavaScript Examples</a>
-                    <br>
-                    <a href="#" class="Angular">Angular16 Examples</a>
                 </div>
+
             </div>
+
+
+            <!-- Introduction -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    C# Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    C# Intro
+                </a>
+
+                <a href="GetStartedPage.html" class="sidebar-link">
+                    <i class="bx bx-play-circle"></i>
+                    C# Get Started
+                </a>
+
+                <a href="SyntaxPage.html" class="sidebar-link">
+                    <i class="bx bx-code-alt"></i>
+                    C# Syntax
+                </a>
+
+                <a href="OutputPage.html" class="sidebar-link">
+                    <i class="bx bx-terminal"></i>
+                    C# Output
+                </a>
+
+                <a href="CommentsPage.html" class="sidebar-link">
+                    <i class="bx bx-comment-detail"></i>
+                    C# Comments
+                </a>
+
+            </div>
+
+
+            <!-- Variables -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-data"></i>
+                    Variables
+                </h3>
+
+                <a href="VariablesPage.html" class="sidebar-link">
+                    <i class="bx bx-data"></i>
+                    C# Variables
+                </a>
+
+                <a href="ConstantsPage.html" class="sidebar-link">
+                    <i class="bx bx-lock-alt"></i>
+                    C# Constants
+                </a>
+
+                <a href="DisplayVariablesPage.html" class="sidebar-link">
+                    <i class="bx bx-show"></i>
+                    C# Display Variables
+                </a>
+
+                <a href="MultipleVariablesPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    C# Multiple Variables
+                </a>
+
+                <a href="IdentifiersPage.html" class="sidebar-link">
+                    <i class="bx bx-purchase-tag"></i>
+                    C# Identifiers
+                </a>
+
+            </div>
+
+
+            <!-- Data Types -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-category"></i>
+                    Data Types
+                </h3>
+
+                <a href="DataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    C# Data Types
+                </a>
+
+                <a href="TypeCastingPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    C# Type Casting
+                </a>
+
+                <a href="UserInputPage.html" class="sidebar-link">
+                    <i class="bx bx-edit-alt"></i>
+                    C# User Input
+                </a>
+
+            </div>
+
+
+            <!-- Operators -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-calculator"></i>
+                    Operators
+                </h3>
+
+                <a href="ArithmeticPage.html" class="sidebar-link">
+                    <i class="bx bx-calculator"></i>
+                    C# Arithmetic
+                </a>
+
+                <a href="AssignmentPage.html" class="sidebar-link">
+                    <i class="bx bx-equalizer"></i>
+                    C# Assignment
+                </a>
+
+                <a href="ComparisonPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer-alt"></i>
+                    C# Comparison
+                </a>
+
+                <a href="LogicalPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    C# Logical
+                </a>
+
+            </div>
+
+
+            <!-- Math -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-math"></i>
+                    Math
+                </h3>
+
+                <a href="MathPage.html" class="sidebar-link">
+                    <i class="bx bx-math"></i>
+                    C# Math
+                </a>
+
+            </div>
+
+
+            <!-- Strings -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-text"></i>
+                    Strings
+                </h3>
+
+                <a href="StringsPage.html" class="sidebar-link">
+                    <i class="bx bx-text"></i>
+                    C# Strings
+                </a>
+
+                <a href="ConcatenationPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    C# Concatenation
+                </a>
+
+                <a href="InterpolationPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    C# Interpolation
+                </a>
+
+                <a href="AccessStringsPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    C# Access Strings
+                </a>
+
+                <a href="SpecialCharactersPage.html" class="sidebar-link">
+                    <i class="bx bx-code"></i>
+                    C# Special Characters
+                </a>
+
+            </div>
+
+
+            <!-- Booleans -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-toggle-left"></i>
+                    Booleans
+                </h3>
+
+                <a href="BooleansPage.html" class="sidebar-link">
+                    <i class="bx bx-toggle-left"></i>
+                    C# Booleans
+                </a>
+
+            </div>
+
+
+            <!-- If...Else -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    If...Else
+                </h3>
+
+                <a href="IFPage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    C# if
+                </a>
+
+                <a href="ElsePage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    C# Else
+                </a>
+
+                <a href="ElseIfPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    C# Else if
+                </a>
+
+                <a href="ShortHandIfElsePage.html" class="sidebar-link">
+                    <i class="bx bx-code"></i>
+                    C# Short Hand if...else
+                </a>
+
+            </div>
+
+
+            <!-- Control Flow -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Control Flow
+                </h3>
+
+                <a href="SwitchPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    C# Switch
+                </a>
+
+                <a href="WhileLoopPage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    C# While Loop
+                </a>
+
+            </div>
+
+
+            <!-- For Loop -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-repeat"></i>
+                    For Loop
+                </h3>
+
+                <a href="ForLoopPage.html" class="sidebar-link">
+                    <i class="bx bx-repeat"></i>
+                    C# For Loop
+                </a>
+
+                <a href="ForeachLoopPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ul"></i>
+                    C# Foreach Loop
+                </a>
+
+            </div>
+
+
+            <!-- Loop Control -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-transfer"></i>
+                    Loop Control
+                </h3>
+
+                <a href="BreakAndContinuePage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    C# Break / Continue
+                </a>
+
+            </div>
+
+
+            <!-- Arrays -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-grid-alt"></i>
+                    Arrays
+                </h3>
+
+                <a href="ArraysPage.html" class="sidebar-link">
+                    <i class="bx bx-grid-alt"></i>
+                    C# Arrays
+                </a>
+
+                <a href="LoopThroughAnArrayPage.html" class="sidebar-link">
+                    <i class="bx bx-list-check"></i>
+                    C# Loop Through an Array
+                </a>
+
+                <a href="SortArraysPage.html" class="sidebar-link">
+                    <i class="bx bx-sort"></i>
+                    C# Sort Arrays
+                </a>
+
+                <a href="MultidimensionalArraysPage.html" class="sidebar-link">
+                    <i class="bx bx-grid"></i>
+                    C# Multidimensional Arrays
+                </a>
+
+            </div>
+
+
+            <!-- Methods -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-function"></i>
+                    Methods
+                </h3>
+
+                <a href="MethodsPage.html" class="sidebar-link">
+                    <i class="bx bx-function"></i>
+                    C# Methods
+                </a>
+
+                <a href="MethodParametersPage.html" class="sidebar-link">
+                    <i class="bx bx-slider-alt"></i>
+                    C# Parameters
+                </a>
+
+                <a href="DefaultParameterPage.html" class="sidebar-link">
+                    <i class="bx bx-cog"></i>
+                    C# Default Parameter
+                </a>
+
+                <a href="ReturnValuePage.html" class="sidebar-link">
+                    <i class="bx bx-log-out"></i>
+                    C# Return Values
+                </a>
+
+                <a href="NamedArgumentsPage.html" class="sidebar-link">
+                    <i class="bx bx-label"></i>
+                    C# Named Arguments
+                </a>
+
+                <a href="MethodOverloadingPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    C# Method Overloading
+                </a>
+
+            </div>
+
+
+            <!-- Classes -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-cube"></i>
+                    Classes
+                </h3>
+
+                <a href="OOPPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    C# OOP
+                </a>
+
+                <a href="ClassesAndObjectsPage.html" class="sidebar-link">
+                    <i class="bx bx-cube-alt"></i>
+                    C# Classes and Objects
+                </a>
+
+                <a href="MultipleObjectsPage.html" class="sidebar-link">
+                    <i class="bx bx-copy"></i>
+                    C# Multiple Objects
+                </a>
+
+                <a href="ClassesMembersPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ul"></i>
+                    C# Class Members
+                </a>
+
+                <a href="ConstructorsPage.html" class="sidebar-link">
+                    <i class="bx bx-buildings"></i>
+                    C# Constructors
+                </a>
+
+                <a href="AccessModifiersPage.html" class="sidebar-link active">
+                    <i class="bx bx-lock-open-alt"></i>
+                    C# Access Modifiers
+                </a>
+
+                <a href="PropertiesPage.html" class="sidebar-link">
+                    <i class="bx bx-slider-alt"></i>
+                    C# Properties
+                </a>
+
+                <a href="InheritancePage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    C# Inheritance
+                </a>
+
+                <a href="PolymorphismPage.html" class="sidebar-link">
+                    <i class="bx bx-shape-polygon"></i>
+                    C# Polymorphism
+                </a>
+
+                <a href="AbstractionPage.html" class="sidebar-link">
+                    <i class="bx bx-hide"></i>
+                    C# Abstraction
+                </a>
+
+                <a href="InterfacePage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    C# Interface
+                </a>
+
+                <a href="MultipleInterfacesPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer-alt"></i>
+                    C# Multiple Interfaces
+                </a>
+
+                <a href="EnumsPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    C# Enums
+                </a>
+
+                <a href="FilesPage.html" class="sidebar-link">
+                    <i class="bx bx-file"></i>
+                    C# Files
+                </a>
+
+                <a href="ExceptionsPage.html" class="sidebar-link">
+                    <i class="bx bx-error"></i>
+                    C# Exceptions
+                </a>
+
+            </div>
+
+
+            <!-- How To -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-wrench"></i>
+                    How To
+                </h3>
+
+                <a href="AddTwoNumbersPage.html" class="sidebar-link">
+                    <i class="bx bx-plus-circle"></i>
+                    C# Add Two Numbers
+                </a>
+
+            </div>
+
+
+            <!-- Examples -->
+
+            <div class="sidebar-section">
+
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-block"></i>
+                    C# Examples
+                </a>
+
+                <a href="CompilerPage.html" class="sidebar-link">
+                    <i class="bx bx-terminal"></i>
+                    C# Compiler
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-task"></i>
+                    C# Exercises
+                </a>
+
+                <a href="QuizPage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    C# Quiz
+                </a>
+
+                <a href="ServerPage.html" class="sidebar-link">
+                    <i class="bx bx-server"></i>
+                    C# Server
+                </a>
+
+                <a href="SyllabusPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    C# Syllabus
+                </a>
+
+                <a href="StudyPlanPage.html" class="sidebar-link">
+                    <i class="bx bx-calendar"></i>
+                    C# Study Plan
+                </a>
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-certification"></i>
+                    C# Certificate
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==================================================
+             Tutorial Content
+             ================================================== -->
+
+        <section class="tutorial-content">
+
+            <!-- ==================================================
+                 Tutorial Header
+                 ================================================== -->
+
+            <div class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-code-curly"></i>
+
+                    C# Programming
+
+                </span>
+
+                <h1>
+                    C# Access Modifiers
+                </h1>
+
+                <p>
+                    Learn how access modifiers control the visibility of classes,
+                    fields, methods, and properties in C#.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="ConstructorsPage.html" class="tutorial-button secondary">
+
+                        <i class="bx bx-left-arrow-alt"></i>
+
+                        Previous
+
+                    </a>
+
+                    <a href="PropertiesPage.html" class="tutorial-button primary">
+
+                        Next
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 Access Modifiers
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-lock-open-alt"></i>
+
+                        Access Modifiers
+
+                    </span>
+
+                    <h2>
+                        Access Modifiers
+                    </h2>
+
+                    <p>
+                        Access modifiers are used to set the access level and
+                        visibility of classes, fields, methods, and properties.
+                    </p>
+
+                </div>
+
+
+                <p class="access-description">
+                    By now, you are quite familiar with the
+                    <span class="access-inline">public</span>
+                    keyword that appears in many of our examples:
+                </p>
+
+
+                <div class="access-example">
+
+                    <div class="access-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+                    <pre><code><span class="access-keyword">public</span> <span class="access-type">string</span> color;</code></pre>
+
+                </div>
+
+
+                <p class="access-description">
+
+                    The
+                    <span class="access-inline">public</span>
+                    keyword is an
+                    <strong>access modifier</strong>,
+                    which is used to set the access level and visibility for
+                    classes, fields, methods, and properties.
+
+                </p>
+
+
+                <p class="access-description">
+                    C# has the following access modifiers:
+                </p>
+
+
+                <div class="access-table-wrapper">
+
+                    <table class="access-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Modifier</th>
+                                <th>Description</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <span class="access-modifier">
+                                        public
+                                    </span>
+                                </td>
+
+                                <td>
+                                    The code is accessible from all classes.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <span class="access-modifier">
+                                        private
+                                    </span>
+                                </td>
+
+                                <td>
+                                    The code is only accessible within the same class.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <span class="access-modifier">
+                                        protected
+                                    </span>
+                                </td>
+
+                                <td>
+                                    The code is accessible within the same class,
+                                    or in a class that is inherited from that class.
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <span class="access-modifier">
+                                        internal
+                                    </span>
+                                </td>
+
+                                <td>
+                                    The code is accessible within its own assembly,
+                                    but not from another assembly.
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <p class="access-description">
+
+                    There are also two combinations:
+
+                    <span class="access-inline">
+                        protected internal
+                    </span>
+
+                    and
+
+                    <span class="access-inline">
+                        private protected
+                    </span>.
+
+                </p>
+
+
+                <p class="access-description">
+
+                    For now, let's focus on the
+                    <span class="access-inline">public</span>
+                    and
+                    <span class="access-inline">private</span>
+                    modifiers.
+
+                </p>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Private Modifier
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-lock"></i>
+
+                        Private
+
+                    </span>
+
+                    <h2>
+                        Private Modifier
+                    </h2>
+
+                    <p>
+                        A private member can only be accessed from within
+                        the same class.
+                    </p>
+
+                </div>
+
+
+                <p class="access-description">
+
+                    If you declare a field with the
+                    <span class="access-inline">private</span>
+                    access modifier, it can only be accessed within the same class.
+
+                </p>
+
+
+                <div class="access-example">
+
+                    <div class="access-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+                    <pre><code><span class="access-keyword">class</span> <span class="access-class">Car</span>
+{
+    <span class="access-keyword">private</span> <span class="access-type">string</span> model = <span class="access-string">"Mustang"</span>;
+
+    <span class="access-keyword">static void</span> <span class="access-method">Main</span>(<span class="access-type">string</span>[] args)
+    {
+        <span class="access-class">Car</span> myObj = <span class="access-keyword">new</span> <span class="access-class">Car</span>();
+
+        Console.WriteLine(myObj.model);
+    }
+}</code></pre>
+
+                </div>
+
+
+                <p class="access-description">
+
+                    The output will be:
+
+                </p>
+
+
+                <div class="access-output">
+                    Mustang
+                </div>
+
+
+                <p class="access-description">
+
+                    If you try to access the private field outside the class,
+                    an error will occur.
+
+                </p>
+
+
+                <div class="access-example">
+
+                    <div class="access-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <i class="bx bx-error-circle"></i>
+
+                    </div>
+
+                    <pre><code><span class="access-keyword">class</span> <span class="access-class">Car</span>
+{
+    <span class="access-keyword">private</span> <span class="access-type">string</span> model = <span class="access-string">"Mustang"</span>;
+}
+
+<span class="access-keyword">class</span> <span class="access-class">Program</span>
+{
+    <span class="access-keyword">static void</span> <span class="access-method">Main</span>(<span class="access-type">string</span>[] args)
+    {
+        <span class="access-class">Car</span> myObj = <span class="access-keyword">new</span> <span class="access-class">Car</span>();
+
+        Console.WriteLine(myObj.model);
+    }
+}</code></pre>
+
+                </div>
+
+
+                <div class="access-note">
+
+                    <strong>Result:</strong>
+
+                    <p>
+                        <code>Car.model</code> is inaccessible because
+                        <code>model</code> is private and can only be accessed
+                        inside the <code>Car</code> class.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Public Modifier
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-globe"></i>
+
+                        Public
+
+                    </span>
+
+                    <h2>
+                        Public Modifier
+                    </h2>
+
+                    <p>
+                        A public member can be accessed from other classes.
+                    </p>
+
+                </div>
+
+
+                <p class="access-description">
+
+                    If you declare a field with the
+                    <span class="access-inline">public</span>
+                    access modifier, it is accessible from other classes.
+
+                </p>
+
+
+                <div class="access-example">
+
+                    <div class="access-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+                    <pre><code><span class="access-keyword">class</span> <span class="access-class">Car</span>
+{
+    <span class="access-keyword">public</span> <span class="access-type">string</span> model = <span class="access-string">"Mustang"</span>;
+}
+
+<span class="access-keyword">class</span> <span class="access-class">Program</span>
+{
+    <span class="access-keyword">static void</span> <span class="access-method">Main</span>(<span class="access-type">string</span>[] args)
+    {
+        <span class="access-class">Car</span> myObj = <span class="access-keyword">new</span> <span class="access-class">Car</span>();
+
+        Console.WriteLine(myObj.model);
+    }
+}</code></pre>
+
+                </div>
+
+
+                <p class="access-description">
+                    The output will be:
+                </p>
+
+
+                <div class="access-output">
+                    Mustang
+                </div>
+
+
+                <div class="access-note">
+
+                    <strong>Why Access Modifiers?</strong>
+
+                    <p>
+                        Access modifiers control the visibility of class members
+                        and help you control how different parts of your program
+                        interact with each other.
+                    </p>
+
+                    <p>
+                        They also help achieve
+                        <strong>encapsulation</strong>,
+                        which means hiding sensitive data and exposing only what
+                        is necessary.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Default Access Modifier
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-info-circle"></i>
+
+                        Default Access
+
+                    </span>
+
+                    <h2>
+                        Default Access Modifier
+                    </h2>
+
+                    <p>
+                        Class members are private by default when no access
+                        modifier is specified.
+                    </p>
+
+                </div>
+
+
+                <p class="access-description">
+
+                    By default, class members are
+                    <span class="access-inline">private</span>
+                    if you don't specify an access modifier.
+
+                </p>
+
+
+                <div class="access-example">
+
+                    <div class="access-example-header">
+
+                        <span>
+                            Example
+                        </span>
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </div>
+
+                    <pre><code><span class="access-keyword">class</span> <span class="access-class">Car</span>
+{
+    <span class="access-type">string</span> model; <span class="access-comment">// private</span>
+    <span class="access-type">string</span> year;  <span class="access-comment">// private</span>
+}</code></pre>
+
+                </div>
+
+
+                <div class="access-note">
+
+                    <strong>Remember:</strong>
+
+                    <p>
+                        If you do not specify an access modifier for a class member,
+                        its default access level is <code>private</code>.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Practice
+                 ================================================== -->
+
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-task"></i>
+
+                        Practice
+
+                    </span>
+
+                    <h2>
+                        Test Your Knowledge
+                    </h2>
+
+                    <p>
+                        Choose the correct answer to check your understanding
+                        of C# access modifiers.
+                    </p>
+
+                </div>
+
+
+                <div class="exercise-preview" data-correct-answer="Control the visibility of class members">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                C# Exercise
+                            </span>
+
+                            <h3>
+                                Access Modifiers
+                            </h3>
+
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <p class="exercise-question">
+                        What is the purpose of access modifiers in C#?
+                    </p>
+
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option"
+                            data-answer="Control the visibility of class members">
+
+                            Control the visibility of class members
+
+                        </button>
+
+
+                        <button type="button" class="exercise-option" data-answer="Create new classes">
+
+                            Create new classes
+
+                        </button>
+
+
+                        <button type="button" class="exercise-option" data-answer="Create variables">
+
+                            Create variables
+
+                        </button>
+
+
+                        <button type="button" class="exercise-option" data-answer="Run the program">
+
+                            Run the program
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="exercise-result" id="exerciseResult"></div>
+
+                </div>
+
+
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+
+                        See All C# Exercises
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 Bottom Navigation
+                 ================================================== -->
+
+            <div class="tutorial-bottom-actions">
+
+                <a href="ConstructorsPage.html" class="tutorial-button secondary">
+
+                    <i class="bx bx-left-arrow-alt"></i>
+
+                    Previous
+
+                </a>
+
+
+                <a href="PropertiesPage.html" class="tutorial-button primary">
+
+                    Next
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         Footer
+         ================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="../../index.html" class="brand">
+
+                    <span class="brand-icon">
+                        <i class="bx bx-code-alt"></i>
+                    </span>
+
+                    <span class="brand-text">
+                        Dev<span>Path</span>
+                    </span>
+
+                </a>
+
+                <p>
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+                </p>
+
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="bx bxl-tiktok"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="bx bxl-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Front-End
+                </h3>
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+                <a href="../../Pages/BootstrapPage.html">
+                    Bootstrap
+                </a>
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    More
+                </h3>
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
         </div>
 
 
+        <div class="footer-bottom">
 
-        <div class="Links">
-            <a href="https://www.facebook.com/?locale=ar_AR" class="Facebook"><i class='bx bxl-facebook-square'
-                    style="color: rgb(0, 136, 255);"></i></i></a>
-            <a href="https://www.tiktok.com/foryou" class="TikTok"><i class='bx bxl-tiktok' style='color:wheat'></i></a>
-            <a href="https://www.instagram.com/" class="instagram"><i class='bx bxl-instagram-alt'
-                    style='color:rgba(255,0,105,0.79)'></i></a>
-            <a href="https://web.whatsapp.com/" class="WhatSapp"><i class='bx bxl-whatsapp-square'
-                    style='color:#0bf164'></i></a>
+            <p>
+                © 2026 DevPath. All rights reserved. • Built for developers.
+            </p>
+
         </div>
-
-
-        <p><mark>Taalem</mark> is optimized for learning and training. Examples might be simplified to improve reading
-            and learning. Tutorials, examples are constantly reviewed to avid errors, but we cannot warrant full
-            correctness of all content. While using <mark>taalam</mark>, you agree to have read and accepted our terms
-            of use, cookie and privacy policy.</p>
-
-
-        <i class='bx bxs-up-arrow-square' style='color:#ff00ee' id="start"></i>
-
-
-
-
 
     </footer>
 
 
+    <!-- Back To Top -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0">
+    </i>
 
 
+    <!-- Global JavaScript -->
+    <script src="../../JavaScript/global.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-    <SCript
-        src="C:\Users\DELL\Desktop\Full Stack  Developer\Front_end\Project3 html , css , js\JavaScript\JSLearnCsharb.js"></SCript>
 </body>
+
+</html>
