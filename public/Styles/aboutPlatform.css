@@ -2,45 +2,13 @@
    DevPath - About Platform
    Page Specific Styles
    ========================================================== */
-
 @import url("./global.css");
 
-/* ==========================================================
-   Base
-   ========================================================== */
-
-body {
-  min-height: 100vh;
-
-  font-family: "Inter", sans-serif;
-
-  color: var(--text);
-
-  background:
-    radial-gradient(
-      circle at 10% 10%,
-      rgba(249, 115, 22, 0.1),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 90% 45%,
-      rgba(250, 204, 21, 0.04),
-      transparent 28%
-    ),
-    var(--bg);
-
-  overflow-x: hidden;
-}
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* ==========================================================
    Shared Page Container
@@ -168,7 +136,7 @@ img {
 
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 11px;
+  font-size: 15px;
 
   font-weight: 600;
 }
@@ -239,9 +207,9 @@ img {
 
   border-radius: var(--radius-sm);
 
-  font-size: 12px;
+  font-size: 16px;
 
-  font-weight: 700;
+  font-weight: 900;
 
   transition: var(--transition);
 }
@@ -297,7 +265,7 @@ img {
 
   color: var(--text-muted);
 
-  font-size: 11px;
+  font-size: 15px;
 }
 
 .trust-item i {
@@ -401,7 +369,7 @@ img {
 
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .code-window-body {
@@ -409,7 +377,7 @@ img {
 
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 11px;
+  font-size: 15px;
 
   line-height: 2.2;
 }
@@ -517,13 +485,13 @@ img {
 .floating-card strong {
   color: var(--text);
 
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .floating-card span {
   color: var(--text-muted);
 
-  font-size: 9px;
+  font-size: 15px;
 }
 
 .floating-card-top {
@@ -619,7 +587,7 @@ img {
 .stat-card span {
   color: var(--text-muted);
 
-  font-size: 10px;
+  font-size: 15px;
 }
 
 /* ==========================================================
@@ -655,7 +623,7 @@ img {
 
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 10px;
+  font-size: 15px;
 
   font-weight: 600;
 }
@@ -773,7 +741,7 @@ img {
 .mission-feature p {
   color: var(--text-muted);
 
-  font-size: 12px;
+  font-size: 15px;
 
   line-height: 1.75;
 }
@@ -866,7 +834,7 @@ img {
 
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 8px;
+  font-size: 15px;
 }
 
 /* ==========================================================
@@ -880,7 +848,7 @@ img {
 .offer-grid {
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 15px;
 }
@@ -949,9 +917,9 @@ img {
 
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 12px;
+  font-size: 25px;
 
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .offer-icon {
@@ -981,7 +949,9 @@ img {
 
   color: var(--text);
 
-  font-size: 17px;
+  font-size: 22px;
+
+  font-weight: 900;
 }
 
 .offer-card p {
@@ -989,7 +959,7 @@ img {
 
   color: var(--text-muted);
 
-  font-size: 12px;
+  font-size: 15px;
 
   line-height: 1.8;
 }
@@ -1005,9 +975,9 @@ img {
 
   color: var(--primary-light);
 
-  font-size: 11px;
+  font-size: 15px;
 
-  font-weight: 700;
+  font-weight: 900;
 
   transition: var(--transition);
 }
@@ -1091,7 +1061,7 @@ img {
 
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .process-list {
@@ -1139,7 +1109,7 @@ img {
 
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .process-item div {
@@ -1155,13 +1125,13 @@ img {
 .process-item strong {
   color: var(--text);
 
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .process-item div span {
   color: var(--text-muted);
 
-  font-size: 9px;
+  font-size: 15px;
 }
 
 .process-item > i {
@@ -1208,7 +1178,7 @@ img {
 
   color: var(--text-secondary);
 
-  font-size: 13px;
+  font-size: 15px;
 
   line-height: 1.85;
 }
@@ -1232,7 +1202,7 @@ img {
 
   color: var(--text-secondary);
 
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .philosophy-points i {
@@ -1291,7 +1261,7 @@ img {
 
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .audience-icon {
@@ -1321,13 +1291,13 @@ img {
 
   color: var(--text);
 
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .audience-card p {
   color: var(--text-muted);
 
-  font-size: 12px;
+  font-size: 15px;
 
   line-height: 1.8;
 }
@@ -1436,7 +1406,7 @@ img {
 
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 8px;
+  font-size: 16px;
 }
 
 .founder-code strong {
@@ -1444,7 +1414,7 @@ img {
 
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 11px;
+  font-size: 16px;
 }
 
 .founder-content h2 {
@@ -1468,7 +1438,7 @@ img {
 
   color: var(--text-secondary);
 
-  font-size: 13px;
+  font-size: 15px;
 
   line-height: 1.85;
 }
@@ -1500,7 +1470,7 @@ img {
 
   border-radius: 999px;
 
-  font-size: 10px;
+  font-size: 16px;
 }
 
 .founder-tags i {
@@ -1586,7 +1556,7 @@ img {
 
   color: var(--text-secondary);
 
-  font-size: 14px;
+  font-size: 15px;
 
   line-height: 1.8;
 }
@@ -1612,9 +1582,9 @@ img {
 
   box-shadow: 0 12px 30px rgba(249, 115, 22, 0.2);
 
-  font-size: 12px;
+  font-size: 16px;
 
-  font-weight: 700;
+  font-weight: 900;
 
   transition: var(--transition);
 }
@@ -1632,6 +1602,12 @@ img {
 .footer-column a.current-page {
   color: var(--primary-light);
 }
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* ==========================================================
    Responsive - 1100px

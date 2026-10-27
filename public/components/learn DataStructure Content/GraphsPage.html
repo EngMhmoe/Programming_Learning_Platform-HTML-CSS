@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <title>Graphs | Data Structure Tutorial</title>
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style GraphsPage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link active">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <div class="tutorial-content graphs-page">
+
+            <!-- ==================================================
+                Tutorial Header
+            ================================================== -->
+            <section class="tutorial-header">
+
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+
+                <h1>Graphs</h1>
+
+                <p>
+                    Learn how graphs represent relationships between objects,
+                    explore their main types, and understand how graph traversal
+                    algorithms visit vertices.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="HeapsPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="GraphRepresentationsPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 1: Introduction to Graphs
+            ================================================== -->
+            <section class="tutorial-card graph-introduction" id="introduction">
+
+                <div class="section-heading left">
+
+                    <span class="graph-section-number">01</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-book-open"></i>
+                            Introduction
+                        </span>
+
+                        <h2>Introduction to Graphs</h2>
+
+                        <p>
+                            A graph is a non-linear data structure used to represent
+                            relationships between objects.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="graph-definition">
+
+                    <h3>What Is a Graph?</h3>
+
+                    <p>
+                        A graph consists of a set of <strong>vertices</strong>
+                        (also called nodes) and a set of <strong>edges</strong>
+                        that connect pairs of vertices. Graphs are useful when
+                        relationships are more complex than a simple linear sequence
+                        or hierarchy.
+                    </p>
+
+                </div>
+
+                <div class="graph-diagram-wrapper">
+
+                    <h3>A Simple Graph</h3>
+
+                    <p>
+                        In this example, each circle represents a vertex, and each
+                        line represents an edge.
+                    </p>
+
+                    <div class="graph-diagram">
+
+                        <svg viewBox="0 0 520 300" role="img"
+                            aria-label="An undirected graph with four vertices A, B, C, and D connected by edges">
+
+                            <line class="graph-edge" x1="100" y1="75" x2="260" y2="75" />
+                            <line class="graph-edge" x1="100" y1="75" x2="180" y2="220" />
+                            <line class="graph-edge" x1="260" y1="75" x2="420" y2="145" />
+                            <line class="graph-edge" x1="180" y1="220" x2="420" y2="145" />
+                            <line class="graph-edge" x1="260" y1="75" x2="180" y2="220" />
+
+                            <circle class="graph-node" cx="100" cy="75" r="28" />
+                            <circle class="graph-node" cx="260" cy="75" r="28" />
+                            <circle class="graph-node" cx="180" cy="220" r="28" />
+                            <circle class="graph-node" cx="420" cy="145" r="28" />
+
+                            <text class="graph-node-label" x="100" y="75">A</text>
+                            <text class="graph-node-label" x="260" y="75">B</text>
+                            <text class="graph-node-label" x="180" y="220">C</text>
+                            <text class="graph-node-label" x="420" y="145">D</text>
+
+                        </svg>
+
+                    </div>
+
+                    <div class="graph-diagram-legend">
+
+                        <div>
+                            <span class="legend-node"></span>
+                            <span>Vertex (Node)</span>
+                        </div>
+
+                        <div>
+                            <span class="legend-edge"></span>
+                            <span>Edge (Connection)</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="graph-example-box">
+
+                    <h3>Understanding the Example</h3>
+
+                    <ul>
+                        <li>The graph contains four vertices: A, B, C, and D.</li>
+                        <li>Each line represents a connection between two vertices.</li>
+                        <li>A vertex can connect to multiple other vertices.</li>
+                        <li>The connections do not have to form a straight line or a tree.</li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 2: Graph Terminology
+            ================================================== -->
+            <section class="tutorial-card graph-terminology" id="terminology">
+
+                <div class="section-heading left">
+
+                    <span class="graph-section-number">02</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-book-content"></i>
+                            Core Concepts
+                        </span>
+
+                        <h2>Graph Terminology</h2>
+
+                        <p>
+                            Understanding the basic terminology makes graph
+                            structures and algorithms easier to learn.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="graph-terms-grid">
+
+                    <article class="graph-term-card">
+
+                        <div class="graph-term-icon">
+                            <i class="bx bx-radio-circle-marked"></i>
+                        </div>
+
+                        <h3>Vertex</h3>
+
+                        <p>
+                            A vertex, or node, represents an individual object
+                            or entity in a graph.
+                        </p>
+
+                        <div class="graph-term-example">
+                            Example: A, B, C, or D.
+                        </div>
+
+                    </article>
+
+                    <article class="graph-term-card">
+
+                        <div class="graph-term-icon">
+                            <i class="bx bx-git-merge"></i>
+                        </div>
+
+                        <h3>Edge</h3>
+
+                        <p>
+                            An edge represents a connection between two vertices.
+                        </p>
+
+                        <div class="graph-term-example">
+                            Example: A connection between A and B.
+                        </div>
+
+                    </article>
+
+                    <article class="graph-term-card">
+
+                        <div class="graph-term-icon">
+                            <i class="bx bx-link"></i>
+                        </div>
+
+                        <h3>Adjacent Vertices</h3>
+
+                        <p>
+                            Two vertices are adjacent when an edge directly
+                            connects them.
+                        </p>
+
+                        <div class="graph-term-example">
+                            Example: A and B are adjacent.
+                        </div>
+
+                    </article>
+
+                    <article class="graph-term-card">
+
+                        <div class="graph-term-icon">
+                            <i class="bx bx-network-chart"></i>
+                        </div>
+
+                        <h3>Degree</h3>
+
+                        <p>
+                            In an undirected graph, the degree of a vertex is
+                            the number of edges connected to it.
+                        </p>
+
+                        <div class="graph-term-example">
+                            Example: A vertex with three connections has degree 3.
+                        </div>
+
+                    </article>
+
+                    <article class="graph-term-card">
+
+                        <div class="graph-term-icon">
+                            <i class="bx bx-transfer"></i>
+                        </div>
+
+                        <h3>Path</h3>
+
+                        <p>
+                            A path is a sequence of vertices connected through
+                            edges.
+                        </p>
+
+                        <div class="graph-term-example">
+                            Example: A → B → D.
+                        </div>
+
+                    </article>
+
+                    <article class="graph-term-card">
+
+                        <div class="graph-term-icon">
+                            <i class="bx bx-infinite"></i>
+                        </div>
+
+                        <h3>Cycle</h3>
+
+                        <p>
+                            A cycle is a path that starts and ends at the same
+                            vertex, following connected edges.
+                        </p>
+
+                        <div class="graph-term-example">
+                            Example: A → B → C → A.
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 3: Types of Graphs
+            ================================================== -->
+            <section class="tutorial-card graph-types" id="types">
+
+                <div class="section-heading left">
+
+                    <span class="graph-section-number">03</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-category-alt"></i>
+                            Graph Categories
+                        </span>
+
+                        <h2>Types of Graphs</h2>
+
+                        <p>
+                            Graphs can be classified according to the direction
+                            of their edges and whether their edges have weights.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="graph-types-grid">
+
+                    <article class="graph-type-card">
+
+                        <div class="graph-type-icon">
+                            <i class="bx bx-git-branch"></i>
+                        </div>
+
+                        <h3>Undirected Graph</h3>
+
+                        <p>
+                            Edges do not have a direction. A connection between
+                            A and B can be followed in either direction.
+                        </p>
+
+                        <div class="graph-type-example">
+                            A — B
+                        </div>
+
+                        <ul>
+                            <li>Connections are bidirectional.</li>
+                            <li>Useful for representing mutual relationships.</li>
+                        </ul>
+
+                    </article>
+
+                    <article class="graph-type-card">
+
+                        <div class="graph-type-icon">
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </div>
+
+                        <h3>Directed Graph</h3>
+
+                        <p>
+                            Edges have a direction, usually shown with arrows.
+                            A connection from A to B does not automatically
+                            imply a connection from B to A.
+                        </p>
+
+                        <div class="graph-type-example">
+                            A → B
+                        </div>
+
+                        <ul>
+                            <li>Connections follow a specific direction.</li>
+                            <li>Useful for representing one-way relationships.</li>
+                        </ul>
+
+                    </article>
+
+                    <article class="graph-type-card">
+
+                        <div class="graph-type-icon">
+                            <i class="bx bx-slider-alt"></i>
+                        </div>
+
+                        <h3>Weighted Graph</h3>
+
+                        <p>
+                            Each edge has an associated value called a weight.
+                            The weight can represent distance, cost, or time.
+                        </p>
+
+                        <div class="graph-type-example">
+                            A — 5 — B
+                        </div>
+
+                        <ul>
+                            <li>Edges carry numerical values.</li>
+                            <li>Useful for route and cost calculations.</li>
+                        </ul>
+
+                    </article>
+
+                    <article class="graph-type-card">
+
+                        <div class="graph-type-icon">
+                            <i class="bx bx-git-commit"></i>
+                        </div>
+
+                        <h3>Unweighted Graph</h3>
+
+                        <p>
+                            Edges do not have explicit weights. Each connection
+                            is treated equally when considering the graph's
+                            basic structure.
+                        </p>
+
+                        <div class="graph-type-example">
+                            A — B — C
+                        </div>
+
+                        <ul>
+                            <li>Connections have no assigned edge weights.</li>
+                            <li>Useful for simple relationship networks.</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+                <div class="graph-example-box">
+
+                    <h3>Important Note</h3>
+
+                    <p>
+                        These categories are not mutually exclusive. For example,
+                        a graph can be both directed and weighted.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 4: Graph Traversal
+            ================================================== -->
+            <section class="tutorial-card graph-traversal" id="traversal">
+
+                <div class="section-heading left">
+
+                    <span class="graph-section-number">04</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-git-compare"></i>
+                            Traversal Algorithms
+                        </span>
+
+                        <h2>Graph Traversal</h2>
+
+                        <p>
+                            Graph traversal is the process of visiting vertices
+                            in a graph. Two common traversal algorithms are BFS
+                            and DFS.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="graph-traversal-grid">
+
+                    <article class="graph-traversal-card">
+
+                        <div class="graph-traversal-heading">
+
+                            <div class="graph-traversal-icon">
+                                <i class="bx bx-layer"></i>
+                            </div>
+
+                            <div>
+                                <h3>Breadth-First Search (BFS)</h3>
+                                <span class="graph-algorithm-label">Level by level</span>
+                            </div>
+
+                        </div>
+
+                        <p>
+                            BFS visits neighboring vertices first before
+                            moving farther away from the starting vertex.
+                            It commonly uses a queue to manage the next
+                            vertices to visit.
+                        </p>
+
+                        <h4>How It Works</h4>
+
+                        <ol>
+                            <li>Choose a starting vertex.</li>
+                            <li>Visit the starting vertex and add it to a queue.</li>
+                            <li>Remove a vertex from the queue.</li>
+                            <li>Add its unvisited neighbors to the queue.</li>
+                            <li>Repeat until the queue is empty.</li>
+                        </ol>
+
+                        <div class="graph-complexity">
+                            <span>Time Complexity</span>
+                            <strong>O(V + E)</strong>
+                        </div>
+
+                        <div class="graph-complexity">
+                            <span>Common Use</span>
+                            <strong>Shortest paths in unweighted graphs</strong>
+                        </div>
+
+                    </article>
+
+                    <article class="graph-traversal-card">
+
+                        <div class="graph-traversal-heading">
+
+                            <div class="graph-traversal-icon">
+                                <i class="bx bx-git-branch"></i>
+                            </div>
+
+                            <div>
+                                <h3>Depth-First Search (DFS)</h3>
+                                <span class="graph-algorithm-label">Explore deeply</span>
+                            </div>
+
+                        </div>
+
+                        <p>
+                            DFS explores one path as far as possible before
+                            backtracking. It can be implemented using recursion
+                            or an explicit stack.
+                        </p>
+
+                        <h4>How It Works</h4>
+
+                        <ol>
+                            <li>Choose a starting vertex.</li>
+                            <li>Visit the vertex and mark it as visited.</li>
+                            <li>Move to an unvisited neighboring vertex.</li>
+                            <li>Continue until no unvisited neighbor remains.</li>
+                            <li>Backtrack and explore other paths.</li>
+                        </ol>
+
+                        <div class="graph-complexity">
+                            <span>Time Complexity</span>
+                            <strong>O(V + E)</strong>
+                        </div>
+
+                        <div class="graph-complexity">
+                            <span>Common Use</span>
+                            <strong>Cycle detection and connectivity analysis</strong>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="graph-example-box">
+
+                    <h3>What Do V and E Mean?</h3>
+
+                    <p>
+                        In the complexity expression <strong>O(V + E)</strong>,
+                        <strong>V</strong> represents the number of vertices
+                        and <strong>E</strong> represents the number of edges.
+                        With an adjacency-list representation, BFS and DFS
+                        generally run in O(V + E) time.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 5: Graph Applications
+            ================================================== -->
+            <section class="tutorial-card graph-applications" id="applications">
+
+                <div class="section-heading left">
+
+                    <span class="graph-section-number">05</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-world"></i>
+                            Real-World Uses
+                        </span>
+
+                        <h2>Applications of Graphs</h2>
+
+                        <p>
+                            Graphs are used whenever a system contains objects
+                            and relationships between them.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="graph-applications-grid">
+
+                    <article class="graph-application-card">
+
+                        <div class="graph-application-icon">
+                            <i class="bx bx-map"></i>
+                        </div>
+
+                        <h3>Navigation Systems</h3>
+
+                        <p>
+                            Locations can be represented as vertices, while roads
+                            are edges. Weights can represent distance or travel time.
+                        </p>
+
+                    </article>
+
+                    <article class="graph-application-card">
+
+                        <div class="graph-application-icon">
+                            <i class="bx bx-user-voice"></i>
+                        </div>
+
+                        <h3>Social Networks</h3>
+
+                        <p>
+                            Users can be represented as vertices, and friendships
+                            or follows can be represented as edges.
+                        </p>
+
+                    </article>
+
+                    <article class="graph-application-card">
+
+                        <div class="graph-application-icon">
+                            <i class="bx bx-network-chart"></i>
+                        </div>
+
+                        <h3>Computer Networks</h3>
+
+                        <p>
+                            Devices can be represented as vertices and network
+                            connections as edges.
+                        </p>
+
+                    </article>
+
+                    <article class="graph-application-card">
+
+                        <div class="graph-application-icon">
+                            <i class="bx bx-git-repo-forked"></i>
+                        </div>
+
+                        <h3>Dependency Systems</h3>
+
+                        <p>
+                            Directed graphs can model dependencies between
+                            tasks, modules, or software packages.
+                        </p>
+
+                    </article>
+
+                    <article class="graph-application-card">
+
+                        <div class="graph-application-icon">
+                            <i class="bx bx-search-alt"></i>
+                        </div>
+
+                        <h3>Search and Recommendation</h3>
+
+                        <p>
+                            Graph relationships can help systems explore
+                            connections between users, products, and content.
+                        </p>
+
+                    </article>
+
+                    <article class="graph-application-card">
+
+                        <div class="graph-application-icon">
+                            <i class="bx bx-git-merge"></i>
+                        </div>
+
+                        <h3>Project Planning</h3>
+
+                        <p>
+                            Tasks and their dependencies can be modeled using
+                            directed graphs to understand execution order.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 6: Practice
+            ================================================== -->
+            <section class="tutorial-card" id="practice">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>Test Your Understanding</h2>
+
+                    <p>
+                        Check your understanding of graph vertices and edges.
+                    </p>
+
+                </div>
+
+                <div class="exercise-preview" data-correct-answer="B">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+                            <span class="section-label">Exercise Example</span>
+                            <h3>Understand Graph Fundamentals</h3>
+                        </div>
+
+                        <span class="exercise-number">01</span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        In a graph, what does an edge represent?
+                    </p>
+
+                    <div class="exercise-code">
+                        <span>Answer:</span>
+                        <span class="exercise-answer-slot" id="exerciseAnswer">?</span>
+                    </div>
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="A">
+                            A single vertex in the graph
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="B">
+                            A connection between two vertices
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="C">
+                            The starting vertex of a traversal
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="D">
+                            The number of vertices in the graph
+                        </button>
+
+                    </div>
+
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 7: Key Takeaways
+            ================================================== -->
+            <section class="tutorial-card graph-takeaways" id="key-takeaways">
+
+                <div class="section-heading left">
+
+                    <span class="graph-section-number">07</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-check-circle"></i>
+                            Summary
+                        </span>
+
+                        <h2>Key Takeaways</h2>
+
+                        <p>
+                            Review the most important concepts before moving
+                            to graph representations.
+                        </p>
+                    </div>
+
+                </div>
+
+                <ul class="graph-takeaways-list">
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            A graph consists of vertices and edges that represent
+                            objects and their relationships.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Edges can be directed or undirected, and they may
+                            have weights.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Vertices can be adjacent, connected by paths, or
+                            part of cycles.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            BFS explores neighbors level by level and commonly
+                            uses a queue.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            DFS explores deeply before backtracking and commonly
+                            uses a stack or recursion.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Graphs are used in navigation, social networks,
+                            computer networks, and dependency systems.
+                        </span>
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <!-- ==================================================
+                Learning Note
+            ================================================== -->
+            <div class="learning-note">
+
+                <i class="bx bx-info-circle"></i>
+
+                <div>
+                    <strong>Learning Note</strong>
+
+                    <p>
+                        Before moving on, make sure you can distinguish vertices
+                        from edges and explain the difference between BFS and DFS.
+                        These concepts will help you understand how graphs are
+                        stored and processed.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- ==================================================
+                Progress Card
+            ================================================== -->
+            <section class="progress-card">
+
+                <div class="progress-card-content">
+
+                    <span class="section-badge">
+                        <i class="bx bx-rocket"></i>
+                        Keep Learning
+                    </span>
+
+                    <h2>Ready to Learn Graph Representations?</h2>
+
+                    <p>
+                        Now that you understand graph fundamentals, continue to
+                        learn how graphs are represented and stored in memory.
+                    </p>
+
+                    <a href="GraphRepresentationsPage.html" class="content-button">
+                        Continue Learning
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+                <div class="progress-card-icon">
+                    <i class="bx bx-book-reader"></i>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Bottom Navigation
+            ================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="HeapsPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+
+        </div>
+
+
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

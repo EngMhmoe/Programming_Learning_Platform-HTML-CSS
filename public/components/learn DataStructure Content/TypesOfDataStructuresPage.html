@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    =========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Types of Data Structures | DevPath</title>
+
+
+
+    <!-- ==========================================================
+        Favicon
+    =========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style TypesOfDataStructuresPage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link active">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <section class="tutorial-content">
+
+            <!-- ==================================================
+                Tutorial Header
+            ================================================== -->
+            <section class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+
+
+                <h1>Types of Data Structures</h1>
+
+                <p>
+                    Learn how data structures are classified,
+                    understand the difference between linear and
+                    non-linear structures, and discover when each
+                    type can be useful.
+                </p>
+
+                <div class="tutorial-actions">
+
+
+                    <a href="ImportanceOfDataStructuresPage.html" class="tutorial-button secondary">
+
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+
+                    </a>
+
+
+                    <a href="AbstractDataTypesPage.html" class="tutorial-button primary">
+
+                        Next
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Introduction
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-book-open"></i>
+                        Overview
+                    </span>
+
+                    <h2>
+                        Understanding the Types of Data Structures
+                    </h2>
+
+                </div>
+
+                <p>
+                    Data structures can be classified into different
+                    types based on how data is organized, connected,
+                    and accessed.
+                </p>
+
+                <p>
+                    Understanding these types helps you choose the
+                    right structure for a particular problem and
+                    organize data in a way that makes your program
+                    easier to work with.
+                </p>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Remember:</strong>
+
+                        <p>
+                            Different data structures are designed
+                            for different purposes. There is no
+                            single structure that is the best choice
+                            for every situation.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Main Classification
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-branch"></i>
+                        Classification
+                    </span>
+
+                    <h2>
+                        The Main Categories
+                    </h2>
+
+                    <p>
+                        A common way to classify data structures is
+                        to divide them into two main categories.
+                    </p>
+
+                </div>
+
+                <div class="structure-types-grid">
+
+                    <!-- Linear Data Structures -->
+                    <article class="structure-type-card">
+
+                        <div class="structure-type-icon">
+                            <i class="bx bx-list-ol"></i>
+                        </div>
+
+                        <h3>
+                            Linear Data Structures
+                        </h3>
+
+                        <p>
+                            Data elements are arranged in a sequence.
+                            Each element is positioned before or after
+                            another element, following a linear order.
+                        </p>
+
+                        <div class="structure-type-examples">
+
+                            <span>Examples</span>
+
+                            <ul>
+                                <li>Arrays</li>
+                                <li>Linked Lists</li>
+                                <li>Stacks</li>
+                                <li>Queues</li>
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Non-Linear Data Structures -->
+                    <article class="structure-type-card">
+
+                        <div class="structure-type-icon">
+                            <i class="bx bx-network-chart"></i>
+                        </div>
+
+                        <h3>
+                            Non-Linear Data Structures
+                        </h3>
+
+                        <p>
+                            Data elements are organized in structures
+                            where relationships are not limited to a
+                            single sequence. Elements may have
+                            hierarchical or network connections.
+                        </p>
+
+                        <div class="structure-type-examples">
+
+                            <span>Examples</span>
+
+                            <ul>
+                                <li>Trees</li>
+                                <li>Graphs</li>
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Linear Data Structures
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-list-ol"></i>
+                        Type 01
+                    </span>
+
+                    <h2>
+                        Linear Data Structures
+                    </h2>
+
+                </div>
+
+                <p>
+                    In a linear data structure, elements are arranged
+                    in a logical sequence. This makes it possible to
+                    process elements in an ordered way.
+                </p>
+
+                <p>
+                    Imagine people standing in a line. Each person
+                    has a position in that line, and you can move
+                    from one person to the next.
+                </p>
+
+                <!-- Linear Example -->
+                <div class="structure-example">
+
+                    <h3>
+                        Example: A Sequence of Numbers
+                    </h3>
+
+                    <div class="linear-visual">
+
+                        <div class="linear-item">10</div>
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                        <div class="linear-item">20</div>
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                        <div class="linear-item">30</div>
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                        <div class="linear-item">40</div>
+
+                    </div>
+
+                    <p class="example-description">
+                        The numbers follow a sequence:
+                        10 comes before 20, 20 comes before 30,
+                        and 30 comes before 40.
+                    </p>
+
+                </div>
+
+                <h3>
+                    Common Linear Structures
+                </h3>
+
+                <ul class="structure-list">
+
+                    <li>
+                        <strong>Array:</strong>
+                        Stores elements in indexed positions.
+                    </li>
+
+                    <li>
+                        <strong>Linked List:</strong>
+                        Connects elements using links between nodes.
+                    </li>
+
+                    <li>
+                        <strong>Stack:</strong>
+                        Follows the Last In, First Out (LIFO) principle.
+                    </li>
+
+                    <li>
+                        <strong>Queue:</strong>
+                        Follows the First In, First Out (FIFO) principle.
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <!-- ==================================================
+                Non-Linear Data Structures
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-network-chart"></i>
+                        Type 02
+                    </span>
+
+                    <h2>
+                        Non-Linear Data Structures
+                    </h2>
+
+                </div>
+
+                <p>
+                    In a non-linear data structure, elements are not
+                    arranged in one simple sequence. Instead, they
+                    can be connected through hierarchical or
+                    network-based relationships.
+                </p>
+
+                <p>
+                    Think about a family tree. One person may have
+                    children, and each child may have their own
+                    children. The relationships form levels rather
+                    than a single line.
+                </p>
+
+                <!-- Non-Linear Examples -->
+                <div class="nonlinear-examples-grid">
+
+                    <!-- Tree -->
+                    <article class="nonlinear-example-card">
+
+                        <div class="nonlinear-example-icon">
+                            <i class="bx bx-git-branch"></i>
+                        </div>
+
+                        <h3>Tree</h3>
+
+                        <p>
+                            Organizes data in a hierarchy of parent
+                            and child nodes.
+                        </p>
+
+                        <div class="tree-visual">
+
+                            <div class="tree-node">A</div>
+
+                            <div class="tree-branches">
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="tree-children">
+                                <div class="tree-node">B</div>
+                                <div class="tree-node">C</div>
+                            </div>
+
+                        </div>
+
+                        <span class="example-caption">
+                            Example of a simple tree
+                        </span>
+
+                    </article>
+
+                    <!-- Graph -->
+                    <article class="nonlinear-example-card">
+
+                        <div class="nonlinear-example-icon">
+                            <i class="bx bx-network-chart"></i>
+                        </div>
+
+                        <h3>Graph</h3>
+
+                        <p>
+                            Represents data as vertices connected
+                            by edges, allowing different kinds of
+                            relationships.
+                        </p>
+
+                        <div class="graph-visual">
+
+                            <svg viewBox="0 0 240 130" role="img"
+                                aria-label="A simple graph with four connected vertices">
+
+                                <line x1="45" y1="35" x2="120" y2="25"></line>
+                                <line x1="120" y1="25" x2="195" y2="55"></line>
+                                <line x1="45" y1="35" x2="75" y2="100"></line>
+                                <line x1="75" y1="100" x2="195" y2="55"></line>
+
+                                <circle cx="45" cy="35" r="15"></circle>
+                                <circle cx="120" cy="25" r="15"></circle>
+                                <circle cx="195" cy="55" r="15"></circle>
+                                <circle cx="75" cy="100" r="15"></circle>
+
+                                <text x="45" y="40">A</text>
+                                <text x="120" y="30">B</text>
+                                <text x="195" y="60">C</text>
+                                <text x="75" y="105">D</text>
+
+                            </svg>
+
+                        </div>
+
+                        <span class="example-caption">
+                            Example of a simple graph
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Comparison
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Comparison
+                    </span>
+
+                    <h2>
+                        Linear vs. Non-Linear Data Structures
+                    </h2>
+
+                    <p>
+                        Let's compare the two categories to understand
+                        how their organization differs.
+                    </p>
+
+                </div>
+
+                <div class="structure-comparison">
+
+                    <div class="comparison-row comparison-header">
+
+                        <div>Feature</div>
+                        <div>Linear</div>
+                        <div>Non-Linear</div>
+
+                    </div>
+
+                    <div class="comparison-row">
+
+                        <div>Organization</div>
+
+                        <div>
+                            Sequential
+                        </div>
+
+                        <div>
+                            Hierarchical or network-based
+                        </div>
+
+                    </div>
+
+                    <div class="comparison-row">
+
+                        <div>Relationships</div>
+
+                        <div>
+                            Elements follow a logical sequence
+                        </div>
+
+                        <div>
+                            Elements may have multiple connections
+                        </div>
+
+                    </div>
+
+                    <div class="comparison-row">
+
+                        <div>Examples</div>
+
+                        <div>
+                            Arrays, Linked Lists, Stacks, Queues
+                        </div>
+
+                        <div>
+                            Trees, Graphs
+                        </div>
+
+                    </div>
+
+                    <div class="comparison-row">
+
+                        <div>Common Use</div>
+
+                        <div>
+                            Ordered collections and sequential processing
+                        </div>
+
+                        <div>
+                            Hierarchies and complex relationships
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Important Note</strong>
+
+                        <p>
+                            This classification describes how data
+                            is organized. The best choice still
+                            depends on the operations and requirements
+                            of your application.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Choosing a Data Structure
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bulb"></i>
+                        Practical Example
+                    </span>
+
+                    <h2>
+                        Choosing the Right Type
+                    </h2>
+
+                </div>
+
+                <p>
+                    Imagine you are developing an application and
+                    need to store different kinds of information.
+                    The type of relationship between the data can
+                    help you decide which structure to consider.
+                </p>
+
+                <div class="use-case-list">
+
+                    <div class="use-case-item">
+
+                        <div class="use-case-icon">
+                            <i class="bx bx-list-ol"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Student Scores</h3>
+
+                            <p>
+                                An array can be a suitable choice
+                                when you want to store and access
+                                a sequence of student scores.
+                            </p>
+
+                            <span class="use-case-type">
+                                Linear Structure
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="use-case-item">
+
+                        <div class="use-case-icon">
+                            <i class="bx bx-git-branch"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Organization Chart</h3>
+
+                            <p>
+                                A tree can represent a hierarchy
+                                in which managers and employees
+                                have parent-child relationships.
+                            </p>
+
+                            <span class="use-case-type">
+                                Non-Linear Structure
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="use-case-item">
+
+                        <div class="use-case-icon">
+                            <i class="bx bx-network-chart"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Social Network</h3>
+
+                            <p>
+                                A graph can represent people as
+                                vertices and their relationships
+                                as edges.
+                            </p>
+
+                            <span class="use-case-type">
+                                Non-Linear Structure
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Key Takeaways
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-circle"></i>
+                        Summary
+                    </span>
+
+                    <h2>
+                        What Should You Remember?
+                    </h2>
+
+                </div>
+
+                <div class="takeaways-list">
+
+                    <div class="takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Data structures can be classified
+                            according to how they organize and
+                            connect data.
+                        </p>
+
+                    </div>
+
+                    <div class="takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Linear structures arrange elements
+                            in a logical sequence.
+                        </p>
+
+                    </div>
+
+                    <div class="takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Non-linear structures represent
+                            hierarchical or network relationships.
+                        </p>
+
+                    </div>
+
+                    <div class="takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Arrays, Linked Lists, Stacks, and Queues
+                            are common linear structures.
+                        </p>
+
+                    </div>
+
+                    <div class="takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Trees and Graphs are common non-linear
+                            structures.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Exercises => Shared
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Types of Data Structures Exercises
+                    </h2>
+
+                    <p>
+                        Test your understanding of linear and
+                        non-linear data structures.
+                    </p>
+
+                </div>
+
+                <!-- Exercise Example -->
+                <div class="exercise-preview" data-correct-answer="Non-Linear">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Exercise Example
+                            </span>
+
+                            <h3>
+                                Identify the Data Structure Type
+                            </h3>
+
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        Which category includes Trees and Graphs?
+                    </p>
+
+                    <!-- Answer Example -->
+                    <div class="exercise-code">
+
+                        <span>Answer:</span>
+
+                        <span class="exercise-answer-slot" id="exerciseAnswer">?</span>
+
+                    </div>
+
+                    <!-- Answer Options -->
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="Linear">
+                            Linear
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Non-Linear">
+                            Non-Linear
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Sequential Only">
+                            Sequential Only
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Primitive">
+                            Primitive
+                        </button>
+
+                    </div>
+
+                    <!-- Answer Result -->
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <!-- All Exercises Button -->
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Progress Card
+            ================================================== -->
+            <section class="progress-card">
+
+                <div class="progress-card-content">
+
+                    <span class="section-badge">
+                        <i class="bx bx-rocket"></i>
+                        Keep Learning
+                    </span>
+
+                    <h2>
+                        Ready to Explore Data Structure Fundamentals?
+                    </h2>
+
+                    <p>
+                        Now that you understand the main types,
+                        continue learning about the basic concepts
+                        and properties of data structures.
+                    </p>
+
+                    <a href="AbstractDataTypesPage.html" class="content-button">
+                        Continue Learning
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+                <div class="progress-card-icon">
+                    <i class="bx bx-layer"></i>
+                </div>
+
+            </section>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Bottom Navigation => مشترك
+            =================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="ImportanceOfDataStructuresPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+
+        </section>
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

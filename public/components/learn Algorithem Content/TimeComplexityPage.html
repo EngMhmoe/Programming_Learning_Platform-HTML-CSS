@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Learn Time Complexity, analyze algorithm performance, understand common growth rates, and compare linear and quadratic algorithms with practical examples.">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <meta name="keywords"
+        content="Time Complexity, Algorithm Analysis, Big O, Linear Time, Quadratic Time, Algorithm Performance">
+
+    <title>Time Complexity | DevPath</title>
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" href="../../photos/algorithm-course.jpg">
+
+    <!-- ==========================================================
+        Google Fonts
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================================
+        Boxicons
+    ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- ==========================================================
+        Shared Learning Page CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+    <!-- ==========================================================
+        Time Complexity Page CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learn Algorithms Content/style TimeComplexityPage.css">
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html" class="current">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-git-branch"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>Algorithms Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    Algorithms Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    Algorithms Intro
+                </a>
+
+                <a href="WhatIsAlgorithmPage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is Algorithm?
+                </a>
+
+                <a href="ImportanceOfAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    Importance of Algorithms
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Algorithm Analysis -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-line-chart"></i>
+                    Algorithm Analysis
+                </h3>
+
+                <a href="AlgorithmCharacteristicsPage.html" class="sidebar-link">
+                    <i class="bx bx-list-check"></i>
+                    Algorithm Characteristics
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link active">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Searching Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-search"></i>
+                    Searching Algorithms
+                </h3>
+
+                <a href="SearchingAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Introduction to Searching
+                </a>
+
+                <a href="LinearSearchPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Linear Search
+                </a>
+
+                <a href="BinarySearchPage.html" class="sidebar-link">
+                    <i class="bx bx-git-compare"></i>
+                    Binary Search
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Sorting Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-sort"></i>
+                    Sorting Algorithms
+                </h3>
+
+                <a href="SortingAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-alt-2"></i>
+                    Introduction to Sorting
+                </a>
+
+                <a href="BubbleSortPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-down"></i>
+                    Bubble Sort
+                </a>
+
+                <a href="SelectionSortPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Selection Sort
+                </a>
+
+                <a href="InsertionSortPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-up"></i>
+                    Insertion Sort
+                </a>
+
+                <a href="MergeSortPage.html" class="sidebar-link">
+                    <i class="bx bx-git-merge"></i>
+                    Merge Sort
+                </a>
+
+                <a href="QuickSortPage.html" class="sidebar-link">
+                    <i class="bx bx-fast-forward"></i>
+                    Quick Sort
+                </a>
+
+                <a href="HeapSortPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heap Sort
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Graph Traversal Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-network-chart"></i>
+                    Graph Traversal Algorithms
+                </h3>
+
+                <a href="BFSPage.html" class="sidebar-link">
+                    <i class="bx bx-git-merge"></i>
+                    Breadth-First Search (BFS)
+                </a>
+
+                <a href="DFSPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Depth-First Search (DFS)
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Algorithmic Techniques -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-alt"></i>
+                    Algorithmic Techniques
+                </h3>
+
+                <a href="RecursionPage.html" class="sidebar-link">
+                    <i class="bx bx-repeat"></i>
+                    Recursion
+                </a>
+
+                <a href="TwoPointersPage.html" class="sidebar-link">
+                    <i class="bx bx-move-horizontal"></i>
+                    Two Pointers
+                </a>
+
+                <a href="SlidingWindowPage.html" class="sidebar-link">
+                    <i class="bx bx-window"></i>
+                    Sliding Window
+                </a>
+
+                <a href="GreedyAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-target-lock"></i>
+                    Greedy Algorithms
+                </a>
+
+                <a href="DynamicProgrammingPage.html" class="sidebar-link">
+                    <i class="bx bx-brain"></i>
+                    Dynamic Programming
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <div class="tutorial-content" id="course-content">
+
+            <!-- ==================================================
+                Tutorial Header => Shared Structure
+            =================================================== -->
+            <section class="tutorial-header">
+
+                <div class="tutorial-header-content">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-git-branch"></i>
+
+                        Algorithms Programming
+
+                    </span>
+
+                    <h1>
+                        Time Complexity <span>Algorithms</span>
+                    </h1>
+
+                    <p>
+                        Learn how to analyze algorithm performance, understand
+                        how the number of operations grows with input size,
+                        and recognize common time complexity patterns.
+                    </p>
+
+                    <div class="tutorial-actions">
+
+                        <a href="AlgorithmCharacteristicsPage.html" class="tutorial-button secondary">
+                            <i class="bx bx-left-arrow-alt"></i>
+                            Previous
+                        </a>
+
+                        <a href="SpaceComplexityPage.html" class="tutorial-button primary">
+                            Next
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Lesson Overview
+            =================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-line-chart"></i>
+                        Lesson Overview
+                    </span>
+
+                    <h2>
+                        How Efficient Is Your Algorithm?
+                    </h2>
+
+                    <p>
+                        Two algorithms may solve the same problem but perform
+                        very differently when the amount of data increases.
+                        Time Complexity helps us understand this difference
+                        by studying how the required computational work grows.
+                    </p>
+
+                </div>
+
+                <div class="time-complexity-hero">
+
+                    <div class="time-complexity-hero-icon">
+                        <i class="bx bx-timer"></i>
+                    </div>
+
+                    <div class="time-complexity-hero-content">
+
+                        <span class="time-complexity-eyebrow">
+                            The Main Idea
+                        </span>
+
+                        <h3>
+                            Focus on Growth, Not Just Seconds
+                        </h3>
+
+                        <p>
+                            Instead of relying only on how many seconds a
+                            program takes on one computer, we examine how its
+                            computational work changes as the input gets larger.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <p>
+                        Time Complexity describes the growth of computational
+                        work as input size increases. It is not an exact
+                        measurement of elapsed time in seconds.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                Understanding Input Size
+            =================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-data"></i>
+                        Input Size
+                    </span>
+
+                    <h2>
+                        1. Understanding the Input Size
+                    </h2>
+
+                    <p>
+                        Before analyzing an algorithm, we need to identify
+                        the size of the input it processes. We commonly
+                        represent this size using the letter n.
+                    </p>
+
+                </div>
+
+                <div class="time-complexity-input-grid">
+
+                    <div class="time-complexity-input-card">
+
+                        <div class="time-complexity-input-icon">
+                            <i class="bx bx-list-ol"></i>
+                        </div>
+
+                        <span class="time-complexity-mini-label">
+                            Small Input
+                        </span>
+
+                        <h3>
+                            n = 10
+                        </h3>
+
+                        <div class="time-complexity-data-bars small">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <p>
+                            An algorithm processes a small collection of
+                            elements.
+                        </p>
+
+                    </div>
+
+                    <div class="time-complexity-input-card">
+
+                        <div class="time-complexity-input-icon">
+                            <i class="bx bx-bar-chart-alt-2"></i>
+                        </div>
+
+                        <span class="time-complexity-mini-label">
+                            Medium Input
+                        </span>
+
+                        <h3>
+                            n = 100
+                        </h3>
+
+                        <div class="time-complexity-data-bars medium">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <p>
+                            The algorithm may need to perform more operations
+                            to process the larger collection.
+                        </p>
+
+                    </div>
+
+                    <div class="time-complexity-input-card">
+
+                        <div class="time-complexity-input-icon">
+                            <i class="bx bx-trending-up"></i>
+                        </div>
+
+                        <span class="time-complexity-mini-label">
+                            Large Input
+                        </span>
+
+                        <h3>
+                            n = 1,000
+                        </h3>
+
+                        <div class="time-complexity-data-bars large">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <p>
+                            An efficient algorithm should handle increasing
+                            input sizes as effectively as possible.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="example-note">
+
+                    <i class="bx bx-lightbulb"></i>
+
+                    <p>
+                        The meaning of n depends on the problem. For an array,
+                        n might be the number of elements. For a string, it
+                        might be the number of characters.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                Common Time Complexities
+            =================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-trending-up"></i>
+                        Growth Rates
+                    </span>
+
+                    <h2>
+                        2. Common Time Complexity Classes
+                    </h2>
+
+                    <p>
+                        Different algorithms can have different growth rates.
+                        Understanding these common patterns makes it easier
+                        to compare solutions and recognize potential
+                        performance problems.
+                    </p>
+
+                </div>
+
+                <div class="time-complexity-growth-grid">
+
+                    <div class="time-complexity-growth-card constant">
+
+                        <div class="time-complexity-growth-top">
+                            <span class="time-complexity-growth-icon">
+                                <i class="bx bx-check-shield"></i>
+                            </span>
+
+                            <span class="time-complexity-growth-tag">
+                                Excellent
+                            </span>
+                        </div>
+
+                        <h3>
+                            O(1)
+                        </h3>
+
+                        <span class="time-complexity-growth-name">
+                            Constant Time
+                        </span>
+
+                        <p>
+                            The operation count stays constant as n increases,
+                            assuming the operation itself has constant cost.
+                        </p>
+
+                        <div class="time-complexity-growth-example">
+                            <span>Example</span>
+                            <code>const first = numbers[0];</code>
+                        </div>
+
+                    </div>
+
+                    <div class="time-complexity-growth-card logarithmic">
+
+                        <div class="time-complexity-growth-top">
+                            <span class="time-complexity-growth-icon">
+                                <i class="bx bx-git-compare"></i>
+                            </span>
+
+                            <span class="time-complexity-growth-tag">
+                                Very Efficient
+                            </span>
+                        </div>
+
+                        <h3>
+                            O(log n)
+                        </h3>
+
+                        <span class="time-complexity-growth-name">
+                            Logarithmic Time
+                        </span>
+
+                        <p>
+                            The search space is repeatedly reduced, as in
+                            Binary Search on a sorted array.
+                        </p>
+
+                        <div class="time-complexity-growth-example">
+                            <span>Example</span>
+                            <code>Binary Search</code>
+                        </div>
+
+                    </div>
+
+                    <div class="time-complexity-growth-card linear">
+
+                        <div class="time-complexity-growth-top">
+                            <span class="time-complexity-growth-icon">
+                                <i class="bx bx-trending-up"></i>
+                            </span>
+
+                            <span class="time-complexity-growth-tag">
+                                Scalable
+                            </span>
+                        </div>
+
+                        <h3>
+                            O(n)
+                        </h3>
+
+                        <span class="time-complexity-growth-name">
+                            Linear Time
+                        </span>
+
+                        <p>
+                            The work grows proportionally to the number
+                            of elements processed.
+                        </p>
+
+                        <div class="time-complexity-growth-example">
+                            <span>Example</span>
+                            <code>Visit every array element</code>
+                        </div>
+
+                    </div>
+
+                    <div class="time-complexity-growth-card quadratic">
+
+                        <div class="time-complexity-growth-top">
+                            <span class="time-complexity-growth-icon">
+                                <i class="bx bx-grid-alt"></i>
+                            </span>
+
+                            <span class="time-complexity-growth-tag">
+                                Can Be Expensive
+                            </span>
+                        </div>
+
+                        <h3>
+                            O(n²)
+                        </h3>
+
+                        <span class="time-complexity-growth-name">
+                            Quadratic Time
+                        </span>
+
+                        <p>
+                            The work can grow quadratically when two loops
+                            each perform n iterations.
+                        </p>
+
+                        <div class="time-complexity-growth-example">
+                            <span>Example</span>
+                            <code>Compare every pair of elements</code>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="time-complexity-comparison">
+
+                    <div class="time-complexity-comparison-heading">
+                        <i class="bx bx-bar-chart-alt-2"></i>
+
+                        <div>
+                            <h3>
+                                Why Does Growth Matter?
+                            </h3>
+
+                            <p>
+                                Consider these simplified operation counts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="time-complexity-table-wrapper">
+
+                        <table class="time-complexity-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Input Size</th>
+                                    <th>O(1)</th>
+                                    <th>O(log n)</th>
+                                    <th>O(n)</th>
+                                    <th>O(n²)</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>10</td>
+                                    <td>1</td>
+                                    <td>~4</td>
+                                    <td>10</td>
+                                    <td>100</td>
+                                </tr>
+
+                                <tr>
+                                    <td>100</td>
+                                    <td>1</td>
+                                    <td>~7</td>
+                                    <td>100</td>
+                                    <td>10,000</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,000</td>
+                                    <td>1</td>
+                                    <td>~10</td>
+                                    <td>1,000</td>
+                                    <td>1,000,000</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <p class="time-complexity-table-caption">
+                        Illustrative growth counts, not exact runtime measurements.
+                        Logarithmic values are rounded for readability.
+                    </p>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <p>
+                        These classes are introduced here as common patterns.
+                        We will study how to express and analyze growth rates
+                        formally in the Big O Notation lesson.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                Linear Time Example
+            =================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        Practical Example
+                    </span>
+
+                    <h2>
+                        3. Analyzing a Linear Algorithm — O(n)
+                    </h2>
+
+                    <p>
+                        Imagine that we want to display every number in an array.
+                        The algorithm must visit each element once.
+                    </p>
+
+                </div>
+
+                <div class="time-complexity-code-card">
+
+                    <div class="time-complexity-code-header">
+
+                        <div class="time-complexity-code-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span>
+                            printNumbers.js
+                        </span>
+
+                        <span class="time-complexity-code-language">
+                            JavaScript
+                        </span>
+
+                    </div>
+
+                    <pre><code><span class="tc-keyword">function</span> <span class="tc-function">printNumbers</span>(numbers) {
+    <span class="tc-keyword">for</span> (
+        <span class="tc-keyword">let</span> i = <span class="tc-number">0</span>;
+        i &lt; numbers.length;
+        i++
+    ) {
+        console.log(numbers[i]);
+    }
+}</code></pre>
+
+                </div>
+
+                <div class="time-complexity-step-analysis">
+
+                    <div class="time-complexity-step">
+                        <span class="time-complexity-step-number">01</span>
+
+                        <div>
+                            <h3>
+                                Start at the First Element
+                            </h3>
+
+                            <p>
+                                The loop begins with index 0.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="time-complexity-step">
+                        <span class="time-complexity-step-number">02</span>
+
+                        <div>
+                            <h3>
+                                Visit Each Element
+                            </h3>
+
+                            <p>
+                                Each iteration processes one element and
+                                advances the index.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="time-complexity-step">
+                        <span class="time-complexity-step-number">03</span>
+
+                        <div>
+                            <h3>
+                                Stop at the End
+                            </h3>
+
+                            <p>
+                                The loop stops after reaching the array length.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="time-complexity-result-panel">
+
+                    <div class="time-complexity-result-icon">
+                        <i class="bx bx-check-circle"></i>
+                    </div>
+
+                    <div>
+                        <span>Final Analysis</span>
+
+                        <h3>
+                            O(n) — Linear Time
+                        </h3>
+
+                        <p>
+                            If the input contains n elements, the loop
+                            processes n elements. Assuming constant work
+                            per iteration, its running time grows linearly.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                Nested Loops Example
+            =================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-grid-alt"></i>
+                        Nested Loops
+                    </span>
+
+                    <h2>
+                        4. Analyzing Nested Loops — O(n²)
+                    </h2>
+
+                    <p>
+                        Now consider an algorithm that processes every
+                        possible pair of positions in a collection.
+                        Two nested loops can cause the number of operations
+                        to grow much faster.
+                    </p>
+
+                </div>
+
+                <div class="time-complexity-code-card">
+
+                    <div class="time-complexity-code-header">
+
+                        <div class="time-complexity-code-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span>
+                            printPairs.js
+                        </span>
+
+                        <span class="time-complexity-code-language">
+                            JavaScript
+                        </span>
+
+                    </div>
+
+                    <pre><code><span class="tc-keyword">function</span> <span class="tc-function">printPairs</span>(n) {
+    <span class="tc-keyword">for</span> (<span class="tc-keyword">let</span> i = <span class="tc-number">0</span>; i &lt; n; i++) {
+
+        <span class="tc-keyword">for</span> (<span class="tc-keyword">let</span> j = <span class="tc-number">0</span>; j &lt; n; j++) {
+            console.log(i, j);
+        }
+
+    }
+}</code></pre>
+
+                </div>
+
+                <div class="time-complexity-loop-breakdown">
+
+                    <div class="time-complexity-loop-item">
+
+                        <span class="time-complexity-loop-label">
+                            Outer Loop
+                        </span>
+
+                        <strong>n iterations</strong>
+
+                        <p>
+                            The outer loop runs n times.
+                        </p>
+
+                    </div>
+
+                    <div class="time-complexity-loop-symbol">
+                        <i class="bx bx-x"></i>
+                    </div>
+
+                    <div class="time-complexity-loop-item">
+
+                        <span class="time-complexity-loop-label">
+                            Inner Loop
+                        </span>
+
+                        <strong>n iterations</strong>
+
+                        <p>
+                            For every outer iteration, the inner loop
+                            runs n times.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="time-complexity-equation">
+
+                    <span class="time-complexity-equation-label">
+                        Total Iterations
+                    </span>
+
+                    <div class="time-complexity-equation-main">
+                        n × n = n²
+                    </div>
+
+                    <p>
+                        Therefore, this particular nested-loop pattern
+                        has quadratic time complexity: <strong>O(n²)</strong>.
+                    </p>
+
+                </div>
+
+                <div class="example-note">
+
+                    <i class="bx bx-bulb"></i>
+
+                    <p>
+                        Nested loops do not automatically mean O(n²).
+                        Always analyze how many times each loop executes.
+                        If the inner loop runs a fixed number of times,
+                        for example, the overall complexity may still be O(n).
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                Best, Average, Worst Case
+            =================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Performance Cases
+                    </span>
+
+                    <h2>
+                        5. Best, Average, and Worst Case
+                    </h2>
+
+                    <p>
+                        An algorithm's work may change depending on the
+                        particular input it receives. These cases describe
+                        different ways to analyze its performance.
+                    </p>
+
+                </div>
+
+                <div class="time-complexity-cases-grid">
+
+                    <div class="time-complexity-case-card best">
+
+                        <div class="time-complexity-case-icon">
+                            <i class="bx bx-rocket"></i>
+                        </div>
+
+                        <span class="time-complexity-case-label">
+                            Best Case
+                        </span>
+
+                        <h3>
+                            Most Favorable Input
+                        </h3>
+
+                        <p>
+                            The input that allows the algorithm to complete
+                            with the least amount of work for that input size.
+                        </p>
+
+                        <div class="time-complexity-case-example">
+                            <strong>Linear Search</strong>
+
+                            <p>
+                                The target is the first element.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="time-complexity-case-card average">
+
+                        <div class="time-complexity-case-icon">
+                            <i class="bx bx-bar-chart-alt-2"></i>
+                        </div>
+
+                        <span class="time-complexity-case-label">
+                            Average Case
+                        </span>
+
+                        <h3>
+                            Expected Performance
+                        </h3>
+
+                        <p>
+                            The expected amount of work across inputs,
+                            according to a specified input distribution.
+                        </p>
+
+                        <div class="time-complexity-case-example">
+                            <strong>Linear Search</strong>
+
+                            <p>
+                                The target is at a typical position.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="time-complexity-case-card worst">
+
+                        <div class="time-complexity-case-icon">
+                            <i class="bx bx-shield-quarter"></i>
+                        </div>
+
+                        <span class="time-complexity-case-label">
+                            Worst Case
+                        </span>
+
+                        <h3>
+                            Maximum Work
+                        </h3>
+
+                        <p>
+                            The greatest amount of work the algorithm
+                            requires for inputs of a given size.
+                        </p>
+
+                        <div class="time-complexity-case-example">
+                            <strong>Linear Search</strong>
+
+                            <p>
+                                The target is last or is not present.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <p>
+                        For a standard Linear Search, the best-case running
+                        time is O(1), while its worst-case running time is O(n).
+                        Average-case analysis depends on the assumptions
+                        about the input distribution.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                Key Takeaways
+            =================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-circle"></i>
+                        Key Takeaways
+                    </span>
+
+                    <h2>
+                        What Should You Remember?
+                    </h2>
+
+                    <p>
+                        Use these ideas when analyzing algorithms and
+                        comparing different solutions to the same problem.
+                    </p>
+
+                </div>
+
+                <ul class="time-complexity-takeaways-list">
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            <strong>Time Complexity:</strong>
+                            Describes how computational work grows as input size increases.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            <strong>Input Size:</strong>
+                            The variable n commonly represents the amount of input data.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            <strong>O(1):</strong>
+                            Constant growth, assuming constant-cost operations.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            <strong>O(n):</strong>
+                            A common pattern when processing every element once.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            <strong>O(n²):</strong>
+                            A common pattern when two loops each perform n iterations.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+
+                        <span>
+                            <strong>Performance Cases:</strong>
+                            Best, average, and worst cases describe different input scenarios.
+                        </span>
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- ==================================================
+                Practice => Shared Structure
+            ================================================== -->
+            <article class="tutorial-card space-complexity-practice">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Test Your Knowledge
+                    </h2>
+
+                    <p>
+                        Apply what you have learned about auxiliary space,
+                        memory usage, and common space complexity patterns.
+                    </p>
+
+                </div>
+
+                <div class="exercise-preview" data-correct-answer="constant">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+                            <span class="section-label">
+                                Algorithms Exercise
+                            </span>
+
+                            <h3>
+                                Identify Constant Space Complexity
+                            </h3>
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        A function uses only a fixed number of variables,
+                        regardless of the input size. What is its auxiliary
+                        space complexity?
+                    </p>
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="linear">
+                            O(n) — Linear Space
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="logarithmic">
+                            O(log n) — Logarithmic Space
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="constant">
+                            O(1) — Constant Space
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="quadratic">
+                            O(n²) — Quadratic Space
+                        </button>
+
+                    </div>
+
+                    <div class="exercise-result" id="exerciseResult" aria-live="polite">
+                    </div>
+
+                </div>
+
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Space Complexity Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                Bottom Navigation => Shared
+            ================================================== -->
+            <div class="tutorial-bottom-actions">
+
+                <a href="AlgorithmCharacteristicsPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+
+</body>
+
+</html>

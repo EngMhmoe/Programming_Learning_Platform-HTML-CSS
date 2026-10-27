@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <meta name="description"
+        content="Learn Binary Trees in data structures, including their structure, terminology, types, properties, traversal methods, and practical applications.">
+
+    <!-- ==========================================================
+        Title
+    ========================================================== -->
+    <title>Binary Trees Tutorial | DevPath</title>
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+
+    <!-- ==========================================================
+        Google Fonts
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ==========================================================
+        Boxicons
+    ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+    <!-- ==========================================================
+        Stylesheets
+    ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style BinaryTreesPage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link active">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <div class="tutorial-content">
+
+            <!-- ======================================================
+            Tutorial Header
+        ====================================================== -->
+            <header class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+
+                <h1>Binary Trees</h1>
+
+                <p>
+                    Learn how Binary Trees organize data using nodes with
+                    at most two children, and explore their structure,
+                    types, traversal methods, and practical applications.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="TreesPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="BinarySearchTreesPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </header>
+
+            <!-- ======================================================
+            Introduction
+        ====================================================== -->
+            <section class="tutorial-card" id="introduction">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-branch"></i>
+                        Introduction
+                    </span>
+
+                    <h2>What Is a Binary Tree?</h2>
+
+                </div>
+
+                <p>
+                    A <strong>Binary Tree</strong> is a non-linear data
+                    structure in which each node can have at most two
+                    children: a left child and a right child.
+                </p>
+
+                <p>
+                    Binary Trees are commonly used to represent hierarchical
+                    relationships and organize data efficiently. They are
+                    also the foundation of structures such as Binary Search
+                    Trees and Heaps.
+                </p>
+
+                <div class="content-note">
+                    <strong>Key Idea:</strong>
+                    Each node in a Binary Tree can have zero, one, or two
+                    children, but never more than two.
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Binary Tree Structure
+        ====================================================== -->
+            <section class="tutorial-card" id="structure">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-network-chart"></i>
+                        Structure
+                    </span>
+
+                    <h2>Binary Tree Structure</h2>
+
+                    <p>
+                        A Binary Tree consists of nodes connected through
+                        parent-child relationships.
+                    </p>
+
+                </div>
+
+                <div class="tree-structure-example">
+
+                    <div class="tree-node">A</div>
+
+                    <div class="tree-children">
+
+                        <div class="tree-branch">
+
+                            <div class="tree-node">B</div>
+
+                            <div class="tree-children">
+
+                                <div class="tree-branch">
+                                    <div class="tree-node">D</div>
+                                </div>
+
+                                <div class="tree-branch">
+                                    <div class="tree-node">E</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tree-branch">
+
+                            <div class="tree-node">C</div>
+
+                            <div class="tree-children">
+
+                                <div class="tree-branch">
+                                    <div class="tree-node">F</div>
+                                </div>
+
+                                <div class="tree-branch">
+                                    <div class="tree-node empty"> </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="content-caption">
+                    Example of a Binary Tree: each node has at most two
+                    children.
+                </p>
+
+                <ul class="content-list">
+
+                    <li>
+                        <strong>Root:</strong>
+                        Node A is the starting point of the tree.
+                    </li>
+
+                    <li>
+                        <strong>Left Child:</strong>
+                        Node B is the left child of A.
+                    </li>
+
+                    <li>
+                        <strong>Right Child:</strong>
+                        Node C is the right child of A.
+                    </li>
+
+                    <li>
+                        <strong>Leaf Nodes:</strong>
+                        Nodes D, E, and F have no children.
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <!-- ======================================================
+            Binary Tree Terminology
+        ====================================================== -->
+            <section class="tutorial-card" id="terminology">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-book-open"></i>
+                        Terminology
+                    </span>
+
+                    <h2>Binary Tree Terminology</h2>
+
+                    <p>
+                        Understanding these terms will help you work with
+                        Binary Trees and their algorithms.
+                    </p>
+
+                </div>
+
+                <div class="content-definition-list">
+
+                    <div class="definition-item">
+                        <h3>Root</h3>
+                        <p>
+                            The topmost node in the tree, which has no parent.
+                        </p>
+                    </div>
+
+                    <div class="definition-item">
+                        <h3>Parent</h3>
+                        <p>
+                            A node that has one or more children.
+                        </p>
+                    </div>
+
+                    <div class="definition-item">
+                        <h3>Child</h3>
+                        <p>
+                            A node directly connected below another node.
+                        </p>
+                    </div>
+
+                    <div class="definition-item">
+                        <h3>Leaf Node</h3>
+                        <p>
+                            A node that has no children.
+                        </p>
+                    </div>
+
+                    <div class="definition-item">
+                        <h3>Subtree</h3>
+                        <p>
+                            A node together with all its descendants.
+                        </p>
+                    </div>
+
+                    <div class="definition-item">
+                        <h3>Height</h3>
+                        <p>
+                            The number of edges on the longest downward path
+                            from a node to a leaf. The height of a tree is
+                            the height of its root.
+                        </p>
+                    </div>
+
+                    <div class="definition-item">
+                        <h3>Depth</h3>
+                        <p>
+                            The number of edges from the root to a particular
+                            node.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Binary Tree Properties
+        ====================================================== -->
+            <section class="tutorial-card" id="properties">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-list-check"></i>
+                        Properties
+                    </span>
+
+                    <h2>Binary Tree Properties</h2>
+
+                </div>
+
+                <ul class="content-list">
+
+                    <li>
+                        Each node can have at most two children.
+                    </li>
+
+                    <li>
+                        Each node can have a left child, a right child,
+                        both children, or no children.
+                    </li>
+
+                    <li>
+                        The maximum number of nodes at level \(L\), when the
+                        root is at level 0, is \(2^L\).
+                    </li>
+
+                    <li>
+                        The maximum number of nodes in a Binary Tree of
+                        height \(H\), measured in edges, is
+                        \(2^{H+1} - 1\).
+                    </li>
+
+                    <li>
+                        A non-empty tree with \(N\) nodes has exactly
+                        \(N - 1\) edges.
+                    </li>
+
+                </ul>
+
+                <div class="content-note">
+                    <strong>Remember:</strong>
+                    These maximum-node formulas describe a completely filled
+                    Binary Tree through the specified level or height.
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Types of Binary Trees
+        ====================================================== -->
+            <section class="tutorial-card" id="types">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-branch"></i>
+                        Types
+                    </span>
+
+                    <h2>Types of Binary Trees</h2>
+
+                    <p>
+                        Binary Trees can be classified according to how their
+                        nodes and levels are arranged.
+                    </p>
+
+                </div>
+
+                <div class="content-definition-list">
+
+                    <div class="definition-item">
+
+                        <h3>Full Binary Tree</h3>
+
+                        <p>
+                            Every node has either zero or exactly two children.
+                        </p>
+
+                    </div>
+
+                    <div class="definition-item">
+
+                        <h3>Complete Binary Tree</h3>
+
+                        <p>
+                            Every level is completely filled except possibly
+                            the last level, and the last level is filled from
+                            left to right.
+                        </p>
+
+                    </div>
+
+                    <div class="definition-item">
+
+                        <h3>Perfect Binary Tree</h3>
+
+                        <p>
+                            Every internal node has exactly two children,
+                            and all leaf nodes are at the same level.
+                        </p>
+
+                    </div>
+
+                    <div class="definition-item">
+
+                        <h3>Balanced Binary Tree</h3>
+
+                        <p>
+                            A tree whose subtree heights remain within a
+                            defined balance condition. The exact condition
+                            depends on the type of balanced tree.
+                        </p>
+
+                    </div>
+
+                    <div class="definition-item">
+
+                        <h3>Skewed Binary Tree</h3>
+
+                        <p>
+                            A tree in which each internal node has only one
+                            child, forming a structure similar to a linked
+                            list.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Binary Tree Traversal
+        ====================================================== -->
+            <section class="tutorial-card" id="traversal">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-transfer-alt"></i>
+                        Traversal
+                    </span>
+
+                    <h2>Binary Tree Traversal</h2>
+
+                    <p>
+                        Traversal is the process of visiting every node in a
+                        tree in a specific order.
+                    </p>
+
+                </div>
+
+                <div class="content-definition-list">
+
+                    <div class="definition-item">
+
+                        <h3>Preorder Traversal</h3>
+
+                        <p>
+                            Visit the root, traverse the left subtree, then
+                            traverse the right subtree.
+                        </p>
+
+                        <p><strong>Order:</strong> Root → Left → Right</p>
+
+                    </div>
+
+                    <div class="definition-item">
+
+                        <h3>Inorder Traversal</h3>
+
+                        <p>
+                            Traverse the left subtree, visit the root, then
+                            traverse the right subtree.
+                        </p>
+
+                        <p><strong>Order:</strong> Left → Root → Right</p>
+
+                    </div>
+
+                    <div class="definition-item">
+
+                        <h3>Postorder Traversal</h3>
+
+                        <p>
+                            Traverse the left subtree, traverse the right
+                            subtree, then visit the root.
+                        </p>
+
+                        <p><strong>Order:</strong> Left → Right → Root</p>
+
+                    </div>
+
+                    <div class="definition-item">
+
+                        <h3>Level Order Traversal</h3>
+
+                        <p>
+                            Visit nodes level by level, from left to right.
+                            This traversal is commonly implemented using
+                            a Queue.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="content-note">
+                    <strong>Important:</strong>
+                    Preorder, Inorder, and Postorder are depth-first traversal
+                    methods. Level Order is a breadth-first traversal method.
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Binary Tree Applications
+        ====================================================== -->
+            <section class="tutorial-card" id="applications">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        Applications
+                    </span>
+
+                    <h2>Applications of Binary Trees</h2>
+
+                </div>
+
+                <ul class="content-list">
+
+                    <li>
+                        Representing hierarchical data.
+                    </li>
+
+                    <li>
+                        Building Binary Search Trees for searching and
+                        organizing data.
+                    </li>
+
+                    <li>
+                        Implementing Heaps used in priority queues.
+                    </li>
+
+                    <li>
+                        Representing expressions using expression trees.
+                    </li>
+
+                    <li>
+                        Supporting decision-making processes through
+                        decision trees.
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <!-- ======================================================
+            Key Takeaways
+        ====================================================== -->
+            <section class="tutorial-card" id="key-takeaways">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-circle"></i>
+                        Summary
+                    </span>
+
+                    <h2>Key Takeaways</h2>
+
+                </div>
+
+                <ul class="content-list">
+
+                    <li>
+                        A Binary Tree is a non-linear data structure in which
+                        each node has at most two children.
+                    </li>
+
+                    <li>
+                        The two possible child positions are the left child
+                        and the right child.
+                    </li>
+
+                    <li>
+                        Full, Complete, Perfect, Balanced, and Skewed Binary
+                        Trees describe different structural properties.
+                    </li>
+
+                    <li>
+                        Preorder, Inorder, Postorder, and Level Order are
+                        common ways to traverse a Binary Tree.
+                    </li>
+
+                    <li>
+                        Binary Trees are the foundation of several important
+                        data structures and algorithms.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- ==================================================
+                Exercises => Shared
+            ================================================== -->
+            <section class="tutorial-card" id="practice">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Binary Trees Exercises
+                    </h2>
+
+                    <p>
+                        Test your understanding of Binary Trees,
+                        their properties, types, and traversal methods.
+                    </p>
+
+                </div>
+
+                <!-- Exercise 01 -->
+                <div class="exercise-preview" data-correct-answer="Two">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Exercise Example
+                            </span>
+
+                            <h3>
+                                Understand Binary Tree Nodes
+                            </h3>
+
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        What is the maximum number of children a node can
+                        have in a Binary Tree?
+                    </p>
+
+                    <!-- Answer -->
+                    <div class="exercise-code">
+
+                        <span>Answer:</span>
+
+                        <span class="exercise-answer-slot" id="exerciseAnswer">
+                            ?
+                        </span>
+
+                    </div>
+
+                    <!-- Answer Options -->
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="One">
+                            One
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Two">
+                            Two
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Three">
+                            Three
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Unlimited">
+                            Unlimited
+                        </button>
+
+                    </div>
+
+                    <!-- Answer Result -->
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+
+                <!-- All Exercises Button -->
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ======================================================
+            Bottom Navigation
+        ====================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="TreesPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

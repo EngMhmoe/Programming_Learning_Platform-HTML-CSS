@@ -1,0 +1,446 @@
+/* ==========================================================
+   Start Import
+   ========================================================== */
+
+@import url("../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Start Certificate Description
+   ========================================================== */
+
+.certificate-description {
+  color: var(--text-secondary);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+
+.certificate-description:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Start Certificate Highlight
+   ========================================================== */
+
+.certificate-highlight {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 25px;
+
+  padding: 20px;
+
+  background: rgba(249, 115, 22, 0.06);
+
+  border: 1px solid rgba(249, 115, 22, 0.14);
+
+  border-radius: var(--radius-lg);
+}
+
+.certificate-highlight-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 54px;
+
+  height: 54px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.12);
+
+  border: 1px solid rgba(249, 115, 22, 0.18);
+
+  border-radius: 50%;
+}
+
+.certificate-highlight-icon i {
+  font-size: 27px;
+}
+
+.certificate-highlight h3 {
+  margin-bottom: 5px;
+
+  color: var(--text);
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.certificate-highlight p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   Start Certificate Checklist
+   ========================================================== */
+
+.certificate-checklist {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  margin: 22px 0 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.certificate-checklist li {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.certificate-checklist li i {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 23px;
+
+  height: 23px;
+
+  margin-top: 2px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border-radius: 50%;
+
+  font-size: 16px;
+}
+
+/* ==========================================================
+   Start Certificate Path
+   ========================================================== */
+
+.certificate-path {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  margin-top: 24px;
+}
+
+.certificate-path-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 16px;
+
+  padding: 18px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.certificate-path-item:hover {
+  background: rgba(249, 115, 22, 0.04);
+
+  border-color: rgba(249, 115, 22, 0.2);
+
+  transform: translateX(4px);
+}
+
+.certificate-path-number {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 46px;
+
+  height: 46px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(249, 115, 22, 0.16);
+
+  border-radius: var(--radius-md);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.certificate-path-item h3 {
+  margin-bottom: 5px;
+
+  color: var(--text);
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.certificate-path-item p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   Start Certificate Final
+   ========================================================== */
+
+.certificate-final {
+  text-align: center;
+}
+
+.certificate-final-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 82px;
+
+  height: 82px;
+
+  margin: 0 auto 22px;
+
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.1);
+
+  border: 1px solid rgba(249, 115, 22, 0.18);
+
+  border-radius: 50%;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.certificate-final-icon i {
+  font-size: 42px;
+}
+
+.certificate-final .section-heading {
+  align-items: center;
+}
+
+.certificate-final .section-heading .section-badge {
+  justify-content: center;
+}
+
+.certificate-final .certificate-description {
+  max-width: 700px;
+
+  margin-right: auto;
+
+  margin-left: auto;
+}
+
+/* ==========================================================
+   Start Certificate Actions
+   ========================================================== */
+
+.certificate-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+/* ==========================================================
+   Start Certificate Note
+   ========================================================== */
+
+.certificate-note {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  color: var(--text-secondary);
+
+  background: rgba(250, 204, 21, 0.06);
+
+  border: 1px solid rgba(250, 204, 21, 0.14);
+
+  border-left: 3px solid var(--secondary);
+
+  border-radius: var(--radius-md);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.certificate-note i {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: var(--secondary);
+
+  font-size: 21px;
+}
+
+.certificate-note p {
+  margin: 0;
+}
+
+.certificate-note strong {
+  color: var(--secondary);
+
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Start Responsive
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .certificate-highlight {
+    align-items: flex-start;
+  }
+
+  .certificate-path-item {
+    padding: 16px;
+  }
+
+  .certificate-actions {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .certificate-actions .tutorial-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .certificate-description {
+    font-size: 15px;
+  }
+
+  .certificate-highlight {
+    padding: 16px;
+  }
+
+  .certificate-highlight-icon {
+    width: 48px;
+
+    height: 48px;
+  }
+
+  .certificate-highlight-icon i {
+    font-size: 24px;
+  }
+
+  .certificate-highlight h3 {
+    font-size: 17px;
+  }
+
+  .certificate-checklist li {
+    font-size: 15px;
+  }
+
+  .certificate-path-item {
+    gap: 12px;
+
+    padding: 14px;
+  }
+
+  .certificate-path-number {
+    width: 40px;
+
+    height: 40px;
+
+    font-size: 12px;
+  }
+
+  .certificate-path-item h3 {
+    font-size: 17px;
+  }
+
+  .certificate-path-item p {
+    font-size: 14px;
+  }
+
+  .certificate-final-icon {
+    width: 70px;
+
+    height: 70px;
+  }
+
+  .certificate-final-icon i {
+    font-size: 35px;
+  }
+
+  .certificate-note {
+    padding: 15px;
+
+    font-size: 14px;
+  }
+}

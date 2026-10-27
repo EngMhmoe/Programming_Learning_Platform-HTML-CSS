@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <title>Heaps | DevPath</title>
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style HeapsPage.css">
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link active">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <div class="tutorial-content heaps-page">
+
+            <!-- Tutorial Header -->
+            <header class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+
+                <h1>Heaps in Data Structure</h1>
+
+                <p>
+                    Learn how Heaps organize data, understand Min-Heaps and Max-Heaps,
+                    and explore heap operations and their time complexity.
+                </p>
+
+                <div class="tutorial-actions">
+                    <a href="BinarySearchTreesPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="GraphsPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+
+            </header>
+
+
+            <!-- Section 1: Introduction -->
+            <section class="tutorial-card" id="introduction">
+
+                <div class="section-heading left">
+                    <span class="heap-section-number">01</span>
+                    <div>
+                        <h2>Introduction to Heaps</h2>
+                        <p>Understand the structure and purpose of a Heap.</p>
+                    </div>
+                </div>
+
+                <div class="heap-content">
+
+                    <h3>What Is a Heap?</h3>
+
+                    <p>
+                        A <strong>Heap</strong> is a specialized tree-based data structure
+                        that satisfies a specific ordering rule called the
+                        <strong>Heap Property</strong>. It is commonly implemented using
+                        an array and is useful when we need quick access to the smallest
+                        or largest element.
+                    </p>
+
+                    <div class="heap-definition">
+                        <div class="heap-definition-icon">
+                            <i class="bx bx-git-branch"></i>
+                        </div>
+
+                        <div>
+                            <h4>Key Idea</h4>
+                            <p>
+                                In a Heap, the root contains the highest-priority element:
+                                the minimum element in a Min-Heap or the maximum element
+                                in a Max-Heap.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="learning-note">
+                        <i class="bx bx-bulb"></i>
+                        <div>
+                            <strong>Important Note</strong>
+                            <p>
+                                A Heap is not the same as a Binary Search Tree.
+                                A Heap maintains a parent-child ordering rule, but its
+                                left and right subtrees are not necessarily sorted.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Section 2: Heap Properties -->
+            <section class="tutorial-card" id="heap-properties">
+
+                <div class="section-heading left">
+                    <span class="heap-section-number">02</span>
+                    <div>
+                        <h2>Heap Properties</h2>
+                        <p>The two important rules that define a Binary Heap.</p>
+                    </div>
+                </div>
+
+                <div class="heap-content">
+
+                    <div class="heap-property-grid">
+
+                        <article class="heap-property-card">
+                            <div class="heap-property-icon">
+                                <i class="bx bx-check-shield"></i>
+                            </div>
+
+                            <h3>Shape Property</h3>
+
+                            <p>
+                                A Binary Heap is a
+                                <strong>Complete Binary Tree</strong>. Every level is
+                                completely filled except possibly the last, which is
+                                filled from left to right.
+                            </p>
+                        </article>
+
+                        <article class="heap-property-card">
+                            <div class="heap-property-icon">
+                                <i class="bx bx-sort-up"></i>
+                            </div>
+
+                            <h3>Heap Property</h3>
+
+                            <p>
+                                Every parent follows the ordering rule of its children.
+                                In a Min-Heap, the parent is smaller than or equal to its
+                                children. In a Max-Heap, the parent is greater than or
+                                equal to its children.
+                            </p>
+                        </article>
+
+                    </div>
+
+                    <div class="heap-visual-card">
+
+                        <h3>Example of a Min-Heap</h3>
+
+                        <p>
+                            Each parent is smaller than or equal to its children.
+                        </p>
+
+                        <div class="heap-tree" aria-label="Min Heap tree example">
+
+                            <div class="heap-tree-level">
+                                <div class="heap-node root-node">10</div>
+                            </div>
+
+                            <div class="heap-tree-connectors">
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="heap-tree-level">
+                                <div class="heap-node">20</div>
+                                <div class="heap-node">15</div>
+                            </div>
+
+                            <div class="heap-tree-connectors heap-connectors-wide">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="heap-tree-level">
+                                <div class="heap-node">40</div>
+                                <div class="heap-node">50</div>
+                                <div class="heap-node">30</div>
+                                <div class="heap-node">35</div>
+                            </div>
+
+                        </div>
+
+                        <p class="heap-visual-caption">
+                            The root contains the smallest value: 10.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Section 3: Types of Heaps -->
+            <section class="tutorial-card" id="heap-types">
+
+                <div class="section-heading left">
+                    <span class="heap-section-number">03</span>
+                    <div>
+                        <h2>Types of Heaps</h2>
+                        <p>Compare Min-Heaps and Max-Heaps.</p>
+                    </div>
+                </div>
+
+                <div class="heap-content">
+
+                    <div class="heap-types-grid">
+
+                        <article class="heap-type-card min-heap-card">
+                            <div class="heap-type-heading">
+                                <div class="heap-type-icon">
+                                    <i class="bx bx-down-arrow-alt"></i>
+                                </div>
+                                <h3>Min-Heap</h3>
+                            </div>
+
+                            <p>
+                                The value of every parent node is less than or equal
+                                to the values of its children.
+                            </p>
+
+                            <div class="heap-type-root">
+                                <span>Root</span>
+                                <strong>Smallest value</strong>
+                            </div>
+
+                            <ul class="content-list">
+                                <li>Quick access to the minimum element.</li>
+                                <li>Useful for priority queues and scheduling.</li>
+                            </ul>
+                        </article>
+
+                        <article class="heap-type-card max-heap-card">
+                            <div class="heap-type-heading">
+                                <div class="heap-type-icon">
+                                    <i class="bx bx-up-arrow-alt"></i>
+                                </div>
+                                <h3>Max-Heap</h3>
+                            </div>
+
+                            <p>
+                                The value of every parent node is greater than or equal
+                                to the values of its children.
+                            </p>
+
+                            <div class="heap-type-root">
+                                <span>Root</span>
+                                <strong>Largest value</strong>
+                            </div>
+
+                            <ul class="content-list">
+                                <li>Quick access to the maximum element.</li>
+                                <li>Useful for highest-priority item selection.</li>
+                            </ul>
+                        </article>
+
+                    </div>
+
+                    <div class="content-note">
+                        <i class="bx bx-info-circle"></i>
+                        <p>
+                            Neither type requires all values in the tree to be sorted.
+                            The ordering rule applies between each parent and its children.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Section 4: Array Representation -->
+            <section class="tutorial-card" id="array-representation">
+
+                <div class="section-heading left">
+                    <span class="heap-section-number">04</span>
+                    <div>
+                        <h2>Array Representation</h2>
+                        <p>A Binary Heap can be stored efficiently in an array.</p>
+                    </div>
+                </div>
+
+                <div class="heap-content">
+
+                    <p>
+                        Because a Binary Heap is a Complete Binary Tree, its nodes can
+                        be stored level by level in an array without needing pointers
+                        for left and right children.
+                    </p>
+
+                    <div class="heap-array-example">
+
+                        <h3>Example Array</h3>
+
+                        <div class="heap-array">
+                            <div class="heap-array-cell">
+                                <span class="heap-array-index">0</span>
+                                <strong>10</strong>
+                            </div>
+
+                            <div class="heap-array-cell">
+                                <span class="heap-array-index">1</span>
+                                <strong>20</strong>
+                            </div>
+
+                            <div class="heap-array-cell">
+                                <span class="heap-array-index">2</span>
+                                <strong>15</strong>
+                            </div>
+
+                            <div class="heap-array-cell">
+                                <span class="heap-array-index">3</span>
+                                <strong>40</strong>
+                            </div>
+
+                            <div class="heap-array-cell">
+                                <span class="heap-array-index">4</span>
+                                <strong>50</strong>
+                            </div>
+
+                            <div class="heap-array-cell">
+                                <span class="heap-array-index">5</span>
+                                <strong>30</strong>
+                            </div>
+
+                            <div class="heap-array-cell">
+                                <span class="heap-array-index">6</span>
+                                <strong>35</strong>
+                            </div>
+                        </div>
+
+                        <p class="heap-visual-caption">
+                            The array stores the nodes level by level, from left to right.
+                        </p>
+
+                    </div>
+
+                    <h3>Index Formulas</h3>
+
+                    <p>
+                        For a zero-based array, the relationships between a node and
+                        its children can be calculated using its index.
+                    </p>
+
+                    <div class="heap-formula-list">
+
+                        <div class="heap-formula-item">
+                            <span>Parent</span>
+                            <code>Math.floor((i - 1) / 2)</code>
+                        </div>
+
+                        <div class="heap-formula-item">
+                            <span>Left Child</span>
+                            <code>2 * i + 1</code>
+                        </div>
+
+                        <div class="heap-formula-item">
+                            <span>Right Child</span>
+                            <code>2 * i + 2</code>
+                        </div>
+
+                    </div>
+
+                    <div class="learning-note">
+                        <i class="bx bx-bulb"></i>
+                        <div>
+                            <strong>Remember</strong>
+                            <p>
+                                These formulas assume the array starts at index 0.
+                                If a node is at index <code>i</code>, its left and right
+                                children can be located directly using the formulas above.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Section 5: Heap Operations -->
+            <section class="tutorial-card" id="heap-operations">
+
+                <div class="section-heading left">
+                    <span class="heap-section-number">05</span>
+                    <div>
+                        <h2>Common Heap Operations</h2>
+                        <p>Understand how a Heap is maintained when its data changes.</p>
+                    </div>
+                </div>
+
+                <div class="heap-content">
+
+                    <div class="heap-operation-list">
+
+                        <article class="heap-operation-item">
+                            <div class="heap-operation-icon">
+                                <i class="bx bx-plus-circle"></i>
+                            </div>
+
+                            <div>
+                                <h3>Insert</h3>
+                                <p>
+                                    Add the new element at the end of the array, then
+                                    move it upward until the Heap Property is restored.
+                                    This process is often called sift-up or heapify-up.
+                                </p>
+                            </div>
+
+                            <span class="heap-operation-complexity">O(log n)</span>
+                        </article>
+
+                        <article class="heap-operation-item">
+                            <div class="heap-operation-icon">
+                                <i class="bx bx-minus-circle"></i>
+                            </div>
+
+                            <div>
+                                <h3>Extract Root</h3>
+                                <p>
+                                    Remove the root, move the last element to the root,
+                                    and move it downward until the Heap Property is restored.
+                                </p>
+                            </div>
+
+                            <span class="heap-operation-complexity">O(log n)</span>
+                        </article>
+
+                        <article class="heap-operation-item">
+                            <div class="heap-operation-icon">
+                                <i class="bx bx-search-alt"></i>
+                            </div>
+
+                            <div>
+                                <h3>Peek</h3>
+                                <p>
+                                    Read the root element without removing it. It gives
+                                    direct access to the minimum in a Min-Heap or the
+                                    maximum in a Max-Heap.
+                                </p>
+                            </div>
+
+                            <span class="heap-operation-complexity">O(1)</span>
+                        </article>
+
+                        <article class="heap-operation-item">
+                            <div class="heap-operation-icon">
+                                <i class="bx bx-sort"></i>
+                            </div>
+
+                            <div>
+                                <h3>Build Heap</h3>
+                                <p>
+                                    Convert an unordered array into a Heap using the
+                                    bottom-up heap construction algorithm.
+                                </p>
+                            </div>
+
+                            <span class="heap-operation-complexity">O(n)</span>
+                        </article>
+
+                    </div>
+
+                    <div class="content-note">
+                        <i class="bx bx-info-circle"></i>
+                        <p>
+                            The time complexities shown are for a standard Binary Heap.
+                            Searching for an arbitrary value is generally O(n), because
+                            a Heap does not keep all values fully sorted.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+    Section 6: Practice
+================================================== -->
+            <section class="tutorial-card" id="practice">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Test Your Understanding
+                    </h2>
+
+                    <p>
+                        Check your understanding of Heap fundamentals,
+                        Min-Heaps, and the Heap property.
+                    </p>
+
+                </div>
+
+                <div class="heap-content">
+
+                    <!-- Exercise Example -->
+                    <div class="exercise-preview" data-correct-answer="B">
+
+                        <div class="exercise-preview-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    Exercise Example
+                                </span>
+
+                                <h3>
+                                    Understand the Min-Heap
+                                </h3>
+
+                            </div>
+
+                            <span class="exercise-number">
+                                01
+                            </span>
+
+                        </div>
+
+                        <p class="exercise-question">
+                            What value is stored at the root of a Min-Heap?
+                        </p>
+
+                        <!-- Answer Example -->
+                        <div class="exercise-code">
+
+                            <span>Answer:</span>
+
+                            <span class="exercise-answer-slot" id="exerciseAnswer">
+                                ?
+                            </span>
+
+                        </div>
+
+                        <!-- Answer Options -->
+                        <div class="exercise-options">
+
+                            <button type="button" class="exercise-option" data-answer="A">
+                                The largest value
+                            </button>
+
+                            <button type="button" class="exercise-option" data-answer="B">
+                                The smallest value
+                            </button>
+
+                            <button type="button" class="exercise-option" data-answer="C">
+                                The middle value
+                            </button>
+
+                            <button type="button" class="exercise-option" data-answer="D">
+                                The most recently inserted value
+                            </button>
+
+                        </div>
+
+                        <!-- Answer Result -->
+                        <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                    </div>
+
+                    <!-- All Exercises Button -->
+                    <div class="exercise-action">
+
+                        <a href="ExercisesPage.html" class="content-button">
+                            See All Data Structure Exercises
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Key Takeaways -->
+            <section class="tutorial-card" id="key-takeaways">
+
+                <div class="section-heading left">
+                    <span class="heap-section-number">07</span>
+                    <div>
+                        <h2>Key Takeaways</h2>
+                        <p>The most important points to remember about Heaps.</p>
+                    </div>
+                </div>
+
+                <div class="heap-content">
+
+                    <ul class="heap-takeaways-list">
+                        <li>
+                            <i class="bx bx-check-circle"></i>
+                            A Binary Heap is a Complete Binary Tree.
+                        </li>
+
+                        <li>
+                            <i class="bx bx-check-circle"></i>
+                            A Min-Heap keeps the smallest value at the root.
+                        </li>
+
+                        <li>
+                            <i class="bx bx-check-circle"></i>
+                            A Max-Heap keeps the largest value at the root.
+                        </li>
+
+                        <li>
+                            <i class="bx bx-check-circle"></i>
+                            A Binary Heap is commonly stored in an array.
+                        </li>
+
+                        <li>
+                            <i class="bx bx-check-circle"></i>
+                            Insertion and root extraction take O(log n) time.
+                        </li>
+
+                        <li>
+                            <i class="bx bx-check-circle"></i>
+                            Reading the root takes O(1) time.
+                        </li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <!-- Progress Card -->
+            <section class="progress-card">
+
+                <div class="progress-card-content">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-circle"></i>
+                        Topic Completed
+                    </span>
+
+                    <h2>Ready to Learn About Graphs?</h2>
+
+                    <p>
+                        You now understand Heap properties, common operations,
+                        and how a Binary Heap can be represented using an array.
+                        Continue to learn how Graphs model relationships between objects.
+                    </p>
+
+                    <a href="GraphsPage.html" class="tutorial-button primary">
+                        Continue to Graphs
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+                <div class="progress-card-icon">
+                    <i class="bx bx-layer"></i>
+                </div>
+
+            </section>
+
+
+            <!-- Bottom Navigation -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="BinarySearchTreesPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="GraphsPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

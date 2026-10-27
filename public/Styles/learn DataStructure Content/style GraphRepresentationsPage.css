@@ -1,0 +1,1085 @@
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Graph Representations Page
+   ========================================================== */
+
+.graph-representations-page {
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================================
+   Section Headings
+   ========================================================== */
+
+.graph-representations-page .tutorial-card > .section-heading.left {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.graph-representations-page .tutorial-card > .section-heading.left > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.graph-representations-page .representation-section-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--primary);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.graph-representations-page .tutorial-card > .section-heading.left h2 {
+  margin: 12px 0 10px;
+  color: var(--text);
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.graph-representations-page .tutorial-card > .section-heading.left p {
+  max-width: 800px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Introduction
+   ========================================================== */
+
+.graph-representations-page .representation-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.graph-representations-page .representation-intro p,
+.graph-representations-page .representation-description p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.graph-representations-page .representation-intro strong,
+.graph-representations-page .representation-description strong {
+  color: var(--primary);
+}
+
+/* ==========================================================
+   Example Graph
+   ========================================================== */
+
+.graph-representations-page .representation-example {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.graph-representations-page .representation-example h3,
+.graph-representations-page .matrix-example h3,
+.graph-representations-page .adjacency-list-example h3 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.graph-representations-page .representation-example > p,
+.graph-representations-page .matrix-example > p {
+  margin: 0 0 20px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.graph-representations-page .representation-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 0;
+  overflow: hidden;
+}
+
+.graph-representations-page .representation-diagram svg {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  overflow: visible;
+}
+
+.graph-representations-page .representation-edge {
+  stroke: var(--primary);
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.85;
+}
+
+.graph-representations-page .representation-node {
+  fill: var(--surface);
+  stroke: var(--primary);
+  stroke-width: 3;
+}
+
+.graph-representations-page .representation-node-label {
+  fill: var(--text);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.graph-representations-page .representation-edge-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.graph-representations-page .representation-edge-list span {
+  padding: 9px 13px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   General Representation Description
+   ========================================================== */
+
+.graph-representations-page .representation-description {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.graph-representations-page .representation-description ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding-left: 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.graph-representations-page .representation-description li {
+  padding-left: 4px;
+}
+
+.graph-representations-page .representation-description li strong {
+  color: var(--primary);
+}
+
+/* ==========================================================
+   Adjacency Matrix
+   ========================================================== */
+
+.graph-representations-page .matrix-example {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.graph-representations-page .matrix-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.graph-representations-page .matrix-table {
+  width: 100%;
+  min-width: 280px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.graph-representations-page .matrix-table th,
+.graph-representations-page .matrix-table td {
+  padding: 14px 12px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.graph-representations-page .matrix-table thead th,
+.graph-representations-page .matrix-table tbody th {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.graph-representations-page .matrix-table td.matrix-connected {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.graph-representations-page .representation-example-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.graph-representations-page .representation-example-note > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.graph-representations-page .representation-example-note p {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ==========================================================
+   Code Blocks
+   ========================================================== */
+
+.graph-representations-page .representation-code-block {
+  min-width: 0;
+  margin-top: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.graph-representations-page .representation-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.graph-representations-page .representation-code-header span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.graph-representations-page .representation-code-header span:first-child i {
+  color: var(--primary);
+  font-size: 18px;
+}
+
+.graph-representations-page .representation-code-block pre {
+  width: 100%;
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  color: var(--text);
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.9;
+  tab-size: 4;
+}
+
+.graph-representations-page .representation-code-block code {
+  color: inherit;
+  font-family: inherit;
+  white-space: pre;
+}
+
+/* ==========================================================
+   Advantages and Disadvantages
+   ========================================================== */
+
+.graph-representations-page .representation-advantages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.graph-representations-page .representation-advantage,
+.graph-representations-page .representation-disadvantage {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.graph-representations-page .representation-advantage h3,
+.graph-representations-page .representation-disadvantage h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.graph-representations-page .representation-advantage h3 i {
+  color: var(--primary);
+  font-size: 21px;
+}
+
+.graph-representations-page .representation-disadvantage h3 i {
+  color: var(--text-muted);
+  font-size: 21px;
+}
+
+.graph-representations-page .representation-advantage ul,
+.graph-representations-page .representation-disadvantage ul {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.graph-representations-page .representation-advantage li,
+.graph-representations-page .representation-disadvantage li {
+  padding-left: 3px;
+}
+
+/* ==========================================================
+   Adjacency List Example
+   ========================================================== */
+
+.graph-representations-page .adjacency-list-example {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.graph-representations-page .adjacency-list-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.graph-representations-page .adjacency-list-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.graph-representations-page .adjacency-list-vertex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.graph-representations-page .adjacency-list-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-muted);
+  font-size: 22px;
+}
+
+.graph-representations-page .adjacency-list-neighbors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 0;
+}
+
+.graph-representations-page .adjacency-list-neighbors span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   Comparison Table
+   ========================================================== */
+
+.graph-representations-page .representation-comparison-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.graph-representations-page .representation-comparison-table {
+  width: 100%;
+  min-width: 590px;
+  border-collapse: collapse;
+}
+
+.graph-representations-page .representation-comparison-table th,
+.graph-representations-page .representation-comparison-table td {
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: left;
+  vertical-align: top;
+}
+
+.graph-representations-page .representation-comparison-table thead th {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.graph-representations-page .representation-comparison-table tbody th {
+  min-width: 145px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.graph-representations-page
+  .representation-comparison-table
+  tbody
+  tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.graph-representations-page #comparison .representation-example-note {
+  margin-top: 20px;
+}
+
+/* ==========================================================
+   Choosing a Representation
+   ========================================================== */
+
+.graph-representations-page .representation-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.graph-representations-page .representation-choice-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  transition: var(--transition);
+}
+
+.graph-representations-page .representation-choice-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.graph-representations-page .representation-choice-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--primary);
+  font-size: 25px;
+}
+
+.graph-representations-page .representation-choice-card h3 {
+  margin: 0 0 16px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.graph-representations-page .representation-choice-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.graph-representations-page .representation-choice-card li {
+  padding-left: 3px;
+}
+
+/* ==========================================================
+   Practice — Match AbstractDataTypesPage
+   ========================================================== */
+
+.graph-representations-page #practice > .section-heading.left {
+  display: block;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.graph-representations-page #practice > .section-heading.left .section-badge {
+  margin-bottom: 12px;
+}
+
+.graph-representations-page #practice > .section-heading.left h2 {
+  margin: 12px 0 10px;
+  color: var(--text);
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.graph-representations-page #practice > .section-heading.left p {
+  max-width: 800px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.graph-representations-page #practice .exercise-preview {
+  margin-top: 0;
+}
+
+.graph-representations-page #practice .exercise-preview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.graph-representations-page #practice .exercise-preview-header > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.graph-representations-page #practice .exercise-preview-header h3 {
+  margin: 7px 0 0;
+  color: var(--text);
+  font-size: 26px;
+  line-height: 1.6;
+}
+
+.graph-representations-page #practice .exercise-question {
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.graph-representations-page #practice .exercise-code {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.graph-representations-page #practice .exercise-options {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.graph-representations-page #practice .exercise-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+  padding: 14px 18px;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.graph-representations-page #practice .exercise-result {
+  min-height: 24px;
+  margin-top: 20px;
+}
+
+.graph-representations-page #practice .exercise-action {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.graph-representations-page #practice .exercise-action .content-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 100%;
+}
+
+/* ==========================================================
+   Key Takeaways
+   ========================================================== */
+
+.graph-representations-page .representation-takeaways-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.graph-representations-page .representation-takeaways-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.graph-representations-page .representation-takeaways-list li > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary);
+  font-size: 19px;
+}
+
+.graph-representations-page .representation-takeaways-list li > span {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ==========================================================
+   Learning Note — Shared Structure
+   ========================================================== */
+
+.graph-representations-page.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 18px;
+}
+
+.graph-representations-page .learning-note > i {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.graph-representations-page .learning-note > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.graph-representations-page .learning-note > div > strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.graph-representations-page .learning-note > div > p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Progress Card — Shared Structure
+   ========================================================== */
+
+.graph-representations-page.tutorial-content .progress-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.graph-representations-page .progress-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.graph-representations-page .progress-card-content .section-badge {
+  margin-bottom: 12px;
+}
+
+.graph-representations-page .progress-card-content h2 {
+  margin: 12px 0 10px;
+  color: var(--text);
+  font-size: 26px;
+  line-height: 1.6;
+}
+
+.graph-representations-page .progress-card-content p {
+  max-width: 800px;
+  margin: 0 0 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.graph-representations-page .progress-card-content .content-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.graph-representations-page .progress-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--primary);
+  font-size: 46px;
+}
+
+/* ==========================================================
+   Bottom Navigation
+   ========================================================== */
+
+.graph-representations-page .tutorial-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.graph-representations-page .tutorial-bottom-actions > a {
+  max-width: 100%;
+}
+
+/* ==========================================================
+    Learning Note
+========================================================== */
+.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content .learning-note > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.tutorial-content .learning-note > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-note strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tutorial-content .learning-note p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Progress Card
+========================================================== */
+.tutorial-content .progress-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 30px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.progress-card-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.progress-card-content h2 {
+  margin: 16px 0 12px;
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.progress-card-content p {
+  margin-bottom: 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.progress-card-icon {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 24px;
+  font-size: 48px;
+}
+
+/* ==========================================================
+   Responsive — Tablet
+   ========================================================== */
+
+@media (max-width: 900px) {
+  .graph-representations-page .representation-advantages {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   Responsive — Mobile
+   ========================================================== */
+
+@media (max-width: 700px) {
+  .graph-representations-page .representation-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .graph-representations-page .tutorial-card > .section-heading.left {
+    gap: 12px;
+  }
+
+  .graph-representations-page .representation-section-number {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .graph-representations-page .representation-example,
+  .graph-representations-page .matrix-example,
+  .graph-representations-page .adjacency-list-example,
+  .graph-representations-page .representation-advantage,
+  .graph-representations-page .representation-disadvantage,
+  .graph-representations-page .representation-choice-card {
+    padding: 20px;
+  }
+
+  .graph-representations-page .representation-edge-list {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .graph-representations-page .representation-edge-list span {
+    text-align: center;
+  }
+
+  .graph-representations-page .representation-code-block pre {
+    padding: 18px;
+    font-size: 12px;
+  }
+
+  .graph-representations-page .representation-comparison-table th,
+  .graph-representations-page .representation-comparison-table td {
+    padding: 12px;
+  }
+
+  .graph-representations-page #practice > .section-heading.left h2,
+  .graph-representations-page .tutorial-card > .section-heading.left h2 {
+    font-size: 26px;
+  }
+
+  .graph-representations-page #practice .exercise-preview-header h3 {
+    font-size: 21px;
+  }
+
+  .graph-representations-page #practice .exercise-option {
+    padding: 13px 15px;
+  }
+
+  .graph-representations-page.tutorial-content .progress-card {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .graph-representations-page .progress-card-icon {
+    align-self: flex-end;
+    width: 72px;
+    height: 72px;
+    font-size: 34px;
+  }
+
+  .graph-representations-page .progress-card-content h2 {
+    font-size: 23px;
+  }
+
+  .graph-representations-page .progress-card-content .content-button {
+    width: 100%;
+  }
+
+  .graph-representations-page .tutorial-bottom-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .graph-representations-page .tutorial-bottom-actions > a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================
+   Responsive — Small Mobile
+   ========================================================== */
+
+@media (max-width: 420px) {
+  .graph-representations-page .tutorial-card > .section-heading.left {
+    gap: 10px;
+  }
+
+  .graph-representations-page .representation-section-number {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .graph-representations-page .representation-example,
+  .graph-representations-page .matrix-example,
+  .graph-representations-page .adjacency-list-example,
+  .graph-representations-page .representation-advantage,
+  .graph-representations-page .representation-disadvantage,
+  .graph-representations-page .representation-choice-card {
+    padding: 16px;
+  }
+
+  .graph-representations-page .adjacency-list-row {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .graph-representations-page .adjacency-list-vertex {
+    width: 34px;
+    height: 34px;
+  }
+
+  .graph-representations-page .adjacency-list-neighbors {
+    gap: 6px;
+  }
+
+  .graph-representations-page .adjacency-list-neighbors span {
+    min-width: 30px;
+    min-height: 30px;
+    padding: 5px 8px;
+  }
+
+  .graph-representations-page #practice .exercise-preview-header {
+    gap: 12px;
+  }
+
+  .graph-representations-page #practice .exercise-preview-header h3 {
+    font-size: 19px;
+  }
+
+  .graph-representations-page .progress-card-content h2 {
+    font-size: 21px;
+  }
+}

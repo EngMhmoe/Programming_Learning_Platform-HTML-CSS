@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Learn the main characteristics of algorithms, including input, output, definiteness, finiteness, effectiveness, and correctness.">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <meta name="keywords"
+        content="Algorithm Characteristics, Input, Output, Definiteness, Finiteness, Effectiveness, Correctness">
+
+    <title>Algorithm Characteristics | DevPath</title>
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" href="../../photos/algorithm-course.jpg">
+
+    <!-- ==========================================================
+        Google Fonts
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================================
+        Boxicons
+    ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- ==========================================================
+        Shared Learning Page CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+    <!-- ==========================================================
+        Algorithm Characteristics Page CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learn Algorithms Content/style AlgorithmCharacteristicsPage.css">
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html" class="current">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-git-branch"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>Algorithms Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    Algorithms Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    Algorithms Intro
+                </a>
+
+                <a href="WhatIsAlgorithmPage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is Algorithm?
+                </a>
+
+                <a href="ImportanceOfAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    Importance of Algorithms
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Algorithm Analysis -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-line-chart"></i>
+                    Algorithm Analysis
+                </h3>
+
+                <a href="AlgorithmCharacteristicsPage.html" class="sidebar-link active">
+                    <i class="bx bx-list-check"></i>
+                    Algorithm Characteristics
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Searching Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-search"></i>
+                    Searching Algorithms
+                </h3>
+
+                <a href="SearchingAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Introduction to Searching
+                </a>
+
+                <a href="LinearSearchPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Linear Search
+                </a>
+
+                <a href="BinarySearchPage.html" class="sidebar-link">
+                    <i class="bx bx-git-compare"></i>
+                    Binary Search
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Sorting Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-sort"></i>
+                    Sorting Algorithms
+                </h3>
+
+                <a href="SortingAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-alt-2"></i>
+                    Introduction to Sorting
+                </a>
+
+                <a href="BubbleSortPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-down"></i>
+                    Bubble Sort
+                </a>
+
+                <a href="SelectionSortPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Selection Sort
+                </a>
+
+                <a href="InsertionSortPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-up"></i>
+                    Insertion Sort
+                </a>
+
+                <a href="MergeSortPage.html" class="sidebar-link">
+                    <i class="bx bx-git-merge"></i>
+                    Merge Sort
+                </a>
+
+                <a href="QuickSortPage.html" class="sidebar-link">
+                    <i class="bx bx-fast-forward"></i>
+                    Quick Sort
+                </a>
+
+                <a href="HeapSortPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heap Sort
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Graph Traversal Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-network-chart"></i>
+                    Graph Traversal Algorithms
+                </h3>
+
+                <a href="BFSPage.html" class="sidebar-link">
+                    <i class="bx bx-git-merge"></i>
+                    Breadth-First Search (BFS)
+                </a>
+
+                <a href="DFSPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Depth-First Search (DFS)
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Algorithmic Techniques -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-alt"></i>
+                    Algorithmic Techniques
+                </h3>
+
+                <a href="RecursionPage.html" class="sidebar-link">
+                    <i class="bx bx-repeat"></i>
+                    Recursion
+                </a>
+
+                <a href="TwoPointersPage.html" class="sidebar-link">
+                    <i class="bx bx-move-horizontal"></i>
+                    Two Pointers
+                </a>
+
+                <a href="SlidingWindowPage.html" class="sidebar-link">
+                    <i class="bx bx-window"></i>
+                    Sliding Window
+                </a>
+
+                <a href="GreedyAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-target-lock"></i>
+                    Greedy Algorithms
+                </a>
+
+                <a href="DynamicProgrammingPage.html" class="sidebar-link">
+                    <i class="bx bx-brain"></i>
+                    Dynamic Programming
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <div class="tutorial-content" id="course-content">
+
+            <!-- ==================================================
+                Tutorial Header => مشترك
+            =================================================== -->
+            <section class="tutorial-header">
+
+                <div class="tutorial-header-content">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-branch"></i>
+                        Algorithms Programming
+                    </span>
+
+                    <h1>
+                        Algorithm <span>Characteristics</span>
+                    </h1>
+
+                    <p>
+                        Learn the essential properties of a well-defined algorithm,
+                        from clear instructions and valid inputs to correct results
+                        and a finite number of steps.
+                    </p>
+
+                    <div class="tutorial-actions">
+
+                        <a href="ImportanceOfAlgorithmsPage.html" class="tutorial-button secondary">
+                            <i class="bx bx-left-arrow-alt"></i>
+                            Previous
+                        </a>
+
+                        <a href="TimeComplexityPage.html" class="tutorial-button primary">
+                            Next
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Lesson Overview
+            ================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-list-check"></i>
+                        Lesson Overview
+                    </span>
+
+                    <h2>
+                        What Makes an Algorithm Good?
+                    </h2>
+
+                    <p>
+                        An algorithm is more than a sequence of instructions.
+                        Its steps should be understandable, its result should
+                        solve the intended problem, and its execution should
+                        follow a clear and limited process.
+                    </p>
+
+                </div>
+
+                <div class="characteristics-overview">
+
+                    <div class="characteristics-overview-icon">
+                        <i class="bx bx-check-shield"></i>
+                    </div>
+
+                    <div class="characteristics-overview-content">
+
+                        <h3>
+                            Clear, Correct, and Complete
+                        </h3>
+
+                        <p>
+                            A well-designed algorithm defines what information
+                            it receives, what result it produces, and how it
+                            reaches that result through precise steps.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <p>
+                        Different textbooks may group or name algorithm
+                        characteristics differently. In this lesson, we will
+                        focus on the commonly taught properties and the practical
+                        meaning of each one.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Input and Output
+            ================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-transfer"></i>
+                        Input & Output
+                    </span>
+
+                    <h2>
+                        1. Input and Output
+                    </h2>
+
+                    <p>
+                        An algorithm receives the information it needs and
+                        produces a result. Some algorithms require multiple
+                        inputs, while others can work without any input.
+                    </p>
+
+                </div>
+
+                <div class="characteristics-io-grid">
+
+                    <div class="characteristics-io-card">
+
+                        <div class="characteristics-io-icon">
+                            <i class="bx bx-log-in-circle"></i>
+                        </div>
+
+                        <span class="characteristics-mini-label">
+                            Input
+                        </span>
+
+                        <h3>
+                            What Goes In?
+                        </h3>
+
+                        <p>
+                            The values or information provided to the algorithm
+                            before or during its execution.
+                        </p>
+
+                        <div class="characteristics-value">
+                            <span>Example</span>
+                            <code>numberA = 5</code>
+                            <code>numberB = 3</code>
+                        </div>
+
+                    </div>
+
+                    <div class="characteristics-io-card">
+
+                        <div class="characteristics-io-icon">
+                            <i class="bx bx-log-out-circle"></i>
+                        </div>
+
+                        <span class="characteristics-mini-label">
+                            Output
+                        </span>
+
+                        <h3>
+                            What Comes Out?
+                        </h3>
+
+                        <p>
+                            The result produced after the algorithm processes
+                            its inputs according to its instructions.
+                        </p>
+
+                        <div class="characteristics-value">
+                            <span>Example</span>
+                            <code>result = 8</code>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="example-note">
+
+                    <i class="bx bx-lightbulb"></i>
+
+                    <p>
+                        For an algorithm that adds two numbers, the inputs are
+                        the two numbers and the output is their sum. An algorithm
+                        that displays a fixed message may not need an input.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Definiteness
+            ================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-message-square-check"></i>
+                        Definiteness
+                    </span>
+
+                    <h2>
+                        2. Clear and Unambiguous Steps
+                    </h2>
+
+                    <p>
+                        Every instruction should have a precise meaning.
+                        The person or computer following the algorithm should
+                        not have to guess what a step means.
+                    </p>
+
+                </div>
+
+                <div class="characteristics-clarity-grid">
+
+                    <div class="characteristics-clarity-card unclear">
+
+                        <div class="characteristics-clarity-heading">
+                            <i class="bx bx-x-circle"></i>
+
+                            <h3>
+                                Unclear Instruction
+                            </h3>
+                        </div>
+
+                        <p>
+                            Make the number better.
+                        </p>
+
+                        <span>
+                            What does "better" mean?
+                        </span>
+
+                    </div>
+
+                    <div class="characteristics-clarity-card clear">
+
+                        <div class="characteristics-clarity-heading">
+                            <i class="bx bx-check-circle"></i>
+
+                            <h3>
+                                Clear Instruction
+                            </h3>
+                        </div>
+
+                        <p>
+                            Add 1 to the number.
+                        </p>
+
+                        <span>
+                            The operation is specific.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="characteristics-concept">
+
+                    <div class="characteristics-concept-icon">
+                        <i class="bx bx-bulb"></i>
+                    </div>
+
+                    <div>
+                        <h3>
+                            Why Does Clarity Matter?
+                        </h3>
+
+                        <p>
+                            Precise instructions make an algorithm easier to
+                            implement, test, understand, and maintain. They also
+                            reduce the chance of different interpretations.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Finiteness
+            ================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-stopwatch"></i>
+                        Finiteness
+                    </span>
+
+                    <h2>
+                        3. Finish After a Finite Number of Steps
+                    </h2>
+
+                    <p>
+                        An algorithm should eventually stop after completing
+                        its task. It must not continue executing forever when
+                        it is expected to produce a final result.
+                    </p>
+
+                </div>
+
+                <div class="characteristics-finite-flow">
+
+                    <div class="characteristics-finite-step">
+                        <span>01</span>
+                        <i class="bx bx-play-circle"></i>
+                        <h3>Start</h3>
+                        <p>Receive the required input.</p>
+                    </div>
+
+                    <div class="characteristics-finite-arrow">
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </div>
+
+                    <div class="characteristics-finite-step">
+                        <span>02</span>
+                        <i class="bx bx-cog"></i>
+                        <h3>Process</h3>
+                        <p>Perform the required operations.</p>
+                    </div>
+
+                    <div class="characteristics-finite-arrow">
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </div>
+
+                    <div class="characteristics-finite-step">
+                        <span>03</span>
+                        <i class="bx bx-check-circle"></i>
+                        <h3>Stop</h3>
+                        <p>Return or display the result.</p>
+                    </div>
+
+                </div>
+
+                <div class="example-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <p>
+                        A loop can be part of a valid algorithm as long as its
+                        execution is properly controlled for the intended input.
+                        An infinite loop that never completes the required task
+                        violates the finiteness requirement.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Effectiveness
+            ================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-cog"></i>
+                        Effectiveness
+                    </span>
+
+                    <h2>
+                        4. Perform Practical Operations
+                    </h2>
+
+                    <p>
+                        Each step should be simple enough to be carried out
+                        using the available operations and resources. The
+                        instructions must be executable, not just theoretical.
+                    </p>
+
+                </div>
+
+                <div class="characteristics-effectiveness-grid">
+
+                    <div class="characteristics-effectiveness-card">
+
+                        <div class="characteristics-effectiveness-icon">
+                            <i class="bx bx-calculator"></i>
+                        </div>
+
+                        <h3>
+                            Performable Operations
+                        </h3>
+
+                        <p>
+                            Operations such as adding numbers, comparing values,
+                            assigning variables, and reading data can be
+                            carried out through defined instructions.
+                        </p>
+
+                    </div>
+
+                    <div class="characteristics-effectiveness-card">
+
+                        <div class="characteristics-effectiveness-icon">
+                            <i class="bx bx-wrench"></i>
+                        </div>
+
+                        <h3>
+                            Feasible Steps
+                        </h3>
+
+                        <p>
+                            Each step should be possible to execute in practice
+                            using the computational model and resources available.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <p>
+                        Effectiveness does not mean that an algorithm must be
+                        the fastest possible solution. It means its individual
+                        operations are sufficiently basic and executable.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Correctness and Generality
+            ================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-shield"></i>
+                        Correctness & Generality
+                    </span>
+
+                    <h2>
+                        5. Produce Correct Results
+                    </h2>
+
+                    <p>
+                        A useful algorithm must solve the intended problem
+                        correctly for every valid input within its defined
+                        requirements.
+                    </p>
+
+                </div>
+
+                <div class="characteristics-correctness-grid">
+
+                    <div class="characteristics-correctness-card">
+
+                        <div class="characteristics-correctness-icon">
+                            <i class="bx bx-check-double"></i>
+                        </div>
+
+                        <h3>
+                            Correctness
+                        </h3>
+
+                        <p>
+                            The algorithm produces the expected output when
+                            given valid input.
+                        </p>
+
+                        <div class="characteristics-result correct">
+                            <i class="bx bx-check-circle"></i>
+                            <span>5 + 3 = 8</span>
+                        </div>
+
+                    </div>
+
+                    <div class="characteristics-correctness-card">
+
+                        <div class="characteristics-correctness-icon">
+                            <i class="bx bx-shape-polygon"></i>
+                        </div>
+
+                        <h3>
+                            Generality
+                        </h3>
+
+                        <p>
+                            The algorithm can handle the range of inputs and
+                            cases defined by the problem, not just one example.
+                        </p>
+
+                        <div class="characteristics-result">
+                            <i class="bx bx-check-circle"></i>
+                            <span>2 + 4 = 6</span>
+                            <span>10 + 7 = 17</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="example-note">
+
+                    <i class="bx bx-lightbulb"></i>
+
+                    <p>
+                        An addition algorithm should not work only for 5 and 3.
+                        It should correctly add other valid pairs of numbers
+                        within its specified input range.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Complete Example
+            ================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-block"></i>
+                        Practical Example
+                    </span>
+
+                    <h2>
+                        Put the Characteristics Together
+                    </h2>
+
+                    <p>
+                        Consider an algorithm that reads two numbers, calculates
+                        their sum, and displays the result.
+                    </p>
+
+                </div>
+
+                <div class="characteristics-code-card">
+
+                    <div class="characteristics-code-header">
+
+                        <div class="characteristics-code-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span>
+                            AddTwoNumbers.pseudo
+                        </span>
+
+                    </div>
+
+
+                    <pre><code><span class="pseudo-keyword">START</span>
+
+<span class="pseudo-keyword">INPUT</span> <span class="pseudo-variable">numberA</span>
+<span class="pseudo-keyword">INPUT</span> <span class="pseudo-variable">numberB</span>
+
+<span class="pseudo-variable">result</span> <span class="pseudo-operator">=</span> <span class="pseudo-variable">numberA</span> <span class="pseudo-operator">+</span> <span class="pseudo-variable">numberB</span>
+
+<span class="pseudo-keyword">OUTPUT</span> <span class="pseudo-variable">result</span>
+
+<span class="pseudo-keyword">END</span></code></pre>
+
+                </div>
+
+                <div class="characteristics-example-breakdown">
+
+                    <div class="characteristics-breakdown-item">
+                        <span>Input</span>
+                        <p>Receives numberA and numberB.</p>
+                    </div>
+
+                    <div class="characteristics-breakdown-item">
+                        <span>Output</span>
+                        <p>Displays the calculated result.</p>
+                    </div>
+
+                    <div class="characteristics-breakdown-item">
+                        <span>Definiteness</span>
+                        <p>Each instruction has a clear meaning.</p>
+                    </div>
+
+                    <div class="characteristics-breakdown-item">
+                        <span>Finiteness</span>
+                        <p>The sequence reaches END after a limited number of steps.</p>
+                    </div>
+
+                    <div class="characteristics-breakdown-item">
+                        <span>Effectiveness</span>
+                        <p>Reading, adding, and displaying are executable operations.</p>
+                    </div>
+
+                    <div class="characteristics-breakdown-item">
+                        <span>Correctness</span>
+                        <p>The result is the sum of the two valid input numbers.</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Key Takeaways
+            ================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-circle"></i>
+                        Key Takeaways
+                    </span>
+
+                    <h2>
+                        What Should You Remember?
+                    </h2>
+
+                    <p>
+                        These characteristics help us understand whether an
+                        algorithm is clearly defined and suitable for solving
+                        a problem.
+                    </p>
+
+                </div>
+
+                <ul class="characteristics-takeaways-list">
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            <strong>Input and Output:</strong>
+                            Define the information received and the result produced.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            <strong>Definiteness:</strong>
+                            Every step must be clear and unambiguous.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            <strong>Finiteness:</strong>
+                            The algorithm should finish after a finite number of steps.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            <strong>Effectiveness:</strong>
+                            Every operation must be executable in practice.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            <strong>Correctness and Generality:</strong>
+                            The algorithm should solve the problem correctly for its
+                            intended range of valid inputs.
+                        </span>
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Practice => مشترك
+            ================================================== -->
+            <article class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Test Your Knowledge
+                    </h2>
+
+                    <p>
+                        Which characteristic requires an algorithm to finish
+                        after a finite number of steps?
+                    </p>
+
+                </div>
+
+                <div class="exercise-preview" data-correct-answer="finiteness">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+                            <span class="section-label">
+                                Algorithms Exercise
+                            </span>
+
+                            <h3>
+                                Understanding Algorithm Characteristics
+                            </h3>
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        What does finiteness mean in an algorithm?
+                    </p>
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="input">
+                            The algorithm must always receive two inputs
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="clarity">
+                            Every instruction must have a clear meaning
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="finiteness">
+                            The algorithm must finish after a finite number of steps
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="speed">
+                            The algorithm must always be the fastest possible
+                        </button>
+
+                    </div>
+
+                    <div class="exercise-result" id="exerciseResult">
+                    </div>
+
+                </div>
+
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Algorithms Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Bottom Navigation => مشترك
+            ================================================== -->
+            <div class="tutorial-bottom-actions">
+
+                <a href="ImportanceOfAlgorithmsPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="TimeComplexityPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+
+</body>
+
+</html>

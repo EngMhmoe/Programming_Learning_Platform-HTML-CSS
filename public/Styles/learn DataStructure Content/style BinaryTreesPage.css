@@ -1,0 +1,252 @@
+/* ==========================================================
+   Shared Learning Page Styles
+========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Binary Tree Structure
+========================================================== */
+
+.tutorial-content .tree-structure-example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  padding: 30px 15px;
+  overflow-x: auto;
+}
+
+.tutorial-content .tree-structure-example .tree-node {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.tutorial-content .tree-structure-example .tree-node.empty {
+  visibility: hidden;
+}
+
+.tutorial-content .tree-structure-example > .tree-children {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+  width: max-content;
+  padding-top: 28px;
+  position: relative;
+}
+
+.tutorial-content .tree-structure-example .tree-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+
+.tutorial-content .tree-structure-example .tree-branch > .tree-node::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 2px;
+  height: 28px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+.tutorial-content .tree-structure-example > .tree-children::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: var(--border);
+}
+
+.tutorial-content .tree-structure-example > .tree-children::after {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  width: 2px;
+  height: 28px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+.tutorial-content .tree-structure-example .tree-branch > .tree-children {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  padding-top: 28px;
+  position: relative;
+}
+
+.tutorial-content
+  .tree-structure-example
+  .tree-branch
+  > .tree-children::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: var(--border);
+}
+
+.tutorial-content .tree-structure-example .tree-branch > .tree-children::after {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  width: 2px;
+  height: 28px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+.tutorial-content .content-caption {
+  margin: 15px 0 20px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ==========================================================
+   Binary Tree Content
+========================================================== */
+
+.tutorial-content .content-note {
+  margin-top: 20px;
+  padding: 18px 20px;
+  color: var(--text-muted);
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.tutorial-content .content-note strong {
+  color: var(--primary-light);
+}
+
+.tutorial-content .content-list {
+  margin: 20px 0 0;
+  padding-left: 24px;
+  color: var(--text-muted);
+}
+
+.tutorial-content .content-list li {
+  padding-left: 5px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.tutorial-content .content-list li::marker {
+  color: var(--primary);
+}
+
+.tutorial-content .content-list strong {
+  color: var(--text);
+}
+
+.tutorial-content .content-definition-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tutorial-content .definition-item {
+  min-width: 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.3s ease;
+}
+
+.tutorial-content .definition-item:hover {
+  border-color: var(--primary);
+}
+
+.tutorial-content .definition-item h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.tutorial-content .definition-item p {
+  margin: 0 0 10px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content .definition-item p:last-child {
+  margin-bottom: 0;
+}
+
+.tutorial-content .definition-item strong {
+  color: var(--primary-light);
+}
+
+/* ==========================================================
+   Binary Tree Responsive
+========================================================== */
+
+@media (max-width: 800px) {
+  .tutorial-content .content-definition-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .tutorial-content .tree-structure-example {
+    padding: 25px 5px;
+  }
+
+  .tutorial-content .tree-structure-example > .tree-children {
+    gap: 20px;
+  }
+
+  .tutorial-content .tree-structure-example .tree-branch > .tree-children {
+    gap: 15px;
+  }
+
+  .tutorial-content .tree-structure-example .tree-node {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .tutorial-content .content-note {
+    padding: 15px;
+  }
+
+  .tutorial-content .definition-item {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mohamed Alwani">
+    <meta name="description"
+        content="Learn Binary Search Trees, BST properties, insertion, searching, deletion, traversal, and time complexity.">
+
+    <title>Binary Search Trees | DevPath</title>
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+    <!-- ==========================================================
+        Fonts
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================================
+        Boxicons
+    ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- ==========================================================
+        CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style BinarySearchTreesPage.css">
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link active">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <section class="tutorial-content">
+
+            <!-- Tutorial Header -->
+            <section class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+
+                <h1>Binary Search Trees (BST)</h1>
+
+                <p>
+                    Learn how Binary Search Trees organize values, how
+                    searching and insertion work, how nodes are deleted,
+                    and why tree balance affects performance.
+                </p>
+
+                <div class="tutorial-actions">
+                    <a href="BinaryTreesPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="HeapsPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                What Is a Binary Search Tree?
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-help-circle"></i>
+                        Definition
+                    </span>
+
+                    <h2>What Is a Binary Search Tree?</h2>
+
+                    <p>
+                        A Binary Search Tree (BST) is a binary tree that
+                        organizes values according to a comparison rule.
+                        For each node, values in the left subtree are
+                        smaller, while values in the right subtree are
+                        larger, assuming unique keys.
+                    </p>
+                </div>
+
+                <div class="bst-definition">
+                    <div class="bst-definition-icon">
+                        <i class="bx bx-git-branch"></i>
+                    </div>
+
+                    <div class="bst-definition-content">
+                        <h3>Ordered for Efficient Searching</h3>
+
+                        <p>
+                            At each node, compare the target with the
+                            current value. Move left when the target is
+                            smaller and right when it is larger. This
+                            ordering helps eliminate part of the tree
+                            during a search.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Remember</strong>
+
+                        <p>
+                            Every Binary Search Tree is a binary tree,
+                            but not every binary tree follows the BST
+                            ordering rule.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                BST Properties
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-check-shield"></i>
+                        Core Rules
+                    </span>
+
+                    <h2>Binary Search Tree Properties</h2>
+
+                    <p>
+                        The BST ordering rule applies to every node and
+                        to every subtree, not only to the root.
+                    </p>
+                </div>
+
+                <div class="bst-properties-grid">
+
+                    <article class="bst-property-card">
+                        <div class="bst-property-icon">
+                            <i class="bx bx-chevron-left"></i>
+                        </div>
+
+                        <h3>Left Subtree</h3>
+
+                        <p>
+                            Values in the left subtree are smaller than
+                            the current node's value.
+                        </p>
+                    </article>
+
+                    <article class="bst-property-card">
+                        <div class="bst-property-icon">
+                            <i class="bx bx-chevron-right"></i>
+                        </div>
+
+                        <h3>Right Subtree</h3>
+
+                        <p>
+                            Values in the right subtree are larger than
+                            the current node's value.
+                        </p>
+                    </article>
+
+                    <article class="bst-property-card">
+                        <div class="bst-property-icon">
+                            <i class="bx bx-git-branch"></i>
+                        </div>
+
+                        <h3>Recursive Rule</h3>
+
+                        <p>
+                            Both the left and right subtrees must
+                            independently satisfy the BST property.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>What About Duplicate Values?</strong>
+
+                        <p>
+                            Duplicate handling depends on the
+                            implementation. A BST may reject duplicates,
+                            count their occurrences, or define a
+                            consistent placement rule.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                BST Structure Example
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-network-chart"></i>
+                        Visual Example
+                    </span>
+
+                    <h2>Understanding BST Structure</h2>
+
+                    <p>
+                        In this example, smaller values go left and
+                        larger values go right at every node.
+                    </p>
+                </div>
+
+                <div class="bst-structure-example">
+
+                    <div class="bst-tree-level bst-tree-level-root">
+                        <div class="bst-node bst-node-root">50</div>
+                    </div>
+
+                    <div class="bst-tree-connectors bst-connectors-root">
+                        <span class="bst-connector-left"></span>
+                        <span class="bst-connector-right"></span>
+                    </div>
+
+                    <div class="bst-tree-level bst-tree-level-two">
+                        <div class="bst-node">30</div>
+                        <div class="bst-node">70</div>
+                    </div>
+
+                    <div class="bst-tree-connectors bst-connectors-bottom">
+                        <span class="bst-connector-left"></span>
+                        <span class="bst-connector-right"></span>
+                        <span class="bst-connector-left"></span>
+                        <span class="bst-connector-right"></span>
+                    </div>
+
+                    <div class="bst-tree-level bst-tree-level-three">
+                        <div class="bst-node">20</div>
+                        <div class="bst-node">40</div>
+                        <div class="bst-node">60</div>
+                        <div class="bst-node">80</div>
+                    </div>
+
+                    <div class="bst-legend">
+                        <span>
+                            <i class="bx bx-circle"></i>
+                            Each circle represents a node
+                        </span>
+
+                        <span>
+                            <i class="bx bx-git-branch"></i>
+                            Lines represent parent-child connections
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+                        <strong>Check the Rule</strong>
+
+                        <p>
+                            For node 50, the values 30, 20, and 40 are
+                            in its left subtree and are smaller than 50.
+                            The values 70, 60, and 80 are in its right
+                            subtree and are larger than 50.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Searching in a BST
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-search"></i>
+                        Operation 01
+                    </span>
+
+                    <h2>Searching in a Binary Search Tree</h2>
+
+                    <p>
+                        Searching starts at the root and compares the
+                        target value with each visited node.
+                    </p>
+                </div>
+
+                <div class="bst-operation-card">
+
+                    <div class="bst-operation-header">
+                        <div>
+                            <span class="bst-operation-label">Search Example</span>
+                            <h3>Find the Value 60</h3>
+                        </div>
+
+                        <i class="bx bx-search-alt"></i>
+                    </div>
+
+                    <div class="bst-search-steps">
+
+                        <div class="bst-search-step">
+                            <span class="bst-step-number">01</span>
+
+                            <div>
+                                <h3>Start at 50</h3>
+
+                                <p>
+                                    Since 60 is greater than 50, move
+                                    to the right child.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bst-search-step">
+                            <span class="bst-step-number">02</span>
+
+                            <div>
+                                <h3>Compare with 70</h3>
+
+                                <p>
+                                    Since 60 is smaller than 70, move
+                                    to the left child.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bst-search-step">
+                            <span class="bst-step-number">03</span>
+
+                            <div>
+                                <h3>Find 60</h3>
+
+                                <p>
+                                    The current node matches the target,
+                                    so the search succeeds.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="bst-search-path">
+                        <span>50</span>
+                        <i class="bx bx-right-arrow-alt"></i>
+                        <span>70</span>
+                        <i class="bx bx-left-arrow-alt"></i>
+                        <span class="bst-search-found">60</span>
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Key Idea</strong>
+
+                        <p>
+                            You do not need to visit every node. Each
+                            comparison tells you which subtree may
+                            contain the target.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Insertion in a BST
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-plus-circle"></i>
+                        Operation 02
+                    </span>
+
+                    <h2>Inserting a New Node</h2>
+
+                    <p>
+                        Insertion follows the same comparisons used
+                        during searching until an empty child position
+                        is found.
+                    </p>
+                </div>
+
+                <div class="bst-insertion-flow">
+
+                    <div class="bst-insertion-step">
+                        <span class="bst-step-number">01</span>
+
+                        <div>
+                            <h3>Start at the Root</h3>
+
+                            <p>
+                                Compare the new value with the current
+                                node.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bst-insertion-step">
+                        <span class="bst-step-number">02</span>
+
+                        <div>
+                            <h3>Choose a Direction</h3>
+
+                            <p>
+                                Move left if the value is smaller, or
+                                right if it is larger.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bst-insertion-step">
+                        <span class="bst-step-number">03</span>
+
+                        <div>
+                            <h3>Insert the Node</h3>
+
+                            <p>
+                                When the selected child position is
+                                empty, insert the new node there.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="bst-code-example">
+                    <div class="bst-code-header">
+                        <span>
+                            <i class="bx bx-code-alt"></i>
+                            Insertion Example
+                        </span>
+
+                        <span class="bst-code-language">Pseudocode</span>
+                    </div>
+
+                    <pre><code>function insert(node, value):
+    if node is null:
+        return new Node(value)
+
+    if value &lt; node.value:
+        node.left = insert(node.left, value)
+    else if value &gt; node.value:
+        node.right = insert(node.right, value)
+
+    return node</code></pre>
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Note</strong>
+
+                        <p>
+                            This pseudocode ignores duplicate values.
+                            An actual implementation should define how
+                            duplicates are handled.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Deletion in a BST
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-minus-circle"></i>
+                        Operation 03
+                    </span>
+
+                    <h2>Deleting a Node</h2>
+
+                    <p>
+                        Deletion has three common cases. The correct
+                        approach depends on the number of children
+                        the target node has.
+                    </p>
+                </div>
+
+                <div class="bst-deletion-grid">
+
+                    <article class="bst-deletion-card">
+                        <div class="bst-deletion-icon">
+                            <i class="bx bx-circle"></i>
+                        </div>
+
+                        <span class="bst-deletion-number">Case 01</span>
+
+                        <h3>Leaf Node</h3>
+
+                        <p>
+                            A leaf has no children. Remove it directly
+                            from its parent.
+                        </p>
+
+                        <div class="bst-mini-tree">
+                            <span>30</span>
+                            <i class="bx bx-down-arrow-alt"></i>
+                            <span class="bst-mini-highlight">20</span>
+                        </div>
+
+                        <p class="bst-mini-caption">
+                            Remove 20
+                        </p>
+                    </article>
+
+                    <article class="bst-deletion-card">
+                        <div class="bst-deletion-icon">
+                            <i class="bx bx-git-branch"></i>
+                        </div>
+
+                        <span class="bst-deletion-number">Case 02</span>
+
+                        <h3>One Child</h3>
+
+                        <p>
+                            Replace the node with its only child so
+                            the remaining subtree stays connected.
+                        </p>
+
+                        <div class="bst-mini-tree">
+                            <span>30</span>
+                            <i class="bx bx-down-arrow-alt"></i>
+                            <span class="bst-mini-highlight">20</span>
+                            <i class="bx bx-down-arrow-alt"></i>
+                            <span>10</span>
+                        </div>
+
+                        <p class="bst-mini-caption">
+                            Remove 20 and connect 30 to 10
+                        </p>
+                    </article>
+
+                    <article class="bst-deletion-card">
+                        <div class="bst-deletion-icon">
+                            <i class="bx bx-git-compare"></i>
+                        </div>
+
+                        <span class="bst-deletion-number">Case 03</span>
+
+                        <h3>Two Children</h3>
+
+                        <p>
+                            Replace the node's value with its inorder
+                            successor or predecessor, then remove that
+                            replacement node from its original position.
+                        </p>
+
+                        <div class="bst-mini-tree">
+                            <span>50</span>
+                            <i class="bx bx-down-arrow-alt"></i>
+                            <span class="bst-mini-highlight">60</span>
+                        </div>
+
+                        <p class="bst-mini-caption">
+                            Example replacement using successor 60
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+                        <strong>Important</strong>
+
+                        <p>
+                            The inorder successor is the smallest value
+                            in the node's right subtree. Reconnecting
+                            nodes correctly preserves the BST property.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                BST Traversal
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-list-ol"></i>
+                        Traversal
+                    </span>
+
+                    <h2>Traversing a Binary Search Tree</h2>
+
+                    <p>
+                        Tree traversal visits nodes in a particular
+                        order. Inorder traversal is especially useful
+                        for BSTs because it visits values in sorted order.
+                    </p>
+                </div>
+
+                <div class="bst-traversal-list">
+
+                    <div class="bst-traversal-item">
+                        <div class="bst-traversal-icon">
+                            <i class="bx bx-sort-up"></i>
+                        </div>
+
+                        <div>
+                            <h3>Inorder: Left → Root → Right</h3>
+
+                            <p>
+                                Visits the left subtree, current node,
+                                and right subtree.
+                            </p>
+
+                            <div class="bst-sequence">
+                                <span>20</span>
+                                <span>30</span>
+                                <span>40</span>
+                                <span>50</span>
+                                <span>60</span>
+                                <span>70</span>
+                                <span>80</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bst-traversal-item">
+                        <div class="bst-traversal-icon">
+                            <i class="bx bx-git-branch"></i>
+                        </div>
+
+                        <div>
+                            <h3>Preorder: Root → Left → Right</h3>
+
+                            <p>
+                                Visits the current node before its
+                                left and right subtrees.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bst-traversal-item">
+                        <div class="bst-traversal-icon">
+                            <i class="bx bx-network-chart"></i>
+                        </div>
+
+                        <div>
+                            <h3>Postorder: Left → Right → Root</h3>
+
+                            <p>
+                                Visits both subtrees before visiting
+                                the current node.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-check-circle"></i>
+
+                    <div>
+                        <strong>Remember</strong>
+
+                        <p>
+                            For a BST containing unique values, inorder
+                            traversal produces the values in ascending
+                            order.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Time Complexity
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-time"></i>
+                        Performance
+                    </span>
+
+                    <h2>Binary Search Tree Time Complexity</h2>
+
+                    <p>
+                        Search, insertion, and deletion depend on the
+                        height of the tree.
+                    </p>
+                </div>
+
+                <div class="bst-complexity-table-wrapper">
+                    <table class="bst-complexity-table">
+                        <thead>
+                            <tr>
+                                <th>Operation</th>
+                                <th>Average Case</th>
+                                <th>Worst Case</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Search</td>
+                                <td><code>O(log n)</code></td>
+                                <td><code>O(n)</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>Insertion</td>
+                                <td><code>O(log n)</code></td>
+                                <td><code>O(n)</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>Deletion</td>
+                                <td><code>O(log n)</code></td>
+                                <td><code>O(n)</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>Traversal</td>
+                                <td><code>O(n)</code></td>
+                                <td><code>O(n)</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bst-complexity-cards">
+
+                    <div class="bst-complexity-card">
+                        <span class="bst-complexity-value">O(log n)</span>
+                        <h3>Balanced Tree</h3>
+
+                        <p>
+                            A balanced tree has a height proportional
+                            to log n, allowing efficient operations.
+                        </p>
+                    </div>
+
+                    <div class="bst-complexity-card">
+                        <span class="bst-complexity-value">O(n)</span>
+                        <h3>Skewed Tree</h3>
+
+                        <p>
+                            A badly unbalanced tree can behave like a
+                            linked list, requiring many comparisons.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Do Not Confuse the Cases</strong>
+
+                        <p>
+                            A regular BST does not guarantee O(log n)
+                            operations. Self-balancing trees, such as
+                            AVL trees and Red-Black trees, maintain
+                            logarithmic height.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                BST vs Binary Tree
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Key Difference
+                    </span>
+
+                    <h2>Binary Tree vs Binary Search Tree</h2>
+
+                    <p>
+                        Both structures allow each node to have at most
+                        two children, but their ordering rules differ.
+                    </p>
+                </div>
+
+                <div class="bst-comparison-grid">
+
+                    <div class="bst-comparison-card">
+                        <div class="bst-comparison-icon">
+                            <i class="bx bx-network-chart"></i>
+                        </div>
+
+                        <h3>Binary Tree</h3>
+
+                        <span class="bst-comparison-label">Structure</span>
+
+                        <p>
+                            Each node can have up to two children.
+                            The values do not have to follow a
+                            particular ordering rule.
+                        </p>
+                    </div>
+
+                    <div class="bst-comparison-card">
+                        <div class="bst-comparison-icon">
+                            <i class="bx bx-search-alt"></i>
+                        </div>
+
+                        <h3>Binary Search Tree</h3>
+
+                        <span class="bst-comparison-label">Structure + Ordering</span>
+
+                        <p>
+                            Each node can have up to two children,
+                            and values must follow the BST ordering
+                            rule throughout the tree.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Applications
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-bulb"></i>
+                        Applications
+                    </span>
+
+                    <h2>Where Are Binary Search Trees Used?</h2>
+
+                    <p>
+                        BSTs are useful when data needs to be searched
+                        and maintained in an ordered form.
+                    </p>
+                </div>
+
+                <div class="bst-applications-grid">
+
+                    <article class="bst-application-card">
+                        <div class="bst-application-icon">
+                            <i class="bx bx-search"></i>
+                        </div>
+
+                        <h3>Searching Data</h3>
+
+                        <p>
+                            Locate values through comparisons rather
+                            than scanning every element in a suitable tree.
+                        </p>
+                    </article>
+
+                    <article class="bst-application-card">
+                        <div class="bst-application-icon">
+                            <i class="bx bx-sort-alt-2"></i>
+                        </div>
+
+                        <h3>Ordered Data</h3>
+
+                        <p>
+                            Maintain values in an order that supports
+                            sorted traversal and range queries.
+                        </p>
+                    </article>
+
+                    <article class="bst-application-card">
+                        <div class="bst-application-icon">
+                            <i class="bx bx-data"></i>
+                        </div>
+
+                        <h3>Dynamic Collections</h3>
+
+                        <p>
+                            Insert and remove values while maintaining
+                            an ordered tree structure.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Key Takeaways
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-bookmark-check"></i>
+                        Summary
+                    </span>
+
+                    <h2>Key Takeaways</h2>
+
+                    <p>
+                        Review the most important Binary Search Tree
+                        concepts before moving to the next lesson.
+                    </p>
+                </div>
+
+                <div class="bst-takeaways-list">
+
+                    <div class="bst-takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            A <strong>Binary Search Tree</strong>
+                            is a binary tree that follows an ordering rule.
+                        </p>
+                    </div>
+
+                    <div class="bst-takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Smaller values are placed in the left
+                            subtree and larger values in the right
+                            subtree, under the unique-key rule.
+                        </p>
+                    </div>
+
+                    <div class="bst-takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Searching and insertion follow comparisons
+                            from the root toward a child.
+                        </p>
+                    </div>
+
+                    <div class="bst-takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Deletion has three cases: a leaf, a node
+                            with one child, and a node with two children.
+                        </p>
+                    </div>
+
+                    <div class="bst-takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Inorder traversal of a BST with unique
+                            keys visits values in ascending order.
+                        </p>
+                    </div>
+
+                    <div class="bst-takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            BST search, insertion, and deletion can
+                            take <strong>O(n)</strong> in the worst
+                            case if the tree becomes skewed.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-brain"></i>
+
+                    <div>
+                        <strong>Quick Reminder</strong>
+
+                        <p>
+                            A BST's performance depends on its height.
+                            Keeping the tree balanced helps maintain
+                            efficient operations.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Exercises => Shared
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>Binary Search Trees Exercises</h2>
+
+                    <p>
+                        Test your understanding of BST ordering,
+                        searching, traversal, and time complexity.
+                    </p>
+                </div>
+
+                <div class="exercise-preview" data-correct-answer="Left">
+
+                    <div class="exercise-preview-header">
+                        <div>
+                            <span class="section-label">Exercise 01</span>
+
+                            <h3>Understand BST Ordering</h3>
+                        </div>
+
+                        <span class="exercise-number">01</span>
+                    </div>
+
+                    <p class="exercise-question">
+                        In a Binary Search Tree, where are values
+                        smaller than the current node placed?
+                    </p>
+
+                    <div class="exercise-code">
+                        <span>Answer:</span>
+
+                        <span class="exercise-answer-slot" id="exerciseAnswer">?</span>
+                    </div>
+
+                    <div class="exercise-options">
+                        <button type="button" class="exercise-option" data-answer="Left">
+                            In the left subtree
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Right">
+                            In the right subtree
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Root">
+                            Always at the root
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Anywhere">
+                            Anywhere in the tree
+                        </button>
+                    </div>
+
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <div class="exercise-action">
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Progress Card => Shared
+            ================================================== -->
+            <section class="progress-card">
+
+                <div class="progress-card-content">
+
+                    <span class="section-badge">
+                        <i class="bx bx-rocket"></i>
+                        Keep Learning
+                    </span>
+
+                    <h2>Ready to Explore Heaps?</h2>
+
+                    <p>
+                        Continue your learning journey and discover
+                        another important tree-based data structure
+                        used to manage priorities efficiently.
+                    </p>
+
+                    <a href="HeapsPage.html" class="content-button">
+                        Continue Learning
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+                <div class="progress-card-icon">
+                    <i class="bx bx-layer"></i>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Bottom Navigation => Shared
+            ================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="BinaryTreesPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="HeapsPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

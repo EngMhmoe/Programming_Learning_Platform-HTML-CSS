@@ -1,0 +1,439 @@
+/* ==========================================================
+   Examples Page
+   ========================================================== */
+@import url("../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Examples Description
+   ========================================================== */
+
+.examples-description {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.examples-description:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Example Item
+   ========================================================== */
+
+.example-item {
+  margin-top: 22px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.example-item:hover {
+  border-color: rgba(249, 115, 22, 0.22);
+
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================
+   Example Header
+   ========================================================== */
+
+.example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  min-height: 70px;
+
+  padding: 14px 18px;
+
+  background: rgba(249, 115, 22, 0.06);
+
+  border-bottom: 1px solid var(--border);
+}
+
+/* ==========================================================
+   Example Title
+   ========================================================== */
+
+.example-title {
+  min-width: 0;
+}
+
+.example-number {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--primary-light);
+
+  font-size: 12px;
+  font-weight: 900;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.example-title h3 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   Example Toggle
+   ========================================================== */
+
+.example-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  min-height: 42px;
+
+  padding: 9px 15px;
+
+  color: var(--text);
+
+  background: rgba(249, 115, 22, 0.08);
+
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: var(--radius-md);
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.example-toggle:hover {
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.14);
+
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+.example-toggle i {
+  color: var(--primary-light);
+
+  font-size: 18px;
+
+  transition: transform 0.25s ease;
+}
+
+/* ==========================================================
+   Toggle Arrow
+   Bootstrap automatically changes aria-expanded
+   ========================================================== */
+
+.example-toggle[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
+
+.example-toggle[aria-expanded="true"] {
+  color: var(--primary-light);
+
+  background: rgba(249, 115, 22, 0.14);
+
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+/* ==========================================================
+   Example Question
+   ========================================================== */
+
+.example-question {
+  padding: 20px;
+}
+
+.example-question > p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.example-question strong {
+  color: var(--text);
+
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Question Code
+   ========================================================== */
+
+.example-question-code {
+  margin-top: 18px;
+
+  overflow: hidden;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.example-question-code pre {
+  width: 100%;
+
+  margin: 0;
+  padding: 18px;
+
+  overflow-x: auto;
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  line-height: 1.8;
+
+  white-space: pre;
+}
+
+.example-question-code code {
+  color: inherit;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   Answer
+   ========================================================== */
+
+.example-answer {
+  border-top: 1px solid var(--border);
+
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================================
+   Answer Header
+   ========================================================== */
+
+.example-answer-header {
+  display: flex;
+  align-items: center;
+
+  min-height: 48px;
+
+  padding: 10px 18px;
+
+  background: rgba(249, 115, 22, 0.07);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.example-answer-header span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--primary-light);
+
+  font-size: 13px;
+  font-weight: 900;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.example-answer-header i {
+  font-size: 17px;
+}
+
+/* ==========================================================
+   Answer Code
+   ========================================================== */
+
+.example-answer pre {
+  width: 100%;
+
+  margin: 0;
+  padding: 22px;
+
+  overflow-x: auto;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: var(--text);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  line-height: 1.8;
+
+  white-space: pre;
+}
+
+.example-answer code {
+  color: inherit;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   C# Code Highlighting
+   ========================================================== */
+
+.examples-keyword {
+  color: var(--primary-light);
+
+  font-weight: 800;
+}
+
+.examples-type {
+  color: #f97316;
+
+  font-weight: 700;
+}
+
+.examples-class {
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+.examples-method {
+  color: #008cff;
+
+  font-weight: 700;
+}
+
+.examples-string {
+  color: #a3e635;
+}
+
+.examples-comment {
+  color: var(--text-muted);
+
+  font-style: italic;
+}
+
+.examples-number {
+  color: #a3e635;
+
+  font-weight: 700;
+}
+
+/* ==========================================================
+   Explanation Button
+   ========================================================== */
+
+.examples-action {
+  display: flex;
+
+  margin-top: 22px;
+}
+
+/* ==========================================================
+   Bootstrap Collapse Override
+   Keep Bootstrap behavior,
+   but use DevPath visual system.
+   ========================================================== */
+
+.example-item .collapse {
+  transition: height 0.3s ease;
+}
+
+.example-item .collapsing {
+  transition: height 0.3s ease;
+}
+
+/* ==========================================================
+   Focus
+   ========================================================== */
+
+.example-toggle:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 800px) {
+  .example-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .example-toggle {
+    width: 100%;
+  }
+
+  .example-question-code pre,
+  .example-answer pre {
+    padding: 18px;
+
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================
+   Small Screens
+   ========================================================== */
+
+@media (max-width: 560px) {
+  .examples-description {
+    font-size: 15px;
+  }
+
+  .example-header {
+    padding: 14px 15px;
+  }
+
+  .example-question {
+    padding: 16px;
+  }
+
+  .example-title h3 {
+    font-size: 16px;
+  }
+
+  .example-question > p {
+    font-size: 15px;
+  }
+
+  .example-question-code pre,
+  .example-answer pre {
+    padding: 16px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .example-answer-header {
+    padding: 9px 15px;
+  }
+}

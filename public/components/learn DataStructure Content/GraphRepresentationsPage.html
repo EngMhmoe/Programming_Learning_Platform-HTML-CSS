@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <meta name="description"
+        content="Learn graph representations, adjacency matrices, adjacency lists, graph implementation examples, and their time and space complexity.">
+
+    <title>Graph Representations | Data Structure Tutorial</title>
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style GraphRepresentationsPage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link active">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <div class="tutorial-content graph-representations-page">
+
+            <!-- ==================================================
+                Tutorial Header
+            ================================================== -->
+            <section class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+
+                <h1>Graph Representations</h1>
+
+                <p>
+                    Learn how graphs are stored in memory using adjacency
+                    matrices and adjacency lists, and understand how to
+                    choose the right representation for different problems.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="GraphsPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="ExamplesPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+
+            </section>
+
+            <!-- ==================================================
+                Section 1: Introduction
+            ================================================== -->
+            <section class="tutorial-card" id="introduction">
+
+                <div class="section-heading left">
+
+                    <span class="representation-section-number">01</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-book-open"></i>
+                            Introduction
+                        </span>
+
+                        <h2>What Are Graph Representations?</h2>
+
+                        <p>
+                            A graph representation is a way to store a graph's
+                            vertices and edges in computer memory.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="representation-intro">
+
+                    <p>
+                        A graph consists of vertices and edges, but a computer
+                        needs a specific data structure to store this information.
+                        Two common approaches are the <strong>Adjacency Matrix</strong>
+                        and the <strong>Adjacency List</strong>.
+                    </p>
+
+                    <p>
+                        Both representations can describe the same graph, but
+                        they differ in memory usage and in how efficiently they
+                        support operations such as checking connections and
+                        listing neighbors.
+                    </p>
+
+                </div>
+
+                <div class="representation-example">
+
+                    <h3>Example Graph</h3>
+
+                    <p>
+                        Consider an undirected graph with four vertices and these
+                        connections: A–B, A–C, B–C, and C–D.
+                    </p>
+
+                    <div class="representation-diagram">
+
+                        <svg viewBox="0 0 460 260" role="img"
+                            aria-label="Undirected graph with vertices A, B, C, D and edges A-B, A-C, B-C, C-D">
+
+                            <line class="representation-edge" x1="90" y1="65" x2="225" y2="65" />
+                            <line class="representation-edge" x1="90" y1="65" x2="155" y2="175" />
+                            <line class="representation-edge" x1="225" y1="65" x2="155" y2="175" />
+                            <line class="representation-edge" x1="155" y1="175" x2="355" y2="175" />
+
+                            <circle class="representation-node" cx="90" cy="65" r="25" />
+                            <circle class="representation-node" cx="225" cy="65" r="25" />
+                            <circle class="representation-node" cx="155" cy="175" r="25" />
+                            <circle class="representation-node" cx="355" cy="175" r="25" />
+
+                            <text class="representation-node-label" x="90" y="65">A</text>
+                            <text class="representation-node-label" x="225" y="65">B</text>
+                            <text class="representation-node-label" x="155" y="175">C</text>
+                            <text class="representation-node-label" x="355" y="175">D</text>
+
+                        </svg>
+
+                    </div>
+
+                    <div class="representation-edge-list">
+                        <span>Vertices: A, B, C, D</span>
+                        <span>Edges: A–B, A–C, B–C, C–D</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 2: Adjacency Matrix
+            ================================================== -->
+            <section class="tutorial-card" id="adjacency-matrix">
+
+                <div class="section-heading left">
+
+                    <span class="representation-section-number">02</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-grid-alt"></i>
+                            Representation One
+                        </span>
+
+                        <h2>Adjacency Matrix</h2>
+
+                        <p>
+                            An adjacency matrix uses a two-dimensional array
+                            to indicate which vertices are connected.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="representation-description">
+
+                    <p>
+                        For a graph containing <strong>V vertices</strong>,
+                        an adjacency matrix has <strong>V rows and V columns</strong>.
+                        Each cell indicates whether an edge exists between
+                        the corresponding pair of vertices.
+                    </p>
+
+                    <ul>
+                        <li><strong>1</strong> means an edge exists.</li>
+                        <li><strong>0</strong> means no edge exists.</li>
+                        <li>For an undirected graph, the matrix is symmetric.</li>
+                    </ul>
+
+                </div>
+
+                <div class="matrix-example">
+
+                    <h3>Adjacency Matrix Example</h3>
+
+                    <p>
+                        Using the graph from the previous section, its adjacency
+                        matrix is:
+                    </p>
+
+                    <div class="matrix-table-wrapper">
+
+                        <table class="matrix-table">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">A</th>
+                                    <th scope="col">B</th>
+                                    <th scope="col">C</th>
+                                    <th scope="col">D</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th scope="row">A</th>
+                                    <td class="matrix-connected">0</td>
+                                    <td class="matrix-connected">1</td>
+                                    <td class="matrix-connected">1</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">B</th>
+                                    <td class="matrix-connected">1</td>
+                                    <td class="matrix-connected">0</td>
+                                    <td class="matrix-connected">1</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">C</th>
+                                    <td class="matrix-connected">1</td>
+                                    <td class="matrix-connected">1</td>
+                                    <td class="matrix-connected">0</td>
+                                    <td class="matrix-connected">1</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">D</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td class="matrix-connected">1</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <div class="representation-example-note">
+                        <i class="bx bx-info-circle"></i>
+                        <p>
+                            The value at row A and column B is 1 because A is
+                            connected to B. The value at row A and column D is
+                            0 because no direct edge connects them.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="representation-code-block">
+
+                    <div class="representation-code-header">
+                        <span><i class="bx bx-code-alt"></i> JavaScript Example</span>
+                        <span>Adjacency Matrix</span>
+                    </div>
+
+                    <pre><code>const matrix = [
+    [0, 1, 1, 0],
+    [1, 0, 1, 0],
+    [1, 1, 0, 1],
+    [0, 0, 1, 0]
+];
+
+// Check whether A is connected to B
+console.log(matrix[0][1]); // 1
+
+// Check whether A is connected to D
+console.log(matrix[0][3]); // 0</code></pre>
+
+                </div>
+
+                <div class="representation-advantages">
+
+                    <div class="representation-advantage">
+
+                        <h3>
+                            <i class="bx bx-check-circle"></i>
+                            Advantages
+                        </h3>
+
+                        <ul>
+                            <li>Checking whether an edge exists takes O(1) time.</li>
+                            <li>Simple to implement using a two-dimensional array.</li>
+                            <li>Useful for dense graphs with many edges.</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="representation-disadvantage">
+
+                        <h3>
+                            <i class="bx bx-x-circle"></i>
+                            Disadvantages
+                        </h3>
+
+                        <ul>
+                            <li>Requires O(V²) space.</li>
+                            <li>Can waste memory when the graph has few edges.</li>
+                            <li>Listing all neighbors of a vertex takes O(V) time.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 3: Adjacency List
+            ================================================== -->
+            <section class="tutorial-card" id="adjacency-list">
+
+                <div class="section-heading left">
+
+                    <span class="representation-section-number">03</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-list-ul"></i>
+                            Representation Two
+                        </span>
+
+                        <h2>Adjacency List</h2>
+
+                        <p>
+                            An adjacency list stores each vertex alongside a
+                            collection of its neighboring vertices.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="representation-description">
+
+                    <p>
+                        Instead of allocating a cell for every possible pair
+                        of vertices, an adjacency list stores only the neighbors
+                        connected to each vertex.
+                    </p>
+
+                    <p>
+                        This makes it especially useful for <strong>sparse graphs</strong>,
+                        where the number of edges is relatively small compared
+                        with the number of possible edges.
+                    </p>
+
+                </div>
+
+                <div class="adjacency-list-example">
+
+                    <h3>Adjacency List Example</h3>
+
+                    <div class="adjacency-list-rows">
+
+                        <div class="adjacency-list-row">
+                            <span class="adjacency-list-vertex">A</span>
+                            <span class="adjacency-list-arrow">
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </span>
+                            <div class="adjacency-list-neighbors">
+                                <span>B</span>
+                                <span>C</span>
+                            </div>
+                        </div>
+
+                        <div class="adjacency-list-row">
+                            <span class="adjacency-list-vertex">B</span>
+                            <span class="adjacency-list-arrow">
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </span>
+                            <div class="adjacency-list-neighbors">
+                                <span>A</span>
+                                <span>C</span>
+                            </div>
+                        </div>
+
+                        <div class="adjacency-list-row">
+                            <span class="adjacency-list-vertex">C</span>
+                            <span class="adjacency-list-arrow">
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </span>
+                            <div class="adjacency-list-neighbors">
+                                <span>A</span>
+                                <span>B</span>
+                                <span>D</span>
+                            </div>
+                        </div>
+
+                        <div class="adjacency-list-row">
+                            <span class="adjacency-list-vertex">D</span>
+                            <span class="adjacency-list-arrow">
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </span>
+                            <div class="adjacency-list-neighbors">
+                                <span>C</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="representation-code-block">
+
+                    <div class="representation-code-header">
+                        <span><i class="bx bx-code-alt"></i> JavaScript Example</span>
+                        <span>Adjacency List</span>
+                    </div>
+
+                    <pre><code>const graph = {
+    A: ["B", "C"],
+    B: ["A", "C"],
+    C: ["A", "B", "D"],
+    D: ["C"]
+};
+
+// Get the neighbors of A
+console.log(graph.A); // ["B", "C"]
+
+// Check the neighbors of C
+console.log(graph.C); // ["A", "B", "D"]</code></pre>
+
+                </div>
+
+                <div class="representation-advantages">
+
+                    <div class="representation-advantage">
+
+                        <h3>
+                            <i class="bx bx-check-circle"></i>
+                            Advantages
+                        </h3>
+
+                        <ul>
+                            <li>Uses O(V + E) space.</li>
+                            <li>Efficient for iterating over a vertex's neighbors.</li>
+                            <li>Usually a good choice for sparse graphs.</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="representation-disadvantage">
+
+                        <h3>
+                            <i class="bx bx-x-circle"></i>
+                            Disadvantages
+                        </h3>
+
+                        <ul>
+                            <li>Checking for a specific edge can take O(degree(V)) time.</li>
+                            <li>Requires managing a collection of neighbors for each vertex.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 4: Compare Representations
+            ================================================== -->
+            <section class="tutorial-card" id="comparison">
+
+                <div class="section-heading left">
+
+                    <span class="representation-section-number">04</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-git-compare"></i>
+                            Comparison
+                        </span>
+
+                        <h2>Adjacency Matrix vs Adjacency List</h2>
+
+                        <p>
+                            Both approaches represent the same graph, but each
+                            has different performance and memory characteristics.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="representation-comparison-wrapper">
+
+                    <table class="representation-comparison-table">
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Operation / Feature</th>
+                                <th scope="col">Adjacency Matrix</th>
+                                <th scope="col">Adjacency List</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">Space Complexity</th>
+                                <td>O(V²)</td>
+                                <td>O(V + E)</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Check an Edge</th>
+                                <td>O(1)</td>
+                                <td>O(degree(V))</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Iterate over Neighbors</th>
+                                <td>O(V)</td>
+                                <td>O(degree(V))</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Add a Vertex</th>
+                                <td>Usually O(V²) to resize and rebuild</td>
+                                <td>O(1) amortized with a suitable structure</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Best Suited For</th>
+                                <td>Dense Graphs</td>
+                                <td>Sparse Graphs</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="representation-example-note">
+                    <i class="bx bx-info-circle"></i>
+                    <p>
+                        Here, V is the number of vertices, E is the number of
+                        edges, and degree(V) means the number of neighbors of
+                        the specific vertex being examined. Exact costs can
+                        vary with the implementation and graph type.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 5: Choosing a Representation
+            ================================================== -->
+            <section class="tutorial-card" id="choosing-representation">
+
+                <div class="section-heading left">
+
+                    <span class="representation-section-number">05</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-bulb"></i>
+                            Practical Decisions
+                        </span>
+
+                        <h2>When Should You Use Each Representation?</h2>
+
+                        <p>
+                            Choose a representation according to the graph's
+                            density and the operations your application performs most.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="representation-choice-grid">
+
+                    <article class="representation-choice-card">
+
+                        <div class="representation-choice-icon">
+                            <i class="bx bx-grid-alt"></i>
+                        </div>
+
+                        <h3>Choose an Adjacency Matrix When</h3>
+
+                        <ul>
+                            <li>The graph is dense.</li>
+                            <li>You frequently check whether a particular edge exists.</li>
+                            <li>The number of vertices is relatively small or predictable.</li>
+                            <li>Simple, constant-time edge lookup is important.</li>
+                        </ul>
+
+                    </article>
+
+                    <article class="representation-choice-card">
+
+                        <div class="representation-choice-icon">
+                            <i class="bx bx-list-ul"></i>
+                        </div>
+
+                        <h3>Choose an Adjacency List When</h3>
+
+                        <ul>
+                            <li>The graph is sparse.</li>
+                            <li>You want to reduce memory usage.</li>
+                            <li>You frequently traverse a vertex's neighbors.</li>
+                            <li>The graph contains many vertices with few connections.</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 6: Practice
+            ================================================== -->
+            <section class="tutorial-card" id="practice">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>Test Your Understanding</h2>
+
+                    <p>
+                        Check your understanding of adjacency matrices and adjacency lists.
+                    </p>
+
+                </div>
+
+                <div class="exercise-preview" data-correct-answer="B">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+                            <span class="section-label">Exercise Example</span>
+                            <h3>Choose the Right Graph Representation</h3>
+                        </div>
+
+                        <span class="exercise-number">01</span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        Which graph representation usually uses less memory for a sparse graph?
+                    </p>
+
+                    <div class="exercise-code">
+                        <span>Answer:</span>
+                        <span class="exercise-answer-slot" id="exerciseAnswer">?</span>
+                    </div>
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="A">
+                            Adjacency Matrix
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="B">
+                            Adjacency List
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="C">
+                            Both always use the same amount of memory
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="D">
+                            Neither representation can store a sparse graph
+                        </button>
+
+                    </div>
+
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Section 7: Key Takeaways
+            ================================================== -->
+            <section class="tutorial-card" id="key-takeaways">
+
+                <div class="section-heading left">
+
+                    <span class="representation-section-number">07</span>
+
+                    <div>
+                        <span class="section-badge">
+                            <i class="bx bx-check-circle"></i>
+                            Summary
+                        </span>
+
+                        <h2>Key Takeaways</h2>
+
+                        <p>
+                            Review the main differences before moving to the next topic.
+                        </p>
+                    </div>
+
+                </div>
+
+                <ul class="representation-takeaways-list">
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Graph representations define how vertices and edges
+                            are stored in computer memory.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            An adjacency matrix stores edge information in a
+                            two-dimensional array and uses O(V²) space.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            An adjacency list stores each vertex's neighbors
+                            and uses O(V + E) space.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            An adjacency matrix checks for an edge in O(1) time.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            An adjacency list is often more memory-efficient
+                            for sparse graphs.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            The best representation depends on graph density
+                            and the operations your application needs.
+                        </span>
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <!-- ==================================================
+                Learning Note
+            ================================================== -->
+            <div class="learning-note">
+
+                <i class="bx bx-info-circle"></i>
+
+                <div>
+                    <strong>Learning Note</strong>
+
+                    <p>
+                        Make sure you can convert a small graph into both an
+                        adjacency matrix and an adjacency list. Pay special
+                        attention to the difference between O(V²) and O(V + E)
+                        space complexity.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- ==================================================
+                Progress Card
+            ================================================== -->
+            <section class="progress-card">
+
+                <div class="progress-card-content">
+
+                    <span class="section-badge">
+                        <i class="bx bx-rocket"></i>
+                        Keep Learning
+                    </span>
+
+                    <h2>Ready to Practice Data Structures?</h2>
+
+                    <p>
+                        You now understand how graphs can be represented in memory.
+                        Review your knowledge with practical examples and exercises.
+                    </p>
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        Continue to Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+                <div class="progress-card-icon">
+                    <i class="bx bx-book-reader"></i>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Bottom Navigation
+            ================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="GraphsPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="ExamplesPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>
+
+</html>

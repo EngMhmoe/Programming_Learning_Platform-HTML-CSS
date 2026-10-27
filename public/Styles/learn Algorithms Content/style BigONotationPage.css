@@ -1,0 +1,1482 @@
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+.tutorial-content.big-o-notation-page {
+  --bo-accent: var(--primary-light, #f97316);
+  --bo-accent-strong: #fb923c;
+  --bo-accent-soft: rgba(249, 115, 22, 0.1);
+  --bo-accent-border: rgba(249, 115, 22, 0.28);
+
+  --bo-surface: var(--card-bg, rgba(255, 255, 255, 0.035));
+  --bo-surface-raised: rgba(255, 255, 255, 0.055);
+  --bo-surface-soft: rgba(255, 255, 255, 0.025);
+
+  --bo-border: var(--border, rgba(255, 255, 255, 0.12));
+  --bo-text: var(--text, #f1f5f9);
+  --bo-muted: var(--text-muted, var(--text-secondary, #a8b3c7));
+
+  --bo-green: #22c55e;
+  --bo-green-soft: rgba(34, 197, 94, 0.1);
+  --bo-green-border: rgba(34, 197, 94, 0.28);
+
+  --bo-blue: #60a5fa;
+  --bo-blue-soft: rgba(96, 165, 250, 0.1);
+  --bo-blue-border: rgba(96, 165, 250, 0.25);
+
+  --bo-purple: #c084fc;
+  --bo-purple-soft: rgba(192, 132, 252, 0.1);
+  --bo-purple-border: rgba(192, 132, 252, 0.25);
+
+  --bo-red: #fb7185;
+  --bo-red-soft: rgba(251, 113, 133, 0.1);
+  --bo-red-border: rgba(251, 113, 133, 0.25);
+
+  --bo-yellow: #fbbf24;
+  --bo-yellow-soft: rgba(251, 191, 36, 0.1);
+  --bo-yellow-border: rgba(251, 191, 36, 0.25);
+
+  --bo-radius-lg: 20px;
+  --bo-radius-md: 15px;
+  --bo-radius-sm: 10px;
+
+  --bo-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  --bo-transition: 0.25s ease;
+
+  min-width: 0;
+  color: var(--bo-text);
+}
+
+.tutorial-content.space-complexity-page {
+  min-width: 0;
+}
+
+.tutorial-content .tutorial-header-content {
+  max-width: 850px;
+}
+
+.tutorial-content .tutorial-header .tutorial-header-content h1 {
+  margin-bottom: 18px;
+}
+
+.tutorial-content .tutorial-header .tutorial-header-content h1 span {
+  color: var(--bo-accent);
+}
+
+.tutorial-content .tutorial-header .tutorial-header-content > p {
+  max-width: 720px;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   Shared Page Elements
+========================================================= */
+.tutorial-content.big-o-notation-page .tutorial-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.tutorial-content.big-o-notation-page .section-heading {
+  margin-bottom: 28px;
+}
+
+.tutorial-content.big-o-notation-page .section-heading h2 {
+  color: var(--bo-text);
+}
+
+.tutorial-content.big-o-notation-page .section-heading p {
+  color: var(--bo-muted);
+  line-height: 1.8;
+}
+
+.tutorial-content.big-o-notation-page .section-badge {
+  border-color: var(--bo-accent-border);
+}
+
+.tutorial-content.big-o-notation-page a {
+  transition:
+    color var(--bo-transition),
+    background-color var(--bo-transition),
+    border-color var(--bo-transition),
+    transform var(--bo-transition);
+}
+
+.tutorial-content.big-o-notation-page code {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* =========================================================
+   01 - Lesson Overview
+========================================================= */
+
+.tutorial-content.big-o-notation-page .big-o-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+  border: 1px solid var(--bo-accent-border);
+  border-radius: var(--bo-radius-lg);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(249, 115, 22, 0.13),
+      transparent 42%
+    ),
+    var(--bo-surface);
+}
+
+.tutorial-content.big-o-notation-page .big-o-hero-content {
+  min-width: 0;
+}
+
+.tutorial-content.big-o-notation-page .big-o-hero-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border: 1px solid var(--bo-accent-border);
+  border-radius: 999px;
+  background: var(--bo-accent-soft);
+  color: var(--bo-accent-strong);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tutorial-content.big-o-notation-page .big-o-hero-content h3 {
+  margin: 18px 0 12px;
+  color: var(--bo-text);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.4;
+}
+
+.tutorial-content.big-o-notation-page .big-o-hero-content > p {
+  margin: 0;
+  color: var(--bo-muted);
+  line-height: 1.85;
+}
+
+.tutorial-content.big-o-notation-page .big-o-hero-points {
+  display: grid;
+  gap: 13px;
+  margin-top: 24px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-hero-point {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--bo-text);
+}
+
+.tutorial-content.big-o-notation-page .big-o-hero-point i {
+  color: var(--bo-green);
+  font-size: 1.2rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.tutorial-content.big-o-notation-page .big-o-visual-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-width: 0;
+  min-height: 170px;
+  padding: 20px 12px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-md);
+  background: var(--bo-surface-raised);
+  text-align: center;
+}
+
+.tutorial-content.big-o-notation-page .big-o-visual-label,
+.tutorial-content.big-o-notation-page .big-o-visual-caption {
+  color: var(--bo-muted);
+  font-size: 0.82rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-visual-symbol {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border: 1px solid var(--bo-accent-border);
+  border-radius: 16px;
+  background: var(--bo-accent-soft);
+  color: var(--bo-accent-strong);
+  font-size: 1.8rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-visual-arrow {
+  flex-shrink: 0;
+  color: var(--bo-accent);
+  font-size: 1.7rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-objectives {
+  padding: 25px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-lg);
+  background: var(--bo-surface-soft);
+}
+
+.tutorial-content.big-o-notation-page .big-o-objectives > h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 22px;
+  color: var(--bo-text);
+  font-size: 1.15rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-objectives > h3 i {
+  color: var(--bo-accent);
+}
+
+.tutorial-content.big-o-notation-page .big-o-objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-objective {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 18px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-md);
+  background: var(--bo-surface);
+}
+
+.tutorial-content.big-o-notation-page .big-o-objective-number {
+  display: grid;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--bo-accent-soft);
+  color: var(--bo-accent-strong);
+  font-weight: 800;
+}
+
+.tutorial-content.big-o-notation-page .big-o-objective h4 {
+  margin: 0 0 7px;
+  color: var(--bo-text);
+  font-size: 0.98rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-objective p {
+  margin: 0;
+  color: var(--bo-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   Learning Notes and Example Notes
+========================================================= */
+.tutorial-content.big-o-notation-page .learning-note,
+.tutorial-content.big-o-notation-page .example-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 19px 20px;
+  border: 1px solid var(--bo-accent-border);
+  border-left: 4px solid var(--bo-accent);
+  border-radius: var(--bo-radius-md);
+  background: var(--bo-accent-soft);
+  margin-top: 25px;
+}
+
+.tutorial-content.big-o-notation-page .learning-note > i,
+.tutorial-content.big-o-notation-page .example-note > i {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--bo-accent-strong);
+  font-size: 1.35rem;
+}
+
+.tutorial-content.big-o-notation-page .learning-note strong,
+.tutorial-content.big-o-notation-page .example-note strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--bo-text);
+}
+
+.tutorial-content.big-o-notation-page .learning-note p,
+.tutorial-content.big-o-notation-page .example-note p {
+  margin: 0;
+  color: var(--bo-muted);
+  line-height: 1.8;
+}
+
+.tutorial-content.big-o-notation-page .learning-note a {
+  color: var(--bo-accent-strong);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tutorial-content.big-o-notation-page .learning-note a:hover {
+  color: var(--bo-accent);
+}
+
+/* =========================================================
+   02 - Big O Definition
+========================================================= */
+.tutorial-content.big-o-notation-page .big-o-definition-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+  gap: 25px;
+  align-items: stretch;
+}
+
+.tutorial-content.big-o-notation-page .big-o-definition-text {
+  min-width: 0;
+}
+
+.tutorial-content.big-o-notation-page .big-o-definition-text > p {
+  margin: 0 0 17px;
+  color: var(--bo-muted);
+  line-height: 1.9;
+}
+
+.tutorial-content.big-o-notation-page .big-o-formula-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 27px;
+  border: 1px solid var(--bo-accent-border);
+  border-radius: var(--bo-radius-lg);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(249, 115, 22, 0.12),
+      transparent 55%
+    ),
+    var(--bo-surface);
+  text-align: center;
+}
+
+.tutorial-content.big-o-notation-page .big-o-formula-label {
+  color: var(--bo-muted);
+  font-size: 0.85rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-formula {
+  margin: 18px 0;
+  color: var(--bo-accent-strong);
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+}
+
+.tutorial-content.big-o-notation-page .big-o-formula-card > p {
+  margin: 0;
+  color: var(--bo-muted);
+  line-height: 1.8;
+}
+
+.tutorial-content.big-o-notation-page .big-o-formula-card > p strong {
+  color: var(--bo-text);
+}
+
+.tutorial-content.big-o-notation-page .big-o-formula-details {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+  text-align: left;
+}
+
+.tutorial-content.big-o-notation-page .big-o-formula-details > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-sm);
+  background: var(--bo-surface-raised);
+  color: var(--bo-muted);
+  font-size: 0.9rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-formula-symbol {
+  display: grid;
+  flex-shrink: 0;
+  min-width: 48px;
+  min-height: 35px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--bo-accent-soft);
+  color: var(--bo-accent-strong);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+}
+
+/* =========================================================
+   03 - Input Size and Growth
+========================================================= */
+
+.tutorial-content.big-o-notation-page .big-o-input-explanation {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-input-card {
+  padding: 23px 18px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-lg);
+  background: var(--bo-surface);
+  text-align: center;
+  transition:
+    transform var(--bo-transition),
+    border-color var(--bo-transition);
+}
+
+.tutorial-content.big-o-notation-page .big-o-input-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--bo-accent-border);
+}
+
+.tutorial-content.big-o-notation-page .big-o-input-icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  margin: 0 auto 16px;
+  border: 1px solid var(--bo-accent-border);
+  border-radius: 15px;
+  background: var(--bo-accent-soft);
+  color: var(--bo-accent-strong);
+  font-size: 1.6rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-input-card h3 {
+  margin: 0 0 10px;
+  color: var(--bo-text);
+  font-size: 1rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-input-card p {
+  margin: 0 0 8px;
+  color: var(--bo-accent-strong);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+}
+
+.tutorial-content.big-o-notation-page .big-o-input-card > span {
+  color: var(--bo-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.tutorial-content.big-o-notation-page .big-o-growth-example {
+  padding: 25px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-lg);
+  background: var(--bo-surface-soft);
+}
+
+.tutorial-content.big-o-notation-page .big-o-growth-example > h3 {
+  margin: 0 0 12px;
+  color: var(--bo-text);
+}
+
+.tutorial-content.big-o-notation-page .big-o-growth-example > p {
+  margin: 0 0 22px;
+  color: var(--bo-muted);
+  line-height: 1.85;
+}
+
+/* =========================================================
+   07. Lesson-Specific Code Blocks
+========================================================= */
+.tutorial-content.big-o-notation-page .code-example {
+  --code-bg: rgba(10, 7, 3, 0.684);
+  --code-header-bg: rgba(52, 27, 9, 0.801);
+  --code-border: rgb(82, 44, 18);
+  --code-text: rgba(231, 183, 148, 0.997);
+  --code-muted: #9ca3af;
+
+  position: relative;
+  min-width: 0;
+  margin-top: 23px;
+  overflow: hidden;
+
+  color: var(--code-text);
+  background: var(--code-bg);
+
+  border: 1px solid var(--code-border);
+  border-radius: var(--sc-radius-md);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(249, 115, 22, 0.035);
+
+  transition:
+    border-color var(--sc-transition),
+    box-shadow var(--sc-transition);
+}
+
+.tutorial-content.big-o-notation-page .code-example:hover {
+  border-color: rgba(249, 115, 22, 0.52);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(249, 115, 22, 0.07);
+}
+
+.tutorial-content.big-o-notation-page .code-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  min-width: 0;
+  min-height: 58px;
+  padding: 14px 19px;
+
+  color: #f3f4f6;
+  background:
+    linear-gradient(
+      110deg,
+      rgba(249, 115, 22, 0.12),
+      rgba(249, 115, 22, 0.025) 65%
+    ),
+    var(--code-header-bg);
+
+  border-bottom: 1px solid rgba(249, 115, 22, 0.2);
+
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+.tutorial-content.big-o-notation-page .code-file-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.tutorial-content.big-o-notation-page .code-file-name i {
+  flex: 0 0 auto;
+  color: var(--sc-accent-strong);
+  font-size: 26px;
+}
+
+.tutorial-content.big-o-notation-page .code-file-name span {
+  min-width: 0;
+  overflow: hidden;
+  color: #f3f4f6;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tutorial-content.big-o-notation-page .code-language {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+
+  padding: 15px 50px;
+
+  color: #fac48b;
+  background: rgba(255, 106, 0, 0.11);
+
+  border: 1px solid rgba(249, 115, 22, 0.27);
+  border-radius: 7px;
+
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.tutorial-content.big-o-notation-page .code-example pre {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 23px 24px;
+  overflow-x: auto;
+
+  color: var(--code-text);
+  background: var(--code-bg);
+
+  font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.9;
+  font-weight: 400;
+  tab-size: 4;
+
+  text-align: left;
+  white-space: pre;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c15d22 #1b2433;
+}
+
+.tutorial-content.big-o-notation-page .code-example pre::-webkit-scrollbar {
+  height: 9px;
+}
+
+.tutorial-content.big-o-notation-page
+  .code-example
+  pre::-webkit-scrollbar-track {
+  background: #1b2433;
+  border-radius: 10px;
+}
+
+.tutorial-content.big-o-notation-page
+  .code-example
+  pre::-webkit-scrollbar-thumb {
+  background: #9a4a20;
+  border: 2px solid #1b2433;
+  border-radius: 10px;
+}
+
+.tutorial-content.big-o-notation-page
+  .code-example
+  pre::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+.tutorial-content.big-o-notation-page .code-example pre code {
+  display: block;
+  min-width: max-content;
+  padding: 0;
+
+  color: inherit;
+  background: transparent;
+
+  border: 0;
+  border-radius: 0;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  white-space: inherit;
+  tab-size: inherit;
+}
+
+/* Keep inline code inside lesson examples consistent */
+
+.tutorial-content.big-o-notation-page .code-example code {
+  font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
+}
+
+/* =========================================================
+   Example Steps and Results
+========================================================= */
+.tutorial-content.big-o-notation-page .example-steps {
+  margin-top: 25px;
+}
+
+.tutorial-content.big-o-notation-page .example-steps h3,
+.tutorial-content.big-o-notation-page .example-steps h4 {
+  margin: 0 0 15px;
+  color: var(--bo-text);
+}
+
+.tutorial-content.big-o-notation-page .example-steps ol {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 25px;
+  color: var(--bo-muted);
+  line-height: 1.8;
+}
+
+.tutorial-content.big-o-notation-page .example-steps li {
+  padding-left: 5px;
+}
+
+.tutorial-content.big-o-notation-page .example-steps li::marker {
+  color: var(--bo-accent-strong);
+  font-weight: 700;
+}
+
+.tutorial-content.big-o-notation-page .result-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 19px;
+  border: 1px solid var(--bo-green-border);
+  border-radius: var(--bo-radius-md);
+  background: var(--bo-green-soft);
+}
+
+.tutorial-content.big-o-notation-page .result-panel > i {
+  flex-shrink: 0;
+  color: var(--bo-green);
+  font-size: 1.4rem;
+}
+
+.tutorial-content.big-o-notation-page .result-panel strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--bo-green);
+}
+
+.tutorial-content.big-o-notation-page .result-panel p {
+  margin: 0;
+  color: var(--bo-muted);
+  line-height: 1.8;
+}
+
+/* =========================================================
+   04 - Complexity Classes
+========================================================= */
+
+.tutorial-content.big-o-notation-page .big-o-classes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-class-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-lg);
+  background: var(--bo-surface);
+  transition:
+    transform var(--bo-transition),
+    border-color var(--bo-transition),
+    box-shadow var(--bo-transition);
+}
+
+.tutorial-content.big-o-notation-page .big-o-class-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--bo-accent-border);
+  box-shadow: var(--bo-shadow);
+}
+
+.tutorial-content.big-o-notation-page .big-o-class-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-class-index {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--bo-accent-soft);
+  color: var(--bo-accent-strong);
+  font-weight: 800;
+}
+
+.tutorial-content.big-o-notation-page .big-o-class-tag {
+  padding: 6px 9px;
+  border: 1px solid var(--bo-green-border);
+  border-radius: 999px;
+  background: var(--bo-green-soft);
+  color: var(--bo-green);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tutorial-content.big-o-notation-page
+  .big-o-class-card:nth-child(4)
+  .big-o-class-tag,
+.tutorial-content.big-o-notation-page
+  .big-o-class-card:nth-child(5)
+  .big-o-class-tag {
+  border-color: var(--bo-yellow-border);
+  background: var(--bo-yellow-soft);
+  color: var(--bo-yellow);
+}
+
+.tutorial-content.big-o-notation-page
+  .big-o-class-card:nth-child(6)
+  .big-o-class-tag {
+  border-color: var(--bo-red-border);
+  background: var(--bo-red-soft);
+  color: var(--bo-red);
+}
+
+.tutorial-content.big-o-notation-page .big-o-class-formula {
+  margin: 25px 0 17px;
+  color: var(--bo-accent-strong);
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+}
+
+.tutorial-content.big-o-notation-page .big-o-class-card h3 {
+  margin: 0 0 10px;
+  color: var(--bo-text);
+  font-size: 1.05rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-class-card > p {
+  flex: 1;
+  margin: 0 0 20px;
+  color: var(--bo-muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.tutorial-content.big-o-notation-page .big-o-class-example {
+  padding: 12px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-sm);
+  background: var(--bo-surface-raised);
+}
+
+.tutorial-content.big-o-notation-page .big-o-class-example code {
+  color: var(--bo-accent-strong);
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   05 - Growth Comparison Table
+========================================================= */
+
+.tutorial-content.big-o-notation-page .big-o-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-md);
+}
+
+.tutorial-content.big-o-notation-page .big-o-comparison-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  background: var(--bo-surface);
+  text-align: left;
+}
+
+.tutorial-content.big-o-notation-page .big-o-comparison-table th,
+.tutorial-content.big-o-notation-page .big-o-comparison-table td {
+  padding: 15px 17px;
+  border-bottom: 1px solid var(--bo-border);
+  color: var(--bo-muted);
+  white-space: nowrap;
+}
+
+.tutorial-content.big-o-notation-page .big-o-comparison-table th {
+  background: var(--bo-surface-raised);
+  color: var(--bo-text);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.tutorial-content.big-o-notation-page .big-o-comparison-table tbody tr {
+  transition: background-color var(--bo-transition);
+}
+
+.tutorial-content.big-o-notation-page .big-o-comparison-table tbody tr:hover {
+  background: var(--bo-accent-soft);
+}
+
+.tutorial-content.big-o-notation-page
+  .big-o-comparison-table
+  tbody
+  tr:last-child
+  td {
+  border-bottom: 0;
+}
+
+.tutorial-content.big-o-notation-page .big-o-comparison-table td code {
+  color: var(--bo-accent-strong);
+  font-weight: 700;
+}
+
+.tutorial-content.big-o-notation-page .big-o-table-disclaimer {
+  margin: 18px 0 0;
+  color: var(--bo-muted);
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   06 - Simplification Rules
+========================================================= */
+
+.tutorial-content.big-o-notation-page .big-o-rules-list {
+  display: grid;
+  gap: 16px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-rule {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-md);
+  background: var(--bo-surface);
+}
+
+.tutorial-content.big-o-notation-page .big-o-rule-number {
+  display: grid;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid var(--bo-accent-border);
+  border-radius: 13px;
+  background: var(--bo-accent-soft);
+  color: var(--bo-accent-strong);
+  font-weight: 800;
+}
+
+.tutorial-content.big-o-notation-page .big-o-rule-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.tutorial-content.big-o-notation-page .big-o-rule-content h3 {
+  margin: 0 0 9px;
+  color: var(--bo-text);
+  font-size: 1.05rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-rule-content p {
+  margin: 0 0 14px;
+  color: var(--bo-muted);
+  line-height: 1.8;
+}
+
+.tutorial-content.big-o-notation-page .big-o-rule-example {
+  display: inline-block;
+  max-width: 100%;
+  padding: 10px 13px;
+  border: 1px solid var(--bo-accent-border);
+  border-radius: var(--bo-radius-sm);
+  background: var(--bo-accent-soft);
+}
+
+.tutorial-content.big-o-notation-page .big-o-rule-example code {
+  color: var(--bo-accent-strong);
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   07, 08, 09 - Complexity Examples
+========================================================= */
+
+.tutorial-content.big-o-notation-page .big-o-constant-time,
+.tutorial-content.big-o-notation-page .big-o-linear-time,
+.tutorial-content.big-o-notation-page .big-o-quadratic-time {
+  min-width: 0;
+}
+
+.tutorial-content.big-o-notation-page .big-o-constant-time .code-example {
+  border-color: var(--bo-green-border);
+}
+
+.tutorial-content.big-o-notation-page .big-o-linear-time .code-example {
+  border-color: var(--bo-blue-border);
+}
+
+.tutorial-content.big-o-notation-page .big-o-quadratic-time .code-example {
+  border-color: var(--bo-red-border);
+}
+
+/* =========================================================
+   10 - Sequential and Nested Loops
+========================================================= */
+
+.tutorial-content.big-o-notation-page .big-o-loop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-loop-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-lg);
+  background: var(--bo-surface);
+}
+
+.tutorial-content.big-o-notation-page .big-o-loop-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-loop-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--bo-accent-soft);
+  color: var(--bo-accent-strong);
+  font-size: 1.5rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-loop-heading h3 {
+  margin: 0 0 6px;
+  color: var(--bo-text);
+  font-size: 1.05rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-loop-heading div > span {
+  color: var(--bo-accent-strong);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.tutorial-content.big-o-notation-page .big-o-loop-card .code-example {
+  margin: 20px 0;
+}
+
+.tutorial-content.big-o-notation-page .big-o-loop-card > p {
+  color: var(--bo-muted);
+  line-height: 1.8;
+}
+
+.tutorial-content.big-o-notation-page .big-o-loop-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 14px;
+  border: 1px solid var(--bo-accent-border);
+  border-radius: var(--bo-radius-sm);
+  background: var(--bo-accent-soft);
+}
+
+.tutorial-content.big-o-notation-page .big-o-loop-result strong {
+  color: var(--bo-text);
+  font-size: 0.9rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-loop-result code {
+  color: var(--bo-accent-strong);
+  font-weight: 800;
+}
+
+/* =========================================================
+   11 - Best, Average, and Worst Case
+========================================================= */
+
+.tutorial-content.big-o-notation-page .big-o-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-case-card {
+  padding: 23px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-lg);
+  background: var(--bo-surface);
+  text-align: center;
+}
+
+.tutorial-content.big-o-notation-page .big-o-case-icon {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  place-items: center;
+  margin: 0 auto 15px;
+  border-radius: 15px;
+  background: var(--bo-accent-soft);
+  color: var(--bo-accent-strong);
+  font-size: 1.5rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-case-card h3 {
+  margin: 0 0 14px;
+  color: var(--bo-text);
+  font-size: 1.05rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-case-formula {
+  margin-bottom: 14px;
+  color: var(--bo-accent-strong);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.55rem;
+  font-weight: 800;
+}
+
+.tutorial-content.big-o-notation-page .big-o-case-card > p {
+  margin: 0;
+  color: var(--bo-muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   12 - Time vs Space Complexity
+========================================================= */
+
+.tutorial-content.big-o-notation-page .big-o-time-space-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-resource-card {
+  padding: 25px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-lg);
+  background: var(--bo-surface);
+}
+
+.tutorial-content.big-o-notation-page .big-o-resource-icon {
+  display: grid;
+  width: 55px;
+  height: 55px;
+  place-items: center;
+  margin-bottom: 18px;
+  border: 1px solid var(--bo-accent-border);
+  border-radius: 15px;
+  background: var(--bo-accent-soft);
+  color: var(--bo-accent-strong);
+  font-size: 1.7rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-resource-card h3 {
+  margin: 0 0 12px;
+  color: var(--bo-text);
+}
+
+.tutorial-content.big-o-notation-page .big-o-resource-card > p {
+  margin: 0;
+  color: var(--bo-muted);
+  line-height: 1.8;
+}
+
+.tutorial-content.big-o-notation-page .big-o-resource-example {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 14px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-sm);
+  background: var(--bo-surface-raised);
+}
+
+.tutorial-content.big-o-notation-page .big-o-resource-example > span {
+  color: var(--bo-muted);
+  font-size: 0.85rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-resource-example code {
+  color: var(--bo-accent-strong);
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   13 - Common Mistakes
+========================================================= */
+
+.tutorial-content.big-o-notation-page .big-o-mistakes-list {
+  display: grid;
+  gap: 14px;
+}
+
+.tutorial-content.big-o-notation-page .big-o-mistake {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 19px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-md);
+  background: var(--bo-surface);
+}
+
+.tutorial-content.big-o-notation-page .big-o-mistake-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--bo-red-border);
+  border-radius: 12px;
+  background: var(--bo-red-soft);
+  color: var(--bo-red);
+  font-size: 1.3rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-mistake h3 {
+  margin: 0 0 8px;
+  color: var(--bo-text);
+  font-size: 1rem;
+}
+
+.tutorial-content.big-o-notation-page .big-o-mistake p {
+  margin: 0;
+  color: var(--bo-muted);
+  line-height: 1.8;
+}
+
+/* =========================================================
+   14 - Key Takeaways
+========================================================= */
+
+.tutorial-content.big-o-notation-page .takeaways-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tutorial-content.big-o-notation-page .takeaways-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 16px 18px;
+  border: 1px solid var(--bo-border);
+  border-radius: var(--bo-radius-md);
+  background: var(--bo-surface);
+}
+
+.tutorial-content.big-o-notation-page .takeaways-list li > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--bo-green);
+  font-size: 1.2rem;
+}
+
+.tutorial-content.big-o-notation-page .takeaways-list li > span {
+  color: var(--bo-muted);
+  line-height: 1.8;
+}
+
+/* =========================================================
+   Responsive - Tablets
+========================================================= */
+
+@media (max-width: 1024px) {
+  .tutorial-content.big-o-notation-page .big-o-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-hero-visual {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-classes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-loop-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .tutorial-content.big-o-notation-page .big-o-hero {
+    gap: 25px;
+    padding: 23px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-objectives {
+    padding: 20px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-objectives-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-definition-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-input-explanation {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-input-card {
+    display: grid;
+    grid-template-columns: 55px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 15px;
+    text-align: left;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-input-icon {
+    grid-row: span 3;
+    margin: 0;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-input-card h3,
+  .tutorial-content.big-o-notation-page .big-o-input-card p {
+    margin-bottom: 5px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-cases-grid,
+  .tutorial-content.big-o-notation-page .big-o-time-space-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-growth-example {
+    padding: 18px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-rule {
+    gap: 13px;
+    padding: 18px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-practice .exercise-preview {
+    padding: 19px;
+  }
+
+  .tutorial-content.big-o-notation-page .exercise-preview-header {
+    gap: 12px;
+  }
+}
+
+/* =========================================================
+   Responsive - Small Mobile
+========================================================= */
+
+@media (max-width: 420px) {
+  .tutorial-content.big-o-notation-page .big-o-hero {
+    padding: 17px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-hero-visual {
+    gap: 7px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-visual-card {
+    min-height: 140px;
+    padding: 13px 7px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-visual-label,
+  .tutorial-content.big-o-notation-page .big-o-visual-caption {
+    font-size: 0.72rem;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-visual-symbol {
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-objectives {
+    padding: 15px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-objective {
+    gap: 11px;
+    padding: 14px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-class-card,
+  .tutorial-content.big-o-notation-page .big-o-case-card,
+  .tutorial-content.big-o-notation-page .big-o-resource-card,
+  .tutorial-content.big-o-notation-page .big-o-loop-card {
+    padding: 17px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-rule {
+    flex-direction: column;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-rule-example {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-mistake {
+    gap: 11px;
+    padding: 15px;
+  }
+
+  .tutorial-content.big-o-notation-page .big-o-mistake-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tutorial-content.big-o-notation-page .tutorial-bottom-actions {
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .tutorial-content.big-o-notation-page
+    .tutorial-bottom-actions
+    .tutorial-button {
+    flex: 1;
+    gap: 6px;
+    padding: 11px 9px;
+    font-size: 0.85rem;
+  }
+
+  .tutorial-content.big-o-notation-page .exercise-preview-header {
+    align-items: flex-start;
+  }
+
+  .tutorial-content.big-o-notation-page .exercise-number {
+    min-width: 38px;
+    min-height: 38px;
+  }
+
+  .tutorial-content.big-o-notation-page .exercise-option {
+    align-items: flex-start;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .tutorial-content.big-o-notation-page .exercise-action .content-button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* =========================================================
+   Reduced Motion
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .tutorial-content.big-o-notation-page *,
+  .tutorial-content.big-o-notation-page *::before,
+  .tutorial-content.big-o-notation-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

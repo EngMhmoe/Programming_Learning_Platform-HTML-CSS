@@ -1,0 +1,2305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <meta name="description"
+        content="Learn Space Complexity, understand memory usage in algorithms, and analyze auxiliary space with practical examples.">
+
+    <title>Space Complexity | DevPath</title>
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" href="../../photos/algorithm-course.jpg">
+
+    <!-- ==========================================================
+        Google Fonts
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================================
+        Boxicons
+    ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- ==========================================================
+        Shared Learning Page CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+    <!-- ==========================================================
+        Space Complexity Page CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learn Algorithms Content/style SpaceComplexityPage.css">
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html" class="current">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-git-branch"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>Algorithms Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    Algorithms Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    Algorithms Intro
+                </a>
+
+                <a href="WhatIsAlgorithmPage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is Algorithm?
+                </a>
+
+                <a href="ImportanceOfAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    Importance of Algorithms
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Algorithm Analysis -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-line-chart"></i>
+                    Algorithm Analysis
+                </h3>
+
+                <a href="AlgorithmCharacteristicsPage.html" class="sidebar-link">
+                    <i class="bx bx-list-check"></i>
+                    Algorithm Characteristics
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link active">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Searching Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-search"></i>
+                    Searching Algorithms
+                </h3>
+
+                <a href="SearchingAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Introduction to Searching
+                </a>
+
+                <a href="LinearSearchPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Linear Search
+                </a>
+
+                <a href="BinarySearchPage.html" class="sidebar-link">
+                    <i class="bx bx-git-compare"></i>
+                    Binary Search
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Sorting Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-sort"></i>
+                    Sorting Algorithms
+                </h3>
+
+                <a href="SortingAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-alt-2"></i>
+                    Introduction to Sorting
+                </a>
+
+                <a href="BubbleSortPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-down"></i>
+                    Bubble Sort
+                </a>
+
+                <a href="SelectionSortPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Selection Sort
+                </a>
+
+                <a href="InsertionSortPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-up"></i>
+                    Insertion Sort
+                </a>
+
+                <a href="MergeSortPage.html" class="sidebar-link">
+                    <i class="bx bx-git-merge"></i>
+                    Merge Sort
+                </a>
+
+                <a href="QuickSortPage.html" class="sidebar-link">
+                    <i class="bx bx-fast-forward"></i>
+                    Quick Sort
+                </a>
+
+                <a href="HeapSortPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heap Sort
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Graph Traversal Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-network-chart"></i>
+                    Graph Traversal Algorithms
+                </h3>
+
+                <a href="BFSPage.html" class="sidebar-link">
+                    <i class="bx bx-git-merge"></i>
+                    Breadth-First Search (BFS)
+                </a>
+
+                <a href="DFSPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Depth-First Search (DFS)
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Algorithmic Techniques -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-alt"></i>
+                    Algorithmic Techniques
+                </h3>
+
+                <a href="RecursionPage.html" class="sidebar-link">
+                    <i class="bx bx-repeat"></i>
+                    Recursion
+                </a>
+
+                <a href="TwoPointersPage.html" class="sidebar-link">
+                    <i class="bx bx-move-horizontal"></i>
+                    Two Pointers
+                </a>
+
+                <a href="SlidingWindowPage.html" class="sidebar-link">
+                    <i class="bx bx-window"></i>
+                    Sliding Window
+                </a>
+
+                <a href="GreedyAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-target-lock"></i>
+                    Greedy Algorithms
+                </a>
+
+                <a href="DynamicProgrammingPage.html" class="sidebar-link">
+                    <i class="bx bx-brain"></i>
+                    Dynamic Programming
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <div class="tutorial-content space-complexity-page">
+
+            <!-- ==================================================
+                Tutorial Header => Shared
+            =================================================== -->
+            <section class="tutorial-header">
+
+                <div class="tutorial-header-content">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-git-branch"></i>
+
+                        Algorithms Programming
+
+                    </span>
+
+
+                    <h1>
+                        Space Complexity <span>Algorithms</span>
+                    </h1>
+
+                    <p>
+                        Learn how to measure the memory an algorithm needs,
+                        understand common space complexity classes, and analyze
+                        how memory usage changes as the input grows.
+                    </p>
+
+                    <div class="tutorial-actions">
+
+                        <a href="TimeComplexityPage.html" class="tutorial-button secondary">
+                            <i class="bx bx-left-arrow-alt"></i>
+                            Previous
+                        </a>
+
+                        <a href="BigONotationPage.html" class="tutorial-button primary">
+                            Next
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 Section 1: Introduction
+            =================================================== -->
+            <section class="tutorial-card space-complexity-overview">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-memory-card"></i>
+                        Lesson Overview
+                    </span>
+
+                    <h2>
+                        What Is Space Complexity?
+                    </h2>
+
+                    <p>
+                        Space Complexity helps us understand how much memory
+                        an algorithm needs to solve a problem and how its
+                        memory usage grows as the input size increases.
+                    </p>
+
+                </div>
+
+                <div class="space-complexity-hero">
+
+                    <div class="space-complexity-hero-content">
+
+                        <p>
+                            <strong>Space Complexity</strong> describes how much
+                            memory an algorithm needs while it runs, depending
+                            on the size of its input.
+                        </p>
+
+                        <p>
+                            An algorithm may need only a few variables, or it
+                            may need to create arrays, objects, matrices, or
+                            additional data structures. Space complexity helps
+                            us understand how these memory requirements grow.
+                        </p>
+
+                    </div>
+
+                    <div class="space-complexity-hero-visual" aria-hidden="true">
+                        <div class="memory-visual">
+
+                            <div class="memory-visual-header">
+                                <i class="bx bx-memory-card"></i>
+                                <span>Memory Usage</span>
+                            </div>
+
+                            <div class="memory-blocks">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="memory-visual-footer">
+                                <span>Input Size</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span>Memory Required</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="space-complexity-concepts">
+
+                    <article class="space-complexity-concept">
+                        <div class="concept-icon">
+                            <i class="bx bx-chip"></i>
+                        </div>
+
+                        <h3>Memory Usage</h3>
+
+                        <p>
+                            Measures the memory required by an algorithm during
+                            execution.
+                        </p>
+                    </article>
+
+                    <article class="space-complexity-concept">
+                        <div class="concept-icon">
+                            <i class="bx bx-trending-up"></i>
+                        </div>
+
+                        <h3>Growing Input</h3>
+
+                        <p>
+                            Explains how memory requirements change when the
+                            input size increases.
+                        </p>
+                    </article>
+
+                    <article class="space-complexity-concept">
+                        <div class="concept-icon">
+                            <i class="bx bx-leaf"></i>
+                        </div>
+
+                        <h3>Memory Efficiency</h3>
+
+                        <p>
+                            Helps compare algorithms that solve the same problem
+                            but use different amounts of memory.
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Important:</strong>
+
+                        <p>
+                            Space complexity is about how memory usage grows
+                            with the input size, not simply the total number of
+                            bytes used on one particular computer.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 Section 2: Total Space vs Auxiliary Space
+            =================================================== -->
+            <section class="tutorial-card space-complexity-space-types">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Core Concepts
+                    </span>
+
+                    <h2>
+                        Total Space vs. Auxiliary Space
+                    </h2>
+
+                    <p>
+                        When analyzing an algorithm's memory usage, it is useful to
+                        distinguish between the total memory required and the extra
+                        memory created by the algorithm itself.
+                    </p>
+
+                </div>
+
+                <div class="space-types-grid">
+
+                    <article class="space-type-card total-space-card">
+
+                        <div class="space-type-icon">
+                            <i class="bx bx-layer"></i>
+                        </div>
+
+                        <h3>Total Space Complexity</h3>
+
+                        <p>
+                            Includes the memory needed for the input and the
+                            additional memory used during execution.
+                        </p>
+
+                        <div class="space-type-formula">
+                            Total Space = Input Space + Auxiliary Space
+                        </div>
+
+                        <div class="space-type-example">
+                            <strong>Example:</strong>
+
+                            <p>
+                                An algorithm receives an array of 100 numbers
+                                and creates another array to store its results.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <article class="space-type-card auxiliary-space-card">
+
+                        <div class="space-type-icon">
+                            <i class="bx bx-code-alt"></i>
+                        </div>
+
+                        <h3>Auxiliary Space</h3>
+
+                        <p>
+                            Refers to the extra memory used by an algorithm,
+                            excluding the input storage itself.
+                        </p>
+
+                        <div class="space-type-formula">
+                            Auxiliary Space = Extra Memory
+                        </div>
+
+                        <div class="space-type-example">
+                            <strong>Example:</strong>
+
+                            <p>
+                                An algorithm uses a few variables to calculate
+                                the sum of an existing array without creating
+                                another array.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="example-note">
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+                        <strong>Remember:</strong>
+
+                        <p>
+                            Some explanations use "space complexity" to refer
+                            to auxiliary space. Always check whether the input
+                            memory is included in the analysis.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 Section 3: Common Space Complexity Classes
+            =================================================== -->
+            <section class="tutorial-card space-complexity-classes">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bar-chart-alt-2"></i>
+                        Complexity Classes
+                    </span>
+
+                    <h2>
+                        Common Space Complexity Classes
+                    </h2>
+
+                    <p>
+                        Space complexity is commonly expressed using Big O
+                        notation. The notation describes how memory requirements
+                        grow as the input size \(n\) increases.
+                    </p>
+
+                </div>
+
+                <div class="space-class-list">
+
+                    <article class="space-class-item">
+
+                        <div class="space-class-heading">
+                            <span class="complexity-badge constant">O(1)</span>
+
+                            <div>
+                                <h3>Constant Space</h3>
+                                <p>Memory usage stays constant as input grows.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-class-visual constant-visual">
+                            <div class="space-unit"></div>
+                            <div class="space-unit"></div>
+                            <div class="space-unit"></div>
+                            <div class="space-unit"></div>
+                            <div class="space-unit"></div>
+                        </div>
+
+                        <p class="space-class-example">
+                            <strong>Example:</strong> Using a fixed number of
+                            variables to calculate a sum.
+                        </p>
+
+                    </article>
+
+                    <article class="space-class-item">
+
+                        <div class="space-class-heading">
+                            <span class="complexity-badge linear">O(n)</span>
+
+                            <div>
+                                <h3>Linear Space</h3>
+                                <p>Memory grows proportionally to input size.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-class-visual linear-visual">
+                            <div class="space-unit"></div>
+                            <div class="space-unit"></div>
+                            <div class="space-unit"></div>
+                            <div class="space-unit"></div>
+                            <div class="space-unit"></div>
+                        </div>
+
+                        <p class="space-class-example">
+                            <strong>Example:</strong> Creating an array that
+                            stores \(n\) numbers.
+                        </p>
+
+                    </article>
+
+                    <article class="space-class-item">
+
+                        <div class="space-class-heading">
+                            <span class="complexity-badge quadratic">O(n²)</span>
+
+                            <div>
+                                <h3>Quadratic Space</h3>
+                                <p>Memory grows proportionally to \(n \times n\).</p>
+                            </div>
+                        </div>
+
+                        <div class="space-class-visual quadratic-visual">
+                            <div class="space-grid">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <p class="space-class-example">
+                            <strong>Example:</strong> Creating an \(n \times n\)
+                            matrix.
+                        </p>
+
+                    </article>
+
+                </div>
+
+                <div class="section-subheading">
+                    <h3>Space Complexity Comparison</h3>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="complexity-table space-complexity-table">
+
+                        <thead>
+                            <tr>
+                                <th>Complexity</th>
+                                <th>Meaning</th>
+                                <th>For n = 5</th>
+                                <th>Typical Example</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><code>O(1)</code></td>
+                                <td>Constant memory</td>
+                                <td>Fixed number of variables</td>
+                                <td>Sum using a few variables</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>O(n)</code></td>
+                                <td>Linear memory</td>
+                                <td>5 stored elements</td>
+                                <td>One-dimensional array</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>O(n²)</code></td>
+                                <td>Quadratic memory</td>
+                                <td>25 stored elements</td>
+                                <td>5 × 5 matrix</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Keep in mind:</strong>
+
+                        <p>
+                            These examples describe the amount of stored data
+                            in common cases. Actual space complexity depends on
+                            the variables, data structures, and operations used
+                            by the algorithm.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 Section 4: Constant Space Example
+            =================================================== -->
+            <section class="tutorial-card space-complexity-constant-example">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        Practical Example 01
+                    </span>
+
+                    <h2>
+                        Understanding O(1) Space Complexity
+                    </h2>
+
+                    <p>
+                        Consider a function that calculates the sum of all numbers
+                        in an array. It uses a variable named <code>sum</code> to
+                        store the result.
+                    </p>
+
+                </div>
+
+                <div class="code-example">
+
+                    <div class="code-example-header">
+                        <div class="code-file-name">
+                            <i class="bx bx-file"></i>
+                            <span>sum.js</span>
+                        </div>
+
+                        <span class="code-language">JavaScript</span>
+                    </div>
+
+                    <pre><code>function calculateSum(numbers) {
+    let sum = 0;
+
+    for (let i = 0; i &lt; numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    return sum;
+}
+
+console.log(calculateSum([2, 4, 6, 8]));</code></pre>
+
+                </div>
+
+                <div class="example-steps">
+
+                    <article class="example-step">
+                        <span class="step-number">01</span>
+
+                        <div>
+                            <h3>Input Array</h3>
+
+                            <p>
+                                The function receives an existing array. The
+                                array contains the input values.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="example-step">
+                        <span class="step-number">02</span>
+
+                        <div>
+                            <h3>Fixed Variables</h3>
+
+                            <p>
+                                The function uses <code>sum</code> and
+                                <code>i</code>. It does not create a new array
+                                that grows with the input.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="example-step">
+                        <span class="step-number">03</span>
+
+                        <div>
+                            <h3>Constant Auxiliary Space</h3>
+
+                            <p>
+                                Even if the input contains thousands of
+                                numbers, the function still uses a fixed
+                                number of additional variables.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="result-panel">
+                    <div class="result-panel-icon">
+                        <i class="bx bx-check-circle"></i>
+                    </div>
+
+                    <div class="result-panel-content">
+                        <h3>Space Complexity: O(1)</h3>
+
+                        <p>
+                            The auxiliary memory remains constant as the input
+                            size grows. The loop affects the running time, but
+                            the loop itself does not require a growing amount
+                            of additional memory.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 Section 5: Linear Space Example
+            =================================================== -->
+            <section class="tutorial-card space-complexity-linear-example">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        Practical Example 02
+                    </span>
+
+                    <h2>
+                        Understanding O(n) Space Complexity
+                    </h2>
+
+                    <p>
+                        Now consider a function that creates a new array and stores
+                        the numbers from 1 to \(n\). The new array grows whenever
+                        the input size increases.
+                    </p>
+
+                </div>
+
+                <div class="code-example">
+
+                    <div class="code-example-header">
+                        <div class="code-file-name">
+                            <i class="bx bx-file"></i>
+                            <span>createNumbers.js</span>
+                        </div>
+
+                        <span class="code-language">JavaScript</span>
+                    </div>
+
+                    <pre><code>function createNumbers(n) {
+    const numbers = [];
+
+    for (let i = 1; i &lt;= n; i++) {
+        numbers.push(i);
+    }
+
+    return numbers;
+}
+
+console.log(createNumbers(5));</code></pre>
+
+                </div>
+
+                <div class="example-steps">
+
+                    <article class="example-step">
+                        <span class="step-number">01</span>
+
+                        <div>
+                            <h3>Create an Empty Array</h3>
+
+                            <p>
+                                The function starts with an empty array named
+                                <code>numbers</code>.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="example-step">
+                        <span class="step-number">02</span>
+
+                        <div>
+                            <h3>Store Each Number</h3>
+
+                            <p>
+                                Every loop iteration adds another element to
+                                the array.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="example-step">
+                        <span class="step-number">03</span>
+
+                        <div>
+                            <h3>Memory Grows with n</h3>
+
+                            <p>
+                                If \(n = 5\), the array stores five elements.
+                                If \(n = 100\), it stores one hundred elements.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="space-growth-demo">
+
+                    <div class="section-subheading">
+                        <h3>Visualizing Array Growth</h3>
+                    </div>
+
+                    <div class="array-growth-row">
+                        <span class="array-growth-label">n = 3</span>
+
+                        <div class="array-growth-cells">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
+
+                        <span class="array-growth-count">3 elements</span>
+                    </div>
+
+                    <div class="array-growth-row">
+                        <span class="array-growth-label">n = 5</span>
+
+                        <div class="array-growth-cells">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+
+                        <span class="array-growth-count">5 elements</span>
+                    </div>
+
+                    <div class="array-growth-row">
+                        <span class="array-growth-label">n = 8</span>
+
+                        <div class="array-growth-cells">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                        </div>
+
+                        <span class="array-growth-count">8 elements</span>
+                    </div>
+
+                </div>
+
+                <div class="result-panel">
+                    <div class="result-panel-icon">
+                        <i class="bx bx-trending-up"></i>
+                    </div>
+
+                    <div class="result-panel-content">
+                        <h3>Space Complexity: O(n)</h3>
+
+                        <p>
+                            The function creates an array containing \(n\)
+                            elements. When the input size doubles, the number
+                            of stored elements also doubles.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 Section 6: Quadratic Space Example
+            ================================================== -->
+
+            <section class="tutorial-card space-complexity-quadratic-example">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-grid-alt"></i>
+                        Practical Example 03
+                    </span>
+
+                    <h2>
+                        Understanding O(n²) Space Complexity
+                    </h2>
+
+                    <p>
+                        A two-dimensional matrix can require quadratic space when
+                        it contains \(n\) rows and \(n\) columns.
+                    </p>
+
+                </div>
+
+                <div class="code-example">
+
+                    <div class="code-example-header">
+                        <div class="code-file-name">
+                            <i class="bx bx-file"></i>
+                            <span>createMatrix.js</span>
+                        </div>
+
+                        <span class="code-language">JavaScript</span>
+                    </div>
+
+                    <pre><code>function createMatrix(n) {
+    const matrix = [];
+
+    for (let row = 0; row &lt; n; row++) {
+        const currentRow = [];
+
+        for (let column = 0; column &lt; n; column++) {
+            currentRow.push(0);
+        }
+
+        matrix.push(currentRow);
+    }
+
+    return matrix;
+}
+
+console.log(createMatrix(3));</code></pre>
+
+                </div>
+
+                <div class="matrix-demo">
+
+                    <div class="section-subheading">
+                        <h3>A 3 × 3 Matrix</h3>
+                    </div>
+
+                    <p>
+                        When \(n = 3\), the matrix contains 3 rows and 3 columns,
+                        giving us 9 elements.
+                    </p>
+
+                    <div class="matrix-grid" aria-label="Three by three matrix">
+                        <span>0</span>
+                        <span>0</span>
+                        <span>0</span>
+                        <span>0</span>
+                        <span>0</span>
+                        <span>0</span>
+                        <span>0</span>
+                        <span>0</span>
+                        <span>0</span>
+                    </div>
+
+                    <div class="matrix-formula">
+                        <span>Rows</span>
+                        <strong>3</strong>
+                        <span>×</span>
+                        <span>Columns</span>
+                        <strong>3</strong>
+                        <span>=</span>
+                        <strong>9 Elements</strong>
+                    </div>
+
+                </div>
+
+                <div class="example-steps">
+
+                    <article class="example-step">
+                        <span class="step-number">01</span>
+
+                        <div>
+                            <h3>Create the Matrix</h3>
+
+                            <p>
+                                The function creates an outer array that will
+                                hold all the rows.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="example-step">
+                        <span class="step-number">02</span>
+
+                        <div>
+                            <h3>Create Each Row</h3>
+
+                            <p>
+                                For every row, the function creates another
+                                array and fills it with \(n\) elements.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="example-step">
+                        <span class="step-number">03</span>
+
+                        <div>
+                            <h3>Calculate the Stored Elements</h3>
+
+                            <p>
+                                An \(n \times n\) matrix contains \(n^2\)
+                                elements. For example, a 10 × 10 matrix
+                                contains 100 elements.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="result-panel">
+                    <div class="result-panel-icon">
+                        <i class="bx bx-grid-alt"></i>
+                    </div>
+
+                    <div class="result-panel-content">
+                        <h3>Space Complexity: O(n²)</h3>
+
+                        <p>
+                            The matrix stores \(n^2\) elements. Doubling the
+                            input dimension makes the number of matrix elements
+                            four times larger.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 Section 7: Loops and Space Complexity
+            =================================================== -->
+            <section class="tutorial-card space-complexity-loops">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-error-circle"></i>
+                        Common Mistake
+                    </span>
+
+                    <h2>
+                        Does Every Loop Increase Space Complexity?
+                    </h2>
+
+                    <p>
+                        No. A loop does not automatically increase space
+                        complexity. What matters is whether the algorithm creates
+                        or stores additional data as it runs.
+                    </p>
+
+                </div>
+
+                <div class="loop-comparison-grid">
+
+                    <article class="loop-example-card">
+
+                        <div class="loop-example-heading">
+                            <span class="complexity-badge constant">O(1)</span>
+                            <h3>Loop with Constant Space</h3>
+                        </div>
+
+                        <div class="code-example">
+
+                            <div class="code-example-header">
+                                <div class="code-file-name">
+                                    <i class="bx bx-file"></i>
+                                    <span>printNumbers.js</span>
+                                </div>
+                            </div>
+
+                            <pre><code>function printNumbers(n) {
+    for (let i = 1; i &lt;= n; i++) {
+        console.log(i);
+    }
+}</code></pre>
+
+                        </div>
+
+                        <p>
+                            The function prints each number without storing
+                            all the numbers in a new data structure. Its
+                            auxiliary space is O(1).
+                        </p>
+
+                    </article>
+
+                    <article class="loop-example-card">
+
+                        <div class="loop-example-heading">
+                            <span class="complexity-badge linear">O(n)</span>
+                            <h3>Loop with Linear Space</h3>
+                        </div>
+
+                        <div class="code-example">
+
+                            <div class="code-example-header">
+                                <div class="code-file-name">
+                                    <i class="bx bx-file"></i>
+                                    <span>saveNumbers.js</span>
+                                </div>
+                            </div>
+
+                            <pre><code>function saveNumbers(n) {
+    const numbers = [];
+
+    for (let i = 1; i &lt;= n; i++) {
+        numbers.push(i);
+    }
+
+    return numbers;
+}</code></pre>
+
+                        </div>
+
+                        <p>
+                            This function stores every number in an array.
+                            The array grows with the input size, so its
+                            auxiliary space is O(n).
+                        </p>
+
+                    </article>
+
+                </div>
+
+                <div class="example-note">
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+                        <strong>The main idea:</strong>
+
+                        <p>
+                            Time complexity asks how the amount of work grows.
+                            Space complexity asks how the additional memory
+                            grows. A loop can increase time without increasing
+                            auxiliary space.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 Section 8: How to Analyze Space Complexity
+            =================================================== -->
+            <section class="tutorial-card space-complexity-analysis">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-search-alt"></i>
+                        Analysis Guide
+                    </span>
+
+                    <h2>
+                        How to Analyze Space Complexity
+                    </h2>
+
+                    <p>
+                        To estimate an algorithm's space complexity, inspect the
+                        variables, data structures, and function calls it uses.
+                    </p>
+
+                </div>
+
+                <div class="analysis-steps">
+
+                    <article class="analysis-step">
+                        <span class="analysis-step-number">01</span>
+
+                        <div>
+                            <h3>Identify the Input Size</h3>
+
+                            <p>
+                                Determine the input size and represent it
+                                using \(n\).
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="analysis-step">
+                        <span class="analysis-step-number">02</span>
+
+                        <div>
+                            <h3>Count Additional Variables</h3>
+
+                            <p>
+                                Check whether the algorithm uses a fixed
+                                number of variables or creates more variables
+                                as the input grows.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="analysis-step">
+                        <span class="analysis-step-number">03</span>
+
+                        <div>
+                            <h3>Inspect Data Structures</h3>
+
+                            <p>
+                                Look for arrays, objects, sets, maps, matrices,
+                                or other structures that store additional data.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="analysis-step">
+                        <span class="analysis-step-number">04</span>
+
+                        <div>
+                            <h3>Check Recursion</h3>
+
+                            <p>
+                                Recursive calls may create stack frames that
+                                remain in memory until those calls return.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="analysis-step">
+                        <span class="analysis-step-number">05</span>
+
+                        <div>
+                            <h3>Express the Growth</h3>
+
+                            <p>
+                                Use Big O notation to describe how the
+                                additional memory grows with the input size.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="section-subheading">
+                    <h3>Example: Recursion and the Call Stack</h3>
+                </div>
+
+                <p>
+                    Each active recursive call needs a stack frame. In this
+                    countdown example, the maximum number of active calls
+                    grows with \(n\).
+                </p>
+
+                <div class="code-example">
+
+                    <div class="code-example-header">
+                        <div class="code-file-name">
+                            <i class="bx bx-file"></i>
+                            <span>countDown.js</span>
+                        </div>
+
+                        <span class="code-language">JavaScript</span>
+                    </div>
+
+                    <pre><code>function countDown(n) {
+    if (n === 0) {
+        return;
+    }
+
+    countDown(n - 1);
+}
+
+countDown(3);</code></pre>
+
+                </div>
+
+                <div class="recursion-stack-demo">
+
+                    <div class="section-subheading">
+                        <h3>Call Stack for countDown(3)</h3>
+                    </div>
+
+                    <div class="recursion-stack">
+
+                        <div class="stack-frame">
+                            <span class="stack-frame-label">Call 1</span>
+                            <code>countDown(3)</code>
+                        </div>
+
+                        <div class="stack-frame">
+                            <span class="stack-frame-label">Call 2</span>
+                            <code>countDown(2)</code>
+                        </div>
+
+                        <div class="stack-frame">
+                            <span class="stack-frame-label">Call 3</span>
+                            <code>countDown(1)</code>
+                        </div>
+
+                        <div class="stack-frame">
+                            <span class="stack-frame-label">Call 4</span>
+                            <code>countDown(0)</code>
+                        </div>
+
+                    </div>
+
+                    <p class="stack-caption">
+                        Each call waits for the next call to finish before
+                        returning.
+                    </p>
+
+                </div>
+
+                <div class="result-panel">
+                    <div class="result-panel-icon">
+                        <i class="bx bx-git-branch"></i>
+                    </div>
+
+                    <div class="result-panel-content">
+                        <h3>Auxiliary Space: O(n)</h3>
+
+                        <p>
+                            The recursion depth grows with \(n\). Therefore,
+                            the call stack requires O(n) additional space,
+                            assuming each stack frame uses constant space.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Important:</strong>
+
+                        <p>
+                            Recursion does not always require O(n) space.
+                            The space complexity depends on the maximum
+                            recursion depth and the memory used by each call.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 Section 9: Space Complexity vs Time Complexity
+            =================================================== -->
+            <section class="tutorial-card space-complexity-vs-time">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Comparison
+                    </span>
+
+                    <h2>
+                        Space Complexity vs. Time Complexity
+                    </h2>
+
+                    <p>
+                        Time and space complexity measure different aspects of
+                        an algorithm. An algorithm can be fast but require more
+                        memory, or use less memory while performing more work.
+                    </p>
+
+                </div>
+
+
+                <div class="table-responsive">
+                    <table class="complexity-table">
+
+                        <thead>
+                            <tr>
+                                <th>Aspect</th>
+                                <th>Time Complexity</th>
+                                <th>Space Complexity</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Measures</td>
+                                <td>How the amount of work grows</td>
+                                <td>How memory usage grows</td>
+                            </tr>
+
+                            <tr>
+                                <td>Main concern</td>
+                                <td>Execution efficiency</td>
+                                <td>Memory efficiency</td>
+                            </tr>
+
+                            <tr>
+                                <td>Common examples</td>
+                                <td>O(1), O(n), O(n²)</td>
+                                <td>O(1), O(n), O(n²)</td>
+                            </tr>
+
+                            <tr>
+                                <td>What to inspect</td>
+                                <td>Operations and loops</td>
+                                <td>Variables, data structures, and recursion</td>
+                            </tr>
+
+                            <tr>
+                                <td>Key question</td>
+                                <td>How much work is performed?</td>
+                                <td>How much additional memory is needed?</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="example-note">
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+                        <strong>Remember:</strong>
+
+                        <p>
+                            A nested loop often increases running time, but it
+                            does not necessarily create quadratic space. Always
+                            analyze memory usage separately from execution time.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 Section 10: Key Takeaways
+            =================================================== -->
+            <section class="tutorial-card space-complexity-key-takeaways">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-circle"></i>
+                        Summary
+                    </span>
+
+                    <h2>
+                        Key Takeaways
+                    </h2>
+
+                    <p>
+                        Review the key principles of Space Complexity and learn
+                        how to identify memory usage patterns, recognize common
+                        complexity classes, and analyze the extra space an
+                        algorithm requires.
+                    </p>
+
+                </div>
+
+
+                <div class="takeaways-list">
+
+                    <div class="takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Space complexity describes how memory requirements
+                            grow with input size.
+                        </p>
+                    </div>
+
+                    <div class="takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Total space includes input storage and auxiliary
+                            space, while auxiliary space focuses on additional
+                            memory.
+                        </p>
+                    </div>
+
+                    <div class="takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            O(1) means constant additional memory, O(n) means
+                            linear additional memory, and O(n²) means quadratic
+                            additional memory.
+                        </p>
+                    </div>
+
+                    <div class="takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            A loop does not automatically increase space
+                            complexity. Check what the algorithm stores.
+                        </p>
+                    </div>
+
+                    <div class="takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Recursion can consume additional memory through
+                            the call stack.
+                        </p>
+                    </div>
+
+                    <div class="takeaway-item">
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Analyze time complexity and space complexity
+                            separately because they measure different things.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Exercises => Shared Structure
+            =================================================== -->
+            <section class="tutorial-card space-complexity-practice">
+
+
+                <div class="section-heading left">
+
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-task"></i>
+
+                        Practice
+
+                    </span>
+
+
+                    <h2>
+                        Space Complexity Exercises
+                    </h2>
+
+
+                    <p>
+                        Test your understanding of Space Complexity through
+                        practice questions covering auxiliary space,
+                        memory usage, and common complexity classes.
+                    </p>
+
+                </div>
+
+
+                <!-- ==================================================
+                    Exercise Example
+                =================================================== -->
+                <div class="exercise-preview" data-correct-answer="O(1)">
+
+
+                    <div class="exercise-preview-header">
+
+
+                        <div>
+
+
+                            <span class="section-label">
+                                Exercise Example
+                            </span>
+
+
+                            <h3>
+                                Identify Constant Space Complexity
+                            </h3>
+
+                        </div>
+
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <p class="exercise-question">
+
+                        What is the auxiliary space complexity of a function
+                        that uses only a fixed number of variables,
+                        regardless of the input size?
+
+                    </p>
+
+
+                    <!-- ==================================================
+                        Answer Example
+                    =================================================== -->
+                    <div class="exercise-code">
+
+
+                        <span>Answer:</span>
+
+
+                        <span class="exercise-answer-slot" id="exerciseAnswer">
+                            ?
+                        </span>
+
+                    </div>
+
+
+                    <!-- ==================================================
+                        Answer Options
+                    =================================================== -->
+                    <div class="exercise-options">
+
+
+                        <button type="button" class="exercise-option" data-answer="O(n)">
+                            O(n) — Linear Space
+                        </button>
+
+
+                        <button type="button" class="exercise-option" data-answer="O(1)">
+                            O(1) — Constant Space
+                        </button>
+
+
+                        <button type="button" class="exercise-option" data-answer="O(n²)">
+                            O(n²) — Quadratic Space
+                        </button>
+
+                    </div>
+
+
+                    <!-- ==================================================
+                        Answer Result
+                    =================================================== -->
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+
+                <!-- ==================================================
+                    All Exercises Button
+                =================================================== -->
+                <div class="exercise-action">
+
+
+                    <a href="ExercisesPage.html" class="content-button">
+
+                        See All Space Complexity Exercises
+
+                        <i class="bx bx-right-arrow-alt"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 Bottom Tutorial Navigation
+            =================================================== -->
+            <div class="tutorial-bottom-actions">
+
+                <a href="TimeComplexityPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="BigONotationPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+
+</body>
+
+</html>

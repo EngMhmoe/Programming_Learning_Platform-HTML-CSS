@@ -1,0 +1,851 @@
+/* ==========================================================
+   Shared Learning Content Styles
+========================================================== */
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Tutorial Header Content
+========================================================== */
+.tutorial-header-content {
+  max-width: 850px;
+}
+
+.tutorial-header .tutorial-header-content h1 {
+  margin-bottom: 18px;
+}
+
+.tutorial-header .tutorial-header-content h1 span {
+  color: var(--primary-light);
+}
+
+.tutorial-header .tutorial-header-content > p {
+  max-width: 720px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.tutorial-header .tutorial-actions {
+  margin-top: 26px;
+}
+
+/* ==========================================================
+   Algorithm Definition
+========================================================== */
+.algorithm-definition {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 26px;
+  margin-top: 28px;
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-lg);
+}
+
+.algorithm-definition-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.12);
+  border-radius: var(--radius-md);
+  font-size: 38px;
+}
+
+.algorithm-definition-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.algorithm-definition-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.algorithm-definition-content h3 {
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  font-size: clamp(20px, 2.5vw, 27px);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.algorithm-definition-content p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Algorithm Definition Points
+========================================================== */
+.algorithm-definition-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.algorithm-definition-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.algorithm-definition-point > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border-radius: 11px;
+  font-size: 22px;
+}
+
+.algorithm-definition-point h3 {
+  margin: 0 0 8px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.algorithm-definition-point p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Input, Process, Output
+========================================================== */
+.algorithm-ipo-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.algorithm-ipo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 24px 18px;
+  text-align: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.algorithm-ipo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 16px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 16px;
+  font-size: 30px;
+}
+
+.algorithm-ipo-number {
+  margin-bottom: 5px;
+  color: var(--primary-light);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.algorithm-ipo-card h3 {
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.algorithm-ipo-card > p {
+  flex: 1;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.algorithm-ipo-example {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+.algorithm-ipo-example span {
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.algorithm-ipo-example strong {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.algorithm-ipo-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  font-size: 26px;
+}
+
+/* ==========================================================
+   Algorithm Example Scenario
+========================================================== */
+.algorithm-example-scenario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 26px 0;
+  padding: 28px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.algorithm-example-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+  padding: 18px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.algorithm-example-number span {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.algorithm-example-number strong {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.algorithm-example-versus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.algorithm-example-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.algorithm-example-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.algorithm-example-step > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.algorithm-example-step h3 {
+  margin: 0 0 7px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.algorithm-example-step p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.algorithm-example-step code,
+.algorithm-code-explanation code {
+  padding: 2px 5px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border-radius: 4px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+}
+
+.algorithm-example-result {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  padding: 18px 20px;
+  color: var(--text-primary);
+  background: rgba(34, 197, 94, 0.07);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.algorithm-example-result > i {
+  flex-shrink: 0;
+  color: #22c55e;
+  font-size: 28px;
+}
+
+.algorithm-example-result div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.algorithm-example-result span {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.algorithm-example-result strong {
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   Writing an Algorithm
+========================================================== */
+.algorithm-writing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.algorithm-writing-card {
+  min-width: 0;
+  padding: 22px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.algorithm-writing-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.algorithm-writing-heading > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 12px;
+  font-size: 23px;
+}
+
+.algorithm-writing-heading h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.algorithm-writing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding-left: 24px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.algorithm-writing-list li {
+  padding-left: 5px;
+}
+
+.algorithm-writing-list li::marker {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Algorithm Code Blocks
+========================================================== */
+.algorithm-pseudocode,
+.algorithm-code-example {
+  min-width: 0;
+  overflow: hidden;
+  background: #101827;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: var(--radius-md);
+}
+
+.algorithm-code-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 0 14px;
+  background: #182235;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.algorithm-code-header > span {
+  width: 9px;
+  height: 9px;
+  background: #64748b;
+  border-radius: 50%;
+}
+
+.algorithm-code-header > span:nth-child(1) {
+  background: #fb7185;
+}
+
+.algorithm-code-header > span:nth-child(2) {
+  background: #fbbf24;
+}
+
+.algorithm-code-header > span:nth-child(3) {
+  background: #4ade80;
+}
+
+.algorithm-code-header small {
+  margin-left: auto;
+  color: #cbd5e1;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.algorithm-pseudocode pre,
+.algorithm-code-example pre {
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+  color: #e2e8f0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  line-height: 1.95;
+  tab-size: 4;
+}
+
+.algorithm-pseudocode code,
+.algorithm-code-example code {
+  font-family: inherit;
+}
+
+.algorithm-code-keyword {
+  color: #c4b5fd;
+}
+
+.algorithm-code-number {
+  color: #fbbf24;
+}
+
+.algorithm-code-string {
+  color: #86efac;
+}
+
+.algorithm-code-comment {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* ==========================================================
+   Code Explanation
+========================================================== */
+.algorithm-code-explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.algorithm-code-explanation > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 14px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.algorithm-code-explanation > div > i {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.algorithm-code-explanation p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.algorithm-code-explanation strong {
+  color: var(--text-primary);
+}
+
+/* ==========================================================
+   Algorithm Quality
+========================================================== */
+.algorithm-quality-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.algorithm-quality-card {
+  padding: 22px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.algorithm-quality-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 15px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 13px;
+  font-size: 24px;
+}
+
+.algorithm-quality-card h3 {
+  margin: 0 0 9px;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.algorithm-quality-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Common Misconceptions
+========================================================== */
+.algorithm-misconceptions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.algorithm-misconception-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.algorithm-misconception-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+  border-radius: 12px;
+  font-size: 23px;
+}
+
+.algorithm-misconception-item h3 {
+  margin: 0 0 8px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.algorithm-misconception-item p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Key Takeaways
+========================================================== */
+.algorithm-takeaways-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.algorithm-takeaways-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.algorithm-takeaways-list li > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+/* ==========================================================
+   Example Note
+========================================================== */
+.example-note,
+.learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.12);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  line-height: 1.7;
+  -webkit-border-radius: var(--radius-md);
+  -moz-border-radius: var(--radius-md);
+  -ms-border-radius: var(--radius-md);
+  -o-border-radius: var(--radius-md);
+}
+
+.example-note i,
+.learning-note i {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 19px;
+}
+
+/* ==========================================================
+   Learning Note
+========================================================== */
+.learning-note {
+  margin-bottom: 25px;
+}
+
+/* ==========================================================
+   Responsive Design
+========================================================== */
+@media (max-width: 1000px) {
+  .algorithm-definition-points {
+    grid-template-columns: 1fr;
+  }
+
+  .algorithm-ipo-flow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .algorithm-ipo-arrow {
+    min-height: 24px;
+    transform: rotate(90deg);
+  }
+
+  .algorithm-ipo-card {
+    padding: 22px;
+  }
+
+  .algorithm-ipo-card > p {
+    flex: initial;
+    max-width: 420px;
+  }
+
+  .algorithm-ipo-example {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .algorithm-definition {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .algorithm-definition-icon {
+    width: 62px;
+    height: 62px;
+    font-size: 31px;
+  }
+
+  .algorithm-writing-grid,
+  .algorithm-quality-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .algorithm-writing-card {
+    padding: 18px;
+  }
+
+  .algorithm-example-scenario {
+    gap: 12px;
+    padding: 20px 12px;
+  }
+
+  .algorithm-example-number {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 8px;
+  }
+
+  .algorithm-example-number strong {
+    font-size: 30px;
+  }
+
+  .algorithm-example-versus {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+
+  .algorithm-pseudocode pre,
+  .algorithm-code-example pre {
+    padding: 16px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .algorithm-definition {
+    padding: 18px;
+  }
+
+  .algorithm-definition-content h3 {
+    font-size: 20px;
+  }
+
+  .algorithm-definition-point {
+    padding: 16px;
+  }
+
+  .algorithm-example-scenario {
+    gap: 8px;
+    padding: 16px 8px;
+  }
+
+  .algorithm-example-number span {
+    font-size: 10px;
+  }
+
+  .algorithm-example-number strong {
+    font-size: 26px;
+  }
+
+  .algorithm-example-step {
+    gap: 11px;
+    padding: 14px;
+  }
+
+  .algorithm-example-step > span {
+    width: 32px;
+    height: 32px;
+  }
+
+  .algorithm-misconception-item {
+    gap: 11px;
+    padding: 15px;
+  }
+
+  .algorithm-misconception-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .algorithm-takeaways-list li {
+    gap: 9px;
+    font-size: 13px;
+  }
+}

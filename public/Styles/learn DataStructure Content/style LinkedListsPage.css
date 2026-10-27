@@ -1,0 +1,1780 @@
+/* ==========================================================
+    Global Styles
+========================================================== */
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Linked Lists - General Layout
+========================================================== */
+
+.tutorial-content {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tutorial-content *,
+.tutorial-content *::before,
+.tutorial-content *::after {
+  box-sizing: border-box;
+}
+
+.tutorial-content .tutorial-card {
+  min-width: 0;
+  width: 100%;
+}
+
+.tutorial-content .tutorial-card > p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.tutorial-content .tutorial-card > p strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tutorial-content .section-heading {
+  min-width: 0;
+}
+
+.tutorial-content .section-heading > h2 {
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .section-heading > p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Linked List Introduction
+========================================================== */
+
+.linked-concept-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+
+  min-width: 0;
+  margin-top: 25px;
+  padding: 25px;
+
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.linked-concept-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border-radius: 18px;
+  font-size: 34px;
+}
+
+.linked-concept-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.linked-concept-content h3 {
+  margin: 0 0 12px;
+
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.linked-concept-content p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.linked-example-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  min-width: 0;
+  margin-top: 25px;
+  padding: 25px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.linked-node {
+  min-width: 0;
+  width: 116px;
+  flex-shrink: 0;
+}
+
+.linked-node-label {
+  display: block;
+  margin-bottom: 9px;
+
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.linked-node-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  min-width: 0;
+  min-height: 58px;
+  overflow: hidden;
+
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+}
+
+.linked-node-data,
+.linked-node-pointer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  padding: 10px 5px;
+
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.linked-node-data {
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.1);
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.linked-node-pointer {
+  color: var(--primary-light);
+  background: rgba(255, 255, 255, 0.025);
+  border-left: 1px solid var(--border);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.linked-arrow {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 27px;
+}
+
+.linked-null {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 62px;
+  min-height: 40px;
+  padding: 8px 12px;
+
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Learning Note
+========================================================== */
+
+.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  min-width: 0;
+  margin-top: 22px;
+  padding: 18px 20px;
+
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid rgba(249, 115, 22, 0.17);
+  border-radius: var(--radius-md);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content .learning-note > i {
+  flex-shrink: 0;
+  margin-top: 2px;
+
+  color: var(--primary-light);
+  font-size: 22px;
+}
+
+.tutorial-content .learning-note > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-note strong {
+  display: block;
+  margin-bottom: 6px;
+
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.tutorial-content .learning-note p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.tutorial-content .learning-note code {
+  padding: 2px 5px;
+
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border-radius: 4px;
+
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.92em;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Linked List Benefits
+========================================================== */
+
+.linked-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.linked-feature {
+  min-width: 0;
+  padding: 23px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.linked-feature:hover {
+  background: rgba(249, 115, 22, 0.035);
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.linked-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+  margin-bottom: 17px;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.linked-feature h3 {
+  margin: 0 0 10px;
+
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.linked-feature p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Node Structure
+========================================================== */
+
+.linked-node-parts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.linked-node-part {
+  position: relative;
+  min-width: 0;
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.linked-node-part:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.linked-part-number {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+
+  color: var(--primary-light);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.linked-part-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+  margin-bottom: 17px;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.linked-node-part h3 {
+  margin: 0 0 10px;
+
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.linked-node-part p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.linked-node-part code {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Linked List Code Examples
+========================================================== */
+
+.linked-code-example {
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.linked-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  min-width: 0;
+  padding: 17px 20px;
+
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.055);
+  border-bottom: 1px solid var(--border);
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.linked-code-header > i {
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.linked-code-example pre {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.22);
+  border: 0;
+  border-radius: 0;
+
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.9;
+  tab-size: 4;
+}
+
+.linked-code-example pre code {
+  color: inherit;
+  font-family: inherit;
+  white-space: pre;
+  overflow-wrap: normal;
+}
+
+.linked-code-description {
+  margin: 18px 0 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.linked-code-description code {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Head and Tail
+========================================================== */
+
+.linked-terms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.linked-term {
+  min-width: 0;
+  padding: 23px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.linked-term:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.linked-term-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 17px;
+}
+
+.linked-term-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 47px;
+  height: 47px;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.linked-term-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+  padding: 6px 11px;
+
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.17);
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.linked-term h3 {
+  margin: 0 0 10px;
+
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.linked-term p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.linked-head-tail-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  min-width: 0;
+  margin-top: 25px;
+  padding: 30px 20px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.linked-mini-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  width: 76px;
+  min-width: 0;
+  min-height: 70px;
+  padding: 8px;
+
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.075);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.linked-mini-node small {
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.linked-tail-node {
+  border-color: var(--primary-dark);
+}
+
+.linked-pointer-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.linked-pointer-label i {
+  font-size: 22px;
+}
+
+.linked-head-label {
+  align-self: flex-start;
+}
+
+.linked-tail-label {
+  align-self: flex-end;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Types of Linked Lists
+========================================================== */
+
+.linked-type-list {
+  display: grid;
+  gap: 18px;
+
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.linked-type-item {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 18px;
+
+  min-width: 0;
+  padding: 22px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  transition: border-color 0.3s ease;
+}
+
+.linked-type-item:hover {
+  border-color: var(--primary);
+}
+
+.linked-type-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border-radius: 13px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.linked-type-content {
+  min-width: 0;
+}
+
+.linked-type-content h3 {
+  margin: 0 0 10px;
+
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.linked-type-content p {
+  margin: 0 0 18px;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.linked-type-content p code {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+.linked-type-diagram {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  min-width: 0;
+  padding: 15px;
+
+  background: rgba(249, 115, 22, 0.045);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.linked-type-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 46px;
+  min-height: 42px;
+  padding: 8px 10px;
+
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(249, 115, 22, 0.4);
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.linked-type-diagram > i {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 22px;
+}
+
+.linked-type-null {
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.linked-double-diagram {
+  gap: 8px;
+}
+
+.linked-circular-diagram {
+  border-style: dashed;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Linked List vs. Arrays
+========================================================== */
+
+.linked-table-wrapper,
+.linked-complexity-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.linked-comparison-table,
+.linked-complexity-table {
+  width: 100%;
+  min-width: 560px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  background: rgba(255, 255, 255, 0.015);
+  text-align: left;
+}
+
+.linked-comparison-table th,
+.linked-comparison-table td,
+.linked-complexity-table th,
+.linked-complexity-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+
+  font-size: 13px;
+  line-height: 1.8;
+  vertical-align: middle;
+}
+
+.linked-comparison-table th,
+.linked-complexity-table th {
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.09);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.linked-comparison-table td,
+.linked-complexity-table td {
+  color: var(--text-muted);
+}
+
+.linked-comparison-table tbody tr:last-child td,
+.linked-complexity-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.linked-comparison-table tbody tr,
+.linked-complexity-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.linked-comparison-table tbody tr:hover,
+.linked-complexity-table tbody tr:hover {
+  background: rgba(249, 115, 22, 0.035);
+}
+
+.linked-comparison-table td:first-child,
+.linked-complexity-table td:first-child {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.linked-comparison-table td code,
+.linked-complexity-table td code {
+  display: inline-block;
+  padding: 3px 6px;
+
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border-radius: 5px;
+
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.linked-comparison-good,
+.linked-comparison-warning {
+  display: inline-block;
+  margin-right: 5px;
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.linked-comparison-good {
+  color: #6ee7b7;
+}
+
+.linked-comparison-warning {
+  color: #fbbf24;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Basic Linked List Operations
+========================================================== */
+
+.linked-operations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.linked-operation {
+  min-width: 0;
+  padding: 21px 16px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  text-align: center;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.linked-operation:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.linked-operation > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 49px;
+  height: 49px;
+  margin: 0 auto 15px;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.linked-operation h3 {
+  margin: 0 0 9px;
+
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.linked-operation p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Time Complexity
+========================================================== */
+
+.linked-complexity-table-wrapper {
+  margin-top: 25px;
+}
+
+.linked-complexity-table {
+  min-width: 420px;
+}
+
+.linked-complexity-table td:last-child {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-weight: 900;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Advantages and Disadvantages
+========================================================== */
+
+.linked-pros-cons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.linked-pros,
+.linked-cons {
+  min-width: 0;
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.linked-pros {
+  border-top: 3px solid #10b981;
+}
+
+.linked-cons {
+  border-top: 3px solid #ef4444;
+}
+
+.linked-pros-cons-heading {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  margin-bottom: 18px;
+}
+
+.linked-pros-cons-heading > i {
+  flex-shrink: 0;
+  font-size: 24px;
+}
+
+.linked-pros .linked-pros-cons-heading > i {
+  color: #6ee7b7;
+}
+
+.linked-cons .linked-pros-cons-heading > i {
+  color: #fca5a5;
+}
+
+.linked-pros-cons-heading h3 {
+  margin: 0;
+
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.linked-pros-cons-grid ul {
+  display: grid;
+  gap: 12px;
+
+  margin: 0;
+  padding-left: 22px;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.linked-pros-cons-grid li {
+  padding-left: 3px;
+}
+
+.linked-pros-cons-grid li::marker {
+  color: var(--primary);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Key Takeaways
+========================================================== */
+
+.linked-takeaways-list {
+  display: grid;
+  gap: 12px;
+
+  min-width: 0;
+  margin: 25px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.linked-takeaway {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  min-width: 0;
+  padding: 16px 18px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.linked-takeaway > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.linked-takeaway p {
+  min-width: 0;
+  margin: 0;
+
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.linked-takeaway code {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Exercise Section
+========================================================== */
+
+.tutorial-content .exercise-preview {
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 25px;
+}
+
+.tutorial-content .exercise-preview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+
+  min-width: 0;
+}
+
+.tutorial-content .exercise-preview-header > div {
+  min-width: 0;
+}
+
+.tutorial-content .exercise-preview-header h3 {
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .section-label {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.tutorial-content .exercise-question {
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .exercise-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.tutorial-content .exercise-option {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .exercise-result {
+  min-height: 24px;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .exercise-action {
+  display: flex;
+  justify-content: flex-start;
+
+  min-width: 0;
+  margin-top: 22px;
+}
+
+.tutorial-content .exercise-action .content-button {
+  max-width: 100%;
+}
+
+.linked-exercise-card .exercise-option.correct {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.09);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.linked-exercise-card .exercise-option.incorrect {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.09);
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.linked-exercise-card .exercise-option.selected {
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.12);
+}
+
+.linked-exercise-card .exercise-result.correct {
+  color: #6ee7b7;
+}
+
+.linked-exercise-card .exercise-result.incorrect {
+  color: #fca5a5;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Progress Card
+========================================================== */
+
+.tutorial-content .learning-progress-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  min-width: 0;
+  width: 100%;
+  margin-top: 30px;
+  padding: 28px;
+
+  background: rgba(38, 22, 10, 0.72);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.tutorial-content .learning-progress-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border-radius: var(--radius-md);
+  font-size: 32px;
+}
+
+.tutorial-content .learning-progress-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-progress-content h3 {
+  margin: 0 0 9px;
+
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.tutorial-content .learning-progress-content p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Header and Bottom Navigation
+========================================================== */
+
+.tutorial-content .tutorial-header {
+  min-width: 0;
+}
+
+.tutorial-content .tutorial-header .tutorial-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  min-width: 0;
+  margin-top: 22px;
+}
+
+.tutorial-content .tutorial-header .tutorial-button,
+.tutorial-content .tutorial-bottom-actions .tutorial-button {
+  max-width: 100%;
+}
+
+.tutorial-content .tutorial-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  min-width: 0;
+  margin-top: 30px;
+}
+
+.tutorial-content .tutorial-bottom-actions .content-button {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design - 1000px
+========================================================== */
+
+@media (max-width: 1000px) {
+  .linked-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .linked-feature:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .linked-operations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .linked-example-visual {
+    gap: 10px;
+  }
+
+  .linked-node {
+    width: 105px;
+  }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design - 800px
+========================================================== */
+
+@media (max-width: 800px) {
+  .tutorial-content .learning-progress-card {
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 24px;
+  }
+
+  .tutorial-content .learning-progress-content {
+    flex-basis: calc(100% - 90px);
+  }
+
+  .linked-concept-box {
+    gap: 17px;
+    padding: 21px;
+  }
+
+  .linked-feature {
+    padding: 20px;
+  }
+
+  .linked-node-part,
+  .linked-term {
+    padding: 20px;
+  }
+
+  .linked-type-item {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .linked-code-example pre {
+    padding: 18px;
+  }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design - 600px
+========================================================== */
+
+@media (max-width: 600px) {
+  .linked-concept-box {
+    flex-direction: column;
+    gap: 15px;
+    padding: 18px;
+  }
+
+  .linked-concept-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 15px;
+    font-size: 29px;
+  }
+
+  .linked-concept-content h3 {
+    font-size: 19px;
+  }
+
+  .linked-concept-content p {
+    font-size: 13px;
+  }
+
+  .linked-example-visual {
+    gap: 8px;
+    padding: 18px 10px;
+  }
+
+  .linked-node {
+    width: 88px;
+  }
+
+  .linked-node-content {
+    min-height: 47px;
+  }
+
+  .linked-node-data {
+    font-size: 14px;
+  }
+
+  .linked-node-pointer {
+    font-size: 10px;
+  }
+
+  .linked-arrow {
+    font-size: 20px;
+  }
+
+  .linked-null {
+    min-width: 48px;
+    min-height: 34px;
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .linked-feature-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .linked-feature:last-child {
+    grid-column: auto;
+  }
+
+  .linked-feature {
+    padding: 19px;
+  }
+
+  .linked-node-parts,
+  .linked-terms-grid,
+  .linked-pros-cons-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .linked-head-tail-visual {
+    gap: 8px;
+    padding: 25px 10px;
+  }
+
+  .linked-mini-node {
+    width: 56px;
+    min-height: 58px;
+    font-size: 15px;
+  }
+
+  .linked-pointer-label {
+    font-size: 10px;
+  }
+
+  .linked-type-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 13px;
+    padding: 17px;
+  }
+
+  .linked-type-number {
+    width: 38px;
+    height: 38px;
+  }
+
+  .linked-type-diagram {
+    gap: 7px;
+    padding: 11px;
+  }
+
+  .linked-type-node {
+    min-width: 38px;
+    min-height: 36px;
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .linked-operations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .linked-operation {
+    padding: 17px 10px;
+  }
+
+  .linked-operation h3 {
+    font-size: 14px;
+  }
+
+  .linked-operation p {
+    font-size: 12px;
+  }
+
+  .linked-comparison-table th,
+  .linked-comparison-table td,
+  .linked-complexity-table th,
+  .linked-complexity-table td {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .linked-code-example pre {
+    padding: 15px 12px;
+    font-size: 12px;
+  }
+
+  .linked-code-header {
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .linked-pros,
+  .linked-cons {
+    padding: 19px;
+  }
+
+  .linked-takeaway {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .linked-takeaway p {
+    font-size: 13px;
+  }
+
+  .tutorial-content .learning-note {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .tutorial-content .exercise-options {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tutorial-content .learning-progress-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 20px;
+  }
+
+  .tutorial-content .learning-progress-icon {
+    width: 54px;
+    height: 54px;
+    font-size: 28px;
+  }
+
+  .tutorial-content .learning-progress-content h3 {
+    font-size: 19px;
+  }
+
+  .tutorial-content .tutorial-header .tutorial-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tutorial-content .tutorial-header .tutorial-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tutorial-content .tutorial-bottom-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tutorial-content .tutorial-bottom-actions .content-button {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design - 400px
+========================================================== */
+
+@media (max-width: 400px) {
+  .linked-concept-box {
+    padding: 16px;
+  }
+
+  .linked-example-visual {
+    gap: 6px;
+    padding: 15px 7px;
+  }
+
+  .linked-node {
+    width: 75px;
+  }
+
+  .linked-node-content {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .linked-node-data {
+    font-size: 12px;
+  }
+
+  .linked-node-pointer {
+    padding: 7px 2px;
+    font-size: 9px;
+  }
+
+  .linked-arrow {
+    font-size: 17px;
+  }
+
+  .linked-null {
+    min-width: 42px;
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .linked-head-tail-visual {
+    gap: 6px;
+  }
+
+  .linked-mini-node {
+    width: 48px;
+    min-height: 53px;
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  .linked-type-diagram {
+    gap: 5px;
+  }
+
+  .linked-type-node {
+    min-width: 32px;
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .linked-type-diagram > i {
+    font-size: 18px;
+  }
+
+  .linked-operations-grid {
+    gap: 8px;
+  }
+
+  .linked-operation {
+    padding: 14px 8px;
+  }
+
+  .linked-operation > i {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+
+  .linked-operation h3 {
+    font-size: 13px;
+  }
+
+  .linked-operation p {
+    font-size: 11px;
+  }
+
+  .linked-code-example pre {
+    padding: 13px 10px;
+    font-size: 11px;
+  }
+
+  .linked-pros,
+  .linked-cons {
+    padding: 16px;
+  }
+
+  .linked-pros-cons-grid ul {
+    padding-left: 18px;
+    font-size: 13px;
+  }
+
+  .tutorial-content .learning-progress-card {
+    padding: 17px;
+  }
+}

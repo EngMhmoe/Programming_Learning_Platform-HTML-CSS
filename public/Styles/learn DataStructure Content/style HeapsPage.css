@@ -1,0 +1,861 @@
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Heaps Page - Base
+========================================================== */
+
+.heaps-page {
+  min-width: 0;
+}
+
+.heaps-page .heap-content {
+  min-width: 0;
+  color: var(--text);
+}
+
+.heaps-page .heap-content h3 {
+  margin: 24px 0 12px;
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.heaps-page .heap-content p {
+  margin-top: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.heaps-page .heap-content strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.heaps-page .heap-content code {
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   Section Number
+========================================================== */
+
+.heaps-page .heap-section-number {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Heap Definition
+========================================================== */
+
+.heaps-page .heap-definition {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 20px;
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: var(--radius-lg);
+}
+
+.heaps-page .heap-definition-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.12);
+  border-radius: var(--radius-md);
+  font-size: 25px;
+}
+
+.heaps-page .heap-definition h4 {
+  margin: 0 0 7px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.heaps-page .heap-definition p {
+  margin: 0;
+}
+
+/* ==========================================================
+   Heap Properties
+========================================================== */
+
+.heaps-page .heap-property-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.heaps-page .heap-property-card {
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.heaps-page .heap-property-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: var(--radius-md);
+  font-size: 25px;
+}
+
+.heaps-page .heap-property-card h3 {
+  margin: 16px 0 10px;
+  font-size: 18px;
+}
+
+.heaps-page .heap-property-card p {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Heap Tree Visual
+========================================================== */
+
+.heaps-page .heap-visual-card {
+  min-width: 0;
+  margin-top: 26px;
+  padding: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.heaps-page .heap-visual-card > h3 {
+  margin: 0 0 10px;
+}
+
+.heaps-page .heap-visual-card > p {
+  margin-bottom: 18px;
+}
+
+.heaps-page .heap-tree {
+  width: 100%;
+  max-width: 620px;
+  margin: 24px auto;
+}
+
+.heaps-page .heap-tree-level {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+}
+
+.heaps-page .heap-node {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.heaps-page .heap-node.root-node {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-color: transparent;
+}
+
+.heaps-page .heap-tree-connectors {
+  height: 35px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 75px;
+}
+
+.heaps-page .heap-tree-connectors span {
+  width: 2px;
+  height: 30px;
+  flex: 0 0 2px;
+  display: block;
+  background: var(--border);
+  transform: rotate(35deg);
+  transform-origin: top center;
+}
+
+.heaps-page .heap-tree-connectors span + span {
+  transform: rotate(-35deg);
+}
+
+.heaps-page .heap-tree-connectors.heap-connectors-wide {
+  gap: 35px;
+}
+
+.heaps-page .heap-tree-connectors.heap-connectors-wide span {
+  height: 30px;
+}
+
+.heaps-page .heap-content p.heap-visual-caption {
+  margin: 18px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ==========================================================
+   Min-Heap and Max-Heap
+========================================================== */
+
+.heaps-page .heap-types-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.heaps-page .heap-type-card {
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.heaps-page .heap-type-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.heaps-page .heap-type-heading h3 {
+  min-width: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.heaps-page .heap-type-icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: var(--radius-md);
+  font-size: 25px;
+}
+
+.heaps-page .heap-type-card > p {
+  margin: 18px 0;
+}
+
+.heaps-page .heap-type-root {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 18px 0;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.heaps-page .heap-type-root span {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.heaps-page .heap-type-root strong {
+  font-size: 14px;
+}
+
+.heaps-page .heap-type-card .content-list {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.heaps-page .heap-type-card .content-list li {
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.heaps-page .heap-type-card .content-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Shared Content Note - Scoped to Heaps
+========================================================== */
+
+.heaps-page .content-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 22px;
+  padding: 16px 18px;
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-md);
+}
+
+.heaps-page .content-note > i {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.heaps-page .content-note p {
+  min-width: 0;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Array Representation
+========================================================== */
+
+.heaps-page .heap-array-example {
+  min-width: 0;
+  margin-top: 22px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.heaps-page .heap-array-example h3 {
+  margin: 0 0 10px;
+}
+
+.heaps-page .heap-array {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.heaps-page .heap-array-cell {
+  min-width: 0;
+  min-height: 78px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.heaps-page .heap-array-index {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.heaps-page .heap-array-cell strong {
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 17px;
+}
+
+.heaps-page .heap-formula-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.heaps-page .heap-formula-item {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 17px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.heaps-page .heap-formula-item span {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.heaps-page .heap-formula-item code {
+  max-width: 100%;
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   Heap Operations
+========================================================== */
+
+.heaps-page .heap-operation-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.heaps-page .heap-operation-item {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.heaps-page .heap-operation-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: var(--radius-md);
+  font-size: 24px;
+}
+
+.heaps-page .heap-operation-item h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.heaps-page .heap-operation-item p {
+  margin: 0;
+}
+
+.heaps-page .heap-operation-complexity {
+  padding: 7px 10px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: var(--radius-md);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   Key Takeaways
+========================================================== */
+
+.heaps-page .heap-takeaways-list {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.heaps-page .heap-takeaways-list li {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.heaps-page .heap-takeaways-list li i {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 19px;
+}
+
+/* ==========================================================
+   Learning Note
+========================================================== */
+
+.heaps-page.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.heaps-page .learning-note > i {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.heaps-page .learning-note > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.heaps-page .learning-note strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.heaps-page .learning-note p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Exercises - Keep Shared Structure
+========================================================== */
+
+.heaps-page .exercise-preview {
+  min-width: 0;
+  margin-top: 24px;
+  padding: 24px;
+}
+
+.heaps-page .exercise-preview:first-child {
+  margin-top: 0;
+}
+
+.heaps-page .exercise-preview-header {
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.heaps-page .exercise-preview .section-label {
+  min-width: 0;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.heaps-page .exercise-preview .exercise-number {
+  flex: 0 0 auto;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+.heaps-page .exercise-preview .exercise-question {
+  margin: 0 0 18px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.heaps-page .exercise-preview .exercise-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: stretch;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.heaps-page .exercise-preview .exercise-option {
+  min-width: 0;
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 12px;
+  text-align: left;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.heaps-page .exercise-preview .exercise-option > span {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.heaps-page .exercise-preview .exercise-option:hover > span {
+  color: var(--white);
+}
+
+.heaps-page .exercise-preview .exercise-result {
+  min-height: 24px;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.heaps-page .exercise-preview .exercise-action {
+  margin-top: 16px;
+}
+
+/* ==========================================================
+   Progress Card
+========================================================== */
+
+.heaps-page.tutorial-content .progress-card {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 30px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.heaps-page .progress-card-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.heaps-page .progress-card-content .section-badge {
+  gap: 7px;
+}
+
+.heaps-page .progress-card-content h2 {
+  margin: 16px 0 12px;
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.heaps-page .progress-card-content p {
+  margin: 0 0 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.heaps-page .progress-card-icon {
+  width: 100px;
+  height: 100px;
+  flex: 0 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 24px;
+  font-size: 48px;
+}
+
+/* ==========================================================
+   Bottom Navigation
+========================================================== */
+
+.heaps-page .tutorial-bottom-actions {
+  gap: 15px;
+}
+
+.heaps-page .tutorial-bottom-actions .tutorial-button {
+  min-width: 0;
+}
+
+/* ==========================================================
+   Responsive Design
+========================================================== */
+
+@media (max-width: 1100px) {
+  .heaps-page .heap-property-grid,
+  .heaps-page .heap-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heaps-page .heap-array {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .heaps-page .heap-operation-item {
+    grid-template-columns: 46px minmax(0, 1fr);
+  }
+
+  .heaps-page .heap-operation-complexity {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .heaps-page .exercise-preview .exercise-options {
+    grid-template-columns: 1fr;
+  }
+
+  .heaps-page.tutorial-content .progress-card {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .heaps-page .heap-definition {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .heaps-page .heap-definition-icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    font-size: 21px;
+  }
+
+  .heaps-page .heap-property-card,
+  .heaps-page .heap-type-card,
+  .heaps-page .heap-visual-card,
+  .heaps-page .heap-array-example {
+    padding: 16px;
+  }
+
+  .heaps-page .heap-tree-level {
+    gap: 6px;
+  }
+
+  .heaps-page .heap-node {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+    font-size: 12px;
+  }
+
+  .heaps-page .heap-tree-connectors {
+    gap: 42px;
+  }
+
+  .heaps-page .heap-tree-connectors.heap-connectors-wide {
+    gap: 20px;
+  }
+
+  .heaps-page .heap-array {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .heaps-page .heap-array-cell {
+    min-height: 68px;
+  }
+
+  .heaps-page .heap-formula-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .heaps-page .heap-operation-item {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .heaps-page .heap-operation-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .heaps-page .exercise-preview {
+    padding: 18px;
+  }
+
+  .heaps-page .exercise-preview-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .heaps-page .exercise-preview .exercise-option {
+    padding: 10px;
+  }
+
+  .heaps-page.tutorial-content .progress-card {
+    padding: 20px;
+  }
+
+  .heaps-page .progress-card-icon {
+    width: 72px;
+    height: 72px;
+    flex-basis: 72px;
+    border-radius: 18px;
+    font-size: 34px;
+  }
+
+  .heaps-page .progress-card-content h2 {
+    font-size: 21px;
+  }
+
+  .heaps-page .tutorial-bottom-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .heaps-page .tutorial-bottom-actions .tutorial-button {
+    width: 100%;
+  }
+}

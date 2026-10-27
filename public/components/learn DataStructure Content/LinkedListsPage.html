@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <title>Linked Lists | Data Structures Tutorial</title>
+
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style LinkedListsPage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link active">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <div class="tutorial-content">
+
+            <!-- ==================================================
+                Tutorial Header
+            ================================================== -->
+            <section class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+                <h1>Linked Lists</h1>
+
+                <p>
+                    Learn how Linked Lists store and connect data using nodes,
+                    how they work, and when to use them in real-world applications.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="BigONotationPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="SinglyLinkedListPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Introduction to Linked Lists
+            ================================================== -->
+            <section class="tutorial-card linked-intro-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-book-open"></i>
+                        Introduction
+                    </span>
+
+                    <h2>What Is a Linked List?</h2>
+
+                    <p>
+                        A Linked List is a linear data structure made up of
+                        individual elements called nodes. Each node stores data
+                        and a reference to another node in the list.
+                    </p>
+
+                </div>
+
+                <div class="linked-concept-box">
+
+                    <div class="linked-concept-icon">
+                        <i class="bx bx-link-alt"></i>
+                    </div>
+
+                    <div class="linked-concept-content">
+                        <h3>The Main Idea</h3>
+
+                        <p>
+                            Think of a Linked List like a chain. Each link
+                            represents a node, and each node points to the next
+                            one. Unlike an array, the nodes do not need to be
+                            stored next to each other in memory.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="linked-example-visual">
+
+                    <div class="linked-node">
+                        <span class="linked-node-label">Node 1</span>
+                        <div class="linked-node-content">
+                            <span class="linked-node-data">10</span>
+                            <span class="linked-node-pointer">Next</span>
+                        </div>
+                    </div>
+
+                    <i class="bx bx-right-arrow-alt linked-arrow"></i>
+
+                    <div class="linked-node">
+                        <span class="linked-node-label">Node 2</span>
+                        <div class="linked-node-content">
+                            <span class="linked-node-data">20</span>
+                            <span class="linked-node-pointer">Next</span>
+                        </div>
+                    </div>
+
+                    <i class="bx bx-right-arrow-alt linked-arrow"></i>
+
+                    <div class="linked-node">
+                        <span class="linked-node-label">Node 3</span>
+                        <div class="linked-node-content">
+                            <span class="linked-node-data">30</span>
+                            <span class="linked-node-pointer">Next</span>
+                        </div>
+                    </div>
+
+                    <i class="bx bx-right-arrow-alt linked-arrow"></i>
+
+                    <div class="linked-null">
+                        <span>NULL</span>
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+                        <strong>Remember</strong>
+
+                        <p>
+                            A Linked List consists of nodes. Each node stores
+                            data and a link to the next node. The last node
+                            points to <code>null</code>, which means there is
+                            no next node.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Why Use Linked Lists?
+            ================================================== -->
+            <section class="tutorial-card linked-why-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bulb"></i>
+                        Why It Matters
+                    </span>
+
+                    <h2>Why Do We Use Linked Lists?</h2>
+
+                    <p>
+                        Linked Lists are useful when we need a collection
+                        of elements that can grow or shrink dynamically.
+                    </p>
+
+                </div>
+
+                <div class="linked-feature-grid">
+
+                    <article class="linked-feature">
+                        <div class="linked-feature-icon">
+                            <i class="bx bx-expand-vertical"></i>
+                        </div>
+
+                        <h3>Dynamic Size</h3>
+
+                        <p>
+                            A Linked List can grow or shrink as elements
+                            are added or removed.
+                        </p>
+                    </article>
+
+                    <article class="linked-feature">
+                        <div class="linked-feature-icon">
+                            <i class="bx bx-transfer-alt"></i>
+                        </div>
+
+                        <h3>Flexible Insertion</h3>
+
+                        <p>
+                            Nodes can be inserted by updating links without
+                            shifting all the following elements.
+                        </p>
+                    </article>
+
+                    <article class="linked-feature">
+                        <div class="linked-feature-icon">
+                            <i class="bx bx-cut"></i>
+                        </div>
+
+                        <h3>Flexible Removal</h3>
+
+                        <p>
+                            Removing a node can be done by updating the
+                            links between neighboring nodes.
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Important</strong>
+
+                        <p>
+                            Linked Lists do not provide direct index access
+                            like arrays. To find an element, we usually start
+                            at the head and move through the nodes one by one.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Structure of a Node
+            ================================================== -->
+            <section class="tutorial-card linked-node-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-cube"></i>
+                        Fundamentals
+                    </span>
+
+                    <h2>Structure of a Node</h2>
+
+                    <p>
+                        A node is the basic building block of a Linked List.
+                        In a simple singly linked list, each node contains
+                        two main parts.
+                    </p>
+
+                </div>
+
+                <div class="linked-node-parts">
+
+                    <div class="linked-node-part">
+                        <span class="linked-part-number">01</span>
+
+                        <div class="linked-part-icon">
+                            <i class="bx bx-data"></i>
+                        </div>
+
+                        <h3>Data</h3>
+
+                        <p>
+                            Stores the value or information represented
+                            by the node.
+                        </p>
+                    </div>
+
+                    <div class="linked-node-part">
+                        <span class="linked-part-number">02</span>
+
+                        <div class="linked-part-icon">
+                            <i class="bx bx-link"></i>
+                        </div>
+
+                        <h3>Next Pointer</h3>
+
+                        <p>
+                            Stores a reference to the next node in the list.
+                            The last node points to <code>null</code>.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="linked-code-example">
+
+                    <div class="linked-code-header">
+                        <i class="bx bx-code-alt"></i>
+                        <span>JavaScript Example</span>
+                    </div>
+
+                    <pre><code>// Create a Node class
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+// Create a node
+const firstNode = new Node(10);
+
+console.log(firstNode.data); // 10
+console.log(firstNode.next); // null</code></pre>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-check-circle"></i>
+
+                    <div>
+                        <strong>What Happens Here?</strong>
+
+                        <p>
+                            We create a <code>Node</code> class with a
+                            <code>data</code> property and a <code>next</code>
+                            property. When we create a node with the value
+                            <code>10</code>, its <code>next</code> property
+                            starts as <code>null</code>.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Head and Tail
+            ================================================== -->
+            <section class="tutorial-card linked-head-tail-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-branch"></i>
+                        Key Concepts
+                    </span>
+
+                    <h2>Head and Tail</h2>
+
+                    <p>
+                        Two important terms help us understand where a
+                        Linked List starts and ends.
+                    </p>
+
+                </div>
+
+                <div class="linked-terms-grid">
+
+                    <article class="linked-term">
+                        <div class="linked-term-top">
+                            <span class="linked-term-icon">
+                                <i class="bx bx-play-circle"></i>
+                            </span>
+
+                            <span class="linked-term-label">Start</span>
+                        </div>
+
+                        <h3>Head</h3>
+
+                        <p>
+                            The Head is a reference to the first node
+                            in the Linked List.
+                        </p>
+                    </article>
+
+                    <article class="linked-term">
+                        <div class="linked-term-top">
+                            <span class="linked-term-icon">
+                                <i class="bx bx-stop-circle"></i>
+                            </span>
+
+                            <span class="linked-term-label">End</span>
+                        </div>
+
+                        <h3>Tail</h3>
+
+                        <p>
+                            The Tail refers to the last node. In a
+                            singly linked list, its <code>next</code>
+                            property is <code>null</code>.
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="linked-head-tail-visual">
+
+                    <div class="linked-pointer-label linked-head-label">
+                        <i class="bx bx-down-arrow-alt"></i>
+                        Head
+                    </div>
+
+                    <div class="linked-mini-node">
+                        <span>10</span>
+                        <small>Next</small>
+                    </div>
+
+                    <i class="bx bx-right-arrow-alt linked-arrow"></i>
+
+                    <div class="linked-mini-node">
+                        <span>20</span>
+                        <small>Next</small>
+                    </div>
+
+                    <i class="bx bx-right-arrow-alt linked-arrow"></i>
+
+                    <div class="linked-mini-node linked-tail-node">
+                        <span>30</span>
+                        <small>NULL</small>
+                    </div>
+
+                    <div class="linked-pointer-label linked-tail-label">
+                        <i class="bx bx-up-arrow-alt"></i>
+                        Tail
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Types of Linked Lists
+            ================================================== -->
+            <section class="tutorial-card linked-types-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-network-chart"></i>
+                        Types
+                    </span>
+
+                    <h2>Types of Linked Lists</h2>
+
+                    <p>
+                        Linked Lists come in different forms. The main
+                        difference is how their nodes are connected.
+                    </p>
+
+                </div>
+
+                <div class="linked-type-list">
+
+                    <article class="linked-type-item">
+
+                        <div class="linked-type-number">01</div>
+
+                        <div class="linked-type-content">
+
+                            <h3>Singly Linked List</h3>
+
+                            <p>
+                                Each node points to the next node.
+                                Traversal normally moves in one direction.
+                            </p>
+
+                            <div class="linked-type-diagram">
+                                <span class="linked-type-node">10</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="linked-type-node">20</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="linked-type-node">30</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="linked-type-null">NULL</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="linked-type-item">
+
+                        <div class="linked-type-number">02</div>
+
+                        <div class="linked-type-content">
+
+                            <h3>Doubly Linked List</h3>
+
+                            <p>
+                                Each node points to both the next node
+                                and the previous node, allowing traversal
+                                in both directions.
+                            </p>
+
+                            <div class="linked-type-diagram linked-double-diagram">
+                                <span class="linked-type-null">NULL</span>
+                                <i class="bx bx-transfer"></i>
+                                <span class="linked-type-node">10</span>
+                                <i class="bx bx-transfer"></i>
+                                <span class="linked-type-node">20</span>
+                                <i class="bx bx-transfer"></i>
+                                <span class="linked-type-node">30</span>
+                                <i class="bx bx-transfer"></i>
+                                <span class="linked-type-null">NULL</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="linked-type-item">
+
+                        <div class="linked-type-number">03</div>
+
+                        <div class="linked-type-content">
+
+                            <h3>Circular Linked List</h3>
+
+                            <p>
+                                The last node points back to the first node,
+                                forming a circle instead of ending with
+                                <code>null</code>.
+                            </p>
+
+                            <div class="linked-type-diagram linked-circular-diagram">
+                                <span class="linked-type-node">10</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="linked-type-node">20</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span class="linked-type-node">30</span>
+                                <i class="bx bx-rotate-left"></i>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-bookmark"></i>
+
+                    <div>
+                        <strong>Quick Comparison</strong>
+
+                        <p>
+                            Singly Linked Lists move forward, Doubly Linked
+                            Lists can move forward and backward, and Circular
+                            Linked Lists connect the last node back to the first.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Linked Lists vs Arrays
+            ================================================== -->
+            <section class="tutorial-card linked-comparison-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Comparison
+                    </span>
+
+                    <h2>Linked Lists vs. Arrays</h2>
+
+                    <p>
+                        Both structures store collections of data, but
+                        they organize and access that data differently.
+                    </p>
+
+                </div>
+
+                <div class="linked-table-wrapper">
+
+                    <table class="linked-comparison-table">
+
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Array</th>
+                                <th>Linked List</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Memory Layout</td>
+                                <td>Elements are stored contiguously in typical array implementations.</td>
+                                <td>Nodes can be stored in different memory locations.</td>
+                            </tr>
+
+                            <tr>
+                                <td>Access by Index</td>
+                                <td>
+                                    <span class="linked-comparison-good">Fast</span>
+                                    <code>O(1)</code>
+                                </td>
+                                <td>
+                                    <span class="linked-comparison-warning">Sequential</span>
+                                    <code>O(n)</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Insertion at the Beginning</td>
+                                <td>
+                                    May require shifting elements.
+                                </td>
+                                <td>
+                                    <code>O(1)</code> when the Head is available.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Extra Memory</td>
+                                <td>
+                                    Usually no pointer per element.
+                                </td>
+                                <td>
+                                    Nodes need references to other nodes.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Size</td>
+                                <td>
+                                    Depends on the array implementation.
+                                </td>
+                                <td>
+                                    Can grow or shrink dynamically.
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-error-circle"></i>
+
+                    <div>
+                        <strong>Keep in Mind</strong>
+
+                        <p>
+                            Inserting or deleting a node is not always
+                            <code>O(1)</code>. Finding the correct position
+                            may first require traversing the list, which
+                            takes <code>O(n)</code> time.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Basic Linked List Operations
+            ================================================== -->
+            <section class="tutorial-card linked-operations-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-cog"></i>
+                        Operations
+                    </span>
+
+                    <h2>Basic Linked List Operations</h2>
+
+                    <p>
+                        These are the common operations used to work with
+                        a Linked List.
+                    </p>
+
+                </div>
+
+                <div class="linked-operations-grid">
+
+                    <article class="linked-operation">
+                        <i class="bx bx-plus-circle"></i>
+                        <h3>Insertion</h3>
+                        <p>Add a new node to the list.</p>
+                    </article>
+
+                    <article class="linked-operation">
+                        <i class="bx bx-minus-circle"></i>
+                        <h3>Deletion</h3>
+                        <p>Remove a node from the list.</p>
+                    </article>
+
+                    <article class="linked-operation">
+                        <i class="bx bx-search-alt"></i>
+                        <h3>Searching</h3>
+                        <p>Find a node that contains a specific value.</p>
+                    </article>
+
+                    <article class="linked-operation">
+                        <i class="bx bx-list-ul"></i>
+                        <h3>Traversal</h3>
+                        <p>Visit nodes one by one from the Head.</p>
+                    </article>
+
+                </div>
+
+                <div class="linked-code-example">
+
+                    <div class="linked-code-header">
+                        <i class="bx bx-code-alt"></i>
+                        <span>Traversing a Linked List</span>
+                    </div>
+
+                    <pre><code>// Assume head points to the first node
+let current = head;
+
+while (current !== null) {
+    console.log(current.data);
+    current = current.next;
+}</code></pre>
+
+                </div>
+
+                <p class="linked-code-description">
+                    The loop starts at the Head, prints each node's data,
+                    and moves to the next node until it reaches
+                    <code>null</code>.
+                </p>
+
+            </section>
+
+            <!-- ==================================================
+                Time Complexity of Linked List Operations
+            ================================================== -->
+            <section class="tutorial-card linked-complexity-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-time-five"></i>
+                        Performance
+                    </span>
+
+                    <h2>Time Complexity</h2>
+
+                    <p>
+                        The performance of a Linked List operation depends
+                        on where the operation happens and whether we
+                        already have a reference to the required node.
+                    </p>
+
+                </div>
+
+                <div class="linked-complexity-table-wrapper">
+
+                    <table class="linked-complexity-table">
+
+                        <thead>
+                            <tr>
+                                <th>Operation</th>
+                                <th>Typical Time Complexity</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Access by Position</td>
+                                <td><code>O(n)</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>Search by Value</td>
+                                <td><code>O(n)</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>Insert at the Head</td>
+                                <td><code>O(1)</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>Delete the Head</td>
+                                <td><code>O(1)</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>Insert After a Known Node</td>
+                                <td><code>O(1)</code></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Complexity Depends on the Situation</strong>
+
+                        <p>
+                            These values describe common singly linked list
+                            operations. If you must search for a node first,
+                            that search can add <code>O(n)</code> time.
+                            Doubly linked lists and lists that maintain a
+                            Tail reference can have different costs for
+                            certain operations.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Advantages and Disadvantages
+            ================================================== -->
+            <section class="tutorial-card linked-pros-cons-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-scale"></i>
+                        Summary
+                    </span>
+
+                    <h2>Advantages and Disadvantages</h2>
+
+                    <p>
+                        Linked Lists are useful in some situations, but
+                        they are not always the best choice.
+                    </p>
+
+                </div>
+
+                <div class="linked-pros-cons-grid">
+
+                    <article class="linked-pros">
+                        <div class="linked-pros-cons-heading">
+                            <i class="bx bx-check-circle"></i>
+                            <h3>Advantages</h3>
+                        </div>
+
+                        <ul>
+                            <li>Can grow and shrink dynamically.</li>
+                            <li>Efficient insertion at the Head.</li>
+                            <li>No need for contiguous memory locations.</li>
+                            <li>Useful for implementing other data structures.</li>
+                        </ul>
+                    </article>
+
+                    <article class="linked-cons">
+                        <div class="linked-pros-cons-heading">
+                            <i class="bx bx-x-circle"></i>
+                            <h3>Disadvantages</h3>
+                        </div>
+
+                        <ul>
+                            <li>No direct access by index.</li>
+                            <li>Searching usually takes linear time.</li>
+                            <li>Extra memory is needed for references.</li>
+                            <li>Pointer management makes implementation more complex.</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Key Takeaways
+            ================================================== -->
+            <section class="tutorial-card linked-takeaways-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-double"></i>
+                        Review
+                    </span>
+
+                    <h2>Key Takeaways</h2>
+
+                    <p>
+                        Review the most important ideas from this lesson.
+                    </p>
+
+                </div>
+
+                <div class="linked-takeaways-list">
+
+                    <div class="linked-takeaway">
+                        <i class="bx bx-check"></i>
+                        <p>
+                            A Linked List is made up of connected nodes.
+                        </p>
+                    </div>
+
+                    <div class="linked-takeaway">
+                        <i class="bx bx-check"></i>
+                        <p>
+                            Each node stores data and one or more references.
+                        </p>
+                    </div>
+
+                    <div class="linked-takeaway">
+                        <i class="bx bx-check"></i>
+                        <p>
+                            The Head identifies the first node in the list.
+                        </p>
+                    </div>
+
+                    <div class="linked-takeaway">
+                        <i class="bx bx-check"></i>
+                        <p>
+                            In a singly linked list, the last node points to
+                            <code>null</code>.
+                        </p>
+                    </div>
+
+                    <div class="linked-takeaway">
+                        <i class="bx bx-check"></i>
+                        <p>
+                            Linked Lists support flexible insertion and
+                            deletion, but accessing a node by position
+                            usually takes <code>O(n)</code>.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Practice Exercise
+            ================================================== -->
+            <section class="tutorial-card linked-exercise-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>Test Your Knowledge</h2>
+
+                    <p>
+                        Check your understanding of Linked Lists with
+                        this quick question.
+                    </p>
+
+                </div>
+
+                <div class="exercise-preview" data-correct-answer="B">
+
+                    <div class="exercise-preview-header">
+                        <div>
+                            <span class="section-label">Exercise Example</span>
+                            <h3>Question 01</h3>
+                        </div>
+
+                        <span class="exercise-number">01</span>
+                    </div>
+
+                    <p class="exercise-question">
+                        What does the <code>next</code> property of the last
+                        node in a standard singly linked list usually contain?
+                    </p>
+
+                    <div class="exercise-code">
+                        <span>Answer:</span>
+                        <span class="exercise-answer-slot" id="exerciseAnswer">?</span>
+                    </div>
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="A">
+                            A. The first node
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="B">
+                            B. null
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="C">
+                            C. The previous node
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="D">
+                            D. The list length
+                        </button>
+
+                    </div>
+
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <div class="exercise-action">
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                Learning Progress
+            ================================================== -->
+            <section class="learning-progress-card">
+
+                <div class="learning-progress-icon">
+                    <i class="bx bx-trophy"></i>
+                </div>
+
+                <div class="learning-progress-content">
+                    <h3>Great Job!</h3>
+
+                    <p>
+                        You have completed the introduction to Linked Lists.
+                        Continue learning to explore more data structures.
+                    </p>
+
+
+                </div>
+
+                <a href="SinglyLinkedListPage.html" class="tutorial-button primary">
+                    Start the Next Lesson
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </section>
+
+            <!-- ==================================================
+                Tutorial Bottom Navigation
+            ================================================== -->
+            <!-- ==================================================
+                    Bottom Navigation
+                ================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="BigONotationPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+
+        </div>
+
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

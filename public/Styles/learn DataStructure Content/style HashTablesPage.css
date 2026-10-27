@@ -1,0 +1,1779 @@
+/* ==========================================================
+    Global Styles
+========================================================== */
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Hash Table Definition
+========================================================== */
+
+.hash-definition {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.hash-definition-icon {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 18px;
+  font-size: 34px;
+}
+
+.hash-definition-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.hash-definition-content h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.hash-definition-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.hash-definition-content strong {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+.hash-formula {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.hash-formula span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 13px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hash-formula > i {
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Hash Process
+========================================================== */
+
+.hash-process {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.hash-process-step {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hash-process-step:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.hash-process-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.hash-process-number {
+  margin-bottom: 8px;
+  color: var(--primary-light);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.hash-process-step h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.hash-process-step p {
+  flex: 1;
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.hash-process-step > code {
+  max-width: 100%;
+  padding: 7px 9px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: 7px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.hash-process-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  font-size: 25px;
+}
+
+.hash-process-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  background: rgba(249, 115, 22, 0.05);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: var(--radius-md);
+}
+
+.hash-process-note > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.hash-process-note p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Hash Table Visual Example
+========================================================== */
+
+.hash-table-example {
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.hash-table-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.hash-table-example-header > div {
+  min-width: 0;
+}
+
+.hash-example-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.hash-table-example-header h3,
+.hash-code-header h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.hash-table-example-header > i {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  font-size: 28px;
+}
+
+.hash-table-grid {
+  display: grid;
+  grid-template-columns: 0.55fr 1.5fr 0.8fr;
+  gap: 8px;
+}
+
+.hash-table-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 10px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.hash-table-index,
+.hash-table-key,
+.hash-table-value,
+.hash-table-empty {
+  min-width: 0;
+  min-height: 53px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.hash-table-index {
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.05);
+  font-weight: 900;
+}
+
+.hash-table-key {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.025);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.hash-table-key i {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+.hash-table-value {
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  font-weight: 900;
+}
+
+.hash-table-empty {
+  justify-content: center;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.015);
+  border-style: dashed;
+  font-size: 13px;
+}
+
+.hash-example-caption {
+  margin: 20px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Key-Value Pairs
+========================================================== */
+
+.hash-pair-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(249, 115, 22, 0.035);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.hash-pair-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.hash-pair-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 17px;
+  font-size: 31px;
+}
+
+.hash-pair-label {
+  margin-bottom: 8px;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hash-pair-card h3 {
+  max-width: 100%;
+  margin: 0 0 10px;
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 17px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.hash-pair-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.hash-pair-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  font-size: 30px;
+}
+
+.hash-concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.hash-concept-card {
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hash-concept-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.hash-concept-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.hash-concept-card h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.hash-concept-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Hash Function
+========================================================== */
+
+.hash-function-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.hash-function-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.hash-function-icon {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 16px;
+  font-size: 29px;
+}
+
+.hash-function-header > div:last-child {
+  min-width: 0;
+}
+
+.hash-function-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hash-function-header h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.hash-formula-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 25px 18px;
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-lg);
+}
+
+.formula-name,
+.formula-expression {
+  padding: 11px 14px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-md);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.formula-equals {
+  color: var(--text-muted);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.hash-function-description {
+  margin: 20px 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.hash-calculation {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.hash-calculation-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  align-items: center;
+  gap: 15px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.calculation-label {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hash-calculation-row code {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.hash-calculation-result {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background: rgba(34, 197, 94, 0.06);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.hash-calculation-result > i {
+  color: #22c55e;
+  font-size: 27px;
+}
+
+.hash-calculation-result > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hash-calculation-result span {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hash-calculation-result strong {
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Hash Table Operations
+========================================================== */
+
+.hash-operations-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.hash-operation-item {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.3s ease;
+}
+
+.hash-operation-item:hover {
+  border-color: var(--primary);
+}
+
+.hash-operation-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.hash-operation-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.hash-operation-content h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.hash-operation-content > code {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 9px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.hash-operation-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+    Hash Code Example
+========================================================== */
+
+.hash-code-example {
+  margin-top: 25px;
+  padding: 23px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.hash-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.hash-code-header > div {
+  min-width: 0;
+}
+
+.hash-code-header > i {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-size: 28px;
+}
+
+.tutorial-content pre.hash-code-block {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+  color: var(--text-secondary);
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  line-height: 1.9;
+  tab-size: 4;
+  white-space: pre;
+}
+
+.tutorial-content pre.hash-code-block code {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  white-space: inherit;
+}
+
+.hash-code-note {
+  margin: 18px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.hash-code-note code {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Hash Collision
+========================================================== */
+
+.hash-collision-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(249, 115, 22, 0.035);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.hash-collision-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.hash-collision-icon {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 16px;
+  font-size: 29px;
+}
+
+.hash-collision-header > div:last-child {
+  min-width: 0;
+}
+
+.hash-collision-header h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.hash-collision-flow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.hash-collision-key {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.hash-collision-key span {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hash-collision-key code {
+  padding: 6px 10px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: 7px;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
+}
+
+.hash-collision-arrow {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  font-size: 27px;
+}
+
+.hash-collision-function {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 17px;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.07);
+  border: 1px solid rgba(249, 115, 22, 0.17);
+  border-radius: var(--radius-md);
+}
+
+.hash-collision-function i {
+  color: var(--primary-light);
+  font-size: 24px;
+}
+
+.hash-collision-function span {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.hash-collision-result {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 20px;
+  background: rgba(239, 68, 68, 0.055);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.hash-collision-result > span:first-child {
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.hash-collision-result > strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 12px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 19px;
+}
+
+.collision-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.collision-warning i {
+  font-size: 17px;
+}
+
+.hash-collision-methods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.hash-collision-method {
+  min-width: 0;
+  padding: 23px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.hash-method-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.hash-collision-method h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.hash-collision-method > p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.hash-method-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 15px 10px;
+  background: rgba(249, 115, 22, 0.035);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.hash-method-index {
+  padding: 8px 10px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.hash-method-visual > i {
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.hash-chain-values,
+.hash-probe-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.hash-chain-values span,
+.hash-probe-values span {
+  min-width: 37px;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid var(--primary);
+  border-radius: 7px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.hash-probe-values .occupied {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+.hash-probe-values .available {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.07);
+  border-color: rgba(34, 197, 94, 0.45);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Hash Table Complexity
+========================================================== */
+
+.hash-complexity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.hash-complexity-card {
+  min-width: 0;
+  padding: 23px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hash-complexity-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.hash-complexity-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.hash-complexity-card h3 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.hash-complexity-value {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 7px 11px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: 20px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.hash-complexity-card > p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.hash-complexity-card.worst .hash-complexity-value {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.07);
+  border-color: rgba(239, 68, 68, 0.18);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Advantages and Limitations
+========================================================== */
+
+.hash-pros-cons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.hash-pros-card,
+.hash-cons-card {
+  min-width: 0;
+  padding: 23px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.hash-pros-header,
+.hash-cons-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.hash-pros-header > i,
+.hash-cons-header > i {
+  flex-shrink: 0;
+  font-size: 26px;
+}
+
+.hash-pros-header > i {
+  color: #22c55e;
+}
+
+.hash-cons-header > i {
+  color: #f87171;
+}
+
+.hash-pros-header h3,
+.hash-cons-header h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.hash-pros-card ul,
+.hash-cons-card ul {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hash-pros-card li,
+.hash-cons-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.hash-pros-card li > i,
+.hash-cons-card li > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  font-size: 18px;
+}
+
+.hash-pros-card li > i {
+  color: #22c55e;
+}
+
+.hash-cons-card li > i {
+  color: #f87171;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Hash Table Key Takeaways
+========================================================== */
+
+.hash-takeaways-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.hash-takeaway-item {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.hash-takeaway-item > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.hash-takeaway-item p {
+  min-width: 0;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.hash-takeaway-item strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Learning Note
+========================================================== */
+
+.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content .learning-note > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.tutorial-content .learning-note > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-note strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tutorial-content .learning-note p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+    Progress Card
+========================================================== */
+.tutorial-content .progress-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 30px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.progress-card-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.progress-card-content h2 {
+  margin: 16px 0 12px;
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.progress-card-content p {
+  margin-bottom: 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.progress-card-icon {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 24px;
+  font-size: 48px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design
+========================================================== */
+
+@media (max-width: 1000px) {
+  .hash-process {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .hash-process-step {
+    min-height: 0;
+  }
+
+  .hash-process-step p {
+    flex: initial;
+  }
+
+  .hash-process-arrow {
+    transform: rotate(90deg);
+  }
+
+  .hash-concepts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hash-concept-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .hash-concepts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hash-concept-card:last-child {
+    grid-column: auto;
+  }
+
+  .hash-collision-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .hash-complexity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hash-pros-cons {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hash-definition {
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .hash-definition-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    font-size: 29px;
+  }
+
+  .hash-pair-visual {
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .hash-pair-card {
+    padding: 18px 12px;
+  }
+
+  .hash-pair-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 27px;
+  }
+
+  .hash-table-example,
+  .hash-function-card,
+  .hash-collision-card {
+    padding: 20px;
+  }
+
+  .hash-table-grid {
+    gap: 6px;
+  }
+
+  .hash-table-index,
+  .hash-table-key,
+  .hash-table-value,
+  .hash-table-empty {
+    min-height: 48px;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .hash-calculation-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  }
+
+  .hash-operation-item {
+    gap: 13px;
+    padding: 18px;
+  }
+
+  .hash-code-example {
+    padding: 20px;
+  }
+
+  .hash-complexity-grid {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hash-definition {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .hash-definition-content h3 {
+    font-size: 19px;
+  }
+
+  .hash-definition-content p {
+    font-size: 14px;
+  }
+
+  .hash-formula {
+    gap: 8px;
+  }
+
+  .hash-formula span {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .hash-formula > i {
+    font-size: 17px;
+  }
+
+  .hash-process-step {
+    padding: 17px;
+  }
+
+  .hash-table-example,
+  .hash-function-card,
+  .hash-collision-card {
+    padding: 16px 12px;
+  }
+
+  .hash-table-example-header {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .hash-table-example-header h3,
+  .hash-code-header h3 {
+    font-size: 18px;
+  }
+
+  .hash-table-example-header > i,
+  .hash-code-header > i {
+    width: 43px;
+    height: 43px;
+    font-size: 23px;
+  }
+
+  .hash-table-grid {
+    grid-template-columns: 0.45fr 1.4fr 0.65fr;
+    gap: 5px;
+  }
+
+  .hash-table-heading {
+    padding: 10px 4px;
+    font-size: 11px;
+  }
+
+  .hash-table-index,
+  .hash-table-key,
+  .hash-table-value,
+  .hash-table-empty {
+    min-height: 44px;
+    gap: 4px;
+    padding: 8px 5px;
+    font-size: 11px;
+  }
+
+  .hash-table-key i {
+    font-size: 14px;
+  }
+
+  .hash-example-caption {
+    font-size: 12px;
+  }
+
+  .hash-pair-visual {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 16px 12px;
+  }
+
+  .hash-pair-card {
+    padding: 18px;
+  }
+
+  .hash-pair-connector {
+    transform: rotate(90deg);
+    font-size: 25px;
+  }
+
+  .hash-concept-card {
+    padding: 18px;
+  }
+
+  .hash-function-header {
+    gap: 12px;
+  }
+
+  .hash-function-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+  }
+
+  .hash-function-header h3 {
+    font-size: 17px;
+  }
+
+  .hash-formula-block {
+    gap: 8px;
+    padding: 18px 10px;
+  }
+
+  .formula-name,
+  .formula-expression {
+    padding: 9px;
+    font-size: 11px;
+  }
+
+  .formula-equals {
+    font-size: 18px;
+  }
+
+  .hash-calculation-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    padding: 13px;
+  }
+
+  .hash-calculation-row code {
+    font-size: 12px;
+  }
+
+  .hash-operation-item {
+    gap: 11px;
+    padding: 14px 12px;
+  }
+
+  .hash-operation-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+  }
+
+  .hash-operation-content h3 {
+    font-size: 16px;
+  }
+
+  .hash-operation-content p {
+    font-size: 13px;
+  }
+
+  .hash-code-example {
+    padding: 16px 12px;
+  }
+
+  .hash-code-header {
+    gap: 12px;
+  }
+
+  .tutorial-content pre.hash-code-block {
+    padding: 14px 11px;
+    font-size: 11px;
+    line-height: 1.9;
+  }
+
+  .hash-code-note {
+    font-size: 12px;
+  }
+
+  .hash-collision-header {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .hash-collision-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+  }
+
+  .hash-collision-header h3 {
+    font-size: 17px;
+  }
+
+  .hash-collision-flow {
+    gap: 8px;
+  }
+
+  .hash-collision-key {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 7px;
+  }
+
+  .hash-collision-key span {
+    font-size: 11px;
+  }
+
+  .hash-collision-key code {
+    font-size: 12px;
+  }
+
+  .hash-collision-function {
+    gap: 8px;
+    padding: 14px 9px;
+  }
+
+  .hash-collision-function span {
+    font-size: 11px;
+  }
+
+  .hash-collision-result {
+    gap: 9px;
+    padding: 14px 9px;
+  }
+
+  .hash-collision-result > span:first-child {
+    font-size: 11px;
+  }
+
+  .hash-collision-result > strong {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .collision-warning {
+    font-size: 11px;
+  }
+
+  .hash-collision-method {
+    padding: 18px;
+  }
+
+  .hash-method-visual {
+    gap: 7px;
+    padding: 12px 6px;
+  }
+
+  .hash-method-index {
+    padding: 7px;
+    font-size: 10px;
+  }
+
+  .hash-method-visual > i {
+    font-size: 17px;
+  }
+
+  .hash-chain-values span,
+  .hash-probe-values span {
+    min-width: 30px;
+    min-height: 30px;
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .hash-complexity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hash-complexity-card {
+    padding: 18px;
+  }
+
+  .hash-pros-card,
+  .hash-cons-card {
+    padding: 18px;
+  }
+
+  .hash-pros-header h3,
+  .hash-cons-header h3 {
+    font-size: 17px;
+  }
+
+  .hash-takeaway-item {
+    gap: 9px;
+    padding: 13px;
+  }
+
+  .hash-takeaway-item p {
+    font-size: 13px;
+  }
+
+  .tutorial-content .learning-note {
+    gap: 9px;
+    padding: 13px;
+  }
+}

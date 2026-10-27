@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <meta name="description"
+        content="Learn dictionaries in data structures, key-value pairs, dictionary operations, hash table implementations, and time complexity.">
+
+    <title>Dictionaries | DevPath</title>
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style DictionariesPage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link active">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <section class="tutorial-content">
+
+
+            <!-- ==================================================
+                Tutorial Header
+            ================================================== -->
+            <section class="tutorial-header">
+
+                <span class="section-badge">
+                    <i class="bx bx-data"></i>
+                    Data Structure Programming
+                </span>
+
+                <h1>
+                    Dictionaries
+                </h1>
+
+                <p>
+                    Learn how dictionaries organize information using
+                    key-value pairs, support efficient lookup and updates,
+                    and can be implemented using different data structures.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="HashTablesPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="HashingTechniquesPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                What Is a Dictionary?
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-book"></i>
+                        Definition
+                    </span>
+
+                    <h2>
+                        What Is a Dictionary?
+                    </h2>
+
+                    <p>
+                        A dictionary is an abstract data type that stores
+                        information as key-value pairs. Each key identifies
+                        an entry and is used to access its associated value.
+                    </p>
+
+                </div>
+
+                <div class="dictionary-definition">
+
+                    <div class="dictionary-definition-icon">
+                        <i class="bx bx-book-bookmark"></i>
+                    </div>
+
+                    <div class="dictionary-definition-content">
+
+                        <h3>
+                            Key-Value Pairs
+                        </h3>
+
+                        <p>
+                            A <strong>key</strong> identifies an entry,
+                            while a <strong>value</strong> contains the
+                            information associated with that key.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="dictionary-pair-visual">
+
+                    <div class="dictionary-pair-item">
+
+                        <span class="dictionary-pair-label">
+                            Key
+                        </span>
+
+                        <code>"username"</code>
+
+                    </div>
+
+                    <i class="bx bx-right-arrow-alt dictionary-pair-arrow"></i>
+
+                    <div class="dictionary-pair-item">
+
+                        <span class="dictionary-pair-label">
+                            Value
+                        </span>
+
+                        <code>"alex"</code>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    For example, a dictionary can store student IDs as keys
+                    and student names as values.
+                </p>
+
+                <div class="dictionary-example-table">
+
+                    <div class="dictionary-example-row dictionary-example-header">
+                        <span>Key</span>
+                        <span>Value</span>
+                    </div>
+
+                    <div class="dictionary-example-row">
+                        <code>101</code>
+                        <span>Mohamed</span>
+                    </div>
+
+                    <div class="dictionary-example-row">
+                        <code>102</code>
+                        <span>Sara</span>
+                    </div>
+
+                    <div class="dictionary-example-row">
+                        <code>103</code>
+                        <span>Omar</span>
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Remember</strong>
+
+                        <p>
+                            A dictionary accesses values through their keys.
+                            A key is an identifier, not necessarily a numeric
+                            position like an array index.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                How Does a Dictionary Work?
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-merge"></i>
+                        Main Concept
+                    </span>
+
+                    <h2>
+                        How Does a Dictionary Work?
+                    </h2>
+
+                    <p>
+                        A lookup starts with a key and returns the value
+                        associated with that key, if the entry exists.
+                    </p>
+
+                </div>
+
+                <div class="dictionary-workflow">
+
+                    <div class="dictionary-workflow-step">
+
+                        <span class="dictionary-workflow-number">
+                            01
+                        </span>
+
+                        <div class="dictionary-workflow-icon">
+                            <i class="bx bx-key"></i>
+                        </div>
+
+                        <h3>
+                            Provide a Key
+                        </h3>
+
+                        <p>
+                            Specify the identifier of the entry you want.
+                        </p>
+
+                        <code>"username"</code>
+
+                    </div>
+
+                    <div class="dictionary-workflow-arrow">
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </div>
+
+                    <div class="dictionary-workflow-step">
+
+                        <span class="dictionary-workflow-number">
+                            02
+                        </span>
+
+                        <div class="dictionary-workflow-icon">
+                            <i class="bx bx-search-alt"></i>
+                        </div>
+
+                        <h3>
+                            Find the Entry
+                        </h3>
+
+                        <p>
+                            The implementation searches for the matching key.
+                        </p>
+
+                        <code>get(key)</code>
+
+                    </div>
+
+                    <div class="dictionary-workflow-arrow">
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </div>
+
+                    <div class="dictionary-workflow-step">
+
+                        <span class="dictionary-workflow-number">
+                            03
+                        </span>
+
+                        <div class="dictionary-workflow-icon">
+                            <i class="bx bx-check-circle"></i>
+                        </div>
+
+                        <h3>
+                            Return the Value
+                        </h3>
+
+                        <p>
+                            The matching value is returned to the caller.
+                        </p>
+
+                        <code>"alex"</code>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+
+                        <strong>Important</strong>
+
+                        <p>
+                            The dictionary defines the operations available
+                            to the user. Its implementation determines how
+                            those operations locate and manage entries.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Common Dictionary Operations
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-cog"></i>
+                        Operations
+                    </span>
+
+                    <h2>
+                        Common Dictionary Operations
+                    </h2>
+
+                    <p>
+                        Dictionaries provide operations for adding,
+                        retrieving, updating, and removing key-value pairs.
+                    </p>
+
+                </div>
+
+                <div class="dictionary-operations-grid">
+
+                    <article class="dictionary-operation-card">
+
+                        <div class="dictionary-operation-icon">
+                            <i class="bx bx-plus-circle"></i>
+                        </div>
+
+                        <h3>
+                            Insert
+                        </h3>
+
+                        <p>
+                            Add a key and its associated value.
+                        </p>
+
+                        <code>insert(key, value)</code>
+
+                    </article>
+
+                    <article class="dictionary-operation-card">
+
+                        <div class="dictionary-operation-icon">
+                            <i class="bx bx-search-alt"></i>
+                        </div>
+
+                        <h3>
+                            Lookup
+                        </h3>
+
+                        <p>
+                            Retrieve a value using its key.
+                        </p>
+
+                        <code>get(key)</code>
+
+                    </article>
+
+                    <article class="dictionary-operation-card">
+
+                        <div class="dictionary-operation-icon">
+                            <i class="bx bx-edit-alt"></i>
+                        </div>
+
+                        <h3>
+                            Update
+                        </h3>
+
+                        <p>
+                            Change the value associated with an existing key.
+                        </p>
+
+                        <code>update(key, value)</code>
+
+                    </article>
+
+                    <article class="dictionary-operation-card">
+
+                        <div class="dictionary-operation-icon">
+                            <i class="bx bx-trash"></i>
+                        </div>
+
+                        <h3>
+                            Delete
+                        </h3>
+
+                        <p>
+                            Remove an entry identified by its key.
+                        </p>
+
+                        <code>remove(key)</code>
+
+                    </article>
+
+                    <article class="dictionary-operation-card">
+
+                        <div class="dictionary-operation-icon">
+                            <i class="bx bx-check-shield"></i>
+                        </div>
+
+                        <h3>
+                            Check Key
+                        </h3>
+
+                        <p>
+                            Determine whether a key exists in the dictionary.
+                        </p>
+
+                        <code>containsKey(key)</code>
+
+                    </article>
+
+                    <article class="dictionary-operation-card">
+
+                        <div class="dictionary-operation-icon">
+                            <i class="bx bx-list-ul"></i>
+                        </div>
+
+                        <h3>
+                            Get Entries
+                        </h3>
+
+                        <p>
+                            Access the dictionary's keys, values, or entries.
+                        </p>
+
+                        <code>entries()</code>
+
+                    </article>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Note</strong>
+
+                        <p>
+                            These operation names describe common dictionary
+                            behavior. The actual method names depend on the
+                            programming language and implementation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Dictionary Example in JavaScript
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        Code Example
+                    </span>
+
+                    <h2>
+                        Dictionary Example in JavaScript
+                    </h2>
+
+                    <p>
+                        JavaScript's built-in Map type provides a convenient
+                        way to store and retrieve key-value pairs.
+                    </p>
+
+                </div>
+
+                <div class="dictionary-code-example">
+
+                    <div class="dictionary-code-header">
+
+                        <div>
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </div>
+
+                        <span>Map</span>
+
+                    </div>
+
+                    <pre><code>const student = new Map();
+
+// Insert entries
+student.set("name", "Mohamed");
+student.set("age", 20);
+student.set("major", "Computer Science");
+
+// Look up a value
+console.log(student.get("name"));
+
+// Check whether a key exists
+console.log(student.has("age"));
+
+// Update a value
+student.set("age", 21);
+
+// Remove an entry
+student.delete("major");
+
+console.log(student.get("age"));
+console.log(student.size);</code></pre>
+
+                </div>
+
+                <div class="dictionary-output">
+
+                    <div class="dictionary-output-header">
+                        <i class="bx bx-terminal"></i>
+                        Expected Output
+                    </div>
+
+                    <pre><code>Mohamed
+true
+21
+2</code></pre>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+
+                        <strong>Why Use Map?</strong>
+
+                        <p>
+                            <code>Map</code> supports methods such as
+                            <code>set()</code>, <code>get()</code>,
+                            <code>has()</code>, and <code>delete()</code>.
+                            It also supports keys of different types and
+                            provides a <code>size</code> property.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Dictionary vs Hash Table
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Key Difference
+                    </span>
+
+                    <h2>
+                        Dictionary vs Hash Table
+                    </h2>
+
+                    <p>
+                        A dictionary describes the behavior of key-value
+                        storage, while a hash table is one possible way
+                        to implement that behavior.
+                    </p>
+
+                </div>
+
+                <div class="dictionary-comparison">
+
+                    <div class="dictionary-comparison-card">
+
+                        <div class="dictionary-comparison-icon">
+                            <i class="bx bx-book"></i>
+                        </div>
+
+                        <h3>
+                            Dictionary
+                        </h3>
+
+                        <span class="comparison-label">
+                            Abstract Data Type
+                        </span>
+
+                        <p>
+                            Defines the operations used to manage
+                            key-value pairs.
+                        </p>
+
+                        <ul>
+                            <li>Defines supported operations</li>
+                            <li>Focuses on expected behavior</li>
+                            <li>Can have different implementations</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="dictionary-comparison-card">
+
+                        <div class="dictionary-comparison-icon">
+                            <i class="bx bx-table"></i>
+                        </div>
+
+                        <h3>
+                            Hash Table
+                        </h3>
+
+                        <span class="comparison-label">
+                            Data Structure
+                        </span>
+
+                        <p>
+                            Uses a hash function to map keys to positions
+                            in a table.
+                        </p>
+
+                        <ul>
+                            <li>Uses a hash function</li>
+                            <li>Must handle collisions</li>
+                            <li>Usually provides fast average lookup</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Remember the Difference</strong>
+
+                        <p>
+                            A hash table can implement a dictionary.
+                            However, a dictionary can also be implemented
+                            using other data structures, such as a balanced
+                            search tree.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Dictionary Time Complexity
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-time"></i>
+                        Performance
+                    </span>
+
+                    <h2>
+                        Dictionary Time Complexity
+                    </h2>
+
+                    <p>
+                        The performance of dictionary operations depends
+                        on the data structure used to implement them.
+                    </p>
+
+                </div>
+
+                <div class="dictionary-complexity-table">
+
+                    <div class="dictionary-complexity-row dictionary-complexity-header">
+                        <span>Operation</span>
+                        <span>Average Case</span>
+                        <span>Worst Case</span>
+                    </div>
+
+                    <div class="dictionary-complexity-row">
+                        <span>Lookup</span>
+                        <code>O(1)</code>
+                        <code>O(n)</code>
+                    </div>
+
+                    <div class="dictionary-complexity-row">
+                        <span>Insertion</span>
+                        <code>O(1)</code>
+                        <code>O(n)</code>
+                    </div>
+
+                    <div class="dictionary-complexity-row">
+                        <span>Deletion</span>
+                        <code>O(1)</code>
+                        <code>O(n)</code>
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Complexity Note</strong>
+
+                        <p>
+                            These values describe a typical hash-table-based
+                            implementation. Actual performance depends on
+                            hashing, collisions, resizing, and implementation
+                            details. Other dictionary implementations have
+                            different complexity guarantees.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Benefits and Limitations
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-shield"></i>
+                        Evaluation
+                    </span>
+
+                    <h2>
+                        Benefits and Limitations
+                    </h2>
+
+                    <p>
+                        Dictionaries are useful whenever data needs to
+                        be accessed through meaningful identifiers.
+                    </p>
+
+                </div>
+
+                <div class="dictionary-benefits-grid">
+
+                    <div class="dictionary-benefits-card">
+
+                        <h3>
+                            <i class="bx bx-check-circle"></i>
+                            Benefits
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <i class="bx bx-check"></i>
+                                Fast average lookup in hash-based implementations.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-check"></i>
+                                Clear organization of key-value information.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-check"></i>
+                                Convenient insertion, updating, and deletion.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-check"></i>
+                                Useful for records, mappings, and configuration data.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="dictionary-benefits-card">
+
+                        <h3>
+                            <i class="bx bx-error-circle"></i>
+                            Limitations
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <i class="bx bx-minus-circle"></i>
+                                Keys must follow the implementation's equality rules.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-minus-circle"></i>
+                                Hash-based implementations must handle collisions.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-minus-circle"></i>
+                                Extra memory may be needed for efficient lookup.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-minus-circle"></i>
+                                Ordering behavior depends on the implementation.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Key Takeaways
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bookmark-check"></i>
+                        Summary
+                    </span>
+
+                    <h2>
+                        Key Takeaways
+                    </h2>
+
+                    <p>
+                        Review the most important ideas before moving
+                        to the next lesson.
+                    </p>
+
+                </div>
+
+                <div class="dictionary-takeaways-list">
+
+                    <div class="dictionary-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            A <strong>dictionary</strong> stores information
+                            as key-value pairs.
+                        </p>
+
+                    </div>
+
+                    <div class="dictionary-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            A <strong>key</strong> identifies an entry and
+                            provides access to its associated value.
+                        </p>
+
+                    </div>
+
+                    <div class="dictionary-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Common operations include lookup, insertion,
+                            updating, deletion, and checking for a key.
+                        </p>
+
+                    </div>
+
+                    <div class="dictionary-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            A <strong>hash table</strong> is one possible
+                            implementation of a dictionary, not the
+                            definition of a dictionary itself.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-brain"></i>
+
+                    <div>
+
+                        <strong>Quick Reminder</strong>
+
+                        <p>
+                            Dictionary = What key-value operations are available?
+                            Hash Table = One way to implement those operations.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Exercises => Shared
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Dictionaries Exercises
+                    </h2>
+
+                    <p>
+                        Test your understanding of dictionaries,
+                        key-value pairs, and dictionary implementations.
+                    </p>
+
+                </div>
+
+                <!-- Exercise Example -->
+                <div class="exercise-preview" data-correct-answer="Lookup">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Exercise Example
+                            </span>
+
+                            <h3>
+                                Understand Dictionary Operations
+                            </h3>
+
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        What is the primary purpose of a dictionary?
+                    </p>
+
+                    <!-- Answer Example -->
+                    <div class="exercise-code">
+
+                        <span>Answer:</span>
+
+                        <span class="exercise-answer-slot" id="exerciseAnswer">
+                            ?
+                        </span>
+
+                    </div>
+
+                    <!-- Answer Options -->
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="Sorting">
+                            To sort all values automatically
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Lookup">
+                            To store key-value pairs and access values by key
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Storage">
+                            To store values only at numeric indexes
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Indexing">
+                            To arrange values in a fixed sequence
+                        </button>
+
+                    </div>
+
+                    <!-- Answer Result -->
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <!-- All Exercises Button -->
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Bottom Navigation
+            ================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="HashTablesPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

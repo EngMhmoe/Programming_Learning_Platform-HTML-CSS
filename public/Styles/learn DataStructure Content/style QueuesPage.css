@@ -1,0 +1,1044 @@
+/* ==========================================================
+   Queues Page
+   Page-specific styles only
+========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Queue Theme Variables
+   (mapped to the global DevPath theme variables)
+========================================================== */
+
+.queue-page {
+  --queue-primary: var(--primary);
+  --queue-accent: var(--primary-light);
+  --queue-soft: rgba(249, 115, 22, 0.08);
+  --queue-border: rgba(249, 115, 22, 0.22);
+  --queue-info: #0ea5e9;
+  --queue-info-soft: rgba(14, 165, 233, 0.08);
+  --queue-success-soft: rgba(34, 197, 94, 0.08);
+  --queue-danger-soft: rgba(239, 68, 68, 0.07);
+  --queue-code-bg: #0d0804;
+  --queue-radius: 14px;
+}
+
+/* ==========================================================
+   Section Heading (number + title)
+========================================================== */
+
+.queue-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: start;
+}
+
+.queue-section-heading > div {
+  min-width: 0;
+}
+
+.queue-section-heading h2 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.queue-section-heading p {
+  margin: 0;
+}
+
+.queue-section-number {
+  display: inline-flex;
+  flex: 0 0 42px;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--queue-border);
+  border-radius: 12px;
+  background: var(--queue-soft);
+  color: var(--queue-accent);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Queue Content
+========================================================== */
+
+.queue-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.queue-content h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.queue-content h4 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.queue-content p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.85;
+}
+
+.queue-content strong {
+  color: var(--text);
+}
+
+.queue-content code {
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: var(--queue-soft);
+  color: var(--queue-accent);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.92em;
+}
+
+/* global.css resets ul { list-style: none }, so bullets are restored here */
+.queue-content ul {
+  margin: 0;
+  padding-inline-start: 22px;
+  list-style: disc;
+}
+
+.queue-content li {
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.queue-content li::marker {
+  color: var(--queue-accent);
+}
+
+.queue-content li:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Concept Box
+========================================================== */
+
+.queue-concept-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--queue-border);
+  border-radius: var(--queue-radius);
+  background: var(--queue-soft);
+}
+
+.queue-concept-icon {
+  display: flex;
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  font-size: 1.45rem;
+}
+
+.queue-concept-box > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* ==========================================================
+   Queue Visual Card (ticket line)
+========================================================== */
+
+.queue-visual-card {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 22px;
+  border: 1px solid var(--queue-border);
+  border-radius: var(--queue-radius);
+  background: var(--queue-soft);
+}
+
+.queue-visual-card h4 {
+  text-align: center;
+}
+
+.queue-people {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.queue-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 76px;
+  color: var(--queue-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.queue-person-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border: 1px solid var(--queue-border);
+  border-radius: 50%;
+  background: var(--queue-soft);
+  font-size: 1.8rem;
+}
+
+.queue-arrow {
+  color: var(--queue-accent);
+  font-size: 1.5rem;
+}
+
+.queue-direction {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--queue-border);
+}
+
+.queue-direction span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-secondary);
+  font-size: 0.83rem;
+  font-weight: 600;
+}
+
+.queue-direction i {
+  color: var(--queue-accent);
+  font-size: 1.15rem;
+}
+
+/* ==========================================================
+   Learning Note
+========================================================== */
+
+.tutorial-content .queue-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--queue-border);
+  border-inline-start: 4px solid var(--queue-primary);
+  border-radius: 8px;
+  background: var(--queue-soft);
+}
+
+.tutorial-content .queue-note > i {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: var(--queue-accent);
+  font-size: 1.25rem;
+}
+
+.tutorial-content .queue-note p {
+  min-width: 0;
+}
+
+/* ==========================================================
+   Queue Feature Grid
+========================================================== */
+
+.queue-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.queue-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid var(--queue-border);
+  border-radius: var(--queue-radius);
+  background: var(--queue-soft);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.queue-feature:hover {
+  transform: translateY(-3px);
+  border-color: var(--queue-primary);
+}
+
+.queue-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.queue-feature p {
+  font-size: 0.94rem;
+}
+
+/* ==========================================================
+   Queue Parts: Front and Rear
+========================================================== */
+
+.queue-parts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.queue-part {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 18px;
+  border: 1px solid var(--queue-border);
+  border-radius: var(--queue-radius);
+}
+
+.queue-part > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.queue-part-marker {
+  flex: 0 0 12px;
+  width: 12px;
+  height: 12px;
+  margin-top: 6px;
+  border-radius: 50%;
+}
+
+.queue-front-marker {
+  background: var(--queue-info);
+}
+
+.queue-rear-marker {
+  background: var(--queue-primary);
+}
+
+/* ==========================================================
+   Queue Structure Diagram
+========================================================== */
+
+.queue-structure-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px;
+  border: 1px solid var(--queue-border);
+  border-radius: var(--queue-radius);
+  background: var(--queue-soft);
+}
+
+.queue-position-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--queue-accent);
+  font-size: 0.87rem;
+  font-weight: 700;
+}
+
+.queue-items {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.queue-item {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  max-width: 140px;
+  height: 68px;
+  border: 1px solid var(--queue-border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.queue-front-item {
+  border: 2px solid var(--queue-info);
+}
+
+.queue-rear-item {
+  border: 2px solid var(--queue-primary);
+}
+
+.queue-position-caption {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* ==========================================================
+   Code Blocks
+========================================================== */
+
+.queue-content pre.queue-code {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 18px 20px;
+  overflow-x: auto;
+  border: 1px solid var(--queue-border);
+  border-radius: 12px;
+  background: var(--queue-code-bg);
+  color: var(--text-secondary);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  tab-size: 4;
+  white-space: pre;
+}
+
+.queue-content pre.queue-code code {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ==========================================================
+   Enqueue and Dequeue Cards
+========================================================== */
+
+.queue-operation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.queue-operation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--queue-border);
+  border-radius: var(--queue-radius);
+}
+
+.queue-enqueue {
+  background: var(--queue-soft);
+}
+
+.queue-dequeue {
+  background: var(--queue-info-soft);
+}
+
+.queue-operation-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  font-size: 1.6rem;
+}
+
+.queue-dequeue .queue-operation-icon {
+  background: var(--queue-info);
+}
+
+.queue-operation-label {
+  display: inline-flex;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--queue-soft);
+  color: var(--queue-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* ==========================================================
+   Queue Operation List
+========================================================== */
+
+.queue-operation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.queue-operation-row {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--queue-border);
+  border-radius: var(--queue-radius);
+}
+
+.queue-operation-row > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.queue-operation-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--queue-soft);
+  color: var(--queue-accent);
+  font-size: 1.5rem;
+}
+
+/* ==========================================================
+   Result and Explanation Boxes
+========================================================== */
+
+.queue-result-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 10px;
+  background: var(--queue-success-soft);
+}
+
+.queue-result-box > i {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: var(--success);
+  font-size: 1.3rem;
+}
+
+.queue-explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--queue-border);
+  border-radius: var(--queue-radius);
+}
+
+/* ==========================================================
+   Tables
+========================================================== */
+
+.queue-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--queue-border);
+  border-radius: 12px;
+}
+
+.queue-comparison-table,
+.queue-complexity-table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.queue-comparison-table th,
+.queue-comparison-table td,
+.queue-complexity-table th,
+.queue-complexity-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--queue-border);
+  color: var(--text-secondary);
+  text-align: start;
+  vertical-align: middle;
+}
+
+.queue-comparison-table th,
+.queue-complexity-table th {
+  background: var(--queue-soft);
+  color: var(--queue-accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.queue-comparison-table tbody tr:last-child td,
+.queue-complexity-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.queue-comparison-table tbody tr:hover,
+.queue-complexity-table tbody tr:hover {
+  background: var(--queue-soft);
+}
+
+.queue-comparison-table td:first-child,
+.queue-complexity-table td:first-child {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.queue-table-footnote {
+  font-size: 0.88rem;
+}
+
+/* ==========================================================
+   Stack vs Queue Cards
+========================================================== */
+
+.queue-comparison-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.queue-comparison-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid var(--queue-border);
+  border-radius: var(--queue-radius);
+}
+
+.queue-comparison-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.queue-comparison-card h3 i {
+  color: var(--queue-accent);
+  font-size: 1.35rem;
+}
+
+.queue-comparison-card code {
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   Time Complexity Cards
+========================================================== */
+
+.queue-complexity-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.queue-complexity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid var(--queue-border);
+  border-radius: var(--queue-radius);
+}
+
+.queue-complexity-value {
+  color: var(--queue-accent);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+/* ==========================================================
+   Advantages and Disadvantages
+========================================================== */
+
+.queue-pros-cons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.queue-pros,
+.queue-cons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--queue-border);
+  border-radius: var(--queue-radius);
+}
+
+.queue-pros {
+  background: var(--queue-success-soft);
+}
+
+.queue-cons {
+  background: var(--queue-danger-soft);
+}
+
+.queue-pros h3,
+.queue-cons h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.queue-pros h3 i {
+  color: var(--success);
+}
+
+.queue-cons h3 i {
+  color: var(--danger);
+}
+
+/* ==========================================================
+   Key Takeaways
+========================================================== */
+
+.queue-takeaways {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.queue-takeaway {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 17px;
+  border: 1px solid var(--queue-border);
+  border-radius: 10px;
+}
+
+.queue-takeaway > i {
+  flex: 0 0 auto;
+  margin-top: 4px;
+  color: var(--success);
+  font-size: 1.2rem;
+}
+
+.queue-takeaway p {
+  min-width: 0;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================
+   Practice Exercise
+   Uses the shared exercise classes (.exercise-preview,
+   .exercise-option, .exercise-result ...) so the shared
+   JavaScript works without any change.
+========================================================== */
+
+.queue-exercise {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 0;
+}
+
+.queue-exercise .exercise-preview-header {
+  margin-bottom: 0;
+}
+
+.queue-exercise .exercise-preview-header h3 {
+  margin-top: 4px;
+}
+
+.queue-exercise .exercise-question {
+  margin-bottom: 0;
+}
+
+.queue-exercise-hint {
+  font-size: 0.9rem;
+}
+
+.queue-exercise .exercise-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0;
+}
+
+.queue-exercise .exercise-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  text-align: start;
+}
+
+.queue-exercise .exercise-option:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 3px;
+}
+
+.queue-option-letter {
+  display: inline-flex;
+  flex: 0 0 28px;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(249, 115, 22, 0.14);
+  color: var(--queue-accent);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.queue-exercise .exercise-option.correct .queue-option-letter,
+.queue-exercise .exercise-option.wrong .queue-option-letter {
+  background: rgba(255, 255, 255, 0.22);
+  color: var(--white);
+}
+
+.queue-exercise .exercise-result {
+  margin-top: 0;
+}
+
+/* ==========================================================
+   Learning Progress
+========================================================== */
+
+.tutorial-content .learning-progress-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+  width: 100%;
+  margin-top: 30px;
+  padding: 28px;
+  background: rgba(38, 22, 10, 0.72);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.tutorial-content .learning-progress-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: var(--radius-md);
+  font-size: 29px;
+}
+
+.tutorial-content .learning-progress-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-progress-content h3 {
+  margin: 0 0 9px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.tutorial-content .learning-progress-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.tutorial-content .learning-progress-card > .tutorial-button {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin-inline-start: auto;
+}
+
+/* ==========================================================
+   Responsive: Queue-Specific Elements Only
+========================================================== */
+
+@media (max-width: 768px) {
+  .queue-feature-grid,
+  .queue-parts-grid,
+  .queue-operation-grid,
+  .queue-comparison-cards,
+  .queue-complexity-cards,
+  .queue-pros-cons,
+  .queue-exercise .exercise-options {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .queue-section-heading h2 {
+    font-size: 24px;
+  }
+
+  .queue-people {
+    gap: 8px;
+  }
+
+  .queue-person {
+    min-width: 58px;
+    font-size: 0.75rem;
+  }
+
+  .queue-person-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .queue-direction {
+    flex-direction: column;
+  }
+
+  .queue-operation-row {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .queue-operation-symbol {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  .tutorial-content .learning-progress-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .tutorial-content .learning-progress-card > .tutorial-button {
+    width: 100%;
+    margin-inline-start: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .queue-section-heading {
+    gap: 12px;
+  }
+
+  .queue-section-number {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+
+  .queue-section-heading h2 {
+    font-size: 21px;
+  }
+
+  .queue-concept-box {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .queue-concept-icon {
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  .queue-visual-card,
+  .queue-structure-visual {
+    padding: 15px;
+  }
+
+  .queue-people {
+    gap: 5px;
+  }
+
+  .queue-person {
+    min-width: 48px;
+    font-size: 0.68rem;
+  }
+
+  .queue-person-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .queue-arrow {
+    font-size: 1.1rem;
+  }
+
+  .queue-position-labels {
+    font-size: 0.75rem;
+  }
+
+  .queue-items {
+    gap: 6px;
+  }
+
+  .queue-item {
+    height: 54px;
+    font-size: 1rem;
+  }
+
+  .queue-content pre.queue-code {
+    padding: 14px;
+    font-size: 0.78rem;
+  }
+
+  .queue-comparison-table th,
+  .queue-comparison-table td,
+  .queue-complexity-table th,
+  .queue-complexity-table td {
+    padding: 11px;
+    font-size: 0.83rem;
+  }
+
+  .queue-exercise .exercise-option {
+    font-size: 14px;
+  }
+
+  .tutorial-content .learning-progress-icon {
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+}

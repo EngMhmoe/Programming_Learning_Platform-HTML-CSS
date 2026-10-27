@@ -1,0 +1,791 @@
+/* ==========================================================
+    Global Styles
+========================================================== */
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Structure Types Grid
+========================================================== */
+
+.structure-types-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.structure-type-card {
+  min-width: 0;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.structure-type-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.structure-type-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 16px;
+  font-size: 30px;
+}
+
+.structure-type-card h3 {
+  margin-bottom: 12px;
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.structure-type-card > p {
+  margin-bottom: 22px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.structure-type-examples {
+  padding: 17px;
+  background: rgba(249, 115, 22, 0.045);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.structure-type-examples > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--primary-light);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.structure-type-examples ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.structure-type-examples li {
+  position: relative;
+  padding-left: 16px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.structure-type-examples li::before {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+  content: "";
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Linear Data Structures
+========================================================== */
+
+.structure-example {
+  margin: 25px 0;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.structure-example h3 {
+  margin-bottom: 24px;
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.linear-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.linear-item {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.linear-visual > i {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 25px;
+}
+
+.example-description {
+  margin: 22px 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.structure-list {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.structure-list li {
+  position: relative;
+  padding: 15px 18px 15px 40px;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.structure-list li::before {
+  position: absolute;
+  top: 24px;
+  left: 17px;
+  width: 7px;
+  height: 7px;
+  background: var(--primary);
+  border-radius: 50%;
+  content: "";
+}
+
+.structure-list strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Non-Linear Data Structures
+========================================================== */
+
+.nonlinear-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.nonlinear-example-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.nonlinear-example-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.nonlinear-example-card h3 {
+  margin-bottom: 10px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.nonlinear-example-card > p {
+  margin-bottom: 20px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+    Tree Visual
+========================================================== */
+
+.tree-visual {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 0 0;
+}
+
+.tree-node {
+  position: relative;
+  z-index: 1;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  background: var(--bg-card, rgba(255, 255, 255, 0.04));
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.tree-branches {
+  position: relative;
+  width: 100px;
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tree-branches span {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 38px;
+  background: var(--primary);
+  transform-origin: top center;
+}
+
+.tree-branches span:first-child {
+  left: 16px;
+  transform: rotate(43deg);
+}
+
+.tree-branches span:last-child {
+  right: 16px;
+  transform: rotate(-43deg);
+}
+
+.tree-children {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ==========================================================
+    Graph Visual
+========================================================== */
+
+.graph-visual {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.graph-visual svg {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  overflow: visible;
+}
+
+.graph-visual line {
+  stroke: var(--primary);
+  stroke-width: 2.5;
+}
+
+.graph-visual circle {
+  fill: var(--bg-card, #17100b);
+  stroke: var(--primary);
+  stroke-width: 2.5;
+}
+
+.graph-visual text {
+  fill: var(--text);
+  font-size: 12px;
+  font-weight: 800;
+  text-anchor: middle;
+}
+
+.example-caption {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Linear vs Non-Linear Comparison
+========================================================== */
+
+.structure-comparison {
+  width: 100%;
+  margin-top: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-row > div {
+  min-width: 0;
+  padding: 15px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.comparison-row > div + div {
+  border-left: 1px solid var(--border);
+}
+
+.comparison-row > div:first-child {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.comparison-header {
+  background: rgba(249, 115, 22, 0.07);
+}
+
+.comparison-header > div {
+  color: var(--primary-light);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* ==========================================================
+    Learning Note
+========================================================== */
+
+.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content .learning-note > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.tutorial-content .learning-note > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-note strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tutorial-content .learning-note p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Choosing the Right Data Structure
+========================================================== */
+
+.use-case-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.use-case-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.use-case-item:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.use-case-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.use-case-item > div:last-child {
+  min-width: 0;
+  flex: 1;
+}
+
+.use-case-item h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.use-case-item p {
+  margin: 0 0 12px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.use-case-type {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.14);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Key Takeaways
+========================================================== */
+
+.takeaways-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.takeaway-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 17px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.takeaway-item > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.takeaway-item p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Progress Card
+========================================================== */
+
+.tutorial-content .progress-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 30px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.progress-card-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.progress-card-content h2 {
+  margin: 16px 0 12px;
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.progress-card-content p {
+  margin-bottom: 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.progress-card-icon {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 24px;
+  font-size: 48px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design
+========================================================== */
+
+@media (max-width: 900px) {
+  .structure-types-grid,
+  .nonlinear-examples-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .structure-type-card,
+  .nonlinear-example-card {
+    padding: 22px;
+  }
+
+  .tutorial-content .progress-card {
+    padding: 25px;
+  }
+
+  .progress-card-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .structure-comparison {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .comparison-row {
+    min-width: 600px;
+  }
+
+  .structure-example {
+    padding: 20px;
+  }
+
+  .linear-visual {
+    gap: 9px;
+  }
+
+  .linear-item {
+    width: 54px;
+    height: 54px;
+    font-size: 16px;
+  }
+
+  .linear-visual > i {
+    font-size: 21px;
+  }
+
+  .tutorial-content .progress-card {
+    gap: 20px;
+  }
+
+  .progress-card-content h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .structure-type-card,
+  .nonlinear-example-card {
+    padding: 18px;
+  }
+
+  .structure-type-card h3 {
+    font-size: 19px;
+  }
+
+  .structure-type-examples {
+    padding: 14px;
+  }
+
+  .structure-type-examples ul {
+    grid-template-columns: 1fr;
+  }
+
+  .structure-example {
+    padding: 17px 12px;
+  }
+
+  .linear-visual {
+    gap: 6px;
+  }
+
+  .linear-item {
+    width: 43px;
+    height: 43px;
+    border-radius: 9px;
+    font-size: 14px;
+  }
+
+  .linear-visual > i {
+    font-size: 17px;
+  }
+
+  .structure-list li {
+    padding: 13px 12px 13px 32px;
+    font-size: 13px;
+  }
+
+  .structure-list li::before {
+    left: 13px;
+  }
+
+  .use-case-item {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .use-case-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 21px;
+  }
+
+  .use-case-item h3 {
+    font-size: 16px;
+  }
+
+  .tutorial-content .learning-note {
+    gap: 9px;
+    padding: 13px;
+  }
+
+  .tutorial-content .progress-card {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .progress-card-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+    font-size: 32px;
+  }
+
+  .progress-card-content h2 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Start learning Data Structures, understand how data is organized, explore linear and non-linear structures, and practice with JavaScript examples.">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <meta name="keywords" content="Data Structures, Programming, Linear Data Structures, JavaScript">
+
+
+    <title>DevPath | Stacks to Data Structures</title>
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style StacksPage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link active">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <div class="tutorial-content">
+
+            <!-- ==================================================
+        Tutorial Header
+    ================================================== -->
+            <section class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+                <h1>Stacks</h1>
+
+                <p>
+                    Learn how Stacks organize data using the Last In, First Out
+                    principle, how stack operations work, and when to use them
+                    in real-world applications.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="DoublyLinkedListPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="QueuesPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        Introduction to Stacks
+    ================================================== -->
+            <section class="tutorial-card linked-intro-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-book-open"></i>
+                        Introduction
+                    </span>
+
+                    <h2>What Is a Stack?</h2>
+
+                    <p>
+                        A Stack is a linear data structure that follows the
+                        Last In, First Out (LIFO) principle. The last element
+                        added to the Stack is the first element removed.
+                    </p>
+
+                </div>
+
+                <div class="linked-concept-box">
+
+                    <div class="linked-concept-icon">
+                        <i class="bx bx-layer"></i>
+                    </div>
+
+                    <div class="linked-concept-content">
+                        <h3>The Main Idea</h3>
+
+                        <p>
+                            Think of a Stack like a pile of plates. You place a
+                            new plate on top, and when you need one, you remove
+                            the top plate first. You do not normally remove a
+                            plate from the middle of the pile.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="linked-example-visual">
+
+                    <div class="linked-node">
+                        <span class="linked-node-label">Top</span>
+                        <div class="linked-node-content">
+                            <span class="linked-node-data">30</span>
+                            <span class="linked-node-pointer">Last In</span>
+                        </div>
+                    </div>
+
+                    <i class="bx bx-down-arrow-alt linked-arrow"></i>
+
+                    <div class="linked-node">
+                        <span class="linked-node-label">Element 2</span>
+                        <div class="linked-node-content">
+                            <span class="linked-node-data">20</span>
+                            <span class="linked-node-pointer">Earlier</span>
+                        </div>
+                    </div>
+
+                    <i class="bx bx-down-arrow-alt linked-arrow"></i>
+
+                    <div class="linked-node">
+                        <span class="linked-node-label">Bottom</span>
+                        <div class="linked-node-content">
+                            <span class="linked-node-data">10</span>
+                            <span class="linked-node-pointer">First In</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+                        <strong>Remember</strong>
+
+                        <p>
+                            LIFO means Last In, First Out. If we push
+                            <code>10</code>, then <code>20</code>, then
+                            <code>30</code>, the first value removed by
+                            <code>pop()</code> will be <code>30</code>.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        Why Use Stacks?
+    ================================================== -->
+            <section class="tutorial-card linked-why-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bulb"></i>
+                        Why It Matters
+                    </span>
+
+                    <h2>Why Do We Use Stacks?</h2>
+
+                    <p>
+                        Stacks are useful whenever the most recently added
+                        item needs to be processed first.
+                    </p>
+
+                </div>
+
+                <div class="linked-feature-grid">
+
+                    <article class="linked-feature">
+                        <div class="linked-feature-icon">
+                            <i class="bx bx-undo"></i>
+                        </div>
+
+                        <h3>Undo Operations</h3>
+
+                        <p>
+                            Applications can store previous actions and undo
+                            the most recent action first.
+                        </p>
+                    </article>
+
+                    <article class="linked-feature">
+                        <div class="linked-feature-icon">
+                            <i class="bx bx-code-alt"></i>
+                        </div>
+
+                        <h3>Function Calls</h3>
+
+                        <p>
+                            Programs use a call stack to manage function calls
+                            and return to the previous function.
+                        </p>
+                    </article>
+
+                    <article class="linked-feature">
+                        <div class="linked-feature-icon">
+                            <i class="bx bx-transfer-alt"></i>
+                        </div>
+
+                        <h3>Backtracking</h3>
+
+                        <p>
+                            Stacks help track previous states when solving
+                            problems or navigating through choices.
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Important</strong>
+
+                        <p>
+                            A Stack restricts the normal insertion and removal
+                            operations to its top. This makes the LIFO order
+                            predictable and useful for many algorithms.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        Structure of a Stack
+    ================================================== -->
+            <section class="tutorial-card linked-node-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-cube"></i>
+                        Fundamentals
+                    </span>
+
+                    <h2>Structure of a Stack</h2>
+
+                    <p>
+                        A Stack contains a collection of elements and keeps
+                        track of the top element, which is the point where
+                        elements are normally added and removed.
+                    </p>
+
+                </div>
+
+                <div class="linked-node-parts">
+
+                    <div class="linked-node-part">
+                        <span class="linked-part-number">01</span>
+
+                        <div class="linked-part-icon">
+                            <i class="bx bx-layer"></i>
+                        </div>
+
+                        <h3>Elements</h3>
+
+                        <p>
+                            The values stored in the Stack. Their order
+                            determines which value will be removed next.
+                        </p>
+                    </div>
+
+                    <div class="linked-node-part">
+                        <span class="linked-part-number">02</span>
+
+                        <div class="linked-part-icon">
+                            <i class="bx bx-up-arrow-alt"></i>
+                        </div>
+
+                        <h3>Top</h3>
+
+                        <p>
+                            Identifies the most recently added element.
+                            Push and pop operations work at this end.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="linked-code-example">
+
+                    <div class="linked-code-header">
+                        <i class="bx bx-code-alt"></i>
+                        <span>JavaScript Example</span>
+                    </div>
+
+                    <pre><code>// Create a Stack using an array
+const stack = [];
+
+// Add elements to the Stack
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+console.log(stack); // [10, 20, 30]
+
+// The top element is the last array element
+console.log(stack[stack.length - 1]); // 30</code></pre>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-check-circle"></i>
+
+                    <div>
+                        <strong>What Happens Here?</strong>
+
+                        <p>
+                            We use a JavaScript array to represent a Stack.
+                            Each call to <code>push()</code> adds an element
+                            to the top, which is the end of the array in
+                            this implementation.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        The LIFO Principle
+    ================================================== -->
+            <section class="tutorial-card linked-head-tail-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-branch"></i>
+                        Key Concepts
+                    </span>
+
+                    <h2>The LIFO Principle</h2>
+
+                    <p>
+                        LIFO describes the order in which elements leave
+                        a Stack: the last element added is the first one removed.
+                    </p>
+
+                </div>
+
+                <div class="linked-terms-grid">
+
+                    <article class="linked-term">
+                        <div class="linked-term-top">
+                            <span class="linked-term-icon">
+                                <i class="bx bx-plus-circle"></i>
+                            </span>
+
+                            <span class="linked-term-label">Add</span>
+                        </div>
+
+                        <h3>Push</h3>
+
+                        <p>
+                            Adds a new element to the top of the Stack.
+                        </p>
+                    </article>
+
+                    <article class="linked-term">
+                        <div class="linked-term-top">
+                            <span class="linked-term-icon">
+                                <i class="bx bx-minus-circle"></i>
+                            </span>
+
+                            <span class="linked-term-label">Remove</span>
+                        </div>
+
+                        <h3>Pop</h3>
+
+                        <p>
+                            Removes and returns the top element of the Stack.
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="linked-head-tail-visual">
+
+                    <div class="linked-pointer-label linked-head-label">
+                        <i class="bx bx-down-arrow-alt"></i>
+                        Pop First
+                    </div>
+
+                    <div class="linked-mini-node linked-tail-node">
+                        <span>30</span>
+                        <small>Top</small>
+                    </div>
+
+                    <i class="bx bx-down-arrow-alt linked-arrow"></i>
+
+                    <div class="linked-mini-node">
+                        <span>20</span>
+                        <small>Middle</small>
+                    </div>
+
+                    <i class="bx bx-down-arrow-alt linked-arrow"></i>
+
+                    <div class="linked-mini-node">
+                        <span>10</span>
+                        <small>Bottom</small>
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Example</strong>
+
+                        <p>
+                            If we push <code>10</code>, <code>20</code>, and
+                            <code>30</code> in that order, calling
+                            <code>pop()</code> returns <code>30</code> first,
+                            followed by <code>20</code>, then <code>10</code>.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        Basic Stack Operations
+    ================================================== -->
+            <section class="tutorial-card linked-types-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-cog"></i>
+                        Operations
+                    </span>
+
+                    <h2>Basic Stack Operations</h2>
+
+                    <p>
+                        These are the main operations used to add, remove,
+                        inspect, and check elements in a Stack.
+                    </p>
+
+                </div>
+
+                <div class="linked-type-list">
+
+                    <article class="linked-type-item">
+
+                        <div class="linked-type-number">01</div>
+
+                        <div class="linked-type-content">
+
+                            <h3>Push</h3>
+
+                            <p>
+                                Adds a new element to the top of the Stack.
+                            </p>
+
+                            <div class="linked-code-example">
+                                <div class="linked-code-header">
+                                    <i class="bx bx-code-alt"></i>
+                                    <span>Example</span>
+                                </div>
+
+                                <pre><code>const stack = [10, 20];
+
+stack.push(30);
+
+console.log(stack); // [10, 20, 30]</code></pre>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="linked-type-item">
+
+                        <div class="linked-type-number">02</div>
+
+                        <div class="linked-type-content">
+
+                            <h3>Pop</h3>
+
+                            <p>
+                                Removes and returns the top element. If the
+                                Stack is empty, JavaScript's array
+                                <code>pop()</code> returns <code>undefined</code>.
+                            </p>
+
+                            <div class="linked-code-example">
+                                <div class="linked-code-header">
+                                    <i class="bx bx-code-alt"></i>
+                                    <span>Example</span>
+                                </div>
+
+                                <pre><code>const stack = [10, 20, 30];
+
+const removed = stack.pop();
+
+console.log(removed); // 30
+console.log(stack);   // [10, 20]</code></pre>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="linked-type-item">
+
+                        <div class="linked-type-number">03</div>
+
+                        <div class="linked-type-content">
+
+                            <h3>Peek</h3>
+
+                            <p>
+                                Reads the top element without removing it.
+                                With an array-based Stack, we can inspect
+                                the last element directly.
+                            </p>
+
+                            <div class="linked-code-example">
+                                <div class="linked-code-header">
+                                    <i class="bx bx-code-alt"></i>
+                                    <span>Example</span>
+                                </div>
+
+                                <pre><code>const stack = [10, 20, 30];
+
+const top = stack[stack.length - 1];
+
+console.log(top);   // 30
+console.log(stack); // [10, 20, 30]</code></pre>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="linked-type-item">
+
+                        <div class="linked-type-number">04</div>
+
+                        <div class="linked-type-content">
+
+                            <h3>isEmpty</h3>
+
+                            <p>
+                                Checks whether the Stack contains any elements.
+                                In an array-based implementation, an empty
+                                array means the Stack is empty.
+                            </p>
+
+                            <div class="linked-code-example">
+                                <div class="linked-code-header">
+                                    <i class="bx bx-code-alt"></i>
+                                    <span>Example</span>
+                                </div>
+
+                                <pre><code>const stack = [];
+
+const isEmpty = stack.length === 0;
+
+console.log(isEmpty); // true</code></pre>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-bookmark"></i>
+
+                    <div>
+                        <strong>Quick Summary</strong>
+
+                        <p>
+                            <code>push()</code> adds an element,
+                            <code>pop()</code> removes the top element,
+                            <code>peek</code> reads the top element, and
+                            <code>isEmpty</code> checks whether the Stack
+                            contains any elements.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        Implementing a Stack in JavaScript
+    ================================================== -->
+            <section class="tutorial-card linked-comparison-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        Implementation
+                    </span>
+
+                    <h2>Implementing a Stack in JavaScript</h2>
+
+                    <p>
+                        We can create a simple Stack class using an array
+                        and methods that follow the LIFO principle.
+                    </p>
+
+                </div>
+
+                <div class="linked-code-example">
+
+                    <div class="linked-code-header">
+                        <i class="bx bx-code-alt"></i>
+                        <span>Stack Class</span>
+                    </div>
+
+                    <pre><code>class Stack {
+    constructor() {
+        this.items = [];
+    }
+
+    push(element) {
+        this.items.push(element);
+    }
+
+    pop() {
+        if (this.isEmpty()) {
+            return undefined;
+        }
+
+        return this.items.pop();
+    }
+
+    peek() {
+        if (this.isEmpty()) {
+            return undefined;
+        }
+
+        return this.items[this.items.length - 1];
+    }
+
+    isEmpty() {
+        return this.items.length === 0;
+    }
+
+    size() {
+        return this.items.length;
+    }
+}
+
+// Create a Stack
+const stack = new Stack();
+
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+console.log(stack.peek()); // 30
+console.log(stack.pop());  // 30
+console.log(stack.size()); // 2
+console.log(stack.isEmpty()); // false</code></pre>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-check-circle"></i>
+
+                    <div>
+                        <strong>How It Works</strong>
+
+                        <p>
+                            The <code>items</code> array stores the values.
+                            The <code>push()</code> and <code>pop()</code>
+                            methods add and remove values at the end of the array.
+                            The other methods inspect the Stack without changing
+                            its contents.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        Stack vs Queue
+    ================================================== -->
+            <section class="tutorial-card linked-operations-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Comparison
+                    </span>
+
+                    <h2>Stack vs. Queue</h2>
+
+                    <p>
+                        Stacks and Queues are both linear data structures.
+                        Their main difference is the order in which elements
+                        are removed.
+                    </p>
+
+                </div>
+
+                <div class="linked-table-wrapper">
+
+                    <table class="linked-comparison-table">
+
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Stack</th>
+                                <th>Queue</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Principle</td>
+                                <td>LIFO — Last In, First Out</td>
+                                <td>FIFO — First In, First Out</td>
+                            </tr>
+
+                            <tr>
+                                <td>Insertion</td>
+                                <td>At the top</td>
+                                <td>At the rear</td>
+                            </tr>
+
+                            <tr>
+                                <td>Removal</td>
+                                <td>From the top</td>
+                                <td>From the front</td>
+                            </tr>
+
+                            <tr>
+                                <td>Common Operations</td>
+                                <td><code>push()</code>, <code>pop()</code></td>
+                                <td><code>enqueue()</code>, <code>dequeue()</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>Common Uses</td>
+                                <td>Undo, function calls, backtracking</td>
+                                <td>Task scheduling, waiting lines, buffering</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+                        <strong>Easy Way to Remember</strong>
+
+                        <p>
+                            A Stack behaves like a pile of plates: the last
+                            plate placed on top is removed first. A Queue
+                            behaves like a waiting line: the first person
+                            to arrive is served first.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        Time Complexity of Stack Operations
+    ================================================== -->
+            <section class="tutorial-card linked-complexity-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-time-five"></i>
+                        Performance
+                    </span>
+
+                    <h2>Time Complexity of Stack Operations</h2>
+
+                    <p>
+                        With a typical array-based Stack, adding or removing
+                        an element at the end takes constant time on average.
+                    </p>
+
+                </div>
+
+                <div class="linked-complexity-table-wrapper">
+
+                    <table class="linked-complexity-table">
+
+                        <thead>
+                            <tr>
+                                <th>Operation</th>
+                                <th>Time Complexity</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Push</td>
+                                <td><code>O(1)</code> amortized</td>
+                            </tr>
+
+                            <tr>
+                                <td>Pop</td>
+                                <td><code>O(1)</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>Peek</td>
+                                <td><code>O(1)</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>isEmpty</td>
+                                <td><code>O(1)</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>Size</td>
+                                <td><code>O(1)</code></td>
+                            </tr>
+
+                            <tr>
+                                <td>Search for a Value</td>
+                                <td><code>O(n)</code></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="learning-note">
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+                        <strong>Important</strong>
+
+                        <p>
+                            Array resizing can make an individual
+                            <code>push()</code> operation take
+                            <code>O(n)</code> time. However, for a dynamic array,
+                            <code>push()</code> is typically <code>O(1)</code>
+                            amortized over many operations.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        Advantages and Disadvantages
+    ================================================== -->
+            <section class="tutorial-card linked-pros-cons-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-scale"></i>
+                        Summary
+                    </span>
+
+                    <h2>Advantages and Disadvantages</h2>
+
+                    <p>
+                        Stacks are simple and efficient for LIFO operations,
+                        but their restricted access makes them unsuitable
+                        for some tasks.
+                    </p>
+
+                </div>
+
+                <div class="linked-pros-cons-grid">
+
+                    <article class="linked-pros">
+                        <div class="linked-pros-cons-heading">
+                            <i class="bx bx-check-circle"></i>
+                            <h3>Advantages</h3>
+                        </div>
+
+                        <ul>
+                            <li>Simple to understand and implement.</li>
+                            <li>Efficient push and pop operations.</li>
+                            <li>Useful for function calls and recursion.</li>
+                            <li>Helps implement undo and backtracking features.</li>
+                        </ul>
+                    </article>
+
+                    <article class="linked-cons">
+                        <div class="linked-pros-cons-heading">
+                            <i class="bx bx-x-circle"></i>
+                            <h3>Disadvantages</h3>
+                        </div>
+
+                        <ul>
+                            <li>Only the top element is directly accessible through normal Stack operations.</li>
+                            <li>Searching for a specific element may take linear time.</li>
+                            <li>Removing elements in the middle is not a standard Stack operation.</li>
+                            <li>An implementation may need to handle empty Stack cases.</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        Key Takeaways
+    ================================================== -->
+            <section class="tutorial-card linked-takeaways-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-double"></i>
+                        Review
+                    </span>
+
+                    <h2>Key Takeaways</h2>
+
+                    <p>
+                        Review the most important ideas from this lesson.
+                    </p>
+
+                </div>
+
+                <div class="linked-takeaways-list">
+
+                    <div class="linked-takeaway">
+                        <i class="bx bx-check"></i>
+                        <p>
+                            A Stack is a linear data structure that follows LIFO.
+                        </p>
+                    </div>
+
+                    <div class="linked-takeaway">
+                        <i class="bx bx-check"></i>
+                        <p>
+                            The top element is the first one removed.
+                        </p>
+                    </div>
+
+                    <div class="linked-takeaway">
+                        <i class="bx bx-check"></i>
+                        <p>
+                            <code>push()</code> adds an element, while
+                            <code>pop()</code> removes the top element.
+                        </p>
+                    </div>
+
+                    <div class="linked-takeaway">
+                        <i class="bx bx-check"></i>
+                        <p>
+                            <code>peek()</code> reads the top element without
+                            removing it.
+                        </p>
+                    </div>
+
+                    <div class="linked-takeaway">
+                        <i class="bx bx-check"></i>
+                        <p>
+                            Stacks are useful for undo operations, function calls,
+                            recursion, and backtracking.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        Practice Exercise
+    ================================================== -->
+            <section class="tutorial-card linked-exercise-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>Test Your Knowledge</h2>
+
+                    <p>
+                        Check your understanding of Stacks with this quick question.
+                    </p>
+
+                </div>
+
+                <div class="exercise-preview" data-correct-answer="C">
+
+                    <div class="exercise-preview-header">
+                        <div>
+                            <span class="section-label">Exercise Example</span>
+                            <h3>Question 01</h3>
+                        </div>
+
+                        <span class="exercise-number">01</span>
+                    </div>
+
+                    <p class="exercise-question">
+                        If we push <code>10</code>, <code>20</code>, and
+                        <code>30</code> onto an empty Stack, what value will
+                        the first <code>pop()</code> operation return?
+                    </p>
+
+                    <div class="exercise-code">
+                        <span>Answer:</span>
+                        <span class="exercise-answer-slot" id="exerciseAnswer">?</span>
+                    </div>
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="A">
+                            A. 10
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="B">
+                            B. 20
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="C">
+                            C. 30
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="D">
+                            D. null
+                        </button>
+
+                    </div>
+
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <div class="exercise-action">
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+        Learning Progress
+    ================================================== -->
+            <section class="learning-progress-card">
+
+                <div class="learning-progress-icon">
+                    <i class="bx bx-trophy"></i>
+                </div>
+
+                <div class="learning-progress-content">
+                    <h3>Great Job!</h3>
+
+                    <p>
+                        You have completed the introduction to Stacks.
+                        Continue learning to explore the next data structure.
+                    </p>
+                </div>
+
+                <a href="QueuesPage.html" class="tutorial-button primary">
+                    Start the Next Lesson
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </section>
+
+            <!-- ==================================================
+        Tutorial Bottom Navigation
+    ================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="DoublyLinkedListPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="QueuesPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

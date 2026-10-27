@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <meta name="description"
+        content="Learn hashing techniques, hash functions, collision resolution, separate chaining, open addressing, and hash table performance.">
+
+    <title>Hashing Techniques | DevPath</title>
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style HashingTechniquesPage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link active">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <section class="tutorial-content">
+
+
+            <!-- ==================================================
+                Tutorial Header
+            ================================================== -->
+            <section class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+                <h1>
+                    Hashing Techniques
+                </h1>
+
+                <p>
+                    Learn how hash functions map keys to table indexes,
+                    how collisions happen, and how techniques such as
+                    separate chaining and open addressing resolve them.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="DictionariesPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="TreesPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                What Is Hashing?
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-hash"></i>
+                        Definition
+                    </span>
+
+                    <h2>
+                        What Is Hashing?
+                    </h2>
+
+                    <p>
+                        Hashing is a technique that transforms a key into
+                        a value used to determine where the key-value pair
+                        should be stored in a hash table.
+                    </p>
+
+                </div>
+
+                <div class="hashing-definition">
+
+                    <div class="hashing-definition-icon">
+                        <i class="bx bx-shuffle"></i>
+                    </div>
+
+                    <div class="hashing-definition-content">
+
+                        <h3>
+                            From Key to Table Index
+                        </h3>
+
+                        <p>
+                            A <strong>hash function</strong> processes a key
+                            and produces a hash value. A hash table uses that
+                            result to determine a suitable storage index.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="hashing-flow">
+
+                    <div class="hashing-flow-item">
+
+                        <span class="hashing-flow-label">
+                            Input
+                        </span>
+
+                        <code>"apple"</code>
+
+                    </div>
+
+                    <i class="bx bx-right-arrow-alt hashing-flow-arrow"></i>
+
+                    <div class="hashing-flow-item hashing-flow-highlight">
+
+                        <span class="hashing-flow-label">
+                            Hash Function
+                        </span>
+
+                        <code>hash(key)</code>
+
+                    </div>
+
+                    <i class="bx bx-right-arrow-alt hashing-flow-arrow"></i>
+
+                    <div class="hashing-flow-item">
+
+                        <span class="hashing-flow-label">
+                            Index
+                        </span>
+
+                        <code>3</code>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Remember</strong>
+
+                        <p>
+                            A hash function does not guarantee a unique
+                            result for every possible key. Different keys
+                            can map to the same table index, causing a collision.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                How Does a Hash Function Work?
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-cog"></i>
+                        Hash Function
+                    </span>
+
+                    <h2>
+                        How Does a Hash Function Work?
+                    </h2>
+
+                    <p>
+                        A hash function converts a key into a hash value.
+                        The implementation then maps that value to an
+                        index within the available table capacity.
+                    </p>
+
+                </div>
+
+                <div class="hashing-process">
+
+                    <div class="hashing-process-step">
+
+                        <span class="hashing-process-number">
+                            01
+                        </span>
+
+                        <div class="hashing-process-icon">
+                            <i class="bx bx-key"></i>
+                        </div>
+
+                        <h3>
+                            Receive the Key
+                        </h3>
+
+                        <p>
+                            Start with the value you want to store or find.
+                        </p>
+
+                        <code>"apple"</code>
+
+                    </div>
+
+                    <div class="hashing-process-arrow">
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </div>
+
+                    <div class="hashing-process-step">
+
+                        <span class="hashing-process-number">
+                            02
+                        </span>
+
+                        <div class="hashing-process-icon">
+                            <i class="bx bx-math"></i>
+                        </div>
+
+                        <h3>
+                            Calculate the Hash
+                        </h3>
+
+                        <p>
+                            Apply the hash function to the key.
+                        </p>
+
+                        <code>hash("apple")</code>
+
+                    </div>
+
+                    <div class="hashing-process-arrow">
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </div>
+
+                    <div class="hashing-process-step">
+
+                        <span class="hashing-process-number">
+                            03
+                        </span>
+
+                        <div class="hashing-process-icon">
+                            <i class="bx bx-grid-alt"></i>
+                        </div>
+
+                        <h3>
+                            Find the Index
+                        </h3>
+
+                        <p>
+                            Map the hash value to a valid table position.
+                        </p>
+
+                        <code>hash % capacity</code>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+
+                        <strong>Important</strong>
+
+                        <p>
+                            The expression <code>hash % capacity</code>
+                            is a common way to map a non-negative hash value
+                            to a table index. Real implementations may use
+                            different index-mapping strategies.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Properties of a Good Hash Function
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-shield"></i>
+                        Good Design
+                    </span>
+
+                    <h2>
+                        Properties of a Good Hash Function
+                    </h2>
+
+                    <p>
+                        A good hash function helps a hash table distribute
+                        keys effectively and reduce collisions.
+                    </p>
+
+                </div>
+
+                <div class="hashing-properties-grid">
+
+                    <article class="hashing-property-card">
+
+                        <div class="hashing-property-icon">
+                            <i class="bx bx-bolt-circle"></i>
+                        </div>
+
+                        <h3>
+                            Fast to Compute
+                        </h3>
+
+                        <p>
+                            The function should calculate hash values
+                            efficiently for frequent operations.
+                        </p>
+
+                    </article>
+
+                    <article class="hashing-property-card">
+
+                        <div class="hashing-property-icon">
+                            <i class="bx bx-spreadsheet"></i>
+                        </div>
+
+                        <h3>
+                            Uniform Distribution
+                        </h3>
+
+                        <p>
+                            Keys should be spread across the table rather
+                            than concentrated in a small number of indexes.
+                        </p>
+
+                    </article>
+
+                    <article class="hashing-property-card">
+
+                        <div class="hashing-property-icon">
+                            <i class="bx bx-refresh"></i>
+                        </div>
+
+                        <h3>
+                            Consistent Results
+                        </h3>
+
+                        <p>
+                            The same key should produce the same hash result
+                            when evaluated under the same rules.
+                        </p>
+
+                    </article>
+
+                    <article class="hashing-property-card">
+
+                        <div class="hashing-property-icon">
+                            <i class="bx bx-shield-quarter"></i>
+                        </div>
+
+                        <h3>
+                            Low Collision Rate
+                        </h3>
+
+                        <p>
+                            Different keys should be distributed in a way
+                            that reduces frequent collisions.
+                        </p>
+
+                    </article>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Keep in Mind</strong>
+
+                        <p>
+                            No finite hash table can assign a unique index
+                            to every possible key. A good hash function
+                            reduces collisions but cannot eliminate them
+                            in every situation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                What Is a Collision?
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-merge"></i>
+                        Collision
+                    </span>
+
+                    <h2>
+                        What Is a Hash Collision?
+                    </h2>
+
+                    <p>
+                        A collision occurs when two different keys map
+                        to the same index in a hash table.
+                    </p>
+
+                </div>
+
+                <div class="hashing-collision-visual">
+
+                    <div class="hashing-collision-inputs">
+
+                        <div class="hashing-collision-key">
+                            <span>Key A</span>
+                            <code>"apple"</code>
+                        </div>
+
+                        <div class="hashing-collision-key">
+                            <span>Key B</span>
+                            <code>"grape"</code>
+                        </div>
+
+                    </div>
+
+                    <div class="hashing-collision-arrows">
+
+                        <i class="bx bx-down-arrow-alt"></i>
+                        <i class="bx bx-down-arrow-alt"></i>
+
+                    </div>
+
+                    <div class="hashing-collision-function">
+                        <i class="bx bx-shuffle"></i>
+                        <span>Hash Function</span>
+                    </div>
+
+                    <div class="hashing-collision-result">
+                        <i class="bx bx-error-circle"></i>
+                        <div>
+                            <strong>Same Index: 3</strong>
+                            <span>Collision detected</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <p>
+                    The hash table must use a collision-resolution technique
+                    to store both entries without losing their values.
+                </p>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Why Collisions Happen</strong>
+
+                        <p>
+                            The set of possible keys is usually much larger
+                            than the number of available table indexes.
+                            Multiple keys can therefore map to the same index.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Separate Chaining
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-link"></i>
+                        Technique 01
+                    </span>
+
+                    <h2>
+                        Separate Chaining
+                    </h2>
+
+                    <p>
+                        Separate chaining stores multiple entries that map
+                        to the same index in a collection associated with
+                        that table position, commonly a linked list.
+                    </p>
+
+                </div>
+
+                <div class="hashing-technique-layout">
+
+                    <div class="hashing-technique-description">
+
+                        <h3>
+                            How It Works
+                        </h3>
+
+                        <ul class="hashing-feature-list">
+
+                            <li>
+                                <i class="bx bx-check-circle"></i>
+                                Each table index points to a collection of entries.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-check-circle"></i>
+                                Colliding keys are stored in the same collection.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-check-circle"></i>
+                                The collection can be traversed to find a key.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="hashing-chain-visual">
+
+                        <div class="hashing-chain-index">
+                            <span>Index</span>
+                            <strong>3</strong>
+                        </div>
+
+                        <i class="bx bx-right-arrow-alt hashing-chain-link"></i>
+
+                        <div class="hashing-chain-nodes">
+
+                            <div class="hashing-chain-node">
+                                <code>"apple"</code>
+                            </div>
+
+                            <i class="bx bx-right-arrow-alt"></i>
+
+                            <div class="hashing-chain-node">
+                                <code>"grape"</code>
+                            </div>
+
+                            <i class="bx bx-right-arrow-alt"></i>
+
+                            <div class="hashing-chain-null">
+                                NULL
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="hashing-technique-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <p>
+                        <strong>Advantage:</strong>
+                        Chaining can store multiple colliding entries without
+                        searching for another empty table slot.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Open Addressing
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-grid-alt"></i>
+                        Technique 02
+                    </span>
+
+                    <h2>
+                        Open Addressing
+                    </h2>
+
+                    <p>
+                        Open addressing stores all entries directly inside
+                        the table. When a collision occurs, the algorithm
+                        probes other positions until it finds a suitable slot.
+                    </p>
+
+                </div>
+
+                <div class="hashing-open-addressing">
+
+                    <div class="hashing-probe-info">
+
+                        <span class="hashing-probe-label">
+                            Example: Linear Probing
+                        </span>
+
+                        <h3>
+                            Find the Next Available Slot
+                        </h3>
+
+                        <p>
+                            If the target index is occupied, check the next
+                            index, continuing through the table according
+                            to the probing rule.
+                        </p>
+
+                    </div>
+
+                    <div class="hashing-probe-table">
+
+                        <div class="hashing-probe-cell">
+
+                            <span>Index 0</span>
+                            <code>"kiwi"</code>
+
+                        </div>
+
+                        <div class="hashing-probe-cell occupied">
+
+                            <span>Index 1</span>
+                            <code>"apple"</code>
+
+                        </div>
+
+                        <div class="hashing-probe-cell occupied">
+
+                            <span>Index 2</span>
+                            <code>"grape"</code>
+
+                        </div>
+
+                        <div class="hashing-probe-cell hashing-probe-target">
+
+                            <span>Index 3</span>
+                            <code>"orange"</code>
+
+                            <small>Inserted here</small>
+
+                        </div>
+
+                        <div class="hashing-probe-cell">
+
+                            <span>Index 4</span>
+                            <code>Empty</code>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="hashing-technique-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <p>
+                        <strong>Important:</strong>
+                        Open addressing requires careful handling of
+                        insertion, lookup, deletion, and table load factor.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Types of Open Addressing
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-branch"></i>
+                        Probing Methods
+                    </span>
+
+                    <h2>
+                        Types of Open Addressing
+                    </h2>
+
+                    <p>
+                        Open addressing uses different probing strategies
+                        to search for an available position after a collision.
+                    </p>
+
+                </div>
+
+                <div class="hashing-probing-grid">
+
+                    <article class="hashing-probing-card">
+
+                        <div class="hashing-probing-icon">
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </div>
+
+                        <h3>
+                            Linear Probing
+                        </h3>
+
+                        <p>
+                            Checks consecutive positions until an available
+                            slot is found.
+                        </p>
+
+                        <div class="hashing-probing-formula">
+                            <code>(h(key) + i) % capacity</code>
+                        </div>
+
+                        <span class="hashing-probing-example">
+                            Example: 3 → 4 → 5
+                        </span>
+
+                    </article>
+
+                    <article class="hashing-probing-card">
+
+                        <div class="hashing-probing-icon">
+                            <i class="bx bx-git-branch"></i>
+                        </div>
+
+                        <h3>
+                            Quadratic Probing
+                        </h3>
+
+                        <p>
+                            Uses squared offsets to determine the next
+                            positions to inspect.
+                        </p>
+
+                        <div class="hashing-probing-formula">
+                            <code>(h(key) + c1i + c2i²) % capacity</code>
+                        </div>
+
+                        <span class="hashing-probing-example">
+                            Example: 3 → 4 → 7
+                        </span>
+
+                    </article>
+
+                    <article class="hashing-probing-card">
+
+                        <div class="hashing-probing-icon">
+                            <i class="bx bx-shuffle"></i>
+                        </div>
+
+                        <h3>
+                            Double Hashing
+                        </h3>
+
+                        <p>
+                            Uses a second hash function to determine
+                            the step size between probes.
+                        </p>
+
+                        <div class="hashing-probing-formula">
+                            <code>(h1(key) + i × h2(key)) % capacity</code>
+                        </div>
+
+                        <span class="hashing-probing-example">
+                            Step size depends on the second hash
+                        </span>
+
+                    </article>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+
+                        <strong>Choosing a Probing Strategy</strong>
+
+                        <p>
+                            Linear probing is simple but can create clusters
+                            of occupied positions. Quadratic probing changes
+                            the step pattern, while double hashing uses a
+                            second hash function to vary the step size.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Chaining vs Open Addressing
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Comparison
+                    </span>
+
+                    <h2>
+                        Chaining vs Open Addressing
+                    </h2>
+
+                    <p>
+                        Both approaches resolve collisions, but they organize
+                        entries differently.
+                    </p>
+
+                </div>
+
+                <div class="hashing-comparison-table">
+
+                    <div class="hashing-comparison-row hashing-comparison-header">
+                        <span>Feature</span>
+                        <span>Separate Chaining</span>
+                        <span>Open Addressing</span>
+                    </div>
+
+                    <div class="hashing-comparison-row">
+                        <span>Storage</span>
+                        <span>Entries stored in collections per index</span>
+                        <span>Entries stored directly in table slots</span>
+                    </div>
+
+                    <div class="hashing-comparison-row">
+                        <span>Collision Handling</span>
+                        <span>Add entry to the same collection</span>
+                        <span>Probe another table position</span>
+                    </div>
+
+                    <div class="hashing-comparison-row">
+                        <span>Extra Memory</span>
+                        <span>May need extra nodes or collections</span>
+                        <span>Usually avoids separate chain nodes</span>
+                    </div>
+
+                    <div class="hashing-comparison-row">
+                        <span>Load Factor</span>
+                        <span>Can exceed 1</span>
+                        <span>Must remain below 1 for an empty slot to exist</span>
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Load Factor</strong>
+
+                        <p>
+                            Load factor is commonly defined as the number
+                            of stored entries divided by the table capacity.
+                            Its effect on performance depends on the collision
+                            strategy and implementation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Time Complexity
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-time"></i>
+                        Performance
+                    </span>
+
+                    <h2>
+                        Hashing Time Complexity
+                    </h2>
+
+                    <p>
+                        Hash tables usually provide fast average-case
+                        operations, but collisions can increase the
+                        amount of work required.
+                    </p>
+
+                </div>
+
+                <div class="hashing-complexity-grid">
+
+                    <div class="hashing-complexity-card">
+
+                        <span class="hashing-complexity-operation">
+                            Lookup
+                        </span>
+
+                        <strong class="hashing-complexity-average">
+                            O(1)
+                        </strong>
+
+                        <span class="hashing-complexity-label">
+                            Average
+                        </span>
+
+                        <p>
+                            Usually accesses the desired entry quickly.
+                        </p>
+
+                    </div>
+
+                    <div class="hashing-complexity-card">
+
+                        <span class="hashing-complexity-operation">
+                            Insertion
+                        </span>
+
+                        <strong class="hashing-complexity-average">
+                            O(1)
+                        </strong>
+
+                        <span class="hashing-complexity-label">
+                            Average
+                        </span>
+
+                        <p>
+                            Usually inserts an entry with a small number
+                            of probes or collection operations.
+                        </p>
+
+                    </div>
+
+                    <div class="hashing-complexity-card">
+
+                        <span class="hashing-complexity-operation">
+                            Worst Case
+                        </span>
+
+                        <strong class="hashing-complexity-worst">
+                            O(n)
+                        </strong>
+
+                        <span class="hashing-complexity-label">
+                            Lookup / Update
+                        </span>
+
+                        <p>
+                            Many collisions can require examining
+                            a large number of entries or slots.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Complexity Note</strong>
+
+                        <p>
+                            Average O(1) is the typical target for a
+                            well-designed hash table. Worst-case behavior
+                            can be O(n), depending on collisions and the
+                            implementation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Benefits and Limitations
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-shield"></i>
+                        Evaluation
+                    </span>
+
+                    <h2>
+                        Benefits and Limitations
+                    </h2>
+
+                    <p>
+                        Hashing is useful for fast key-based access, but
+                        its performance depends on the function, table
+                        capacity, and collision-resolution strategy.
+                    </p>
+
+                </div>
+
+                <div class="hashing-benefits-grid">
+
+                    <div class="hashing-benefits-card">
+
+                        <h3>
+                            <i class="bx bx-check-circle"></i>
+                            Benefits
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <i class="bx bx-check"></i>
+                                Fast average lookup, insertion, and deletion.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-check"></i>
+                                Useful for dictionaries, caches, and indexes.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-check"></i>
+                                Efficient access through keys.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-check"></i>
+                                Multiple collision strategies are available.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="hashing-benefits-card">
+
+                        <h3>
+                            <i class="bx bx-error-circle"></i>
+                            Limitations
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                <i class="bx bx-minus-circle"></i>
+                                Collisions cannot always be avoided.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-minus-circle"></i>
+                                Poor hash functions can reduce performance.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-minus-circle"></i>
+                                Resizing may require rebuilding table entries.
+                            </li>
+
+                            <li>
+                                <i class="bx bx-minus-circle"></i>
+                                Hash tables are not designed for sorted traversal.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Key Takeaways
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bookmark-check"></i>
+                        Summary
+                    </span>
+
+                    <h2>
+                        Key Takeaways
+                    </h2>
+
+                    <p>
+                        Review the main hashing concepts before continuing
+                        to the next data structure.
+                    </p>
+
+                </div>
+
+                <div class="hashing-takeaways-list">
+
+                    <div class="hashing-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            A <strong>hash function</strong> maps a key
+                            to a hash value used to determine a table index.
+                        </p>
+
+                    </div>
+
+                    <div class="hashing-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            A <strong>collision</strong> occurs when
+                            different keys map to the same table index.
+                        </p>
+
+                    </div>
+
+                    <div class="hashing-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            <strong>Separate chaining</strong> stores
+                            colliding entries in a collection associated
+                            with the same index.
+                        </p>
+
+                    </div>
+
+                    <div class="hashing-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            <strong>Open addressing</strong> resolves
+                            collisions by probing other positions in the table.
+                        </p>
+
+                    </div>
+
+                    <div class="hashing-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Good hash functions distribute keys effectively,
+                            improving average-case performance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-brain"></i>
+
+                    <div>
+
+                        <strong>Quick Reminder</strong>
+
+                        <p>
+                            Hash function → Table index → Collision handling
+                            when two keys map to the same position.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Exercises => Shared
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Hashing Techniques Exercises
+                    </h2>
+
+                    <p>
+                        Test your understanding of hash functions,
+                        collisions, and collision-resolution techniques.
+                    </p>
+
+                </div>
+
+                <div class="exercise-preview" data-correct-answer="Chaining">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Exercise Example
+                            </span>
+
+                            <h3>
+                                Understand Collision Resolution
+                            </h3>
+
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        Which technique stores colliding entries in a
+                        collection associated with the same table index?
+                    </p>
+
+                    <div class="exercise-code">
+
+                        <span>Answer:</span>
+
+                        <span class="exercise-answer-slot" id="exerciseAnswer">
+                            ?
+                        </span>
+
+                    </div>
+
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="Sorting">
+                            Sorting
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Chaining">
+                            Separate Chaining
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="BinarySearch">
+                            Binary Search
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Indexing">
+                            Direct Indexing
+                        </button>
+
+                    </div>
+
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Bottom Navigation
+            ================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="DictionariesPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="TreesPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

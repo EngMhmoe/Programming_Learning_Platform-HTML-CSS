@@ -1,0 +1,1148 @@
+/* ==========================================================
+    Global Styles
+========================================================== */
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    ADT Definition
+========================================================== */
+
+.adt-definition {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.adt-definition-icon {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 18px;
+  font-size: 34px;
+}
+
+.adt-definition-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.adt-definition-content h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.adt-definition-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.adt-definition-content strong {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    ADT Analogy
+========================================================== */
+
+.adt-analogy {
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.analogy-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.analogy-icon {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 22px;
+  font-size: 48px;
+}
+
+.analogy-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  font-size: 35px;
+}
+
+.analogy-action {
+  min-width: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.07);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.analogy-action i {
+  color: var(--primary-light);
+  font-size: 32px;
+}
+
+.analogy-action span {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.adt-analogy .example-description {
+  margin: 22px 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ==========================================================
+    ADT Principles Grid
+========================================================== */
+
+.adt-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.adt-principle-card {
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.adt-principle-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.adt-principle-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.adt-principle-card h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.adt-principle-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    ADT vs Data Structure
+========================================================== */
+
+.adt-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.adt-comparison-card {
+  min-width: 0;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.comparison-card-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 16px;
+  font-size: 29px;
+}
+
+.adt-comparison-card h3 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.comparison-label {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 5px 12px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.adt-comparison-card p {
+  margin: 0 0 18px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.adt-comparison-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.adt-comparison-card li {
+  position: relative;
+  padding-left: 23px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.adt-comparison-card li::before {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  color: var(--primary-light);
+  font-family: "boxicons";
+  font-size: 16px;
+  content: "\eb55";
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    ADT Components
+========================================================== */
+
+.adt-components-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.adt-component-item {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.3s ease;
+}
+
+.adt-component-item:hover {
+  border-color: var(--primary);
+}
+
+.component-number {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.component-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.component-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.component-content h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.component-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    ADT Example Cards
+========================================================== */
+
+.adt-example-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.adt-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.adt-example-header > div {
+  min-width: 0;
+}
+
+.example-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.adt-example-header h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.adt-example-header > i {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  font-size: 28px;
+}
+
+/* ==========================================================
+    Stack Visual
+========================================================== */
+
+.stack-visual {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: rgba(249, 115, 22, 0.035);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.stack-top-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.stack-top-label i {
+  font-size: 19px;
+}
+
+.stack-items {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 8px;
+  border-right: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 0 9px 9px;
+}
+
+.stack-item {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid var(--primary);
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.stack-item-top {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+.stack-bottom {
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ==========================================================
+    Queue Visual
+========================================================== */
+
+.queue-visual {
+  padding: 22px;
+  background: rgba(249, 115, 22, 0.035);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.queue-end-labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 12px;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.queue-end-labels span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.queue-end-labels i {
+  font-size: 18px;
+}
+
+.queue-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.queue-item {
+  width: 70px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.queue-item:first-child {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+.queue-visual .example-description {
+  margin: 18px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ==========================================================
+    Operation List
+========================================================== */
+
+.operation-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.operation-item {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1.5fr);
+  align-items: center;
+  gap: 15px;
+  padding: 15px 17px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.operation-name code {
+  display: inline-block;
+  padding: 6px 9px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.operation-description {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    More ADT Examples
+========================================================== */
+
+.adt-examples-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.adt-small-card {
+  min-width: 0;
+  padding: 23px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.adt-small-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.adt-small-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.adt-small-card h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.adt-small-card > p {
+  margin: 0 0 18px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.adt-small-operations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.adt-small-operations code {
+  padding: 5px 8px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: 6px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    ADT Benefits
+========================================================== */
+
+.adt-benefits-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.adt-benefit-item {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.adt-benefit-item > i {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--primary-light);
+  font-size: 23px;
+}
+
+.adt-benefit-item > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.adt-benefit-item h3 {
+  margin: 0 0 7px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.adt-benefit-item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Key Takeaways
+========================================================== */
+
+.adt-takeaways-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.adt-takeaway-item {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.adt-takeaway-item > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.adt-takeaway-item p {
+  min-width: 0;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.adt-takeaway-item strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Learning Note
+========================================================== */
+.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content .learning-note > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.tutorial-content .learning-note > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-note strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tutorial-content .learning-note p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Progress Card
+========================================================== */
+.tutorial-content .progress-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 30px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.progress-card-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.progress-card-content h2 {
+  margin: 16px 0 12px;
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.progress-card-content p {
+  margin-bottom: 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.progress-card-icon {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 24px;
+  font-size: 48px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design
+========================================================== */
+
+@media (max-width: 1000px) {
+  .adt-principles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .adt-principle-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .adt-principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adt-principle-card:last-child {
+    grid-column: auto;
+  }
+
+  .adt-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .adt-examples-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tutorial-content .progress-card {
+    padding: 25px;
+  }
+
+  .progress-card-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .adt-definition {
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .adt-definition-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    font-size: 29px;
+  }
+
+  .adt-analogy {
+    padding: 20px;
+  }
+
+  .analogy-visual {
+    gap: 15px;
+  }
+
+  .analogy-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 40px;
+  }
+
+  .analogy-action {
+    min-width: 120px;
+    padding: 14px;
+  }
+
+  .adt-component-item {
+    gap: 13px;
+    padding: 18px;
+  }
+
+  .component-number {
+    width: 36px;
+    height: 36px;
+  }
+
+  .component-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+
+  .adt-example-card {
+    padding: 20px;
+  }
+
+  .operation-item {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .tutorial-content .progress-card {
+    gap: 20px;
+  }
+
+  .progress-card-content h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .adt-definition {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .adt-definition-content h3 {
+    font-size: 19px;
+  }
+
+  .adt-definition-content p {
+    font-size: 14px;
+  }
+
+  .adt-analogy {
+    padding: 17px 12px;
+  }
+
+  .analogy-visual {
+    gap: 9px;
+  }
+
+  .analogy-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 15px;
+    font-size: 32px;
+  }
+
+  .analogy-arrow {
+    font-size: 25px;
+  }
+
+  .analogy-action {
+    min-width: 0;
+    max-width: 135px;
+    gap: 7px;
+    padding: 12px 9px;
+  }
+
+  .analogy-action i {
+    font-size: 25px;
+  }
+
+  .analogy-action span {
+    font-size: 12px;
+  }
+
+  .adt-principle-card,
+  .adt-comparison-card {
+    padding: 18px;
+  }
+
+  .adt-comparison-card h3 {
+    font-size: 18px;
+  }
+
+  .adt-component-item {
+    display: grid;
+    grid-template-columns: 36px 42px minmax(0, 1fr);
+    gap: 10px;
+    padding: 14px 12px;
+  }
+
+  .component-content h3 {
+    font-size: 16px;
+  }
+
+  .component-content p {
+    font-size: 13px;
+  }
+
+  .adt-example-card {
+    padding: 16px 12px;
+  }
+
+  .adt-example-header {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .adt-example-header h3 {
+    font-size: 18px;
+  }
+
+  .adt-example-header > i {
+    width: 43px;
+    height: 43px;
+    font-size: 23px;
+  }
+
+  .queue-visual {
+    padding: 15px 10px;
+  }
+
+  .queue-items {
+    gap: 7px;
+  }
+
+  .queue-item {
+    width: 55px;
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .queue-end-labels {
+    font-size: 11px;
+  }
+
+  .operation-item {
+    padding: 13px;
+  }
+
+  .operation-description {
+    font-size: 12px;
+  }
+
+  .adt-examples-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adt-small-card {
+    padding: 18px;
+  }
+
+  .adt-benefit-item {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .adt-benefit-item h3 {
+    font-size: 16px;
+  }
+
+  .adt-benefit-item p {
+    font-size: 13px;
+  }
+
+  .adt-takeaway-item {
+    gap: 9px;
+    padding: 13px;
+  }
+
+  .adt-takeaway-item p {
+    font-size: 13px;
+  }
+
+  .tutorial-content .learning-note {
+    gap: 9px;
+    padding: 13px;
+  }
+
+  .tutorial-content .progress-card {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .progress-card-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+    font-size: 32px;
+  }
+
+  .progress-card-content h2 {
+    font-size: 20px;
+  }
+}

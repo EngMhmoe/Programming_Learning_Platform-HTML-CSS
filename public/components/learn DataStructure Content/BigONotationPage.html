@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <title>Big O Notation | Data Structures | DevPath</title>
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style BigONotationPage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link active">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <section class="tutorial-content">
+
+            <!-- ======================================================
+            Tutorial Header
+        ====================================================== -->
+            <section class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+                <h1>Big O Notation</h1>
+
+                <p>
+                    Learn how Big O Notation describes algorithm efficiency,
+                    understand common growth rates, and analyze how algorithms
+                    behave as their input size increases.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="SpaceComplexityPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="LinkedListsPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            What Is Big O Notation?
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-book-open"></i>
+                        Definition
+                    </span>
+
+                    <h2>What Is Big O Notation?</h2>
+
+                </div>
+
+                <p>
+                    <strong>Big O Notation</strong> is a mathematical way
+                    to describe how an algorithm's resource requirements
+                    grow as the input size increases.
+                </p>
+
+                <p>
+                    It is commonly used to analyze an algorithm's
+                    <strong>Time Complexity</strong> and can also describe
+                    its <strong>Space Complexity</strong>.
+                </p>
+
+                <div class="big-o-definition">
+
+                    <div class="big-o-definition-icon">
+                        <i class="bx bx-line-chart"></i>
+                    </div>
+
+                    <div class="big-o-definition-content">
+
+                        <h3>In Simple Words</h3>
+
+                        <p>
+                            Big O helps us understand what happens when
+                            an algorithm receives more and more data.
+                        </p>
+
+                        <p>
+                            Instead of measuring the exact running time,
+                            we focus on how the amount of work grows
+                            as the input becomes larger.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Important</strong>
+
+                        <p>
+                            Big O does not tell us the exact number of
+                            seconds an algorithm needs. It describes
+                            how its resource usage grows with input size.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Why Big O Notation Matters
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bulb"></i>
+                        Importance
+                    </span>
+
+                    <h2>Why Does Big O Notation Matter?</h2>
+
+                    <p>
+                        Two algorithms may solve the same problem but
+                        behave very differently when the input becomes large.
+                    </p>
+
+                </div>
+
+                <div class="big-o-benefits-grid">
+
+                    <div class="big-o-benefit-card">
+
+                        <div class="big-o-benefit-icon">
+                            <i class="bx bx-tachometer"></i>
+                        </div>
+
+                        <h3>Understand Efficiency</h3>
+
+                        <p>
+                            Helps estimate how the amount of work grows
+                            as the number of input elements increases.
+                        </p>
+
+                    </div>
+
+                    <div class="big-o-benefit-card">
+
+                        <div class="big-o-benefit-icon">
+                            <i class="bx bx-git-compare"></i>
+                        </div>
+
+                        <h3>Compare Algorithms</h3>
+
+                        <p>
+                            Makes it easier to compare different solutions
+                            without depending only on a particular computer.
+                        </p>
+
+                    </div>
+
+                    <div class="big-o-benefit-card">
+
+                        <div class="big-o-benefit-icon">
+                            <i class="bx bx-expand"></i>
+                        </div>
+
+                        <h3>Handle Large Inputs</h3>
+
+                        <p>
+                            Helps identify algorithms that may become
+                            inefficient when processing large datasets.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Understanding Input Size
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-ruler"></i>
+                        Input Size
+                    </span>
+
+                    <h2>Understanding Input Size (n)</h2>
+
+                </div>
+
+                <p>
+                    In algorithm analysis, <strong>n</strong> usually
+                    represents the number of elements in the input.
+                </p>
+
+                <div class="big-o-input-example">
+
+                    <div class="big-o-input-header">
+
+                        <i class="bx bx-list-ul"></i>
+
+                        <span>Example: An Array</span>
+
+                    </div>
+
+                    <div class="big-o-input-array">
+
+                        <span class="big-o-array-cell">10</span>
+                        <span class="big-o-array-cell">20</span>
+                        <span class="big-o-array-cell">30</span>
+                        <span class="big-o-array-cell">40</span>
+
+                    </div>
+
+                    <p>
+                        This array contains four elements, so
+                        <strong>n = 4</strong>.
+                    </p>
+
+                    <div class="big-o-input-growth">
+
+                        <div class="big-o-input-item">
+
+                            <strong>n = 4</strong>
+
+                            <span>4 elements</span>
+
+                        </div>
+
+                        <div class="big-o-input-item">
+
+                            <strong>n = 10</strong>
+
+                            <span>10 elements</span>
+
+                        </div>
+
+                        <div class="big-o-input-item">
+
+                            <strong>n = 100</strong>
+
+                            <span>100 elements</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    An algorithm may perform a fixed amount of work,
+                    process every element once, or repeat work for
+                    combinations of elements. Big O describes how
+                    this work grows as <strong>n</strong> increases.
+                </p>
+
+            </section>
+
+            <!-- ======================================================
+            Common Big O Complexities
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-chart"></i>
+                        Complexity Types
+                    </span>
+
+                    <h2>Common Big O Complexities</h2>
+
+                    <p>
+                        These are common growth rates used to describe
+                        algorithm efficiency.
+                    </p>
+
+                </div>
+
+                <div class="big-o-complexities-grid">
+
+                    <!-- O(1) -->
+                    <div class="big-o-complexity-card">
+
+                        <div class="big-o-complexity-top">
+
+                            <span class="big-o-complexity-symbol">O(1)</span>
+
+                            <span class="big-o-complexity-tag">
+                                Constant
+                            </span>
+
+                        </div>
+
+                        <h3>Constant Time</h3>
+
+                        <p>
+                            The number of operations stays constant
+                            as the input size grows.
+                        </p>
+
+                        <div class="big-o-visual constant-visual">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <p class="big-o-complexity-example">
+                            Example: Accessing an array element
+                            by its index.
+                        </p>
+
+                    </div>
+
+                    <!-- O(log n) -->
+                    <div class="big-o-complexity-card">
+
+                        <div class="big-o-complexity-top">
+
+                            <span class="big-o-complexity-symbol">O(log n)</span>
+
+                            <span class="big-o-complexity-tag">
+                                Logarithmic
+                            </span>
+
+                        </div>
+
+                        <h3>Logarithmic Time</h3>
+
+                        <p>
+                            The amount of work grows slowly because
+                            the problem size is repeatedly reduced.
+                        </p>
+
+                        <div class="big-o-visual logarithmic-visual">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <p class="big-o-complexity-example">
+                            Example: Binary Search in a sorted array.
+                        </p>
+
+                    </div>
+
+                    <!-- O(n) -->
+                    <div class="big-o-complexity-card">
+
+                        <div class="big-o-complexity-top">
+
+                            <span class="big-o-complexity-symbol">O(n)</span>
+
+                            <span class="big-o-complexity-tag">
+                                Linear
+                            </span>
+
+                        </div>
+
+                        <h3>Linear Time</h3>
+
+                        <p>
+                            The amount of work grows proportionally
+                            to the number of input elements.
+                        </p>
+
+                        <div class="big-o-visual linear-visual">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <p class="big-o-complexity-example">
+                            Example: Looping through an array once.
+                        </p>
+
+                    </div>
+
+                    <!-- O(n log n) -->
+                    <div class="big-o-complexity-card">
+
+                        <div class="big-o-complexity-top">
+
+                            <span class="big-o-complexity-symbol">O(n log n)</span>
+
+                            <span class="big-o-complexity-tag">
+                                Linearithmic
+                            </span>
+
+                        </div>
+
+                        <h3>Linearithmic Time</h3>
+
+                        <p>
+                            The work grows approximately with n
+                            multiplied by log n.
+                        </p>
+
+                        <div class="big-o-visual linearithmic-visual">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <p class="big-o-complexity-example">
+                            Example: Merge Sort.
+                        </p>
+
+                    </div>
+
+                    <!-- O(n²) -->
+                    <div class="big-o-complexity-card">
+
+                        <div class="big-o-complexity-top">
+
+                            <span class="big-o-complexity-symbol">O(n²)</span>
+
+                            <span class="big-o-complexity-tag">
+                                Quadratic
+                            </span>
+
+                        </div>
+
+                        <h3>Quadratic Time</h3>
+
+                        <p>
+                            The amount of work may grow with the square
+                            of the input size.
+                        </p>
+
+                        <div class="big-o-visual quadratic-visual">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <p class="big-o-complexity-example">
+                            Example: Comparing every pair of elements
+                            using two nested loops.
+                        </p>
+
+                    </div>
+
+                    <!-- O(2^n) -->
+                    <div class="big-o-complexity-card">
+
+                        <div class="big-o-complexity-top">
+
+                            <span class="big-o-complexity-symbol">O(2ⁿ)</span>
+
+                            <span class="big-o-complexity-tag">
+                                Exponential
+                            </span>
+
+                        </div>
+
+                        <h3>Exponential Time</h3>
+
+                        <p>
+                            The amount of work can approximately double
+                            whenever the input size increases by one.
+                        </p>
+
+                        <div class="big-o-visual exponential-visual">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <p class="big-o-complexity-example">
+                            Example: A naive recursive solution
+                            for some combinatorial problems.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Remember</strong>
+
+                        <p>
+                            These examples describe typical patterns,
+                            not every possible implementation. Always
+                            analyze the actual algorithm to determine
+                            its complexity.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Example 1: Constant Time
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        Code Example
+                    </span>
+
+                    <h2>Example 1: Constant Time — O(1)</h2>
+
+                </div>
+
+                <p>
+                    Accessing an element by index in a typical array
+                    takes a constant amount of time.
+                </p>
+
+                <div class="big-o-code-example">
+
+                    <div class="big-o-code-header">
+
+                        <span>
+                            <i class="bx bx-code-alt"></i>
+                            JavaScript
+                        </span>
+
+                        <span class="big-o-code-label constant-label">
+                            O(1)
+                        </span>
+
+                    </div>
+
+                    <pre><code>function getFirstElement(items) {
+    return items[0];
+}</code></pre>
+
+                    <div class="big-o-code-explanation">
+
+                        <h3>Why O(1)?</h3>
+
+                        <ul>
+                            <li>The function accesses one specific array position.</li>
+                            <li>It does not need to visit every element.</li>
+                            <li>The number of operations stays constant as the array grows.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Example 2: Linear Time
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        Code Example
+                    </span>
+
+                    <h2>Example 2: Linear Time — O(n)</h2>
+
+                </div>
+
+                <p>
+                    Consider a function that prints every element
+                    in an array.
+                </p>
+
+                <div class="big-o-code-example">
+
+                    <div class="big-o-code-header">
+
+                        <span>
+                            <i class="bx bx-code-alt"></i>
+                            JavaScript
+                        </span>
+
+                        <span class="big-o-code-label linear-label">
+                            O(n)
+                        </span>
+
+                    </div>
+
+                    <pre><code>function printItems(items) {
+    for (let i = 0; i < items.length; i++) {
+        console.log(items[i]);
+    }
+}</code></pre>
+
+                    <div class="big-o-code-explanation">
+
+                        <h3>Why O(n)?</h3>
+
+                        <ul>
+                            <li>The loop visits each element once.</li>
+                            <li>An array with 10 elements requires 10 loop iterations.</li>
+                            <li>An array with 1,000 elements requires 1,000 loop iterations.</li>
+                            <li>The amount of work grows linearly with n.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Example 3: Quadratic Time
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        Code Example
+                    </span>
+
+                    <h2>Example 3: Quadratic Time — O(n²)</h2>
+
+                </div>
+
+                <p>
+                    When a loop runs inside another loop, the total
+                    number of iterations may grow quadratically.
+                </p>
+
+                <div class="big-o-code-example">
+
+                    <div class="big-o-code-header">
+
+                        <span>
+                            <i class="bx bx-code-alt"></i>
+                            JavaScript
+                        </span>
+
+                        <span class="big-o-code-label quadratic-label">
+                            O(n²)
+                        </span>
+
+                    </div>
+
+                    <pre><code>function printPairs(items) {
+    for (let i = 0; i < items.length; i++) {
+        for (let j = 0; j < items.length; j++) {
+            console.log(items[i], items[j]);
+        }
+    }
+}</code></pre>
+
+                    <div class="big-o-code-explanation">
+
+                        <h3>Why O(n²)?</h3>
+
+                        <ul>
+                            <li>The outer loop runs n times.</li>
+                            <li>For every outer iteration, the inner loop runs n times.</li>
+                            <li>The total number of iterations is n × n = n².</li>
+                            <li>For n = 10, the nested loops perform 100 iterations.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Example 4: Logarithmic Time
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        Code Example
+                    </span>
+
+                    <h2>Example 4: Logarithmic Time — O(log n)</h2>
+
+                </div>
+
+                <p>
+                    Binary Search repeatedly halves the search range
+                    in a sorted array.
+                </p>
+
+                <div class="big-o-code-example">
+
+                    <div class="big-o-code-header">
+
+                        <span>
+                            <i class="bx bx-code-alt"></i>
+                            JavaScript
+                        </span>
+
+                        <span class="big-o-code-label logarithmic-label">
+                            O(log n)
+                        </span>
+
+                    </div>
+
+                    <pre><code>function binarySearch(items, target) {
+    let left = 0;
+    let right = items.length - 1;
+
+    while (left <= right) {
+        const middle = Math.floor((left + right) / 2);
+
+        if (items[middle] === target) {
+            return middle;
+        }
+
+        if (items[middle] < target) {
+            left = middle + 1;
+        } else {
+            right = middle - 1;
+        }
+    }
+
+    return -1;
+}</code></pre>
+
+                    <div class="big-o-code-explanation">
+
+                        <h3>Why O(log n)?</h3>
+
+                        <ul>
+                            <li>Each iteration eliminates approximately half of the remaining elements.</li>
+                            <li>The algorithm does not need to inspect every element.</li>
+                            <li>The input must be sorted for this Binary Search implementation to work correctly.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Basic Big O Rules
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-list-check"></i>
+                        Analysis Rules
+                    </span>
+
+                    <h2>Basic Rules of Big O Notation</h2>
+
+                    <p>
+                        These rules help simplify an algorithm's
+                        complexity without counting every operation.
+                    </p>
+
+                </div>
+
+                <div class="big-o-rules">
+
+                    <div class="big-o-rule">
+
+                        <div class="big-o-rule-symbol">
+                            1
+                        </div>
+
+                        <div>
+
+                            <h3>Ignore Constant Factors</h3>
+
+                            <p>
+                                Big O focuses on the growth rate, so
+                                constant multipliers are ignored.
+                            </p>
+
+                            <div class="big-o-rule-example">
+                                <span>Example</span>
+                                <code>O(2n) → O(n)</code>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="big-o-rule">
+
+                        <div class="big-o-rule-symbol">
+                            2
+                        </div>
+
+                        <div>
+
+                            <h3>Keep the Dominant Term</h3>
+
+                            <p>
+                                When an expression contains multiple
+                                growth terms, the fastest-growing term
+                                determines the Big O classification.
+                            </p>
+
+                            <div class="big-o-rule-example">
+                                <span>Example</span>
+                                <code>O(n² + n) → O(n²)</code>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="big-o-rule">
+
+                        <div class="big-o-rule-symbol">
+                            3
+                        </div>
+
+                        <div>
+
+                            <h3>Add Sequential Operations</h3>
+
+                            <p>
+                                For operations that run one after another,
+                                add their costs and simplify the result.
+                            </p>
+
+                            <div class="big-o-rule-example">
+                                <span>Example</span>
+                                <code>O(n) + O(n) → O(n)</code>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="big-o-rule">
+
+                        <div class="big-o-rule-symbol">
+                            4
+                        </div>
+
+                        <div>
+
+                            <h3>Multiply Nested Loop Costs</h3>
+
+                            <p>
+                                When one loop runs n times and another
+                                loop inside it also runs n times, their
+                                combined work is proportional to n².
+                            </p>
+
+                            <div class="big-o-rule-example">
+                                <span>Example</span>
+                                <code>O(n) × O(n) → O(n²)</code>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Important Note</strong>
+
+                        <p>
+                            These are useful introductory rules.
+                            More advanced algorithms may require a
+                            detailed analysis of loops, recursion,
+                            branching, and input characteristics.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Comparing Growth Rates
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bar-chart-alt-2"></i>
+                        Growth Comparison
+                    </span>
+
+                    <h2>How Do Growth Rates Compare?</h2>
+
+                </div>
+
+                <p>
+                    The following table shows representative values
+                    for common growth functions as n increases.
+                </p>
+
+                <div class="big-o-growth-table-wrapper">
+
+                    <table class="big-o-growth-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Input (n)</th>
+                                <th>O(1)</th>
+                                <th>O(log₂ n)</th>
+                                <th>O(n)</th>
+                                <th>O(n²)</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>8</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>8</td>
+                                <td>64</td>
+                            </tr>
+
+                            <tr>
+                                <td>16</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>16</td>
+                                <td>256</td>
+                            </tr>
+
+                            <tr>
+                                <td>32</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>32</td>
+                                <td>1,024</td>
+                            </tr>
+
+                            <tr>
+                                <td>100</td>
+                                <td>1</td>
+                                <td>≈ 6.64</td>
+                                <td>100</td>
+                                <td>10,000</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p class="big-o-table-caption">
+                    These are mathematical growth-function values,
+                    not exact execution times or guaranteed operation counts
+                    for every algorithm.
+                </p>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+
+                        <strong>What Should You Notice?</strong>
+
+                        <p>
+                            Constant and logarithmic growth increase slowly.
+                            Linear growth follows the input size, while
+                            quadratic growth increases much more rapidly.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Big O vs. Space Complexity
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Comparison
+                    </span>
+
+                    <h2>Big O Notation and Space Complexity</h2>
+
+                </div>
+
+                <p>
+                    Big O is a notation that can describe different
+                    resource requirements. Time Complexity and Space
+                    Complexity are two common applications of it.
+                </p>
+
+                <div class="big-o-comparison-grid">
+
+                    <div class="big-o-comparison-card">
+
+                        <div class="big-o-comparison-icon">
+                            <i class="bx bx-time-five"></i>
+                        </div>
+
+                        <h3>Time Complexity</h3>
+
+                        <p>
+                            Describes how the amount of work performed
+                            by an algorithm grows with the input size.
+                        </p>
+
+                        <span class="big-o-comparison-example">
+                            Example: O(n) time
+                        </span>
+
+                    </div>
+
+                    <div class="big-o-comparison-card">
+
+                        <div class="big-o-comparison-icon">
+                            <i class="bx bx-memory-card"></i>
+                        </div>
+
+                        <h3>Space Complexity</h3>
+
+                        <p>
+                            Describes how memory requirements grow
+                            with the input size.
+                        </p>
+
+                        <span class="big-o-comparison-example">
+                            Example: O(n) auxiliary space
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Key Takeaways
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-check-circle"></i>
+                        Summary
+                    </span>
+
+                    <h2>Key Takeaways</h2>
+
+                </div>
+
+                <ul class="big-o-takeaways-list">
+
+                    <li>
+                        <i class="bx bx-check"></i>
+                        <span>
+                            Big O describes how an algorithm's resource
+                            requirements grow as the input size increases.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check"></i>
+                        <span>
+                            O(1) represents constant growth, while
+                            O(log n) represents logarithmic growth.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check"></i>
+                        <span>
+                            O(n) represents linear growth, and
+                            O(n²) represents quadratic growth.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check"></i>
+                        <span>
+                            Binary Search is a common example of an
+                            O(log n) algorithm when the input is sorted.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check"></i>
+                        <span>
+                            Nested loops can produce quadratic complexity,
+                            depending on their iteration counts.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check"></i>
+                        <span>
+                            Ignore constant factors and keep the dominant
+                            term when simplifying common Big O expressions.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check"></i>
+                        <span>
+                            Big O can describe both Time Complexity
+                            and Space Complexity.
+                        </span>
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <!-- ======================================================
+            Exercises => Shared
+        ====================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Big O Notation Exercises
+                    </h2>
+
+                    <p>
+                        Test your understanding of Big O Notation
+                        through this practice question.
+                    </p>
+
+                </div>
+
+                <!-- ==================================================
+                Exercise Example
+            ================================================== -->
+                <div class="exercise-preview" data-correct-answer="On">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Exercise Example
+                            </span>
+
+                            <h3>
+                                Identify the Time Complexity
+                            </h3>
+
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        A function loops through an array of n elements
+                        exactly once. What is its time complexity?
+                    </p>
+
+                    <!-- Answer Example -->
+                    <div class="exercise-code">
+
+                        <span>Answer:</span>
+
+                        <span class="exercise-answer-slot" id="exerciseAnswer">?</span>
+
+                    </div>
+
+                    <!-- Answer Options -->
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="O1">
+                            O(1)
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="On">
+                            O(n)
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="On2">
+                            O(n²)
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Ologn">
+                            O(log n)
+                        </button>
+
+                    </div>
+
+                    <!-- Answer Result -->
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <!-- All Exercises Button -->
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Progress Card
+        ====================================================== -->
+            <section class="progress-card">
+
+                <div class="progress-card-icon">
+                    <i class="bx bx-trophy"></i>
+                </div>
+
+                <div class="progress-card-content">
+
+                    <h3>Great Job!</h3>
+
+                    <p>
+                        You have learned the fundamentals of Big O Notation.
+                        Continue your Data Structures journey by exploring
+                        the next topic in the course.
+                    </p>
+
+                </div>
+
+                <a href="LinkedListsPage.html" class="content-button">
+                    Continue Learning
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </section>
+
+            <!-- ==================================================
+            Bottom Navigation
+        ================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="SpaceComplexityPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="LinkedListsPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+        </section>
+
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

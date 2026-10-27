@@ -1,0 +1,1259 @@
+/* ==========================================================
+    Global Styles
+========================================================== */
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+    BST Definition
+========================================================== */
+
+.bst-definition {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.bst-definition-icon {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 18px;
+  font-size: 34px;
+}
+
+.bst-definition-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.bst-definition-content h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.bst-definition-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* ==========================================================
+    BST Properties
+========================================================== */
+
+.bst-properties-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.bst-property-card {
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.bst-property-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.bst-property-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 27px;
+}
+
+.bst-property-card h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.bst-property-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+    BST Structure Example
+========================================================== */
+
+.bst-structure-example {
+  margin-top: 25px;
+  padding: 30px 20px;
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.bst-tree-level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  min-width: 340px;
+}
+
+.bst-tree-level-root {
+  margin-bottom: 0;
+}
+
+.bst-tree-level-two {
+  gap: 150px;
+}
+
+.bst-tree-level-three {
+  gap: 36px;
+}
+
+.bst-node {
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  background: var(--surface);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.bst-node-root {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+.bst-tree-connectors {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-width: 340px;
+  height: 44px;
+}
+
+.bst-tree-connectors span {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 44px;
+  background: var(--primary);
+  transform-origin: top center;
+}
+
+.bst-connectors-root .bst-connector-left {
+  left: calc(50% - 1px);
+  transform: rotate(42deg);
+}
+
+.bst-connectors-root .bst-connector-right {
+  left: calc(50% - 1px);
+  transform: rotate(-42deg);
+}
+
+.bst-connectors-bottom .bst-connector-left,
+.bst-connectors-bottom .bst-connector-right {
+  display: none;
+}
+
+/* The connector layout is kept simple and horizontally scrollable. */
+.bst-connectors-bottom {
+  height: 22px;
+}
+
+.bst-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.bst-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.bst-legend i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+/* ==========================================================
+    BST Operation Card
+========================================================== */
+
+.bst-operation-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.bst-operation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.bst-operation-header > div {
+  min-width: 0;
+}
+
+.bst-operation-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.bst-operation-header h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.bst-operation-header > i {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  font-size: 28px;
+}
+
+/* ==========================================================
+    BST Search Steps
+========================================================== */
+
+.bst-search-steps {
+  display: grid;
+  gap: 14px;
+}
+
+.bst-search-step {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.bst-step-number {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.bst-search-step > div,
+.bst-insertion-step > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.bst-search-step h3,
+.bst-insertion-step h3 {
+  margin: 0 0 7px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.bst-search-step p,
+.bst-insertion-step p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.bst-search-path {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 20px;
+  background: rgba(249, 115, 22, 0.035);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.bst-search-path span {
+  min-width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.bst-search-path > i {
+  color: var(--primary-light);
+  font-size: 22px;
+}
+
+.bst-search-path .bst-search-found {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-color: var(--primary);
+}
+
+/* ==========================================================
+    BST Insertion
+========================================================== */
+
+.bst-insertion-flow {
+  display: grid;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.bst-insertion-step {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.bst-code-example {
+  min-width: 0;
+  margin-top: 25px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.bst-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border-bottom: 1px solid var(--border);
+}
+
+.bst-code-header > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.bst-code-header i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+.bst-code-language {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bst-code-example pre {
+  max-width: 100%;
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  line-height: 1.9;
+  tab-size: 4;
+}
+
+.bst-code-example code {
+  font-family: inherit;
+}
+
+/* ==========================================================
+    BST Deletion Cases
+========================================================== */
+
+.bst-deletion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.bst-deletion-card {
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.bst-deletion-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.bst-deletion-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.bst-deletion-number {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--primary-light);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.bst-deletion-card h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.bst-deletion-card > p:not(.bst-mini-caption) {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.bst-mini-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  padding: 16px 10px;
+  background: rgba(249, 115, 22, 0.035);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.bst-mini-tree span {
+  min-width: 36px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.bst-mini-tree i {
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+.bst-mini-tree .bst-mini-highlight {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+.bst-mini-caption {
+  margin: 12px 0 0;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ==========================================================
+    BST Traversal
+========================================================== */
+
+.bst-traversal-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.bst-traversal-item {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.bst-traversal-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.bst-traversal-item > div:last-child {
+  min-width: 0;
+  flex: 1;
+}
+
+.bst-traversal-item h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+.bst-traversal-item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.bst-sequence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 15px;
+}
+
+.bst-sequence span {
+  min-width: 36px;
+  padding: 7px 9px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: 7px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* ==========================================================
+    BST Complexity
+========================================================== */
+
+.bst-complexity-table-wrapper {
+  width: 100%;
+  margin-top: 25px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.bst-complexity-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.bst-complexity-table th,
+.bst-complexity-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: nowrap;
+}
+
+.bst-complexity-table th {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.035);
+  font-weight: 900;
+}
+
+.bst-complexity-table td {
+  color: var(--text-muted);
+}
+
+.bst-complexity-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.bst-complexity-table td code {
+  display: inline-block;
+  padding: 5px 8px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.bst-complexity-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.bst-complexity-card {
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.bst-complexity-value {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.bst-complexity-card h3 {
+  margin: 0 0 9px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.bst-complexity-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+    BST Comparison
+========================================================== */
+
+.bst-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.bst-comparison-card {
+  min-width: 0;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.bst-comparison-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 16px;
+  font-size: 29px;
+}
+
+.bst-comparison-card h3 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.bst-comparison-label {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 5px 12px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.bst-comparison-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ==========================================================
+    BST Applications
+========================================================== */
+
+.bst-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.bst-application-card {
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.bst-application-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.bst-application-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.bst-application-card h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.bst-application-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+    BST Key Takeaways
+========================================================== */
+
+.bst-takeaways-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.bst-takeaway-item {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.bst-takeaway-item > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.bst-takeaway-item p {
+  min-width: 0;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.bst-takeaway-item strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* ==========================================================
+    Learning Note
+========================================================== */
+.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content .learning-note > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.tutorial-content .learning-note > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-note strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tutorial-content .learning-note p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Progress Card
+========================================================== */
+.tutorial-content .progress-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 30px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.progress-card-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.progress-card-content h2 {
+  margin: 16px 0 12px;
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.progress-card-content p {
+  margin-bottom: 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.progress-card-icon {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 24px;
+  font-size: 48px;
+}
+
+/* ==========================================================
+    Responsive Design
+========================================================== */
+
+@media (max-width: 1000px) {
+  .bst-properties-grid,
+  .bst-applications-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bst-property-card:last-child,
+  .bst-application-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .bst-deletion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bst-deletion-card {
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 16px;
+  }
+
+  .bst-deletion-icon {
+    grid-row: span 2;
+    margin-bottom: 0;
+  }
+
+  .bst-deletion-number {
+    margin-bottom: 5px;
+  }
+
+  .bst-deletion-card h3 {
+    margin-bottom: 8px;
+  }
+
+  .bst-deletion-card > p:not(.bst-mini-caption),
+  .bst-mini-tree,
+  .bst-mini-caption {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .bst-properties-grid,
+  .bst-applications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bst-property-card:last-child,
+  .bst-application-card:last-child {
+    grid-column: auto;
+  }
+
+  .bst-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tutorial-content .progress-card {
+    padding: 25px;
+  }
+
+  .progress-card-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bst-definition {
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .bst-definition-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    font-size: 29px;
+  }
+
+  .bst-complexity-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .bst-operation-card {
+    padding: 20px;
+  }
+
+  .bst-structure-example {
+    padding: 25px 12px;
+  }
+
+  .bst-complexity-table th,
+  .bst-complexity-table td {
+    padding: 13px 14px;
+  }
+
+  .tutorial-content .progress-card {
+    gap: 20px;
+  }
+
+  .progress-card-content h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .bst-definition {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .bst-definition-content h3 {
+    font-size: 19px;
+  }
+
+  .bst-definition-content p {
+    font-size: 14px;
+  }
+
+  .bst-property-card,
+  .bst-deletion-card,
+  .bst-comparison-card,
+  .bst-application-card {
+    padding: 18px;
+  }
+
+  .bst-tree-level {
+    gap: 48px;
+  }
+
+  .bst-tree-level-two {
+    gap: 90px;
+  }
+
+  .bst-tree-level-three {
+    gap: 16px;
+  }
+
+  .bst-node {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    font-size: 13px;
+  }
+
+  .bst-operation-card {
+    padding: 16px 12px;
+  }
+
+  .bst-operation-header {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .bst-operation-header h3 {
+    font-size: 18px;
+  }
+
+  .bst-operation-header > i {
+    width: 43px;
+    height: 43px;
+    font-size: 23px;
+  }
+
+  .bst-search-step,
+  .bst-insertion-step {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .bst-step-number {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+
+  .bst-search-step h3,
+  .bst-insertion-step h3 {
+    font-size: 15px;
+  }
+
+  .bst-search-step p,
+  .bst-insertion-step p {
+    font-size: 13px;
+  }
+
+  .bst-search-path {
+    gap: 7px;
+    padding: 14px 8px;
+  }
+
+  .bst-search-path span {
+    min-width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .bst-search-path > i {
+    font-size: 18px;
+  }
+
+  .bst-code-example pre {
+    padding: 16px 12px;
+    font-size: 11px;
+  }
+
+  .bst-deletion-card {
+    display: block;
+  }
+
+  .bst-deletion-icon {
+    margin-bottom: 14px;
+  }
+
+  .bst-traversal-item {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .bst-traversal-icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    font-size: 21px;
+  }
+
+  .bst-traversal-item h3 {
+    font-size: 15px;
+  }
+
+  .bst-traversal-item p {
+    font-size: 13px;
+  }
+
+  .bst-complexity-value {
+    font-size: 20px;
+  }
+
+  .bst-takeaway-item {
+    gap: 9px;
+    padding: 13px;
+  }
+
+  .bst-takeaway-item p {
+    font-size: 13px;
+  }
+
+  .tutorial-content .learning-note {
+    gap: 9px;
+    padding: 13px;
+  }
+
+  .tutorial-content .progress-card {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .progress-card-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+    font-size: 32px;
+  }
+
+  .progress-card-content h2 {
+    font-size: 20px;
+  }
+}

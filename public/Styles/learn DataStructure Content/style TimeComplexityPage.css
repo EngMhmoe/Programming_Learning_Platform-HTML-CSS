@@ -1,0 +1,1350 @@
+/* ==========================================================
+    Global Styles
+========================================================== */
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Complexity Definition
+========================================================== */
+
+.complexity-definition {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.complexity-definition-icon {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 18px;
+  font-size: 34px;
+}
+
+.complexity-definition-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.complexity-definition-content h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.complexity-definition-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Complexity Scenario
+========================================================== */
+
+.complexity-scenario {
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.scenario-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.scenario-heading > i {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.scenario-heading > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.scenario-heading h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.scenario-heading p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.scenario-options {
+  display: grid;
+  gap: 15px;
+}
+
+.scenario-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 18px;
+  background: rgba(249, 115, 22, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.scenario-option-icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border-radius: 12px;
+  font-size: 23px;
+}
+
+.scenario-option > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.scenario-option h4 {
+  margin: 0 0 7px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.scenario-option p {
+  margin: 0 0 12px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.scenario-complexity {
+  display: inline-flex;
+  padding: 6px 10px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* ==========================================================
+    Complexity Benefits
+========================================================== */
+
+.complexity-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.complexity-benefit-card {
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.complexity-benefit-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.complexity-benefit-icon {
+  width: 49px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.complexity-benefit-card h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.complexity-benefit-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Input Size Example
+========================================================== */
+
+.input-size-example {
+  display: grid;
+  gap: 22px;
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.input-size-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.input-size-heading > i {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.input-size-heading h3 {
+  margin: 0 0 5px;
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.input-size-heading p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.input-size-row {
+  display: grid;
+  grid-template-columns: 75px minmax(0, 1fr);
+  align-items: center;
+  gap: 15px;
+}
+
+.input-size-label {
+  color: var(--primary-light);
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.input-size-array {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.input-size-array-large {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.input-size-array span {
+  min-width: 0;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid var(--primary);
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.input-size-example .example-description {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Big O Highlight
+========================================================== */
+
+.big-o-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 23px;
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.big-o-symbol {
+  width: 85px;
+  height: 85px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 22px;
+  font-size: 49px;
+  font-weight: 900;
+}
+
+.big-o-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.big-o-content h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.big-o-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.big-o-code {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 17px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.big-o-code > span {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.big-o-code code {
+  color: var(--primary-light);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.complexity-rules {
+  display: grid;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.complexity-rule {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.rule-symbol {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border: 1px solid rgba(249, 115, 22, 0.17);
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.complexity-rule > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.complexity-rule h3 {
+  margin: 0 0 7px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.complexity-rule p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Complexity Types Grid
+========================================================== */
+
+.complexity-types-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.complexity-type-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 23px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.complexity-type-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.complexity-type-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 19px;
+}
+
+.complexity-type-number {
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.complexity-rank {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.complexity-type-card h3 {
+  margin: 0 0 13px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.complexity-formula {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.075);
+  border: 1px solid rgba(249, 115, 22, 0.17);
+  border-radius: var(--radius-md);
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.complexity-type-card > p {
+  flex: 1;
+  margin: 0 0 20px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.complexity-mini-example {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.complexity-mini-example > span {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.complexity-mini-example code {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Growth Chart
+========================================================== */
+
+.growth-chart-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.growth-chart-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 28px;
+}
+
+.growth-chart-heading h3 {
+  margin: 0 0 7px;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.growth-chart-heading p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.growth-chart-heading > i {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.growth-chart {
+  display: grid;
+  gap: 20px;
+}
+
+.growth-chart-row {
+  display: grid;
+  grid-template-columns: 95px minmax(0, 1fr) 110px;
+  align-items: center;
+  gap: 13px;
+}
+
+.growth-chart-label {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.growth-track {
+  width: 100%;
+  height: 17px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.growth-bar {
+  height: 100%;
+  min-width: 8px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  border-radius: inherit;
+}
+
+.growth-constant {
+  width: 9%;
+}
+
+.growth-logarithmic {
+  width: 19%;
+}
+
+.growth-linear {
+  width: 37%;
+}
+
+.growth-linearithmic {
+  width: 63%;
+}
+
+.growth-quadratic {
+  width: 91%;
+}
+
+.growth-chart-value {
+  color: var(--text-muted);
+  font-size: 12px;
+  text-align: right;
+}
+
+.growth-chart-caption {
+  margin: 25px 0 0;
+  padding-top: 16px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Code Complexity Examples
+========================================================== */
+
+.code-complexity-example {
+  margin-top: 25px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.code-complexity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.code-example-number {
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.code-complexity-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.17);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.code-complexity-example h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.code-complexity-example > p {
+  margin: 0 0 18px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.complexity-code {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.9;
+  tab-size: 4;
+  -webkit-overflow-scrolling: touch;
+}
+
+.complexity-code code {
+  color: inherit;
+  font-family: inherit;
+  white-space: pre;
+}
+
+.code-complexity-explanation {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 17px;
+  padding: 14px;
+  background: rgba(249, 115, 22, 0.045);
+  border: 1px solid rgba(249, 115, 22, 0.13);
+  border-radius: var(--radius-md);
+}
+
+.code-complexity-explanation > i {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.code-complexity-explanation p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Best, Average, and Worst Cases
+========================================================== */
+
+.complexity-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.complexity-case-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.complexity-case-icon {
+  width: 49px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.complexity-case-card h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.complexity-case-card > p {
+  flex: 1;
+  margin: 0 0 18px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.case-example {
+  display: grid;
+  gap: 6px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.case-example strong {
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.case-example span {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Key Takeaways
+========================================================== */
+
+.complexity-takeaways-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.complexity-takeaway-item {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.complexity-takeaway-item > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.complexity-takeaway-item p {
+  min-width: 0;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.complexity-takeaway-item code {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Learning Note
+========================================================== */
+
+.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content .learning-note > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.tutorial-content .learning-note > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-note strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tutorial-content .learning-note p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Progress Card
+========================================================== */
+
+.tutorial-content .progress-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 30px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.progress-card-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.progress-card-content h2 {
+  margin: 16px 0 12px;
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.progress-card-content p {
+  margin-bottom: 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.progress-card-icon {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 24px;
+  font-size: 48px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design
+========================================================== */
+
+@media (max-width: 1000px) {
+  .complexity-benefits-grid,
+  .complexity-cases-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .complexity-benefit-card:last-child,
+  .complexity-case-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .complexity-types-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .complexity-benefits-grid,
+  .complexity-cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .complexity-benefit-card:last-child,
+  .complexity-case-card:last-child {
+    grid-column: auto;
+  }
+
+  .tutorial-content .progress-card {
+    padding: 25px;
+  }
+
+  .progress-card-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .complexity-definition {
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .complexity-definition-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    font-size: 29px;
+  }
+
+  .complexity-scenario {
+    padding: 20px;
+  }
+
+  .input-size-example {
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .input-size-row {
+    grid-template-columns: 65px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .input-size-array,
+  .input-size-array-large {
+    gap: 5px;
+  }
+
+  .input-size-array span {
+    min-height: 40px;
+    font-size: 13px;
+  }
+
+  .big-o-highlight {
+    gap: 17px;
+    padding: 20px;
+  }
+
+  .big-o-symbol {
+    width: 68px;
+    height: 68px;
+    border-radius: 17px;
+    font-size: 40px;
+  }
+
+  .complexity-type-card {
+    padding: 19px;
+  }
+
+  .growth-chart-card {
+    padding: 20px;
+  }
+
+  .growth-chart-row {
+    grid-template-columns: 85px minmax(0, 1fr) 90px;
+    gap: 9px;
+  }
+
+  .growth-chart-value {
+    font-size: 11px;
+  }
+
+  .code-complexity-example {
+    padding: 20px;
+  }
+
+  .tutorial-content .progress-card {
+    gap: 20px;
+  }
+
+  .progress-card-content h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .complexity-definition {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .complexity-definition-content h3 {
+    font-size: 19px;
+  }
+
+  .complexity-definition-content p {
+    font-size: 14px;
+  }
+
+  .complexity-scenario {
+    padding: 16px 12px;
+  }
+
+  .scenario-heading {
+    gap: 11px;
+  }
+
+  .scenario-heading > i {
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+  }
+
+  .scenario-heading h3 {
+    font-size: 17px;
+  }
+
+  .scenario-option {
+    gap: 10px;
+    padding: 13px;
+  }
+
+  .scenario-option-icon {
+    width: 37px;
+    height: 37px;
+    font-size: 20px;
+  }
+
+  .scenario-option h4 {
+    font-size: 15px;
+  }
+
+  .scenario-option p {
+    font-size: 13px;
+  }
+
+  .complexity-benefit-card {
+    padding: 18px;
+  }
+
+  .input-size-example {
+    padding: 16px 12px;
+  }
+
+  .input-size-heading {
+    gap: 10px;
+  }
+
+  .input-size-heading > i {
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+  }
+
+  .input-size-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .input-size-array span {
+    min-height: 34px;
+    font-size: 12px;
+  }
+
+  .big-o-highlight {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .big-o-symbol {
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+  }
+
+  .big-o-content h3 {
+    font-size: 19px;
+  }
+
+  .complexity-rule {
+    gap: 11px;
+    padding: 14px;
+  }
+
+  .rule-symbol {
+    width: 32px;
+    height: 32px;
+  }
+
+  .complexity-rule h3 {
+    font-size: 15px;
+  }
+
+  .complexity-rule p {
+    font-size: 13px;
+  }
+
+  .complexity-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .complexity-type-card {
+    padding: 18px;
+  }
+
+  .complexity-formula {
+    font-size: 23px;
+  }
+
+  .growth-chart-card {
+    padding: 16px 12px;
+  }
+
+  .growth-chart-heading {
+    gap: 10px;
+  }
+
+  .growth-chart-heading h3 {
+    font-size: 18px;
+  }
+
+  .growth-chart-heading > i {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .growth-chart-row {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  .growth-chart-label {
+    font-size: 12px;
+  }
+
+  .growth-chart-value {
+    grid-column: 2;
+    margin-top: -5px;
+    text-align: left;
+  }
+
+  .growth-track {
+    height: 14px;
+  }
+
+  .code-complexity-example {
+    padding: 16px 12px;
+  }
+
+  .code-complexity-example h3 {
+    font-size: 18px;
+  }
+
+  .complexity-code {
+    padding: 14px 11px;
+    font-size: 11px;
+  }
+
+  .code-complexity-explanation {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .complexity-case-card {
+    padding: 18px;
+  }
+
+  .complexity-takeaway-item {
+    gap: 9px;
+    padding: 13px;
+  }
+
+  .complexity-takeaway-item p {
+    font-size: 13px;
+  }
+
+  .tutorial-content .learning-note {
+    gap: 9px;
+    padding: 13px;
+  }
+
+  .tutorial-content .progress-card {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .progress-card-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+    font-size: 32px;
+  }
+
+  .progress-card-content h2 {
+    font-size: 20px;
+  }
+}

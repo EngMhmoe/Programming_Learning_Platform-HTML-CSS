@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Learn Algorithms with DevPath. Understand algorithm analysis, time and space complexity, searching, sorting, graph traversal, and algorithmic techniques.">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <meta name="keywords"
+        content="Algorithms, Algorithm Analysis, Big O, Searching, Sorting, BFS, DFS, Recursion, Dynamic Programming">
+
+    <title>Algorithms Tutorial | DevPath</title>
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" href="../../photos/algorithm-course.jpg">
+
+
+    <!-- ==========================================================
+        Google Fonts
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ==========================================================
+        Boxicons
+    ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+    <!-- ==========================================================
+        Learning Page CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+
+
+    <!-- ==========================================================
+        Algorithms Home Page CSS
+    ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learn Algorithms Content/style HomePage.css">
+
+</head>
+
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html" class="current">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-git-branch"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>Algorithms Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link active">
+                    <i class="bx bx-home-alt"></i>
+                    Algorithms Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    Algorithms Intro
+                </a>
+
+                <a href="WhatIsAlgorithmPage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is Algorithm?
+                </a>
+
+                <a href="ImportanceOfAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    Importance of Algorithms
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Algorithm Analysis -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-line-chart"></i>
+                    Algorithm Analysis
+                </h3>
+
+                <a href="AlgorithmCharacteristicsPage.html" class="sidebar-link">
+                    <i class="bx bx-list-check"></i>
+                    Algorithm Characteristics
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Searching Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-search"></i>
+                    Searching Algorithms
+                </h3>
+
+                <a href="SearchingAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Introduction to Searching
+                </a>
+
+                <a href="LinearSearchPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Linear Search
+                </a>
+
+                <a href="BinarySearchPage.html" class="sidebar-link">
+                    <i class="bx bx-git-compare"></i>
+                    Binary Search
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Sorting Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-sort"></i>
+                    Sorting Algorithms
+                </h3>
+
+                <a href="SortingAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-alt-2"></i>
+                    Introduction to Sorting
+                </a>
+
+                <a href="BubbleSortPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-down"></i>
+                    Bubble Sort
+                </a>
+
+                <a href="SelectionSortPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Selection Sort
+                </a>
+
+                <a href="InsertionSortPage.html" class="sidebar-link">
+                    <i class="bx bx-sort-up"></i>
+                    Insertion Sort
+                </a>
+
+                <a href="MergeSortPage.html" class="sidebar-link">
+                    <i class="bx bx-git-merge"></i>
+                    Merge Sort
+                </a>
+
+                <a href="QuickSortPage.html" class="sidebar-link">
+                    <i class="bx bx-fast-forward"></i>
+                    Quick Sort
+                </a>
+
+                <a href="HeapSortPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heap Sort
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Graph Traversal Algorithms -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-network-chart"></i>
+                    Graph Traversal Algorithms
+                </h3>
+
+                <a href="BFSPage.html" class="sidebar-link">
+                    <i class="bx bx-git-merge"></i>
+                    Breadth-First Search (BFS)
+                </a>
+
+                <a href="DFSPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Depth-First Search (DFS)
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Algorithmic Techniques -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-alt"></i>
+                    Algorithmic Techniques
+                </h3>
+
+                <a href="RecursionPage.html" class="sidebar-link">
+                    <i class="bx bx-repeat"></i>
+                    Recursion
+                </a>
+
+                <a href="TwoPointersPage.html" class="sidebar-link">
+                    <i class="bx bx-move-horizontal"></i>
+                    Two Pointers
+                </a>
+
+                <a href="SlidingWindowPage.html" class="sidebar-link">
+                    <i class="bx bx-window"></i>
+                    Sliding Window
+                </a>
+
+                <a href="GreedyAlgorithmsPage.html" class="sidebar-link">
+                    <i class="bx bx-target-lock"></i>
+                    Greedy Algorithms
+                </a>
+
+                <a href="DynamicProgrammingPage.html" class="sidebar-link">
+                    <i class="bx bx-brain"></i>
+                    Dynamic Programming
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <div class="tutorial-content" id="course-content">
+
+            <!-- ==================================================
+                Tutorial Header => مشترك
+            =================================================== -->
+            <section class="tutorial-header">
+
+                <div class="tutorial-header-content">
+
+                    <span class="section-badge">
+
+                        <i class="bx bx-git-branch"></i>
+
+                        Algorithms Programming
+
+                    </span>
+
+
+                    <h1>
+                        Algorithms <span>Tutorial</span>
+                    </h1>
+
+                    <p>
+                        Learn how to solve problems step by step,
+                        analyze algorithm efficiency, and choose
+                        the right approach to write better programs.
+                    </p>
+
+                    <div class="tutorial-actions">
+
+
+                        <a href="../../Pages/Algorithem.html" class="tutorial-button secondary">
+
+                            <i class="bx bx-home-alt"></i>
+
+                            Home
+
+                        </a>
+
+
+                        <a href="IntroductionPage.html" class="tutorial-button primary">
+
+                            Next
+
+                            <i class="bx bx-right-arrow-alt"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Welcome Card
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-book-open"></i>
+                        Welcome
+                    </span>
+
+                    <h2>
+                        Welcome to Algorithms
+                    </h2>
+
+                    <p>
+                        An algorithm is a sequence of clear steps used
+                        to solve a problem or complete a task.
+                        Algorithms help us transform a problem into
+                        a practical solution that a computer can execute.
+                    </p>
+
+                </div>
+
+
+                <div class="algorithms-intro-grid">
+
+                    <article class="algorithms-info-item">
+
+                        <div class="algorithms-info-icon">
+                            <i class="bx bx-list-ol"></i>
+                        </div>
+
+                        <h3>Step-by-Step Solutions</h3>
+
+                        <p>
+                            Break complex problems into smaller,
+                            logical steps that are easier to understand
+                            and implement.
+                        </p>
+
+                    </article>
+
+
+                    <article class="algorithms-info-item">
+
+                        <div class="algorithms-info-icon">
+                            <i class="bx bx-tachometer"></i>
+                        </div>
+
+                        <h3>Efficiency</h3>
+
+                        <p>
+                            Compare solutions by examining the time
+                            and memory they need as the input grows.
+                        </p>
+
+                    </article>
+
+
+                    <article class="algorithms-info-item">
+
+                        <div class="algorithms-info-icon">
+                            <i class="bx bx-code-alt"></i>
+                        </div>
+
+                        <h3>Practical Implementation</h3>
+
+                        <p>
+                            Turn algorithmic ideas into code and
+                            practice tracing how each solution works.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Simple Algorithm Example
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        First Example
+                    </span>
+
+                    <h2>
+                        How Does an Algorithm Work?
+                    </h2>
+
+                    <p>
+                        Imagine that you want to find the largest
+                        number in a list. You can start with the first
+                        number, compare each remaining number with
+                        the current largest value, and update it when
+                        you find a larger number.
+                    </p>
+
+                </div>
+
+
+                <!-- Code Example -->
+                <div class="code-example">
+
+                    <div class="code-example-header">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <pre><code><span class="code-keyword">const</span> numbers = [<span class="code-number">4</span>, <span class="code-number">9</span>, <span class="code-number">2</span>, <span class="code-number">15</span>, <span class="code-number">7</span>];
+
+<span class="code-keyword">let</span> largest = numbers[<span class="code-number">0</span>];
+
+<span class="code-keyword">for</span> (<span class="code-keyword">let</span> i = <span class="code-number">1</span>; i &lt; numbers.length; i++) {
+    <span class="code-keyword">if</span> (numbers[i] &gt; largest) {
+        largest = numbers[i];
+    }
+}
+
+console.log(largest);
+
+<span class="code-string">// Output: 15</span></code></pre>
+
+                </div>
+
+
+                <div class="example-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <span>
+                        This example scans the list once and keeps track
+                        of the largest value found so far. It introduces
+                        the idea behind a simple linear-time algorithm.
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                What Will You Learn?
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-target-lock"></i>
+                        Learning Goals
+                    </span>
+
+                    <h2>
+                        What Will You Learn?
+                    </h2>
+
+                    <p>
+                        This course takes you from the basic ideas
+                        behind algorithms to common techniques used
+                        to solve programming problems.
+                    </p>
+
+                </div>
+
+
+                <ul class="algorithms-learning-list">
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Understand algorithms and their essential
+                            characteristics.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Analyze time complexity, space complexity,
+                            and Big O notation.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Search for values using Linear Search
+                            and Binary Search.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Organize data using Bubble, Selection,
+                            Insertion, Merge, Quick, and Heap Sort.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Explore graphs using Breadth-First Search
+                            (BFS) and Depth-First Search (DFS).
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Practice Recursion, Two Pointers,
+                            Sliding Window, Greedy Algorithms,
+                            and Dynamic Programming.
+                        </span>
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Course Roadmap
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-map-alt"></i>
+                        Course Roadmap
+                    </span>
+
+                    <h2>
+                        Explore the Course Sections
+                    </h2>
+
+                    <p>
+                        Follow the course in order, starting with
+                        algorithm fundamentals and moving toward
+                        practical problem-solving techniques.
+                    </p>
+
+                </div>
+
+
+                <div class="algorithms-roadmap">
+
+
+                    <!-- Introduction -->
+                    <a href="IntroductionPage.html" class="algorithms-roadmap-item">
+
+                        <div class="roadmap-icon">
+                            <i class="bx bx-book-open"></i>
+                        </div>
+
+                        <div class="roadmap-content">
+
+                            <span class="roadmap-number">01</span>
+
+                            <h3>Introduction</h3>
+
+                            <p>
+                                Learn what algorithms are, why they
+                                matter, and how they help solve problems.
+                            </p>
+
+                        </div>
+
+                        <i class="bx bx-right-arrow-alt roadmap-arrow"></i>
+
+                    </a>
+
+
+                    <!-- Algorithm Analysis -->
+                    <a href="AlgorithmCharacteristicsPage.html" class="algorithms-roadmap-item">
+
+                        <div class="roadmap-icon">
+                            <i class="bx bx-line-chart"></i>
+                        </div>
+
+                        <div class="roadmap-content">
+
+                            <span class="roadmap-number">02</span>
+
+                            <h3>Algorithm Analysis</h3>
+
+                            <p>
+                                Understand algorithm characteristics,
+                                time complexity, space complexity,
+                                and Big O notation.
+                            </p>
+
+                        </div>
+
+                        <i class="bx bx-right-arrow-alt roadmap-arrow"></i>
+
+                    </a>
+
+
+                    <!-- Searching -->
+                    <a href="SearchingAlgorithmsPage.html" class="algorithms-roadmap-item">
+
+                        <div class="roadmap-icon">
+                            <i class="bx bx-search"></i>
+                        </div>
+
+                        <div class="roadmap-content">
+
+                            <span class="roadmap-number">03</span>
+
+                            <h3>Searching Algorithms</h3>
+
+                            <p>
+                                Learn how to locate values using
+                                Linear Search and Binary Search.
+                            </p>
+
+                        </div>
+
+                        <i class="bx bx-right-arrow-alt roadmap-arrow"></i>
+
+                    </a>
+
+
+                    <!-- Sorting -->
+                    <a href="SortingAlgorithmsPage.html" class="algorithms-roadmap-item">
+
+                        <div class="roadmap-icon">
+                            <i class="bx bx-sort"></i>
+                        </div>
+
+                        <div class="roadmap-content">
+
+                            <span class="roadmap-number">04</span>
+
+                            <h3>Sorting Algorithms</h3>
+
+                            <p>
+                                Compare common sorting techniques
+                                and understand how they arrange data.
+                            </p>
+
+                        </div>
+
+                        <i class="bx bx-right-arrow-alt roadmap-arrow"></i>
+
+                    </a>
+
+
+                    <!-- Graph Traversal -->
+                    <a href="BFSPage.html" class="algorithms-roadmap-item">
+
+                        <div class="roadmap-icon">
+                            <i class="bx bx-network-chart"></i>
+                        </div>
+
+                        <div class="roadmap-content">
+
+                            <span class="roadmap-number">05</span>
+
+                            <h3>Graph Traversal</h3>
+
+                            <p>
+                                Explore graph traversal with
+                                Breadth-First Search and
+                                Depth-First Search.
+                            </p>
+
+                        </div>
+
+                        <i class="bx bx-right-arrow-alt roadmap-arrow"></i>
+
+                    </a>
+
+
+                    <!-- Algorithmic Techniques -->
+                    <a href="RecursionPage.html" class="algorithms-roadmap-item">
+
+                        <div class="roadmap-icon">
+                            <i class="bx bx-code-alt"></i>
+                        </div>
+
+                        <div class="roadmap-content">
+
+                            <span class="roadmap-number">06</span>
+
+                            <h3>Algorithmic Techniques</h3>
+
+                            <p>
+                                Practice reusable approaches such as
+                                Recursion, Two Pointers, Sliding Window,
+                                Greedy Algorithms, and Dynamic Programming.
+                            </p>
+
+                        </div>
+
+                        <i class="bx bx-right-arrow-alt roadmap-arrow"></i>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Practice
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-block"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Learn by Practicing
+                    </h2>
+
+                    <p>
+                        Reading about an algorithm is only the first
+                        step. Use examples to follow each operation,
+                        then solve exercises to test your understanding.
+                    </p>
+
+                </div>
+
+
+                <div class="algorithms-practice-grid">
+
+                    <article class="algorithms-practice-item">
+
+                        <div class="practice-icon">
+                            <i class="bx bx-code-curly"></i>
+                        </div>
+
+                        <h3>Examples</h3>
+
+                        <p>
+                            Explore practical algorithm examples
+                            and follow how each solution works.
+                        </p>
+
+                        <a href="ExamplesPage.html" class="content-button">
+                            Explore Examples
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+
+                    </article>
+
+
+                    <article class="algorithms-practice-item">
+
+                        <div class="practice-icon">
+                            <i class="bx bx-pencil"></i>
+                        </div>
+
+                        <h3>Exercises</h3>
+
+                        <p>
+                            Answer questions and apply what you
+                            have learned throughout the course.
+                        </p>
+
+                        <a href="ExercisesPage.html" class="content-button">
+                            Start Exercises
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Learning Tips
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bulb"></i>
+                        Learning Tips
+                    </span>
+
+                    <h2>
+                        How to Study Algorithms Effectively
+                    </h2>
+
+                </div>
+
+
+                <ul class="algorithms-learning-list">
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Understand the problem before trying
+                            to write the code.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Trace algorithms manually using
+                            small examples.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Learn why an algorithm works, not just
+                            the steps used to implement it.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Compare different solutions and
+                            understand their time and space costs.
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="bx bx-check-circle"></i>
+                        <span>
+                            Solve exercises regularly and revisit
+                            topics that need more practice.
+                        </span>
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- ==================================================
+                Bottom Navigation => مشترك
+            =================================================== -->
+            <div class="tutorial-bottom-actions">
+
+                <a href="../../Pages/Algorithem.html" class="tutorial-button secondary">
+
+                    <i class="bx bx-left-arrow-alt"></i>
+
+                    Previous
+
+                </a>
+
+
+                <a href="IntroductionPage.html" class="tutorial-button primary">
+
+                    Next
+
+                    <i class="bx bx-right-arrow-alt"></i>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+</body>
+
+</html>

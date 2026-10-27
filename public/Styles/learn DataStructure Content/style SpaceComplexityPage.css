@@ -1,0 +1,1552 @@
+/* ==========================================================
+    Global Styles
+========================================================== */
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Space Complexity - General Layout
+========================================================== */
+
+.tutorial-content {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tutorial-content *,
+.tutorial-content *::before,
+.tutorial-content *::after {
+  box-sizing: border-box;
+}
+
+.tutorial-content .tutorial-card {
+  min-width: 0;
+  width: 100%;
+}
+
+.tutorial-content .tutorial-card > p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.tutorial-content .tutorial-card > p strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tutorial-content .section-heading {
+  min-width: 0;
+}
+
+.tutorial-content .section-heading > h2 {
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .section-heading > p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Space Definition
+========================================================== */
+
+.space-definition {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+
+  min-width: 0;
+  margin-top: 25px;
+  padding: 25px;
+
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.space-definition-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border-radius: 18px;
+  font-size: 34px;
+}
+
+.space-definition > div:last-child {
+  min-width: 0;
+  flex: 1;
+}
+
+.space-definition h3 {
+  margin: 0 0 12px;
+
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.space-definition p {
+  margin: 0 0 10px;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.space-definition p:last-child {
+  margin-bottom: 0;
+}
+
+.space-definition p strong {
+  color: var(--primary-light);
+  font-weight: 800;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Learning Note
+========================================================== */
+
+.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  min-width: 0;
+  margin-top: 22px;
+  padding: 18px 20px;
+
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid rgba(249, 115, 22, 0.17);
+  border-radius: var(--radius-md);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content .learning-note > i {
+  flex-shrink: 0;
+  margin-top: 2px;
+
+  color: var(--primary-light);
+  font-size: 22px;
+}
+
+.tutorial-content .learning-note > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-note strong {
+  display: block;
+  margin-bottom: 6px;
+
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.tutorial-content .learning-note p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Space Complexity Benefits
+========================================================== */
+
+.space-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.space-benefit-card {
+  min-width: 0;
+  padding: 23px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.space-benefit-card:hover {
+  background: rgba(249, 115, 22, 0.035);
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.space-benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+  margin-bottom: 17px;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.space-benefit-card h3 {
+  margin: 0 0 10px;
+
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.space-benefit-card p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Input Size Example
+========================================================== */
+
+.input-size-example {
+  display: grid;
+  gap: 22px;
+
+  min-width: 0;
+  margin-top: 25px;
+  padding: 25px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.input-size-example-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-width: 0;
+
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.input-size-example-header > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border: 1px solid rgba(249, 115, 22, 0.16);
+  border-radius: 12px;
+
+  font-size: 23px;
+}
+
+.input-array {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.array-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 58px;
+  padding: 10px;
+
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.075);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  border-radius: var(--radius-md);
+
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.input-size-example > p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.input-size-example > p strong {
+  color: var(--primary-light);
+}
+
+.input-size-growth {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.input-size-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  min-width: 0;
+  padding: 17px 12px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+
+  text-align: center;
+}
+
+.input-size-item strong {
+  color: var(--primary-light);
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.input-size-item span {
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Total Space and Auxiliary Space
+========================================================== */
+
+.space-concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.space-concept-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.space-concept-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.space-concept-label {
+  display: inline-flex;
+  align-items: center;
+
+  max-width: 100%;
+  margin-bottom: 20px;
+  padding: 6px 11px;
+
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.17);
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.space-concept-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+  margin-bottom: 16px;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border-radius: 15px;
+  font-size: 28px;
+}
+
+.space-concept-card h3 {
+  margin: 0 0 10px;
+
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.space-concept-card p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Common Space Complexities
+========================================================== */
+
+.space-complexity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.space-complexity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  min-width: 0;
+  padding: 23px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.space-complexity-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.space-complexity-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  min-width: 0;
+  margin-bottom: 18px;
+}
+
+.space-complexity-symbol {
+  color: var(--primary-light);
+  font-size: 27px;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.space-complexity-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+  padding: 6px 10px;
+
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.space-complexity-card h3 {
+  margin: 0 0 10px;
+
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.space-complexity-card > p {
+  margin: 0 0 17px;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.space-complexity-example {
+  margin: auto 0 0;
+  padding-top: 15px;
+
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border);
+
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* ==========================================================
+    Space Complexity Mini Visuals
+========================================================== */
+
+.space-mini-visual {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+
+  min-width: 0;
+  min-height: 75px;
+  margin: 3px 0 18px;
+  padding: 12px;
+
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.space-mini-visual span {
+  display: block;
+
+  width: 18px;
+  max-width: 20%;
+  min-height: 9px;
+
+  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+
+  border-radius: 4px 4px 2px 2px;
+}
+
+.constant-visual span {
+  height: 25px;
+}
+
+.logarithmic-visual span:nth-child(1) {
+  height: 14px;
+}
+
+.logarithmic-visual span:nth-child(2) {
+  height: 23px;
+}
+
+.logarithmic-visual span:nth-child(3) {
+  height: 33px;
+}
+
+.logarithmic-visual span:nth-child(4) {
+  height: 43px;
+}
+
+.linear-visual span:nth-child(1) {
+  height: 13px;
+}
+
+.linear-visual span:nth-child(2) {
+  height: 25px;
+}
+
+.linear-visual span:nth-child(3) {
+  height: 38px;
+}
+
+.linear-visual span:nth-child(4) {
+  height: 51px;
+}
+
+.quadratic-visual {
+  display: grid;
+  grid-template-columns: repeat(4, 15px);
+  grid-template-rows: repeat(3, 12px);
+  align-content: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.quadratic-visual span {
+  width: 15px;
+  height: 12px;
+  min-height: 0;
+  border-radius: 3px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Code Complexity Examples
+========================================================== */
+
+.code-complexity-example {
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 25px;
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.code-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  min-width: 0;
+  margin-bottom: 16px;
+}
+
+.code-example-header > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.code-example-header > span:first-child i {
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.complexity-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+  padding: 6px 11px;
+
+  border: 1px solid;
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.constant-label {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.linear-label {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.quadratic-label {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.code-complexity-example pre,
+.recursion-example pre {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.9;
+  tab-size: 4;
+}
+
+.code-complexity-example pre code,
+.recursion-example pre code {
+  color: inherit;
+  font-family: inherit;
+  white-space: pre;
+  overflow-wrap: normal;
+}
+
+.code-example-explanation {
+  min-width: 0;
+  margin-top: 20px;
+  padding: 18px;
+
+  background: rgba(249, 115, 22, 0.045);
+  border: 1px solid rgba(249, 115, 22, 0.14);
+  border-radius: var(--radius-md);
+}
+
+.code-example-explanation h3 {
+  margin: 0 0 12px;
+
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.code-example-explanation ul {
+  display: grid;
+  gap: 9px;
+
+  margin: 0;
+  padding-left: 22px;
+
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.code-example-explanation li {
+  padding-left: 3px;
+}
+
+.code-example-explanation li::marker {
+  color: var(--primary);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Recursion Example
+========================================================== */
+
+.recursion-example {
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 25px;
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.recursion-example-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  min-width: 0;
+  margin-bottom: 17px;
+
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.recursion-example-header > i {
+  color: var(--primary-light);
+  font-size: 23px;
+}
+
+.recursion-stack {
+  display: grid;
+  gap: 9px;
+
+  max-width: 450px;
+  margin: 24px auto 0;
+}
+
+.recursion-stack-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  min-width: 0;
+  padding: 13px 17px;
+
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid rgba(249, 115, 22, 0.19);
+  border-radius: var(--radius-md);
+
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.recursion-stack-item:nth-child(2) {
+  margin-left: 12px;
+}
+
+.recursion-stack-item:nth-child(3) {
+  margin-left: 24px;
+}
+
+.recursion-stack-item:nth-child(4) {
+  margin-left: 36px;
+}
+
+.recursion-stack-item > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.recursion-stack-item > i {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.recursion-result {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  min-width: 0;
+  margin-top: 24px;
+  padding: 16px;
+
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: var(--radius-md);
+}
+
+.recursion-result > i {
+  flex-shrink: 0;
+  margin-top: 2px;
+
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.recursion-result p {
+  min-width: 0;
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.recursion-result strong {
+  color: var(--primary-light);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Time Complexity vs. Space Complexity
+========================================================== */
+
+.complexity-comparison-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 20px;
+
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.complexity-comparison {
+  width: 100%;
+  min-width: 620px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  background: rgba(255, 255, 255, 0.015);
+  text-align: left;
+}
+
+.complexity-comparison th,
+.complexity-comparison td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+
+  font-size: 13px;
+  line-height: 1.8;
+  vertical-align: top;
+}
+
+.complexity-comparison th {
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.09);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.complexity-comparison td {
+  color: var(--text-muted);
+}
+
+.complexity-comparison td:first-child {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.complexity-comparison tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.complexity-comparison tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.complexity-comparison tbody tr:hover {
+  background: rgba(249, 115, 22, 0.035);
+}
+
+.complexity-comparison + p {
+  margin-top: 20px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Key Takeaways
+========================================================== */
+
+.space-takeaways-list {
+  display: grid;
+  gap: 12px;
+
+  min-width: 0;
+  margin: 25px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.space-takeaways-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  min-width: 0;
+  padding: 16px 18px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.space-takeaways-list li > i {
+  flex-shrink: 0;
+  margin-top: 3px;
+
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.space-takeaways-list li span {
+  min-width: 0;
+
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.9;
+
+  overflow-wrap: anywhere;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Exercise Section
+========================================================== */
+
+.tutorial-content .exercise-preview {
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 25px;
+}
+
+.tutorial-content .exercise-preview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.tutorial-content .exercise-preview-header > div {
+  min-width: 0;
+}
+
+.tutorial-content .exercise-preview-header h3 {
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .section-label {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.tutorial-content .exercise-question {
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .exercise-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.tutorial-content .exercise-option {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .exercise-result {
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .exercise-action {
+  display: flex;
+  justify-content: flex-start;
+  min-width: 0;
+  margin-top: 22px;
+}
+
+.tutorial-content .exercise-action .content-button {
+  max-width: 100%;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Progress Card
+========================================================== */
+
+.tutorial-content .progress-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  min-width: 0;
+  width: 100%;
+  margin-top: 30px;
+  padding: 28px;
+
+  background: rgba(38, 22, 10, 0.72);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.tutorial-content .progress-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  border-radius: var(--radius-md);
+  font-size: 32px;
+}
+
+.tutorial-content .progress-card-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .progress-card-content h3 {
+  margin: 0 0 9px;
+
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.tutorial-content .progress-card-content p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.tutorial-content .progress-card > .content-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+  max-width: 100%;
+  margin-top: 0;
+
+  white-space: nowrap;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Header and Bottom Navigation
+========================================================== */
+
+.tutorial-content .tutorial-header {
+  min-width: 0;
+}
+
+.tutorial-content .tutorial-header .tutorial-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  min-width: 0;
+  margin-top: 22px;
+}
+
+.tutorial-content .tutorial-header .tutorial-button,
+.tutorial-content .tutorial-bottom-actions .tutorial-button {
+  max-width: 100%;
+}
+
+.tutorial-content .tutorial-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  min-width: 0;
+  margin-top: 30px;
+}
+
+.tutorial-content .tutorial-bottom-actions .tutorial-button {
+  min-width: 0;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design - 1000px
+========================================================== */
+
+@media (max-width: 1000px) {
+  .space-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .space-benefit-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .space-complexity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design - 800px
+========================================================== */
+
+@media (max-width: 800px) {
+  .tutorial-content .progress-card {
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 24px;
+  }
+
+  .tutorial-content .progress-card-content {
+    flex-basis: calc(100% - 90px);
+  }
+
+  .tutorial-content .progress-card > .content-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .space-definition {
+    gap: 17px;
+    padding: 21px;
+  }
+
+  .space-benefit-card {
+    padding: 20px;
+  }
+
+  .space-complexity-card {
+    padding: 20px;
+  }
+
+  .code-complexity-example,
+  .recursion-example {
+    padding: 21px;
+  }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design - 600px
+========================================================== */
+
+@media (max-width: 600px) {
+  .space-definition {
+    flex-direction: column;
+    gap: 15px;
+    padding: 18px;
+  }
+
+  .space-definition-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 15px;
+    font-size: 29px;
+  }
+
+  .space-definition h3 {
+    font-size: 19px;
+  }
+
+  .space-definition p {
+    font-size: 13px;
+  }
+
+  .space-benefits-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .space-benefit-card:last-child {
+    grid-column: auto;
+  }
+
+  .space-benefit-card {
+    padding: 19px;
+  }
+
+  .input-size-example {
+    gap: 17px;
+    padding: 18px;
+  }
+
+  .input-array {
+    gap: 7px;
+  }
+
+  .array-cell {
+    min-height: 46px;
+    padding: 7px;
+    font-size: 15px;
+  }
+
+  .input-size-growth {
+    gap: 9px;
+  }
+
+  .input-size-item {
+    padding: 13px 7px;
+  }
+
+  .input-size-item strong {
+    font-size: 15px;
+  }
+
+  .input-size-item span {
+    font-size: 11px;
+  }
+
+  .space-concepts-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .space-concept-card {
+    padding: 20px;
+  }
+
+  .space-complexity-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .space-complexity-card {
+    padding: 20px;
+  }
+
+  .space-complexity-symbol {
+    font-size: 25px;
+  }
+
+  .code-complexity-example,
+  .recursion-example {
+    padding: 17px;
+  }
+
+  .code-complexity-example pre,
+  .recursion-example pre {
+    padding: 15px 12px;
+    font-size: 12px;
+  }
+
+  .code-example-explanation {
+    padding: 15px;
+  }
+
+  .recursion-stack-item:nth-child(2) {
+    margin-left: 8px;
+  }
+
+  .recursion-stack-item:nth-child(3) {
+    margin-left: 16px;
+  }
+
+  .recursion-stack-item:nth-child(4) {
+    margin-left: 24px;
+  }
+
+  .tutorial-content .learning-note {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .space-takeaways-list li {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .space-takeaways-list li span {
+    font-size: 13px;
+  }
+
+  .tutorial-content .exercise-options {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tutorial-content .progress-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 20px;
+  }
+
+  .tutorial-content .progress-card-icon {
+    width: 54px;
+    height: 54px;
+    font-size: 28px;
+  }
+
+  .tutorial-content .progress-card-content h3 {
+    font-size: 19px;
+  }
+
+  .tutorial-content .progress-card > .content-button {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .tutorial-content .tutorial-header .tutorial-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tutorial-content .tutorial-header .tutorial-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tutorial-content .tutorial-bottom-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tutorial-content .tutorial-bottom-actions .tutorial-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+    Responsive Design - 400px
+========================================================== */
+
+@media (max-width: 400px) {
+  .input-size-growth {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .input-size-item {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .space-complexity-top {
+    align-items: flex-start;
+  }
+
+  .space-complexity-symbol {
+    font-size: 23px;
+  }
+
+  .complexity-label {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .code-example-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .recursion-example {
+    padding: 14px 11px;
+  }
+
+  .recursion-stack-item {
+    padding: 12px;
+    font-size: 11px;
+  }
+
+  .recursion-result {
+    gap: 9px;
+    padding: 12px;
+  }
+
+  .tutorial-content .progress-card {
+    padding: 17px;
+  }
+}

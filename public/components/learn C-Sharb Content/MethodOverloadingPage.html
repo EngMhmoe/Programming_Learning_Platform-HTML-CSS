@@ -2,42 +2,69 @@
 <html lang="en">
 
 <head>
+
+    <!-- ==========================================================
+        Meta
+    =========================================================== -->
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="Learn C# method overloading with DevPath.">
+
     <meta name="author" content="Mohamed Alwani">
+
     <meta name="keywords" content="C#, Method Overloading, Methods, Parameters, C Sharp">
+
 
     <title>C# Method Overloading | DevPath</title>
 
-    <link rel="icon" href="../../photos/photo6.jpg">
 
-    <!-- Google Fonts -->
+
+    <!-- ==========================================================
+        Favicon
+    =========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/c-sharb.jpg">
+
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
 
+
+
+    <!-- ========================================================== -->
     <!-- Boxicons -->
+    <!-- ========================================================== -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-    <!-- Shared Learning Page CSS -->
-    <link rel="stylesheet" href="../../Styles/learningPages.css">
 
-    <!-- Page Content CSS -->
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
     <link rel="stylesheet" href="../../Styles/learn C-Sharb Content/style MethodOverloadingPage.css">
 </head>
 
 <body>
 
     <!-- ==========================================================
-         Start Header
-         ========================================================== -->
-
+        Header => مشترك
+    =========================================================== -->
     <header class="header">
 
+        <!-- Navbar Container -->
         <nav class="navbar">
 
+            <!-- Brand -->
             <a href="../../index.html" class="brand" aria-label="DevPath Home">
 
                 <span class="brand-icon">
@@ -51,21 +78,33 @@
             </a>
 
 
-            <ul class="nav-links">
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
 
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
                 <li>
+
                     <a href="../../index.html" class="nav-link">
                         Home
                     </a>
+
                 </li>
 
 
-                <li class="dropdown">
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
 
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
                     <a href="#" class="nav-link active">
                         Programming Basics
                         <i class="bx bx-chevron-down"></i>
                     </a>
+
 
                     <div class="dropdown-menu">
 
@@ -90,16 +129,20 @@
                         </a>
 
                     </div>
-
                 </li>
 
 
-                <li class="dropdown">
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
 
+
+                <!-- Front-End -->
+                <li class="dropdown">
                     <a href="#" class="nav-link">
                         Front-End
                         <i class="bx bx-chevron-down"></i>
                     </a>
+
 
                     <div class="dropdown-menu">
 
@@ -113,6 +156,11 @@
                             CSS
                         </a>
 
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
                         <a href="../../Pages/BootstrapPage.html">
                             <i class="bx bxl-bootstrap"></i>
                             Bootstrap
@@ -123,45 +171,25 @@
                             Tailwind CSS
                         </a>
 
-                        <a href="../../Pages/JavaScriptPage.html">
-                            <i class="bx bxl-javascript"></i>
-                            JavaScript
-                        </a>
-
                         <a href="../../Pages/React-JS_Page.html">
                             <i class="bx bxl-react"></i>
                             React JS
                         </a>
 
-                    </div>
-
-                </li>
-
-
-                <li class="dropdown">
-
-                    <a href="#" class="nav-link">
-                        Web Technologies
-                        <i class="bx bx-chevron-down"></i>
-                    </a>
-
-                    <div class="dropdown-menu">
-
-                        <a href="../../Pages/APIS-Page.html">
-                            <i class="bx bx-cloud"></i>
-                            API
-                        </a>
-
                         <a href="../../Pages/Strapi_Back-End.Html">
-                            <i class="bx bx-server"></i>
+                            <i class=" bx bx-server"></i>
                             Strapi Back-End
                         </a>
 
                     </div>
-
                 </li>
 
 
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
                 <li class="dropdown">
 
                     <a href="#" class="nav-link">
@@ -169,21 +197,12 @@
                         <i class="bx bx-chevron-down"></i>
                     </a>
 
+
                     <div class="dropdown-menu">
-
-                        <a href="../../Pages/BackEnd-Csharb.html">
-                            <i class="bx bx-code-curly"></i>
-                            C#
-                        </a>
-
-                        <a href="../../Pages/BackEnd-ASP.NET.html">
-                            <i class="bx bx-code-alt"></i>
-                            ASP.NET
-                        </a>
 
                         <a href="../../Pages/BackEnd-SQL.html">
                             <i class="bx bx-data"></i>
-                            SQL
+                            SQL Server
                         </a>
 
                         <a href="../../Pages/BackEnd-EntityFramework.html">
@@ -191,28 +210,39 @@
                             Entity Framework
                         </a>
 
-                        <a href="../../Pages/BackEnd-APIs.html">
-                            <i class="bx bx-transfer"></i>
-                            APIs
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
                         </a>
+
 
                     </div>
 
                 </li>
 
 
-                <li>
-                    <a href="../../Pages/ContactUS.html" class="login-btn">
-                        Contact US
-                    </a>
-                </li>
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
 
 
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
                 <li>
+
                     <a href="../../Pages/LoginPage.html" class="login-btn">
                         <i class="bx bx-log-in"></i>
                         Login
                     </a>
+
                 </li>
 
             </ul>
@@ -221,22 +251,29 @@
 
     </header>
 
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
     <!-- ==========================================================
-         End Header
-         ========================================================== -->
-
-
-    <!-- ==========================================================
-         Start Learning Page
-         ========================================================== -->
-
+        Learning Layout
+    =========================================================== -->
     <main class="learning-page">
 
-
         <!-- ======================================================
-             Start Sidebar
-             ====================================================== -->
-
+            Sidebar => مشترك
+        ======================================================= -->
         <aside class="learning-sidebar">
 
             <!-- Sidebar Header -->
@@ -766,10 +803,6 @@
                     C# Exercises
                 </a>
 
-                <a href="QuizPage.html" class="sidebar-link">
-                    <i class="bx bx-question-mark"></i>
-                    C# Quiz
-                </a>
 
                 <a href="ServerPage.html" class="sidebar-link">
                     <i class="bx bx-server"></i>
@@ -795,15 +828,21 @@
 
         </aside>
 
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
         <!-- ======================================================
-             End Sidebar
-             ====================================================== -->
-
-
-        <!-- ======================================================
-             Start Tutorial Content
-             ====================================================== -->
-
+            Main Tutorial Content
+        ======================================================= -->
         <section class="tutorial-content">
 
 
@@ -1226,63 +1265,91 @@ static double <span class="exercise-blank">?</span>(double x, double y)
 
         </section>
 
-        <!-- ======================================================
-             End Tutorial Content
-             ====================================================== -->
-
     </main>
 
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
     <!-- ==========================================================
-         End Learning Page
-         ========================================================== -->
-
-
-    <!-- ==========================================================
-         Start Footer
-         ========================================================== -->
-
+        Footer => مشترك
+    =========================================================== -->
     <footer class="footer">
 
+        <!-- footer-container -->
         <div class="footer-container">
 
 
+            <!-- Footer Brand -->
+
             <div class="footer-brand">
+
 
                 <a href="../../index.html" class="brand">
 
+
                     <span class="brand-icon">
+
                         <i class="bx bx-code-alt"></i>
+
                     </span>
 
+
                     <span class="brand-text">
+
                         Dev<span>Path</span>
+
                     </span>
 
                 </a>
 
 
                 <p>
+
                     Learn programming step by step and build the skills
                     you need for your development journey.
+
                 </p>
 
 
                 <div class="footer-socials">
 
+
                     <a href="#" aria-label="Facebook">
+
                         <i class="bx bxl-facebook"></i>
+
                     </a>
+
 
                     <a href="#" aria-label="TikTok">
+
                         <i class="bx bxl-tiktok"></i>
+
                     </a>
+
 
                     <a href="#" aria-label="Instagram">
+
                         <i class="bx bxl-instagram"></i>
+
                     </a>
 
+
                     <a href="#" aria-label="WhatsApp">
+
                         <i class="bx bxl-whatsapp"></i>
+
                     </a>
 
                 </div>
@@ -1290,23 +1357,30 @@ static double <span class="exercise-blank">?</span>(double x, double y)
             </div>
 
 
+            <!-- Programming Basics -->
+
             <div class="footer-column">
+
 
                 <h3>
                     Programming Basics
                 </h3>
 
+
                 <a href="../../Pages/BasicsCsharb.html">
                     C#
                 </a>
+
 
                 <a href="../../Pages/DataStructure.html">
                     Data Structure
                 </a>
 
+
                 <a href="../../Pages/Algorithem.html">
                     Algorithm
                 </a>
+
 
                 <a href="../../Pages/ProblemSolving.html">
                     Problem Solving
@@ -1315,26 +1389,32 @@ static double <span class="exercise-blank">?</span>(double x, double y)
             </div>
 
 
+            <!-- Front-End -->
+
             <div class="footer-column">
+
 
                 <h3>
                     Front-End
                 </h3>
 
+
                 <a href="../../Pages/HTMLPage.html">
                     HTML
                 </a>
+
 
                 <a href="../../Pages/CSSPage.html">
                     CSS
                 </a>
 
-                <a href="../../Pages/BootstrapPage.html">
-                    Bootstrap
-                </a>
 
                 <a href="../../Pages/JavaScriptPage.html">
                     JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
                 </a>
 
                 <a href="../../Pages/React-JS_Page.html">
@@ -1344,19 +1424,25 @@ static double <span class="exercise-blank">?</span>(double x, double y)
             </div>
 
 
+            <!-- More -->
+
             <div class="footer-column">
+
 
                 <h3>
                     More
                 </h3>
 
+
                 <a href="../../Pages/LoginPage.html">
                     Login
                 </a>
 
+
                 <a href="../../Pages/AboutPlatform.html">
                     About Platform
                 </a>
+
 
                 <a href="../../Pages/ContactUS.html">
                     Contact US
@@ -1367,10 +1453,24 @@ static double <span class="exercise-blank">?</span>(double x, double y)
         </div>
 
 
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
 
             <p>
-                © 2026 DevPath. All rights reserved. • Built for developers.
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
             </p>
 
         </div>
@@ -1378,15 +1478,45 @@ static double <span class="exercise-blank">?</span>(double x, double y)
     </footer>
 
 
-    <!-- Back To Top -->
 
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
     <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
 
 
-    <!-- Global JavaScript -->
 
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
     <script src="../../JavaScript/global.js"></script>
-
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
 </body>
 
 </html>

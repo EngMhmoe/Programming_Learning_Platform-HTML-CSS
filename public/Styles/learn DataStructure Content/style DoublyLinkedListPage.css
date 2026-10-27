@@ -1,0 +1,1126 @@
+/* ==========================================================
+    Global Styles
+========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+    Doubly Linked List - General Layout
+========================================================== */
+
+.tutorial-content {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tutorial-content *,
+.tutorial-content *::before,
+.tutorial-content *::after {
+  box-sizing: border-box;
+}
+
+.tutorial-content .tutorial-header,
+.tutorial-content .tutorial-card,
+.tutorial-content .section-heading {
+  min-width: 0;
+  width: 100%;
+}
+
+.tutorial-content .tutorial-card {
+  margin-bottom: 25px;
+}
+
+.tutorial-content .tutorial-card > p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.tutorial-content .tutorial-card > p strong,
+.tutorial-content .linked-feature-list strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tutorial-content .section-heading > h2 {
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .section-heading > p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content code {
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+    Tutorial Header
+========================================================== */
+
+.tutorial-content .tutorial-header {
+  margin-bottom: 30px;
+}
+
+.tutorial-content .tutorial-header h1 {
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .tutorial-header > p {
+  max-width: 850px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.tutorial-content .tutorial-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.tutorial-content .tutorial-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  max-width: 100%;
+  min-width: 0;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .tutorial-button i {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+/* ==========================================================
+    Section Headings and Inline Code
+========================================================== */
+
+.tutorial-content .section-heading {
+  margin-bottom: 22px;
+}
+
+.tutorial-content .section-heading.left {
+  text-align: left;
+}
+
+.tutorial-content .section-heading .section-badge {
+  max-width: 100%;
+}
+
+.tutorial-content .tutorial-card p code,
+.tutorial-content .linked-feature-list code,
+.tutorial-content .linked-note code,
+.tutorial-content .linked-comparison-table code {
+  padding: 2px 5px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border-radius: 4px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.92em;
+}
+
+/* ==========================================================
+    Linked List Feature List
+========================================================== */
+
+.tutorial-content .linked-feature-list {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  margin: 20px 0;
+  padding-left: 24px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.tutorial-content .linked-feature-list li {
+  min-width: 0;
+  padding-left: 4px;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .linked-feature-list li::marker {
+  color: var(--primary);
+}
+
+.tutorial-content .linked-feature-list strong {
+  color: var(--text);
+}
+
+/* ==========================================================
+    Learning Note
+========================================================== */
+
+.tutorial-content .linked-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+  margin-top: 22px;
+  padding: 18px 20px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid rgba(249, 115, 22, 0.17);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content .linked-note > i {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--primary-light);
+  font-size: 22px;
+}
+
+.tutorial-content .linked-note > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .linked-note strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.tutorial-content .linked-note p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* ==========================================================
+    Node Structure Diagram
+========================================================== */
+
+.tutorial-content .linked-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  margin-top: 25px;
+  padding: 28px 20px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.tutorial-content .diagram-node {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1.2fr) 1px minmax(0, 1fr);
+  align-items: stretch;
+  width: min(100%, 440px);
+  min-width: 0;
+  min-height: 85px;
+  overflow: hidden;
+  background: rgba(249, 115, 22, 0.07);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+}
+
+.tutorial-content .diagram-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 12px 8px;
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .diagram-part.data-part {
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.13);
+  font-size: 17px;
+}
+
+.tutorial-content .diagram-divider {
+  display: block;
+  width: 1px;
+  background: var(--border);
+}
+
+.tutorial-content .diagram-caption {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  width: min(100%, 500px);
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.tutorial-content .diagram-caption span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+    Doubly Linked List Connections Diagram
+========================================================== */
+
+.tutorial-content .linked-list-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 0;
+  margin-top: 25px;
+  padding: 28px 15px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.tutorial-content .linked-endpoint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 58px;
+  min-height: 40px;
+  padding: 8px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.tutorial-content .linked-node-group {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.tutorial-content .linked-value-node {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  justify-items: center;
+  width: 72px;
+  min-width: 0;
+  min-height: 94px;
+  padding: 7px 5px;
+  background: rgba(249, 115, 22, 0.075);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+}
+
+.tutorial-content .linked-value-node strong {
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.tutorial-content .node-pointer {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.tutorial-content .linked-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  color: var(--primary-light);
+  font-size: 23px;
+}
+
+.tutorial-content .linked-arrow.backward {
+  color: var(--text-muted);
+}
+
+.tutorial-content .linked-arrow.forward {
+  color: var(--primary);
+}
+
+/* ==========================================================
+    Code Blocks
+========================================================== */
+
+.tutorial-content .linked-code-block {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 22px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.tutorial-content .code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px 20px;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.055);
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.tutorial-content .code-header > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .code-header i {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.tutorial-content .linked-code-block pre {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.22);
+  border: 0;
+  border-radius: 0;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.9;
+  tab-size: 4;
+}
+
+.tutorial-content .linked-code-block pre code {
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
+  white-space: pre;
+  overflow-wrap: normal;
+}
+
+/* ==========================================================
+    Common Operations
+========================================================== */
+
+.tutorial-content .linked-operations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.tutorial-content .linked-operation-item {
+  min-width: 0;
+  padding: 21px 16px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.tutorial-content .linked-operation-item:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.tutorial-content .operation-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+  height: 49px;
+  margin: 0 auto 15px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.tutorial-content .operation-icon i {
+  font-size: inherit;
+}
+
+.tutorial-content .linked-operation-item h3 {
+  margin: 0 0 9px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .linked-operation-item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+    Advantages and Disadvantages
+========================================================== */
+
+.tutorial-content .linked-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.tutorial-content .linked-comparison-item {
+  min-width: 0;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.tutorial-content .linked-comparison-item.advantages {
+  border-top: 3px solid #10b981;
+}
+
+.tutorial-content .linked-comparison-item.disadvantages {
+  border-top: 3px solid #ef4444;
+}
+
+.tutorial-content .linked-comparison-item h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.tutorial-content .linked-comparison-item h3 i {
+  flex-shrink: 0;
+  font-size: 23px;
+}
+
+.tutorial-content .linked-comparison-item.advantages h3 i {
+  color: #6ee7b7;
+}
+
+.tutorial-content .linked-comparison-item.disadvantages h3 i {
+  color: #fca5a5;
+}
+
+.tutorial-content .linked-comparison-item ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.tutorial-content .linked-comparison-item li {
+  padding-left: 3px;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .linked-comparison-item li::marker {
+  color: var(--primary);
+}
+
+/* ==========================================================
+    Comparison Tables
+========================================================== */
+
+.tutorial-content .linked-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.tutorial-content .linked-comparison-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: rgba(255, 255, 255, 0.015);
+  text-align: left;
+}
+
+.tutorial-content .linked-comparison-table th,
+.tutorial-content .linked-comparison-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 1.8;
+  vertical-align: middle;
+}
+
+.tutorial-content .linked-comparison-table th {
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.09);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.tutorial-content .linked-comparison-table td {
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .linked-comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tutorial-content .linked-comparison-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.tutorial-content .linked-comparison-table tbody tr:hover {
+  background: rgba(249, 115, 22, 0.035);
+}
+
+.tutorial-content .linked-comparison-table td:first-child {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tutorial-content .linked-comparison-table td code {
+  display: inline-block;
+  padding: 3px 6px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border-radius: 5px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* ==========================================================
+    Exercise Section
+========================================================== */
+
+.tutorial-content .linked-exercise-card .exercise-preview {
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 25px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.tutorial-content .exercise-preview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  min-width: 0;
+  margin-bottom: 20px;
+}
+
+.tutorial-content .exercise-preview-header > div {
+  min-width: 0;
+}
+
+.tutorial-content .section-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.tutorial-content .exercise-preview-header h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .exercise-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.tutorial-content .exercise-question {
+  margin: 0 0 18px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .exercise-code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+  margin-bottom: 18px;
+  padding: 13px 16px;
+  color: var(--text-muted);
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.tutorial-content .exercise-answer-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  min-height: 34px;
+  padding: 5px 10px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  border-radius: 8px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.tutorial-content .exercise-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.tutorial-content .exercise-option {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 14px 16px;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: left;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.tutorial-content .exercise-option:hover {
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.055);
+  border-color: var(--primary);
+}
+
+.tutorial-content .exercise-option:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.tutorial-content .linked-exercise-card .exercise-option.correct {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.09);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.tutorial-content .linked-exercise-card .exercise-option.incorrect {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.09);
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.tutorial-content .linked-exercise-card .exercise-option.selected {
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.12);
+}
+
+.tutorial-content .exercise-result {
+  min-height: 24px;
+  margin: 16px 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .exercise-result.correct {
+  color: #6ee7b7;
+}
+
+.tutorial-content .exercise-result.incorrect {
+  color: #fca5a5;
+}
+
+.tutorial-content .exercise-action {
+  display: flex;
+  justify-content: flex-start;
+  min-width: 0;
+  margin-top: 22px;
+}
+
+.tutorial-content .exercise-action .content-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.tutorial-content .exercise-action .content-button i {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+/* ==========================================================
+    Bottom Navigation
+========================================================== */
+
+.tutorial-content .tutorial-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  min-width: 0;
+  margin-top: 30px;
+}
+
+.tutorial-content .tutorial-bottom-actions .tutorial-button {
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+    Responsive Design - 1000px
+========================================================== */
+
+@media (max-width: 1000px) {
+  .tutorial-content .linked-operations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tutorial-content .linked-list-diagram {
+    justify-content: flex-start;
+  }
+}
+
+/* ==========================================================
+    Responsive Design - 800px
+========================================================== */
+
+@media (max-width: 800px) {
+  .tutorial-content .linked-comparison-grid {
+    gap: 15px;
+  }
+
+  .tutorial-content .linked-comparison-item {
+    padding: 20px;
+  }
+
+  .tutorial-content .linked-code-block pre {
+    padding: 18px;
+  }
+
+  .tutorial-content .linked-note {
+    padding: 17px;
+  }
+}
+
+/* ==========================================================
+    Responsive Design - 600px
+========================================================== */
+
+@media (max-width: 600px) {
+  .tutorial-content .tutorial-header > p,
+  .tutorial-content .tutorial-card > p {
+    font-size: 14px;
+  }
+
+  .tutorial-content .tutorial-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tutorial-content .tutorial-header .tutorial-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tutorial-content .linked-note {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .tutorial-content .linked-note > i {
+    font-size: 20px;
+  }
+
+  .tutorial-content .linked-note p {
+    font-size: 13px;
+  }
+
+  .tutorial-content .linked-diagram {
+    gap: 13px;
+    padding: 22px 12px;
+  }
+
+  .tutorial-content .diagram-node {
+    min-height: 65px;
+  }
+
+  .tutorial-content .diagram-part {
+    padding: 9px 4px;
+    font-size: 12px;
+  }
+
+  .tutorial-content .diagram-part.data-part {
+    font-size: 14px;
+  }
+
+  .tutorial-content .diagram-caption {
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  .tutorial-content .linked-list-diagram {
+    justify-content: flex-start;
+    padding: 20px 10px;
+  }
+
+  .tutorial-content .linked-operations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .tutorial-content .linked-operation-item {
+    padding: 17px 10px;
+  }
+
+  .tutorial-content .linked-operation-item h3 {
+    font-size: 14px;
+  }
+
+  .tutorial-content .linked-operation-item p {
+    font-size: 12px;
+  }
+
+  .tutorial-content .operation-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 23px;
+  }
+
+  .tutorial-content .linked-comparison-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .tutorial-content .linked-comparison-item {
+    padding: 19px;
+  }
+
+  .tutorial-content .linked-comparison-table th,
+  .tutorial-content .linked-comparison-table td {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .tutorial-content .linked-code-block pre {
+    padding: 15px 12px;
+    font-size: 12px;
+  }
+
+  .tutorial-content .code-header {
+    align-items: flex-start;
+    padding: 14px;
+  }
+
+  .tutorial-content .linked-exercise-card .exercise-preview {
+    padding: 17px;
+  }
+
+  .tutorial-content .exercise-options {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tutorial-content .exercise-option {
+    padding: 13px;
+  }
+
+  .tutorial-content .exercise-action .content-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tutorial-content .tutorial-bottom-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tutorial-content .tutorial-bottom-actions .tutorial-button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ==========================================================
+    Responsive Design - 400px
+========================================================== */
+
+@media (max-width: 400px) {
+  .tutorial-content .diagram-node {
+    grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr) 1px minmax(0, 1fr);
+  }
+
+  .tutorial-content .diagram-part {
+    padding: 8px 2px;
+    font-size: 10px;
+  }
+
+  .tutorial-content .diagram-part.data-part {
+    font-size: 12px;
+  }
+
+  .tutorial-content .diagram-caption {
+    font-size: 9px;
+  }
+
+  .tutorial-content .linked-endpoint {
+    min-width: 48px;
+    min-height: 36px;
+    padding: 6px;
+    font-size: 10px;
+  }
+
+  .tutorial-content .linked-value-node {
+    width: 62px;
+    min-height: 84px;
+  }
+
+  .tutorial-content .linked-value-node strong {
+    font-size: 16px;
+  }
+
+  .tutorial-content .node-pointer {
+    font-size: 9px;
+  }
+
+  .tutorial-content .linked-arrow {
+    width: 17px;
+    font-size: 19px;
+  }
+
+  .tutorial-content .linked-operations-grid {
+    gap: 8px;
+  }
+
+  .tutorial-content .linked-operation-item {
+    padding: 14px 8px;
+  }
+
+  .tutorial-content .linked-operation-item h3 {
+    font-size: 13px;
+  }
+
+  .tutorial-content .linked-operation-item p {
+    font-size: 11px;
+  }
+
+  .tutorial-content .linked-comparison-item {
+    padding: 16px;
+  }
+
+  .tutorial-content .linked-comparison-item ul {
+    padding-left: 19px;
+    font-size: 13px;
+  }
+
+  .tutorial-content .linked-exercise-card .exercise-preview {
+    padding: 14px;
+  }
+
+  .tutorial-content .exercise-question {
+    font-size: 14px;
+  }
+
+  .tutorial-content .exercise-code {
+    padding: 11px;
+  }
+}

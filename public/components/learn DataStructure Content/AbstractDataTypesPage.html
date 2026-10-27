@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <title>Abstract Data Types (ADTs) | DevPath</title>
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style AbstractDataTypesPage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link active">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <section class="tutorial-content">
+
+            <!-- ==================================================
+                Tutorial Header
+            ================================================== -->
+            <section class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+
+                <h1>
+                    Abstract Data Types (ADTs)
+                </h1>
+
+                <p>
+                    Learn how Abstract Data Types describe what a data
+                    structure does, define its operations, and hide the
+                    details of how those operations are implemented.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="TypesOfDataStructuresPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="TimeComplexityPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                What Is an Abstract Data Type?
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-help-circle"></i>
+                        Definition
+                    </span>
+
+                    <h2>
+                        What Is an Abstract Data Type?
+                    </h2>
+
+                    <p>
+                        An Abstract Data Type (ADT) is a logical model
+                        that describes a type of data and the operations
+                        that can be performed on it, without specifying
+                        exactly how those operations are implemented.
+                    </p>
+
+                </div>
+
+                <div class="adt-definition">
+
+                    <div class="adt-definition-icon">
+                        <i class="bx bx-shape-polygon"></i>
+                    </div>
+
+                    <div class="adt-definition-content">
+
+                        <h3>
+                            Focus on What, Not How
+                        </h3>
+
+                        <p>
+                            An ADT tells us <strong>what we can do</strong>
+                            with data. The actual data structure determines
+                            <strong>how we do it</strong> in a program.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Remember</strong>
+
+                        <p>
+                            An ADT is a logical description of behavior.
+                            It is not necessarily a specific piece of code
+                            or a particular way of storing data.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                The Main Idea Behind ADTs
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bulb"></i>
+                        Main Concept
+                    </span>
+
+                    <h2>
+                        The Main Idea Behind ADTs
+                    </h2>
+
+                    <p>
+                        Think about using a TV remote. You press a button
+                        to increase the volume, but you do not need to know
+                        how the internal electronics work.
+                    </p>
+
+                </div>
+
+                <div class="adt-analogy">
+
+                    <div class="analogy-visual">
+
+                        <div class="analogy-icon">
+                            <i class="bx bx-tv"></i>
+                        </div>
+
+                        <div class="analogy-arrow">
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </div>
+
+                        <div class="analogy-action">
+                            <i class="bx bx-volume-full"></i>
+                            <span>Increase Volume</span>
+                        </div>
+
+                    </div>
+
+                    <p class="example-description">
+                        You use a clear operation without needing to
+                        understand the internal implementation.
+                    </p>
+
+                </div>
+
+                <div class="adt-principles-grid">
+
+                    <article class="adt-principle-card">
+
+                        <div class="adt-principle-icon">
+                            <i class="bx bx-user-check"></i>
+                        </div>
+
+                        <h3>
+                            Public Operations
+                        </h3>
+
+                        <p>
+                            The ADT describes which operations are
+                            available to the user.
+                        </p>
+
+                    </article>
+
+                    <article class="adt-principle-card">
+
+                        <div class="adt-principle-icon">
+                            <i class="bx bx-hide"></i>
+                        </div>
+
+                        <h3>
+                            Hidden Implementation
+                        </h3>
+
+                        <p>
+                            The user does not need to know the internal
+                            details used to perform each operation.
+                        </p>
+
+                    </article>
+
+                    <article class="adt-principle-card">
+
+                        <div class="adt-principle-icon">
+                            <i class="bx bx-refresh"></i>
+                        </div>
+
+                        <h3>
+                            Flexible Implementation
+                        </h3>
+
+                        <p>
+                            The implementation can change as long as
+                            the defined behavior remains consistent.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                ADT vs Data Structure
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Key Difference
+                    </span>
+
+                    <h2>
+                        ADT vs Data Structure
+                    </h2>
+
+                    <p>
+                        These terms are related, but they do not mean
+                        exactly the same thing.
+                    </p>
+
+                </div>
+
+                <div class="adt-comparison">
+
+                    <div class="adt-comparison-card">
+
+                        <div class="comparison-card-icon">
+                            <i class="bx bx-list-check"></i>
+                        </div>
+
+                        <h3>
+                            Abstract Data Type
+                        </h3>
+
+                        <span class="comparison-label">
+                            What?
+                        </span>
+
+                        <p>
+                            Defines the data's behavior and the operations
+                            that are available.
+                        </p>
+
+                        <ul>
+                            <li>Defines allowed operations</li>
+                            <li>Describes expected behavior</li>
+                            <li>Hides implementation details</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="adt-comparison-card">
+
+                        <div class="comparison-card-icon">
+                            <i class="bx bx-code-alt"></i>
+                        </div>
+
+                        <h3>
+                            Data Structure
+                        </h3>
+
+                        <span class="comparison-label">
+                            How?
+                        </span>
+
+                        <p>
+                            Defines how data is organized and stored
+                            so that operations can be performed.
+                        </p>
+
+                        <ul>
+                            <li>Organizes data in memory</li>
+                            <li>Implements operations</li>
+                            <li>Affects performance and storage</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+
+                        <strong>Simple Example</strong>
+
+                        <p>
+                            A Stack ADT describes the Last In, First Out
+                            (LIFO) behavior and operations such as
+                            <code>push</code> and <code>pop</code>.
+                            A stack can be implemented using an array
+                            or a linked list.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Components of an ADT
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-cog"></i>
+                        Components
+                    </span>
+
+                    <h2>
+                        Components of an ADT
+                    </h2>
+
+                    <p>
+                        An ADT describes the data it represents, the
+                        operations available, and the behavior expected
+                        from those operations.
+                    </p>
+
+                </div>
+
+                <div class="adt-components-list">
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">
+                            01
+                        </span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-data"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>
+                                Data
+                            </h3>
+
+                            <p>
+                                The values or elements managed by the ADT.
+                                For example, a Stack may contain numbers,
+                                names, or other values.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">
+                            02
+                        </span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-list-check"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>
+                                Operations
+                            </h3>
+
+                            <p>
+                                The actions supported by the ADT, such
+                                as adding an item, removing an item,
+                                searching, or checking whether it is empty.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">
+                            03
+                        </span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-check-shield"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>
+                                Rules and Behavior
+                            </h3>
+
+                            <p>
+                                The rules that define how operations
+                                behave. For example, a Stack removes
+                                the most recently added item first.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Example 1: Stack ADT
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-layer"></i>
+                        Example 01
+                    </span>
+
+                    <h2>
+                        Stack as an ADT
+                    </h2>
+
+                    <p>
+                        A Stack follows the Last In, First Out (LIFO)
+                        rule. The last item added is the first item removed.
+                    </p>
+
+                </div>
+
+                <div class="adt-example-card">
+
+                    <div class="adt-example-header">
+
+                        <div>
+                            <span class="example-label">
+                                Stack Operations
+                            </span>
+
+                            <h3>
+                                How Does a Stack Work?
+                            </h3>
+                        </div>
+
+                        <i class="bx bx-layer"></i>
+
+                    </div>
+
+                    <div class="stack-visual">
+
+                        <div class="stack-top-label">
+                            <i class="bx bx-up-arrow-alt"></i>
+                            TOP
+                        </div>
+
+                        <div class="stack-items">
+
+                            <div class="stack-item stack-item-top">
+                                30
+                            </div>
+
+                            <div class="stack-item">
+                                20
+                            </div>
+
+                            <div class="stack-item">
+                                10
+                            </div>
+
+                        </div>
+
+                        <div class="stack-bottom">
+                            Bottom
+                        </div>
+
+                    </div>
+
+                    <div class="operation-list">
+
+                        <div class="operation-item">
+
+                            <span class="operation-name">
+                                <code>push(30)</code>
+                            </span>
+
+                            <span class="operation-description">
+                                Adds 30 to the top of the Stack.
+                            </span>
+
+                        </div>
+
+                        <div class="operation-item">
+
+                            <span class="operation-name">
+                                <code>pop()</code>
+                            </span>
+
+                            <span class="operation-description">
+                                Removes and returns the top item.
+                            </span>
+
+                        </div>
+
+                        <div class="operation-item">
+
+                            <span class="operation-name">
+                                <code>peek()</code>
+                            </span>
+
+                            <span class="operation-description">
+                                Returns the top item without removing it.
+                            </span>
+
+                        </div>
+
+                        <div class="operation-item">
+
+                            <span class="operation-name">
+                                <code>isEmpty()</code>
+                            </span>
+
+                            <span class="operation-description">
+                                Checks whether the Stack contains no items.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Important</strong>
+
+                        <p>
+                            The Stack ADT defines the behavior of these
+                            operations. It does not require one specific
+                            implementation, such as an array or a linked list.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Example 2: Queue ADT
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-list-ul"></i>
+                        Example 02
+                    </span>
+
+                    <h2>
+                        Queue as an ADT
+                    </h2>
+
+                    <p>
+                        A Queue follows the First In, First Out (FIFO)
+                        rule. The first item added is the first item removed.
+                    </p>
+
+                </div>
+
+                <div class="adt-example-card">
+
+                    <div class="adt-example-header">
+
+                        <div>
+                            <span class="example-label">
+                                Queue Operations
+                            </span>
+
+                            <h3>
+                                How Does a Queue Work?
+                            </h3>
+                        </div>
+
+                        <i class="bx bx-list-ul"></i>
+
+                    </div>
+
+                    <div class="queue-visual">
+
+                        <div class="queue-end-labels">
+
+                            <span>
+                                <i class="bx bx-log-in"></i>
+                                Front
+                            </span>
+
+                            <span>
+                                Rear
+                                <i class="bx bx-log-out"></i>
+                            </span>
+
+                        </div>
+
+                        <div class="queue-items">
+
+                            <div class="queue-item">
+                                10
+                            </div>
+
+                            <div class="queue-item">
+                                20
+                            </div>
+
+                            <div class="queue-item">
+                                30
+                            </div>
+
+                        </div>
+
+                        <p class="example-description">
+                            The item 10 entered first, so it leaves first.
+                        </p>
+
+                    </div>
+
+                    <div class="operation-list">
+
+                        <div class="operation-item">
+
+                            <span class="operation-name">
+                                <code>enqueue(30)</code>
+                            </span>
+
+                            <span class="operation-description">
+                                Adds an item to the rear of the Queue.
+                            </span>
+
+                        </div>
+
+                        <div class="operation-item">
+
+                            <span class="operation-name">
+                                <code>dequeue()</code>
+                            </span>
+
+                            <span class="operation-description">
+                                Removes and returns the front item.
+                            </span>
+
+                        </div>
+
+                        <div class="operation-item">
+
+                            <span class="operation-name">
+                                <code>front()</code>
+                            </span>
+
+                            <span class="operation-description">
+                                Returns the front item without removing it.
+                            </span>
+
+                        </div>
+
+                        <div class="operation-item">
+
+                            <span class="operation-name">
+                                <code>isEmpty()</code>
+                            </span>
+
+                            <span class="operation-description">
+                                Checks whether the Queue contains no items.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>Real-Life Example</strong>
+
+                        <p>
+                            A line of people waiting at a ticket counter
+                            behaves like a Queue: the person who arrives
+                            first is served first.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                More Examples of ADTs
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-grid-alt"></i>
+                        More Examples
+                    </span>
+
+                    <h2>
+                        Common Abstract Data Types
+                    </h2>
+
+                    <p>
+                        Many familiar data types can be described by their
+                        behavior and supported operations.
+                    </p>
+
+                </div>
+
+                <div class="adt-examples-grid">
+
+                    <article class="adt-small-card">
+
+                        <div class="adt-small-icon">
+                            <i class="bx bx-list-ol"></i>
+                        </div>
+
+                        <h3>
+                            List
+                        </h3>
+
+                        <p>
+                            Represents an ordered collection of elements.
+                        </p>
+
+                        <div class="adt-small-operations">
+                            <code>add()</code>
+                            <code>remove()</code>
+                            <code>get()</code>
+                        </div>
+
+                    </article>
+
+                    <article class="adt-small-card">
+
+                        <div class="adt-small-icon">
+                            <i class="bx bx-search-alt"></i>
+                        </div>
+
+                        <h3>
+                            Set
+                        </h3>
+
+                        <p>
+                            Represents a collection of unique elements.
+                        </p>
+
+                        <div class="adt-small-operations">
+                            <code>add()</code>
+                            <code>contains()</code>
+                            <code>remove()</code>
+                        </div>
+
+                    </article>
+
+                    <article class="adt-small-card">
+
+                        <div class="adt-small-icon">
+                            <i class="bx bx-key"></i>
+                        </div>
+
+                        <h3>
+                            Map
+                        </h3>
+
+                        <p>
+                            Associates keys with corresponding values.
+                        </p>
+
+                        <div class="adt-small-operations">
+                            <code>put()</code>
+                            <code>get()</code>
+                            <code>remove()</code>
+                        </div>
+
+                    </article>
+
+                    <article class="adt-small-card">
+
+                        <div class="adt-small-icon">
+                            <i class="bx bx-git-branch"></i>
+                        </div>
+
+                        <h3>
+                            Priority Queue
+                        </h3>
+
+                        <p>
+                            Processes elements according to priority
+                            rather than only their arrival order.
+                        </p>
+
+                        <div class="adt-small-operations">
+                            <code>insert()</code>
+                            <code>peek()</code>
+                            <code>remove()</code>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Why Are ADTs Important?
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bulb"></i>
+                        Benefits
+                    </span>
+
+                    <h2>
+                        Why Are ADTs Important?
+                    </h2>
+
+                    <p>
+                        ADTs help developers design software around clear
+                        behavior instead of depending on implementation details.
+                    </p>
+
+                </div>
+
+                <div class="adt-benefits-list">
+
+                    <div class="adt-benefit-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <div>
+                            <h3>
+                                Abstraction
+                            </h3>
+
+                            <p>
+                                You can use operations without needing
+                                to understand their internal implementation.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="adt-benefit-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <div>
+                            <h3>
+                                Easier Maintenance
+                            </h3>
+
+                            <p>
+                                An implementation can be changed without
+                                changing how users interact with the ADT,
+                                as long as its behavior remains the same.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="adt-benefit-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <div>
+                            <h3>
+                                Reusability
+                            </h3>
+
+                            <p>
+                                The same abstract behavior can be implemented
+                                and reused in different programs.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="adt-benefit-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <div>
+                            <h3>
+                                Clear Design
+                            </h3>
+
+                            <p>
+                                Defining operations and rules makes software
+                                easier to understand, test, and maintain.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Key Takeaways
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bookmark-check"></i>
+                        Summary
+                    </span>
+
+                    <h2>
+                        Key Takeaways
+                    </h2>
+
+                    <p>
+                        Review the most important ideas before moving
+                        to the next lesson.
+                    </p>
+
+                </div>
+
+                <div class="adt-takeaways-list">
+
+                    <div class="adt-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            An <strong>Abstract Data Type (ADT)</strong>
+                            defines behavior and supported operations.
+                        </p>
+
+                    </div>
+
+                    <div class="adt-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            A <strong>data structure</strong> determines
+                            how data is organized and how operations
+                            are implemented.
+                        </p>
+
+                    </div>
+
+                    <div class="adt-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            A Stack follows <strong>LIFO</strong>, while
+                            a Queue follows <strong>FIFO</strong>.
+                        </p>
+
+                    </div>
+
+                    <div class="adt-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            The same ADT behavior can often be implemented
+                            using different data structures.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-brain"></i>
+
+                    <div>
+
+                        <strong>Quick Reminder</strong>
+
+                        <p>
+                            ADT = What operations are available?
+                            Data Structure = How are those operations implemented?
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Exercises => Shared
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Abstract Data Types Exercises
+                    </h2>
+
+                    <p>
+                        Test your understanding of ADTs, their operations,
+                        and the difference between abstract behavior
+                        and implementation.
+                    </p>
+
+                </div>
+
+                <!-- Exercise Example -->
+                <div class="exercise-preview" data-correct-answer="What">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Exercise Example
+                            </span>
+
+                            <h3>
+                                Understand the Main Concept
+                            </h3>
+
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        What does an Abstract Data Type primarily define?
+                    </p>
+
+                    <!-- Answer Example -->
+                    <div class="exercise-code">
+
+                        <span>Answer:</span>
+
+                        <span class="exercise-answer-slot" id="exerciseAnswer">
+                            ?
+                        </span>
+
+                    </div>
+
+                    <!-- Answer Options -->
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="Storage">
+                            How data is stored in memory
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="What">
+                            The behavior and available operations
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Language">
+                            The programming language used
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="Hardware">
+                            The computer hardware
+                        </button>
+
+                    </div>
+
+                    <!-- Answer Result -->
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <!-- All Exercises Button -->
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Progress Card
+            ================================================== -->
+            <section class="progress-card">
+
+                <div class="progress-card-content">
+
+                    <span class="section-badge">
+                        <i class="bx bx-rocket"></i>
+                        Keep Learning
+                    </span>
+
+                    <h2>
+                        Ready to Learn Data Structure Fundamentals?
+                    </h2>
+
+                    <p>
+                        Continue your learning journey and explore
+                        the fundamental concepts used to organize
+                        and process data efficiently.
+                    </p>
+
+                    <a href="TimeComplexityPage.html" class="content-button">
+                        Continue Learning
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+                <div class="progress-card-icon">
+                    <i class="bx bx-book-reader"></i>
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                    Bottom Navigation
+                ================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="TypesOfDataStructuresPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="TimeComplexityPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

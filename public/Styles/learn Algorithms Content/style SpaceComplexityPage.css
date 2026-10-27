@@ -1,0 +1,1717 @@
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* =========================================================
+   Space Complexity Lesson
+========================================================= */
+
+/* =========================================================
+   01. Lesson Theme Variables
+========================================================= */
+
+.tutorial-content {
+  --sc-accent: var(--primary-light, #f97316);
+  --sc-accent-strong: #fb923c;
+  --sc-accent-soft: rgba(249, 115, 22, 0.1);
+  --sc-accent-border: rgba(249, 115, 22, 0.28);
+
+  --sc-surface: var(--card-bg, rgba(255, 255, 255, 0.035));
+  --sc-surface-raised: rgba(255, 255, 255, 0.055);
+  --sc-surface-soft: rgba(255, 255, 255, 0.025);
+
+  --sc-border: var(--border, rgba(255, 255, 255, 0.12));
+  --sc-text: var(--text, #f1f5f9);
+  --sc-muted: var(--text-muted, var(--text-secondary, #a8b3c7));
+
+  --sc-green: #22c55e;
+  --sc-green-soft: rgba(34, 197, 94, 0.1);
+  --sc-green-border: rgba(34, 197, 94, 0.25);
+
+  --sc-blue: #60a5fa;
+  --sc-blue-soft: rgba(96, 165, 250, 0.1);
+  --sc-blue-border: rgba(96, 165, 250, 0.25);
+
+  --sc-purple: #c084fc;
+  --sc-purple-soft: rgba(192, 132, 252, 0.1);
+  --sc-purple-border: rgba(192, 132, 252, 0.25);
+
+  --sc-red: #fb7185;
+  --sc-red-soft: rgba(251, 113, 133, 0.1);
+  --sc-red-border: rgba(251, 113, 133, 0.25);
+
+  --sc-yellow: #fbbf24;
+  --sc-yellow-soft: rgba(251, 191, 36, 0.1);
+  --sc-yellow-border: rgba(251, 191, 36, 0.25);
+
+  --sc-radius-lg: 20px;
+  --sc-radius-md: 15px;
+  --sc-radius-sm: 10px;
+
+  --sc-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+
+  --sc-transition: 0.25s ease;
+
+  min-width: 0;
+}
+
+.tutorial-content.space-complexity-page {
+  min-width: 0;
+}
+
+.tutorial-content .tutorial-header-content {
+  max-width: 850px;
+}
+
+.tutorial-content .tutorial-header .tutorial-header-content h1 {
+  margin-bottom: 18px;
+}
+
+.tutorial-content .tutorial-header .tutorial-header-content h1 span {
+  color: var(--sc-accent);
+}
+
+.tutorial-content .tutorial-header .tutorial-header-content > p {
+  max-width: 720px;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.tutorial-content .tutorial-header .tutorial-actions {
+  margin-top: 26px;
+}
+
+/* =========================================================
+   02. Lesson Hero
+========================================================= */
+
+.tutorial-content .space-complexity-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(250px, 0.85fr);
+  align-items: center;
+  gap: 28px;
+  margin-top: 26px;
+  padding: 30px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(135deg, var(--sc-accent-soft), transparent 75%),
+    var(--sc-surface);
+
+  border: 1px solid var(--sc-accent-border);
+  border-radius: var(--sc-radius-lg);
+}
+
+.tutorial-content .space-complexity-hero::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  bottom: -85px;
+  width: 180px;
+  height: 180px;
+  background: var(--sc-accent-soft);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.tutorial-content .space-complexity-hero-content,
+.tutorial-content .space-complexity-hero-visual {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.tutorial-content .space-complexity-hero-content > p {
+  margin: 0 0 15px;
+  color: var(--sc-muted);
+  font-size: 0.95rem;
+  line-height: 1.95;
+}
+
+.tutorial-content .space-complexity-hero-content > p:last-child {
+  margin-bottom: 0;
+}
+
+.tutorial-content .space-complexity-hero-content > p strong {
+  color: var(--sc-accent);
+  font-weight: 800;
+}
+
+/* Memory Visualization */
+
+.tutorial-content .memory-visual {
+  padding: 22px;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid var(--sc-accent-border);
+  border-radius: var(--sc-radius-md);
+}
+
+.tutorial-content .memory-visual-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: var(--sc-text);
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.tutorial-content .memory-visual-header i {
+  color: var(--sc-accent);
+  font-size: 23px;
+}
+
+.tutorial-content .memory-blocks {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.tutorial-content .memory-blocks span {
+  aspect-ratio: 1.25;
+  background: linear-gradient(
+    145deg,
+    var(--sc-accent-strong),
+    var(--sc-accent)
+  );
+  border: 1px solid rgba(251, 146, 60, 0.35);
+  border-radius: 7px;
+  opacity: 0.8;
+  animation: sc-memory-pulse 3s ease-in-out infinite;
+}
+
+.tutorial-content .memory-blocks span:nth-child(2n) {
+  animation-delay: 0.3s;
+}
+
+.tutorial-content .memory-blocks span:nth-child(3n) {
+  animation-delay: 0.6s;
+}
+
+.tutorial-content .memory-visual-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 20px;
+  color: var(--sc-muted);
+  font-size: 0.7rem;
+  font-weight: 650;
+}
+
+.tutorial-content .memory-visual-footer i {
+  flex: 0 0 auto;
+  color: var(--sc-accent);
+  font-size: 19px;
+}
+
+/* =========================================================
+   03. Overview Concept Cards
+========================================================= */
+
+.tutorial-content .space-complexity-concepts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 19px;
+  margin-top: 25px;
+}
+
+.tutorial-content .space-complexity-concept {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 23px;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg);
+  transition:
+    transform var(--sc-transition),
+    border-color var(--sc-transition),
+    box-shadow var(--sc-transition);
+}
+
+.tutorial-content .space-complexity-concept:hover {
+  transform: translateY(-4px);
+  border-color: var(--sc-accent-border);
+  box-shadow: var(--sc-shadow);
+}
+
+.tutorial-content .concept-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  color: var(--sc-accent);
+  background: var(--sc-accent-soft);
+  border: 1px solid var(--sc-accent-border);
+  border-radius: 14px;
+  font-size: 24px;
+}
+
+.tutorial-content .space-complexity-concept h3 {
+  margin: 0 0 10px;
+  color: var(--sc-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.tutorial-content .space-complexity-concept p {
+  margin: 0;
+  color: var(--sc-muted);
+  font-size: 0.87rem;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   04. Total Space and Auxiliary Space
+========================================================= */
+
+.tutorial-content .space-types-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.tutorial-content .space-type-card {
+  --sc-type-color: var(--sc-accent);
+  --sc-type-soft: var(--sc-accent-soft);
+  --sc-type-border: var(--sc-accent-border);
+
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 25px;
+
+  background:
+    linear-gradient(145deg, var(--sc-type-soft), transparent 65%),
+    var(--sc-surface);
+
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg);
+  transition:
+    transform var(--sc-transition),
+    border-color var(--sc-transition),
+    box-shadow var(--sc-transition);
+}
+
+.tutorial-content .space-type-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--sc-type-border);
+  box-shadow: var(--sc-shadow);
+}
+
+.tutorial-content .total-space-card {
+  --sc-type-color: var(--sc-blue);
+  --sc-type-soft: var(--sc-blue-soft);
+  --sc-type-border: var(--sc-blue-border);
+}
+
+.tutorial-content .auxiliary-space-card {
+  --sc-type-color: var(--sc-purple);
+  --sc-type-soft: var(--sc-purple-soft);
+  --sc-type-border: var(--sc-purple-border);
+}
+
+.tutorial-content .space-type-icon {
+  display: grid;
+  place-items: center;
+  width: 49px;
+  height: 49px;
+  margin-bottom: 19px;
+  color: var(--sc-type-color);
+  background: var(--sc-type-soft);
+  border: 1px solid var(--sc-type-border);
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.tutorial-content .space-type-card h3 {
+  margin: 0 0 12px;
+  color: var(--sc-text);
+  font-size: 1.12rem;
+  line-height: 1.55;
+  font-weight: 800;
+}
+
+.tutorial-content .space-type-card > p {
+  margin: 0 0 20px;
+  color: var(--sc-muted);
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+.tutorial-content .space-type-formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  margin-top: auto;
+  padding: 15px;
+  color: var(--sc-type-color);
+  background: var(--sc-type-soft);
+  border: 1px solid var(--sc-type-border);
+  border-radius: var(--sc-radius-sm);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.83rem;
+  line-height: 1.8;
+  font-weight: 750;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .space-type-example {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--sc-border);
+}
+
+.tutorial-content .space-type-example strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--sc-type-color);
+  font-size: 0.83rem;
+  font-weight: 800;
+}
+
+.tutorial-content .space-type-example p {
+  margin: 0;
+  color: var(--sc-muted);
+  font-size: 0.84rem;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   05. Common Space Complexity Classes
+========================================================= */
+
+.tutorial-content .space-class-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 19px;
+  margin-top: 26px;
+}
+
+.tutorial-content .space-class-item {
+  --sc-class-color: var(--sc-accent);
+  --sc-class-soft: var(--sc-accent-soft);
+  --sc-class-border: var(--sc-accent-border);
+
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg);
+  transition:
+    transform var(--sc-transition),
+    border-color var(--sc-transition),
+    box-shadow var(--sc-transition);
+}
+
+.tutorial-content .space-class-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--sc-class-border);
+  box-shadow: var(--sc-shadow);
+}
+
+.tutorial-content .space-class-item:nth-child(1) {
+  --sc-class-color: var(--sc-green);
+  --sc-class-soft: var(--sc-green-soft);
+  --sc-class-border: var(--sc-green-border);
+}
+
+.tutorial-content .space-class-item:nth-child(2) {
+  --sc-class-color: var(--sc-blue);
+  --sc-class-soft: var(--sc-blue-soft);
+  --sc-class-border: var(--sc-blue-border);
+}
+
+.tutorial-content .space-class-item:nth-child(3) {
+  --sc-class-color: var(--sc-purple);
+  --sc-class-soft: var(--sc-purple-soft);
+  --sc-class-border: var(--sc-purple-border);
+}
+
+.tutorial-content .space-class-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+}
+
+.tutorial-content .complexity-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 67px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.82rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.tutorial-content .complexity-badge.constant {
+  color: var(--sc-green);
+  background: var(--sc-green-soft);
+  border-color: var(--sc-green-border);
+}
+
+.tutorial-content .complexity-badge.linear {
+  color: var(--sc-blue);
+  background: var(--sc-blue-soft);
+  border-color: var(--sc-blue-border);
+}
+
+.tutorial-content .complexity-badge.quadratic {
+  color: var(--sc-purple);
+  background: var(--sc-purple-soft);
+  border-color: var(--sc-purple-border);
+}
+
+.tutorial-content .space-class-heading > div {
+  min-width: 0;
+}
+
+.tutorial-content .space-class-heading h3 {
+  margin: 0 0 6px;
+  color: var(--sc-text);
+  font-size: 0.97rem;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.tutorial-content .space-class-heading p {
+  margin: 0;
+  color: var(--sc-muted);
+  font-size: 0.79rem;
+  line-height: 1.75;
+}
+
+.tutorial-content .space-class-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 92px;
+  margin: 20px 0;
+  background: var(--sc-surface-soft);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-md);
+}
+
+.tutorial-content .space-unit {
+  width: 13px;
+  height: 32px;
+  background: var(--sc-class-color);
+  border: 1px solid var(--sc-class-border);
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+.tutorial-content .space-class-item:nth-child(1) .space-unit:nth-child(n + 2) {
+  opacity: 0.7;
+}
+
+.tutorial-content .space-class-item:nth-child(2) .space-unit {
+  height: 40px;
+}
+
+.tutorial-content .space-class-item:nth-child(3) .space-class-visual {
+  padding: 14px;
+}
+
+.tutorial-content .space-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 22px);
+  gap: 5px;
+}
+
+.tutorial-content .space-grid span {
+  aspect-ratio: 1;
+  background: var(--sc-class-color);
+  border: 1px solid var(--sc-class-border);
+  border-radius: 4px;
+  opacity: 0.85;
+}
+
+.tutorial-content .space-class-example {
+  margin: auto 0 0;
+  padding-top: 15px;
+  color: var(--sc-muted);
+  border-top: 1px solid var(--sc-border);
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+.tutorial-content .space-class-example strong {
+  color: var(--sc-class-color);
+}
+
+/* =========================================================
+   06. Section Subheadings and Tables
+========================================================= */
+
+.tutorial-content .section-subheading {
+  margin: 28px 0 16px;
+}
+
+.tutorial-content .section-subheading h3 {
+  margin: 0;
+  color: var(--sc-text);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 800;
+}
+
+.tutorial-content .table-responsive {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto;
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-md);
+  scrollbar-width: thin;
+  scrollbar-color: var(--sc-accent) transparent;
+}
+
+.tutorial-content .complexity-table {
+  width: 100%;
+  min-width: 540px;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: var(--sc-text);
+  font-size: 0.86rem;
+  text-align: left;
+}
+
+.tutorial-content .complexity-table th,
+.tutorial-content .complexity-table td {
+  padding: 15px 17px;
+  border: 0;
+  border-right: 1px solid var(--sc-border);
+  border-bottom: 1px solid var(--sc-border);
+  line-height: 1.7;
+  vertical-align: middle;
+}
+
+.tutorial-content .complexity-table th:last-child,
+.tutorial-content .complexity-table td:last-child {
+  border-right: 0;
+}
+
+.tutorial-content .complexity-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.tutorial-content .complexity-table thead th {
+  color: var(--sc-accent);
+  background: var(--sc-accent-soft);
+  font-size: 0.79rem;
+  font-weight: 800;
+}
+
+.tutorial-content .complexity-table tbody td {
+  color: var(--sc-muted);
+  background: transparent;
+}
+
+.tutorial-content .complexity-table tbody tr {
+  transition: background var(--sc-transition);
+}
+
+.tutorial-content .complexity-table tbody tr:hover td {
+  background: var(--sc-surface-raised);
+}
+
+.tutorial-content .complexity-table tbody td:first-child {
+  color: var(--sc-text);
+  font-weight: 750;
+}
+
+.tutorial-content .complexity-table code {
+  display: inline-block;
+  padding: 4px 7px;
+  color: var(--sc-accent);
+  background: var(--sc-accent-soft);
+  border: 1px solid var(--sc-accent-border);
+  border-radius: 6px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+
+/* =========================================================
+   07. Lesson-Specific Code Blocks
+========================================================= */
+.tutorial-content.space-complexity-page .code-example {
+  --code-bg: rgba(10, 7, 3, 0.684);
+  --code-header-bg: rgba(52, 27, 9, 0.801);
+  --code-border: rgb(82, 44, 18);
+  --code-text: rgba(231, 183, 148, 0.997);
+  --code-muted: #9ca3af;
+
+  position: relative;
+  min-width: 0;
+  margin-top: 23px;
+  overflow: hidden;
+
+  color: var(--code-text);
+  background: var(--code-bg);
+
+  border: 1px solid var(--code-border);
+  border-radius: var(--sc-radius-md);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(249, 115, 22, 0.035);
+
+  transition:
+    border-color var(--sc-transition),
+    box-shadow var(--sc-transition);
+}
+
+.tutorial-content.space-complexity-page .code-example:hover {
+  border-color: rgba(249, 115, 22, 0.52);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(249, 115, 22, 0.07);
+}
+
+.tutorial-content.space-complexity-page .code-example-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  min-width: 0;
+  min-height: 58px;
+  padding: 14px 19px;
+
+  color: #f3f4f6;
+  background:
+    linear-gradient(
+      110deg,
+      rgba(249, 115, 22, 0.12),
+      rgba(249, 115, 22, 0.025) 65%
+    ),
+    var(--code-header-bg);
+
+  border-bottom: 1px solid rgba(249, 115, 22, 0.2);
+
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+.tutorial-content.space-complexity-page .code-file-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.tutorial-content.space-complexity-page .code-file-name i {
+  flex: 0 0 auto;
+  color: var(--sc-accent-strong);
+  font-size: 26px;
+}
+
+.tutorial-content.space-complexity-page .code-file-name span {
+  min-width: 0;
+  overflow: hidden;
+  color: #f3f4f6;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tutorial-content.space-complexity-page .code-language {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+
+  padding: 15px 50px;
+
+  color: #fac48b;
+  background: rgba(255, 106, 0, 0.11);
+
+  border: 1px solid rgba(249, 115, 22, 0.27);
+  border-radius: 7px;
+
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.tutorial-content.space-complexity-page .code-example pre {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 23px 24px;
+  overflow-x: auto;
+
+  color: var(--code-text);
+  background: var(--code-bg);
+
+  font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.9;
+  font-weight: 400;
+  tab-size: 4;
+
+  text-align: left;
+  white-space: pre;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c15d22 #1b2433;
+}
+
+.tutorial-content.space-complexity-page .code-example pre::-webkit-scrollbar {
+  height: 9px;
+}
+
+.tutorial-content.space-complexity-page
+  .code-example
+  pre::-webkit-scrollbar-track {
+  background: #1b2433;
+  border-radius: 10px;
+}
+
+.tutorial-content.space-complexity-page
+  .code-example
+  pre::-webkit-scrollbar-thumb {
+  background: #9a4a20;
+  border: 2px solid #1b2433;
+  border-radius: 10px;
+}
+
+.tutorial-content.space-complexity-page
+  .code-example
+  pre::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+.tutorial-content.space-complexity-page .code-example pre code {
+  display: block;
+  min-width: max-content;
+  padding: 0;
+
+  color: inherit;
+  background: transparent;
+
+  border: 0;
+  border-radius: 0;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  white-space: inherit;
+  tab-size: inherit;
+}
+
+/* Keep inline code inside lesson examples consistent */
+
+.tutorial-content.space-complexity-page .code-example code {
+  font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
+}
+
+/* =========================================================
+   08. Step-by-Step Analysis
+========================================================= */
+.tutorial-content .example-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.tutorial-content .example-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+  padding: 19px;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-md);
+  transition:
+    border-color var(--sc-transition),
+    background var(--sc-transition);
+}
+
+.tutorial-content .example-step:hover {
+  background: var(--sc-surface-raised);
+  border-color: var(--sc-accent-border);
+}
+
+.tutorial-content .step-number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 39px;
+  width: 39px;
+  height: 39px;
+  color: var(--sc-accent);
+  background: var(--sc-accent-soft);
+  border: 1px solid var(--sc-accent-border);
+  border-radius: 11px;
+  font-size: 0.76rem;
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+}
+
+.tutorial-content .example-step > div {
+  min-width: 0;
+}
+
+.tutorial-content .example-step h3 {
+  margin: 2px 0 9px;
+  color: var(--sc-text);
+  font-size: 0.91rem;
+  line-height: 1.55;
+  font-weight: 800;
+}
+
+.tutorial-content .example-step p {
+  margin: 0;
+  color: var(--sc-muted);
+  font-size: 0.82rem;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.tutorial-content .example-step code {
+  color: var(--sc-accent);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.82em;
+}
+
+/* =========================================================
+   09. Final Analysis Result
+========================================================= */
+
+.tutorial-content .result-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  margin-top: 25px;
+  padding: 24px;
+
+  background:
+    linear-gradient(135deg, var(--sc-green-soft), transparent 80%),
+    var(--sc-surface);
+
+  border: 1px solid var(--sc-green-border);
+  border-radius: var(--sc-radius-lg);
+}
+
+.tutorial-content .result-panel-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  color: var(--sc-green);
+  background: var(--sc-green-soft);
+  border: 1px solid var(--sc-green-border);
+  border-radius: 14px;
+  font-size: 27px;
+}
+
+.tutorial-content .result-panel-content {
+  min-width: 0;
+}
+
+.tutorial-content .result-panel-content h3 {
+  margin: 0 0 10px;
+  color: var(--sc-green);
+  font-size: 1.12rem;
+  line-height: 1.55;
+  font-weight: 850;
+}
+
+.tutorial-content .result-panel-content p {
+  margin: 0;
+  color: var(--sc-muted);
+  font-size: 0.89rem;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   10. Array Growth Visualization
+========================================================= */
+.tutorial-content .space-growth-demo {
+  margin-top: 27px;
+  padding: 23px;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg);
+}
+
+.tutorial-content .space-growth-demo .section-subheading {
+  margin-top: 0;
+}
+
+.tutorial-content .array-growth-row {
+  display: grid;
+  grid-template-columns: 65px minmax(0, 1fr) 95px;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.tutorial-content .array-growth-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.tutorial-content .array-growth-label {
+  color: var(--sc-accent);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.tutorial-content .array-growth-cells {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-width: 0;
+}
+
+.tutorial-content .array-growth-cells span {
+  display: grid;
+  place-items: center;
+  flex: 0 0 29px;
+  width: 29px;
+  height: 32px;
+  color: var(--sc-blue);
+  background: var(--sc-blue-soft);
+  border: 1px solid var(--sc-blue-border);
+  border-radius: 6px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.tutorial-content .array-growth-count {
+  color: var(--sc-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   11. Matrix Visualization
+========================================================= */
+
+.tutorial-content .matrix-demo {
+  margin-top: 25px;
+  padding: 25px;
+
+  background:
+    linear-gradient(145deg, var(--sc-purple-soft), transparent 70%),
+    var(--sc-surface);
+
+  border: 1px solid var(--sc-purple-border);
+  border-radius: var(--sc-radius-lg);
+}
+
+.tutorial-content .matrix-demo > p {
+  margin: 0;
+  color: var(--sc-muted);
+  font-size: 0.88rem;
+  line-height: 1.85;
+}
+
+.tutorial-content .matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 64px));
+  justify-content: center;
+  gap: 9px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 25px auto;
+  padding: 15px;
+  background: var(--sc-surface-soft);
+  border: 1px solid var(--sc-purple-border);
+  border-radius: var(--sc-radius-md);
+}
+
+.tutorial-content .matrix-grid span {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  color: var(--sc-purple);
+  background: var(--sc-purple-soft);
+  border: 1px solid var(--sc-purple-border);
+  border-radius: 9px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.tutorial-content .matrix-formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  background: var(--sc-surface-soft);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-md);
+  color: var(--sc-muted);
+  font-size: 0.8rem;
+}
+
+.tutorial-content .matrix-formula strong {
+  color: var(--sc-purple);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   12. Loop Comparison
+========================================================= */
+
+.tutorial-content .loop-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.tutorial-content .loop-example-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 23px;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg);
+}
+
+.tutorial-content .loop-example-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-bottom: 4px;
+}
+
+.tutorial-content .loop-example-heading h3 {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: var(--sc-text);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 800;
+}
+
+.tutorial-content .loop-example-card .code-example {
+  margin-top: 17px;
+}
+
+/* The loop examples use the same header and code sizing as other examples. */
+
+.tutorial-content .loop-example-card .code-example-header {
+  padding: 14px 19px;
+}
+
+.tutorial-content .loop-example-card .code-example pre {
+  padding: 23px 24px;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.tutorial-content .loop-example-card > p {
+  margin: 17px 0 0;
+  color: var(--sc-muted);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   13. Space Complexity Analysis Steps
+========================================================= */
+
+.tutorial-content .analysis-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.tutorial-content .analysis-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+  padding: 20px;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-md);
+  transition:
+    border-color var(--sc-transition),
+    background var(--sc-transition);
+}
+
+.tutorial-content .analysis-step:hover {
+  background: var(--sc-surface-raised);
+  border-color: var(--sc-accent-border);
+}
+
+.tutorial-content .analysis-step-number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 41px;
+  width: 41px;
+  height: 41px;
+  color: var(--sc-accent);
+  background: var(--sc-accent-soft);
+  border: 1px solid var(--sc-accent-border);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+}
+
+.tutorial-content .analysis-step > div {
+  min-width: 0;
+}
+
+.tutorial-content .analysis-step h3 {
+  margin: 1px 0 8px;
+  color: var(--sc-text);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  font-weight: 800;
+}
+
+.tutorial-content .analysis-step p {
+  margin: 0;
+  color: var(--sc-muted);
+  font-size: 0.84rem;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   14. Recursion Call Stack
+========================================================= */
+
+.tutorial-content .recursion-stack-demo {
+  margin-top: 25px;
+  padding: 24px;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg);
+}
+
+.tutorial-content .recursion-stack-demo .section-subheading {
+  margin-top: 0;
+}
+
+.tutorial-content .recursion-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  max-width: 440px;
+  margin: 22px auto 0;
+}
+
+.tutorial-content .stack-frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+  min-width: 0;
+  padding: 13px 17px;
+
+  background:
+    linear-gradient(90deg, var(--sc-blue-soft), transparent), var(--sc-surface);
+
+  border: 1px solid var(--sc-blue-border);
+  border-left: 4px solid var(--sc-blue);
+  border-radius: 9px;
+  transition:
+    transform var(--sc-transition),
+    border-color var(--sc-transition);
+}
+
+.tutorial-content .stack-frame:hover {
+  transform: translateX(3px);
+  border-color: var(--sc-accent-border);
+}
+
+.tutorial-content .stack-frame-label {
+  color: var(--sc-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.tutorial-content .stack-frame code {
+  color: var(--sc-blue);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+
+.tutorial-content .stack-caption {
+  margin: 20px 0 0;
+  color: var(--sc-muted);
+  font-size: 0.81rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* =========================================================
+   15. Key Takeaways
+========================================================= */
+
+.tutorial-content .takeaways-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  margin-top: 25px;
+}
+
+.tutorial-content .takeaway-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 17px;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-md);
+  transition:
+    border-color var(--sc-transition),
+    background var(--sc-transition);
+}
+
+.tutorial-content .takeaway-item:hover {
+  background: var(--sc-surface-raised);
+  border-color: var(--sc-green-border);
+}
+
+.tutorial-content .takeaway-item > i {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: var(--sc-green);
+  font-size: 20px;
+}
+
+.tutorial-content .takeaway-item p {
+  min-width: 0;
+  margin: 0;
+  color: var(--sc-muted);
+  font-size: 0.86rem;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   16. Example Note and Learning Note
+========================================================= */
+
+.tutorial-content .example-note,
+.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.12);
+  border-radius: var(--radius-md, 10px);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.tutorial-content .example-note > i,
+.tutorial-content .learning-note > i {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 19px;
+}
+
+.tutorial-content .example-note > div,
+.tutorial-content .learning-note > div {
+  min-width: 0;
+}
+
+.tutorial-content .example-note strong,
+.tutorial-content .learning-note strong {
+  display: inline-block;
+  margin-bottom: 3px;
+  color: var(--text, #f1f5f9);
+  font-weight: 800;
+}
+
+.tutorial-content .example-note p,
+.tutorial-content .learning-note p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.tutorial-content .learning-note {
+  margin-bottom: 25px;
+}
+
+/* =========================================================
+   17. Knowledge Check
+========================================================= */
+
+/* Knowledge check styles are provided by the shared stylesheet. */
+
+/* =========================================================
+   18. Reserved
+========================================================= */
+
+/* =========================================================
+   19. Responsive Layout — Tablet
+========================================================= */
+
+@media (max-width: 1024px) {
+  .tutorial-content .space-complexity-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.8fr);
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .tutorial-content .space-complexity-concepts,
+  .tutorial-content .space-class-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tutorial-content .space-complexity-concept:last-child,
+  .tutorial-content .space-class-item:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .tutorial-content .example-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .tutorial-content .example-step {
+    padding: 18px;
+  }
+
+  .tutorial-content .analysis-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .tutorial-content .takeaways-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   20. Responsive Layout — Mobile
+========================================================= */
+
+@media (max-width: 700px) {
+  .tutorial-content .space-complexity-hero {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 21px;
+  }
+
+  .tutorial-content .space-complexity-concepts,
+  .tutorial-content .space-types-grid,
+  .tutorial-content .space-class-list,
+  .tutorial-content .loop-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tutorial-content .space-complexity-concept:last-child,
+  .tutorial-content .space-class-item:last-child {
+    grid-column: auto;
+  }
+
+  .tutorial-content .space-complexity-concept,
+  .tutorial-content .space-type-card,
+  .tutorial-content .space-class-item,
+  .tutorial-content .loop-example-card {
+    padding: 21px;
+  }
+
+  .tutorial-content .memory-visual {
+    padding: 19px;
+  }
+
+  .tutorial-content .space-growth-demo,
+  .tutorial-content .matrix-demo,
+  .tutorial-content .recursion-stack-demo {
+    padding: 19px;
+  }
+
+  .tutorial-content .array-growth-row {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .tutorial-content .array-growth-count {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .tutorial-content .array-growth-cells span {
+    flex-basis: 26px;
+    width: 26px;
+    height: 29px;
+  }
+
+  .tutorial-content .matrix-grid {
+    grid-template-columns: repeat(3, minmax(0, 55px));
+    gap: 7px;
+  }
+
+  .tutorial-content .matrix-formula {
+    gap: 7px;
+    font-size: 0.73rem;
+  }
+
+  .tutorial-content.space-complexity-page .code-example-header {
+    gap: 10px;
+    padding: 12px 14px;
+    font-size: 0.76rem;
+  }
+
+  .tutorial-content.space-complexity-page .code-example pre {
+    padding: 19px;
+    font-size: 0.77rem;
+    line-height: 1.85;
+  }
+
+  .tutorial-content .result-panel {
+    gap: 13px;
+    padding: 20px;
+  }
+
+  .tutorial-content .result-panel-icon {
+    flex-basis: 43px;
+    width: 43px;
+    height: 43px;
+    font-size: 23px;
+  }
+
+  .tutorial-content .exercise-preview {
+    padding: 20px;
+  }
+
+  .tutorial-content .exercise-preview .exercise-options {
+    grid-template-columns: 1fr;
+  }
+
+  .tutorial-content .exercise-preview .exercise-option {
+    min-height: 50px;
+  }
+
+  .tutorial-content .exercise-submit {
+    width: 100%;
+  }
+
+  .tutorial-content .tutorial-bottom-navigation {
+    gap: 11px;
+  }
+
+  .tutorial-content .tutorial-bottom-navigation .tutorial-button {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .tutorial-content .tutorial-bottom-navigation .tutorial-button > span {
+    font-size: 0.77rem;
+  }
+}
+
+/* =========================================================
+   21. Small Mobile Screens
+========================================================= */
+
+@media (max-width: 420px) {
+  .tutorial-content .space-complexity-hero {
+    padding: 18px;
+  }
+
+  .tutorial-content .space-complexity-hero-content > p {
+    font-size: 0.88rem;
+  }
+
+  .tutorial-content .space-complexity-concept,
+  .tutorial-content .space-type-card,
+  .tutorial-content .space-class-item,
+  .tutorial-content .loop-example-card {
+    padding: 18px;
+  }
+
+  .tutorial-content .space-type-formula {
+    font-size: 0.74rem;
+  }
+
+  .tutorial-content .space-class-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tutorial-content .complexity-badge {
+    min-width: 62px;
+  }
+
+  .tutorial-content.space-complexity-page .code-example-header {
+    flex-wrap: wrap;
+  }
+
+  .tutorial-content.space-complexity-page .code-language {
+    margin-left: auto;
+  }
+
+  .tutorial-content .example-step {
+    gap: 11px;
+    padding: 15px;
+  }
+
+  .tutorial-content .step-number {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .tutorial-content .result-panel {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .tutorial-content .array-growth-row {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .tutorial-content .array-growth-count {
+    grid-column: auto;
+  }
+
+  .tutorial-content .matrix-grid {
+    grid-template-columns: repeat(3, minmax(0, 47px));
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .tutorial-content .matrix-formula {
+    gap: 6px;
+    padding: 11px;
+  }
+
+  .tutorial-content .stack-frame {
+    gap: 9px;
+    padding: 12px;
+  }
+
+  .tutorial-content .stack-frame code {
+    font-size: 0.73rem;
+  }
+
+  .tutorial-content .exercise-preview {
+    padding: 16px;
+  }
+
+  .tutorial-content .exercise-preview-header {
+    gap: 10px;
+  }
+
+  .tutorial-content .exercise-question h3 {
+    font-size: 0.94rem;
+  }
+
+  .tutorial-content .exercise-option {
+    gap: 9px;
+    padding: 12px;
+  }
+
+  .tutorial-content .option-text {
+    font-size: 0.8rem;
+  }
+
+  .tutorial-content .tutorial-bottom-navigation .tutorial-button {
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .tutorial-content .tutorial-bottom-navigation .tutorial-button > i {
+    font-size: 18px;
+  }
+
+  .tutorial-content .tutorial-bottom-navigation .tutorial-button > span {
+    font-size: 0.7rem;
+  }
+
+  .tutorial-content .tutorial-bottom-navigation .tutorial-button small {
+    font-size: 0.63rem;
+  }
+}
+
+/* =========================================================
+   22. Reduced Motion Accessibility
+========================================================= */
+
+@keyframes sc-memory-pulse {
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tutorial-content .memory-blocks span {
+    animation: none;
+  }
+
+  .tutorial-content .space-complexity-concept,
+  .tutorial-content .space-type-card,
+  .tutorial-content .space-class-item,
+  .tutorial-content .example-step,
+  .tutorial-content .analysis-step,
+  .tutorial-content .stack-frame,
+  .tutorial-content .takeaway-item,
+  .tutorial-content .exercise-option,
+  .tutorial-content .exercise-submit,
+  .tutorial-content .tutorial-bottom-navigation .tutorial-button {
+    transition: none;
+  }
+
+  .tutorial-content .space-complexity-concept:hover,
+  .tutorial-content .space-type-card:hover,
+  .tutorial-content .space-class-item:hover,
+  .tutorial-content .stack-frame:hover,
+  .tutorial-content .exercise-option:hover,
+  .tutorial-content .exercise-submit:hover,
+  .tutorial-content .tutorial-bottom-navigation .tutorial-button:hover {
+    transform: none;
+  }
+}

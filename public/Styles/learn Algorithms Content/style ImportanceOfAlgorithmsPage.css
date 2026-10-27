@@ -1,0 +1,463 @@
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ==========================================================
+   Tutorial Header
+========================================================== */
+
+.tutorial-header-content {
+  max-width: 850px;
+}
+
+.tutorial-header .tutorial-header-content h1 {
+  margin-bottom: 18px;
+}
+
+.tutorial-header .tutorial-header-content h1 span {
+  color: var(--primary-light);
+}
+
+.tutorial-header .tutorial-header-content > p {
+  max-width: 720px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.tutorial-header .tutorial-actions {
+  margin-top: 26px;
+}
+
+/* ==========================================================
+   Importance Overview
+========================================================== */
+.importance-overview {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 25px;
+  padding: 22px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.importance-overview-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: var(--radius-md);
+  font-size: 28px;
+}
+
+.importance-overview-content h3 {
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  font-size: 18px;
+}
+
+.importance-overview-content p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Performance Cards
+========================================================== */
+.importance-performance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.importance-performance-card {
+  padding: 22px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.importance-performance-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-light);
+}
+
+.importance-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 16px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: var(--radius-md);
+  font-size: 25px;
+}
+
+.importance-performance-card h3 {
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  font-size: 17px;
+}
+
+.importance-performance-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Importance Example
+========================================================== */
+.importance-example {
+  margin-top: 28px;
+  padding: 22px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.importance-example-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.importance-example-heading i {
+  color: var(--primary-light);
+  font-size: 25px;
+}
+
+.importance-example-heading h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 18px;
+}
+
+.importance-example > p {
+  margin: 0 0 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.importance-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.importance-comparison-item {
+  padding: 18px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.importance-comparison-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 10px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.importance-comparison-item h4 {
+  margin: 0 0 9px;
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+.importance-comparison-item p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Scalability Growth
+========================================================== */
+.importance-growth {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.importance-growth-stage {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  padding: 24px 15px;
+  text-align: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.importance-growth-number {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.importance-growth-stage > i {
+  display: block;
+  margin: 12px 0 16px;
+  color: var(--primary-light);
+  font-size: 31px;
+}
+
+.importance-growth-stage h3 {
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+.importance-growth-stage p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.importance-growth-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  font-size: 23px;
+}
+
+/* ==========================================================
+   Real-World Applications
+========================================================== */
+.importance-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.importance-application-card {
+  padding: 22px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.importance-application-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-light);
+}
+
+.importance-application-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 15px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: var(--radius-md);
+  font-size: 25px;
+}
+
+.importance-application-card h3 {
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+.importance-application-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Choosing an Algorithm
+========================================================== */
+.importance-decision-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.importance-decision-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.importance-decision-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.importance-decision-item h3 {
+  margin: 2px 0 8px;
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+.importance-decision-item p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   Key Takeaways
+========================================================== */
+.importance-takeaways-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.importance-takeaways-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.importance-takeaways-list li i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary-light);
+  font-size: 19px;
+}
+
+/* ==========================================================
+   Example Note & Learning Note
+========================================================== */
+.example-note,
+.learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.06);
+  border: 1px solid rgba(249, 115, 22, 0.12);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  line-height: 1.7;
+  -webkit-border-radius: var(--radius-md);
+  -moz-border-radius: var(--radius-md);
+  -ms-border-radius: var(--radius-md);
+  -o-border-radius: var(--radius-md);
+}
+
+.example-note i,
+.learning-note i {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 19px;
+}
+
+.example-note p,
+.learning-note p {
+  margin: 0;
+}
+
+.learning-note {
+  margin-bottom: 25px;
+}
+
+/* ==========================================================
+   Responsive Design
+========================================================== */
+@media (max-width: 900px) {
+  .importance-growth {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .importance-growth-stage {
+    padding: 20px;
+  }
+
+  .importance-growth-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .importance-overview {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .importance-performance-grid,
+  .importance-comparison,
+  .importance-applications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .importance-example {
+    padding: 16px;
+  }
+
+  .importance-decision-item {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .importance-decision-number {
+    width: 33px;
+    height: 33px;
+  }
+}

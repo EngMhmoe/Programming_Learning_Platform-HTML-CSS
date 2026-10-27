@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <meta name="description"
+        content="Learn Queue data structures, FIFO principle, basic operations, implementation in JavaScript, and time complexity.">
+
+
+    <title>Queues - Data Structure Tutorial | DevPath</title>
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style QueuesPage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link active">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <div class="tutorial-content queue-page">
+
+            <!-- ======================================================
+            Tutorial Header
+        ======================================================= -->
+            <header class="tutorial-header queue-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+                <h1>Queues in Data Structure</h1>
+
+                <p>
+                    Learn how Queues work, understand the FIFO principle,
+                    and implement Queue operations using JavaScript.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="StacksPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="CircularQueuePage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+
+            </header>
+
+            <!-- ======================================================
+            Section 1: Introduction to Queues
+        ======================================================= -->
+            <section class="tutorial-card" id="introduction">
+
+                <div class="section-heading">
+                    <span class="queue-section-number">01</span>
+                    <div>
+                        <h2>Introduction to Queues</h2>
+                        <p>Understand the basic idea behind a Queue.</p>
+                    </div>
+                </div>
+
+                <div class="queue-content">
+                    <h3>What Is a Queue?</h3>
+
+                    <p>
+                        A <strong>Queue</strong> is a linear data structure that stores
+                        elements in a specific order. The first element added to the
+                        Queue is the first element removed.
+                    </p>
+
+                    <p>
+                        Think about people waiting in line to buy tickets. The person
+                        who arrives first is served first, while new people join the
+                        end of the line.
+                    </p>
+
+                    <div class="queue-concept-box">
+                        <div class="queue-concept-icon">
+                            <i class="bx bx-bulb"></i>
+                        </div>
+
+                        <div>
+                            <h4>Key Concept: FIFO</h4>
+                            <p>
+                                <strong>FIFO</strong> stands for
+                                <strong>First In, First Out</strong>.
+                                The first element inserted into the Queue is the
+                                first element removed from it.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Queue Visual -->
+                    <div class="queue-visual-card">
+                        <h4>Real-Life Example: A Ticket Line</h4>
+
+                        <div class="queue-people">
+                            <div class="queue-person">
+                                <span class="queue-person-icon">👤</span>
+                                <span>Person 1</span>
+                            </div>
+
+                            <i class="bx bx-chevron-right queue-arrow"></i>
+
+                            <div class="queue-person">
+                                <span class="queue-person-icon">👤</span>
+                                <span>Person 2</span>
+                            </div>
+
+                            <i class="bx bx-chevron-right queue-arrow"></i>
+
+                            <div class="queue-person">
+                                <span class="queue-person-icon">👤</span>
+                                <span>Person 3</span>
+                            </div>
+                        </div>
+
+                        <div class="queue-direction">
+                            <span>
+                                <i class="bx bx-log-in"></i>
+                                New people join here
+                            </span>
+
+                            <span>
+                                <i class="bx bx-log-out"></i>
+                                First person served here
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="learning-note queue-note">
+                        <i class="bx bx-info-circle"></i>
+                        <p>
+                            <strong>Remember:</strong> A Queue adds elements at the
+                            <strong>Rear</strong> and removes elements from the
+                            <strong>Front</strong>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================
+            Section 2: Why Do We Use Queues?
+        ======================================================= -->
+            <section class="tutorial-card" id="why-queues">
+
+                <div class="section-heading">
+                    <span class="queue-section-number">02</span>
+                    <div>
+                        <h2>Why Do We Use Queues?</h2>
+                        <p>Discover where Queues are useful.</p>
+                    </div>
+                </div>
+
+                <div class="queue-content">
+                    <p>
+                        Queues help us process tasks in the same order they arrive.
+                        They are useful whenever fairness and order matter.
+                    </p>
+
+                    <div class="queue-feature-grid">
+
+                        <article class="queue-feature">
+                            <div class="queue-feature-icon">
+                                <i class="bx bx-printer"></i>
+                            </div>
+                            <h3>Print Jobs</h3>
+                            <p>
+                                Documents can wait in a Queue and print in the
+                                order they were submitted.
+                            </p>
+                        </article>
+
+                        <article class="queue-feature">
+                            <div class="queue-feature-icon">
+                                <i class="bx bx-support"></i>
+                            </div>
+                            <h3>Customer Support</h3>
+                            <p>
+                                Requests can be handled in the order they arrive.
+                            </p>
+                        </article>
+
+                        <article class="queue-feature">
+                            <div class="queue-feature-icon">
+                                <i class="bx bx-network-chart"></i>
+                            </div>
+                            <h3>Task Scheduling</h3>
+                            <p>
+                                Systems can manage waiting tasks before processing them.
+                            </p>
+                        </article>
+
+                        <article class="queue-feature">
+                            <div class="queue-feature-icon">
+                                <i class="bx bx-search-alt"></i>
+                            </div>
+                            <h3>Breadth-First Search</h3>
+                            <p>
+                                Graph and tree algorithms use Queues to visit
+                                nearby nodes first.
+                            </p>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================
+            Section 3: Structure of a Queue
+        ======================================================= -->
+            <section class="tutorial-card" id="queue-structure">
+
+                <div class="section-heading">
+                    <span class="queue-section-number">03</span>
+                    <div>
+                        <h2>Structure of a Queue</h2>
+                        <p>Learn about Front, Rear, and stored elements.</p>
+                    </div>
+                </div>
+
+                <div class="queue-content">
+                    <p>
+                        A Queue contains elements arranged in order. Two important
+                        positions help us manage it:
+                    </p>
+
+                    <div class="queue-parts-grid">
+
+                        <div class="queue-part">
+                            <span class="queue-part-marker queue-front-marker"></span>
+                            <div>
+                                <h3>Front</h3>
+                                <p>
+                                    The position of the first element, which is
+                                    removed first.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="queue-part">
+                            <span class="queue-part-marker queue-rear-marker"></span>
+                            <div>
+                                <h3>Rear</h3>
+                                <p>
+                                    The position where new elements are added.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="queue-structure-visual">
+                        <div class="queue-position-labels">
+                            <span>Front</span>
+                            <span>Rear</span>
+                        </div>
+
+                        <div class="queue-items">
+                            <div class="queue-item queue-front-item">10</div>
+                            <div class="queue-item">20</div>
+                            <div class="queue-item queue-rear-item">30</div>
+                        </div>
+
+                        <div class="queue-position-labels queue-position-caption">
+                            <span>First to leave</span>
+                            <span>Last to enter</span>
+                        </div>
+                    </div>
+
+                    <h3>Example Using an Array</h3>
+
+                    <p>
+                        In JavaScript, we can use an array to represent a simple Queue:
+                    </p>
+
+                    <pre class="queue-code"><code>const queue = [10, 20, 30];
+
+console.log(queue);
+// [10, 20, 30]
+
+console.log(queue[0]);
+// 10 (Front)
+
+console.log(queue[queue.length - 1]);
+// 30 (Rear)</code></pre>
+
+                    <div class="learning-note queue-note">
+                        <i class="bx bx-info-circle"></i>
+                        <p>
+                            In this example, the first element is at index
+                            <code>0</code>, and the last element is at index
+                            <code>queue.length - 1</code>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================
+            Section 4: FIFO Principle
+        ======================================================= -->
+            <section class="tutorial-card" id="fifo-principle">
+
+                <div class="section-heading">
+                    <span class="queue-section-number">04</span>
+                    <div>
+                        <h2>The FIFO Principle</h2>
+                        <p>First In, First Out.</p>
+                    </div>
+                </div>
+
+                <div class="queue-content">
+                    <p>
+                        FIFO means the first element added to the Queue is the
+                        first element removed from it.
+                    </p>
+
+                    <div class="queue-operation-grid">
+
+                        <article class="queue-operation queue-enqueue">
+                            <div class="queue-operation-icon">
+                                <i class="bx bx-log-in"></i>
+                            </div>
+
+                            <h3>Enqueue</h3>
+                            <span class="queue-operation-label">Add an element</span>
+
+                            <p>
+                                A new element is inserted at the Rear of the Queue.
+                            </p>
+
+                            <pre class="queue-code"><code>queue.push(40);</code></pre>
+                        </article>
+
+                        <article class="queue-operation queue-dequeue">
+                            <div class="queue-operation-icon">
+                                <i class="bx bx-log-out"></i>
+                            </div>
+
+                            <h3>Dequeue</h3>
+                            <span class="queue-operation-label">Remove an element</span>
+
+                            <p>
+                                The element at the Front is removed first.
+                            </p>
+
+                            <pre class="queue-code"><code>queue.shift();</code></pre>
+                        </article>
+
+                    </div>
+
+                    <h3>Step-by-Step Example</h3>
+
+                    <p>Start with an empty Queue and add three elements:</p>
+
+                    <pre class="queue-code"><code>const queue = [];
+
+queue.push(10);
+queue.push(20);
+queue.push(30);
+
+console.log(queue);
+// [10, 20, 30]</code></pre>
+
+                    <p>Now remove one element from the Front:</p>
+
+                    <pre class="queue-code"><code>const removed = queue.shift();
+
+console.log(removed);
+// 10
+
+console.log(queue);
+// [20, 30]</code></pre>
+
+                    <div class="queue-result-box">
+                        <i class="bx bx-check-circle"></i>
+                        <p>
+                            <strong>Result:</strong> The value <code>10</code>
+                            leaves first because it was added first.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================
+            Section 5: Basic Queue Operations
+        ======================================================= -->
+            <section class="tutorial-card" id="basic-operations">
+
+                <div class="section-heading">
+                    <span class="queue-section-number">05</span>
+                    <div>
+                        <h2>Basic Queue Operations</h2>
+                        <p>Understand the most common Queue operations.</p>
+                    </div>
+                </div>
+
+                <div class="queue-content">
+                    <div class="queue-operation-list">
+
+                        <article class="queue-operation-row">
+                            <span class="queue-operation-symbol">
+                                <i class="bx bx-plus-circle"></i>
+                            </span>
+
+                            <div>
+                                <h3>1. Enqueue</h3>
+                                <p>
+                                    Adds a new element to the Rear of the Queue.
+                                </p>
+                                <pre class="queue-code"><code>queue.push(40);</code></pre>
+                            </div>
+                        </article>
+
+                        <article class="queue-operation-row">
+                            <span class="queue-operation-symbol">
+                                <i class="bx bx-minus-circle"></i>
+                            </span>
+
+                            <div>
+                                <h3>2. Dequeue</h3>
+                                <p>
+                                    Removes and returns the element at the Front.
+                                </p>
+                                <pre class="queue-code"><code>const first = queue.shift();</code></pre>
+                            </div>
+                        </article>
+
+                        <article class="queue-operation-row">
+                            <span class="queue-operation-symbol">
+                                <i class="bx bx-show"></i>
+                            </span>
+
+                            <div>
+                                <h3>3. Peek</h3>
+                                <p>
+                                    Returns the Front element without removing it.
+                                </p>
+                                <pre class="queue-code"><code>const first = queue[0];</code></pre>
+                            </div>
+                        </article>
+
+                        <article class="queue-operation-row">
+                            <span class="queue-operation-symbol">
+                                <i class="bx bx-list-check"></i>
+                            </span>
+
+                            <div>
+                                <h3>4. isEmpty</h3>
+                                <p>
+                                    Checks whether the Queue contains no elements.
+                                </p>
+                                <pre class="queue-code"><code>const empty = queue.length === 0;</code></pre>
+                            </div>
+                        </article>
+
+                        <article class="queue-operation-row">
+                            <span class="queue-operation-symbol">
+                                <i class="bx bx-hash"></i>
+                            </span>
+
+                            <div>
+                                <h3>5. Size</h3>
+                                <p>
+                                    Returns the number of elements currently stored.
+                                </p>
+                                <pre class="queue-code"><code>const count = queue.length;</code></pre>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div class="learning-note queue-note">
+                        <i class="bx bx-info-circle"></i>
+                        <p>
+                            These examples use JavaScript arrays. The
+                            <code>shift()</code> method is easy to understand,
+                            but removing the first array element may take
+                            <code>O(n)</code> time because remaining elements
+                            may need to be shifted.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================
+            Section 6: Implementing a Queue in JavaScript
+        ======================================================= -->
+            <section class="tutorial-card" id="queue-implementation">
+
+                <div class="section-heading">
+                    <span class="queue-section-number">06</span>
+                    <div>
+                        <h2>Implementing a Queue in JavaScript</h2>
+                        <p>Create a Queue class with the basic operations.</p>
+                    </div>
+                </div>
+
+                <div class="queue-content">
+                    <p>
+                        We can create a <code>Queue</code> class to organize the
+                        Queue operations in one place.
+                    </p>
+
+                    <pre class="queue-code"><code>class Queue {
+    constructor() {
+        this.items = [];
+    }
+
+    // Add an element to the Rear
+    enqueue(element) {
+        this.items.push(element);
+    }
+
+    // Remove and return the Front element
+    dequeue() {
+        if (this.isEmpty()) {
+            return undefined;
+        }
+
+        return this.items.shift();
+    }
+
+    // Return the Front element without removing it
+    peek() {
+        if (this.isEmpty()) {
+            return undefined;
+        }
+
+        return this.items[0];
+    }
+
+    // Check whether the Queue is empty
+    isEmpty() {
+        return this.items.length === 0;
+    }
+
+    // Return the number of elements
+    size() {
+        return this.items.length;
+    }
+
+    // Display the Queue elements
+    print() {
+        console.log(this.items);
+    }
+}</code></pre>
+
+                    <h3>Using the Queue Class</h3>
+
+                    <pre class="queue-code"><code>const queue = new Queue();
+
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
+
+queue.print();
+// [10, 20, 30]
+
+console.log(queue.peek());
+// 10
+
+console.log(queue.dequeue());
+// 10
+
+queue.print();
+// [20, 30]
+
+console.log(queue.size());
+// 2
+
+console.log(queue.isEmpty());
+// false</code></pre>
+
+                    <div class="queue-explanation">
+                        <h3>How Does It Work?</h3>
+
+                        <ul>
+                            <li>
+                                <strong>constructor():</strong>
+                                Creates an empty array to store the elements.
+                            </li>
+                            <li>
+                                <strong>enqueue(element):</strong>
+                                Adds an element to the end of the array.
+                            </li>
+                            <li>
+                                <strong>dequeue():</strong>
+                                Removes and returns the first element, or
+                                <code>undefined</code> if the Queue is empty.
+                            </li>
+                            <li>
+                                <strong>peek():</strong>
+                                Reads the first element without removing it.
+                            </li>
+                            <li>
+                                <strong>isEmpty():</strong>
+                                Returns <code>true</code> if the Queue is empty.
+                            </li>
+                            <li>
+                                <strong>size():</strong>
+                                Returns the number of stored elements.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================
+            Section 7: Stack vs Queue
+        ======================================================= -->
+            <section class="tutorial-card" id="stack-vs-queue">
+
+                <div class="section-heading">
+                    <span class="queue-section-number">07</span>
+                    <div>
+                        <h2>Stack vs Queue</h2>
+                        <p>Understand the difference between these structures.</p>
+                    </div>
+                </div>
+
+                <div class="queue-content">
+                    <p>
+                        Both Stack and Queue store multiple elements, but they
+                        remove elements in different orders.
+                    </p>
+
+                    <div class="queue-table-wrapper">
+                        <table class="queue-comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Stack</th>
+                                    <th>Queue</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Principle</td>
+                                    <td>LIFO</td>
+                                    <td>FIFO</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Full Form</td>
+                                    <td>Last In, First Out</td>
+                                    <td>First In, First Out</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Add Operation</td>
+                                    <td>Push</td>
+                                    <td>Enqueue</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Remove Operation</td>
+                                    <td>Pop</td>
+                                    <td>Dequeue</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Common Example</td>
+                                    <td>Stack of plates</td>
+                                    <td>People waiting in line</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="queue-comparison-cards">
+
+                        <div class="queue-comparison-card">
+                            <h3><i class="bx bx-layer"></i> Stack</h3>
+                            <p>
+                                The last element added is the first element removed.
+                            </p>
+                            <code>Push → Push → Pop</code>
+                        </div>
+
+                        <div class="queue-comparison-card">
+                            <h3><i class="bx bx-list-ol"></i> Queue</h3>
+                            <p>
+                                The first element added is the first element removed.
+                            </p>
+                            <code>Enqueue → Enqueue → Dequeue</code>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================
+            Section 8: Queue Time Complexity
+        ======================================================= -->
+            <section class="tutorial-card" id="time-complexity">
+
+                <div class="section-heading">
+                    <span class="queue-section-number">08</span>
+                    <div>
+                        <h2>Queue Time Complexity</h2>
+                        <p>Understand how operation costs are measured.</p>
+                    </div>
+                </div>
+
+                <div class="queue-content">
+                    <p>
+                        Time complexity describes how the time required by an
+                        operation changes as the number of elements grows.
+                    </p>
+
+                    <div class="queue-table-wrapper">
+                        <table class="queue-complexity-table">
+                            <thead>
+                                <tr>
+                                    <th>Operation</th>
+                                    <th>Array with shift()</th>
+                                    <th>Queue with Front Index</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Enqueue</td>
+                                    <td><code>O(1)*</code></td>
+                                    <td><code>O(1)</code></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Dequeue</td>
+                                    <td><code>O(n)</code></td>
+                                    <td><code>O(1)</code></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Peek</td>
+                                    <td><code>O(1)</code></td>
+                                    <td><code>O(1)</code></td>
+                                </tr>
+
+                                <tr>
+                                    <td>isEmpty</td>
+                                    <td><code>O(1)</code></td>
+                                    <td><code>O(1)</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="queue-table-footnote">
+                        * Array insertion at the end is generally amortized
+                        <code>O(1)</code>. Resizing can occasionally take longer.
+                        A Queue implemented with a Front Index avoids shifting
+                        every remaining element during dequeue.
+                    </p>
+
+                    <div class="queue-complexity-cards">
+
+                        <div class="queue-complexity-card">
+                            <span class="queue-complexity-value">O(1)</span>
+                            <h3>Constant Time</h3>
+                            <p>
+                                The operation takes approximately constant time
+                                as the Queue grows.
+                            </p>
+                        </div>
+
+                        <div class="queue-complexity-card">
+                            <span class="queue-complexity-value">O(n)</span>
+                            <h3>Linear Time</h3>
+                            <p>
+                                The operation may need to process or move a
+                                number of elements proportional to the Queue size.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================
+            Section 9: Advantages and Disadvantages
+        ======================================================= -->
+            <section class="tutorial-card" id="advantages-disadvantages">
+
+                <div class="section-heading">
+                    <span class="queue-section-number">09</span>
+                    <div>
+                        <h2>Advantages and Disadvantages</h2>
+                        <p>Know when a Queue is the right choice.</p>
+                    </div>
+                </div>
+
+                <div class="queue-content">
+                    <div class="queue-pros-cons">
+
+                        <div class="queue-pros">
+                            <h3>
+                                <i class="bx bx-check-circle"></i>
+                                Advantages
+                            </h3>
+
+                            <ul>
+                                <li>Maintains the order in which elements arrive.</li>
+                                <li>Useful for scheduling and task processing.</li>
+                                <li>Supports a clear and simple processing flow.</li>
+                                <li>Works well for breadth-first search algorithms.</li>
+                            </ul>
+                        </div>
+
+                        <div class="queue-cons">
+                            <h3>
+                                <i class="bx bx-x-circle"></i>
+                                Disadvantages
+                            </h3>
+
+                            <ul>
+                                <li>Does not directly provide priority-based ordering.</li>
+                                <li>Searching for a particular element can take O(n).</li>
+                                <li>
+                                    Using array <code>shift()</code> may be inefficient
+                                    for large Queues.
+                                </li>
+                                <li>
+                                    Some implementations need extra logic to manage
+                                    memory or reuse array positions.
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================
+            Section 10: Key Takeaways
+        ======================================================= -->
+            <section class="tutorial-card" id="key-takeaways">
+
+                <div class="section-heading">
+                    <span class="queue-section-number">10</span>
+                    <div>
+                        <h2>Key Takeaways</h2>
+                        <p>Review the most important concepts.</p>
+                    </div>
+                </div>
+
+                <div class="queue-content">
+                    <div class="queue-takeaways">
+
+                        <div class="queue-takeaway">
+                            <i class="bx bx-check-circle"></i>
+                            <p>
+                                A Queue is a linear data structure that follows
+                                the <strong>FIFO</strong> principle.
+                            </p>
+                        </div>
+
+                        <div class="queue-takeaway">
+                            <i class="bx bx-check-circle"></i>
+                            <p>
+                                <strong>Enqueue</strong> adds an element to the Rear.
+                            </p>
+                        </div>
+
+                        <div class="queue-takeaway">
+                            <i class="bx bx-check-circle"></i>
+                            <p>
+                                <strong>Dequeue</strong> removes the element at the Front.
+                            </p>
+                        </div>
+
+                        <div class="queue-takeaway">
+                            <i class="bx bx-check-circle"></i>
+                            <p>
+                                <strong>Peek</strong> reads the first element without
+                                removing it.
+                            </p>
+                        </div>
+
+                        <div class="queue-takeaway">
+                            <i class="bx bx-check-circle"></i>
+                            <p>
+                                Using <code>shift()</code> is simple, but an
+                                implementation with a Front Index can make
+                                dequeue more efficient.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ==================================================
+                Exercises => Shared
+            ================================================== -->
+            <section class="tutorial-card">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Queue Exercises
+                    </h2>
+
+                    <p>
+                        Test your understanding of the Queue data structure,
+                        the FIFO principle, and basic Queue operations.
+                    </p>
+
+                </div>
+
+                <!-- Exercise Example -->
+                <div class="exercise-preview" data-correct-answer="10">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Exercise Example
+                            </span>
+
+                            <h3>
+                                Understand the FIFO Principle
+                            </h3>
+
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        What value will be returned by
+                        <code>shift()</code> after executing the following code?
+                    </p>
+
+                    <!-- Exercise Code -->
+                    <pre class="exercise-code"><code>const queue = [];
+
+queue.push(10);
+queue.push(20);
+queue.push(30);
+
+console.log(queue.shift());</code></pre>
+
+                    <!-- Answer Example -->
+                    <div class="exercise-code">
+
+                        <span>Answer:</span>
+
+                        <span class="exercise-answer-slot" id="exerciseAnswer">
+                            ?
+                        </span>
+
+                    </div>
+
+                    <!-- Answer Options -->
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="30">
+                            30
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="20">
+                            20
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="10">
+                            10
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="undefined">
+                            undefined
+                        </button>
+
+                    </div>
+
+                    <!-- Answer Result -->
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <!-- All Exercises Button -->
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+            Learning Progress
+        ======================================================= -->
+            <section class="learning-progress-card">
+
+                <div class="learning-progress-icon">
+                    <i class="bx bx-trophy"></i>
+                </div>
+
+                <div class="learning-progress-content">
+                    <h3>Great Job!</h3>
+
+                    <p>
+                        You have completed the introduction to Stacks.
+                        Continue learning to explore the next data structure.
+                    </p>
+                </div>
+
+                <a href="CircularQueuePage.html" class="tutorial-button primary">
+                    Start the Next Lesson
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </section>
+
+
+            <!-- ======================================================
+            Bottom Navigation
+        ======================================================= -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="StacksPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="CircularQueuePage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>

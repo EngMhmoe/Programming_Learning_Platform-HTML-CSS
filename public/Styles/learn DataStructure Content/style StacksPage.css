@@ -1,0 +1,1286 @@
+/* ==========================================================
+   Global Styles
+========================================================== */
+
+@import url("../../Styles/style_Learning_Content_Pages-Shared.css");
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Introduction to Stacks
+========================================================== */
+
+.linked-intro-card {
+  overflow: hidden;
+}
+
+.linked-concept-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  min-width: 0;
+  margin-top: 25px;
+  margin-bottom: 28px;
+  padding: 25px;
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-lg);
+}
+
+.linked-concept-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 58px;
+  width: 58px;
+  height: 58px;
+  color: #fff7ed;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  border-radius: 16px;
+  font-size: 29px;
+}
+
+.linked-concept-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.linked-concept-content h3 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.linked-concept-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Stack Visual
+========================================================== */
+
+.linked-example-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 380px;
+  min-width: 0;
+  margin: 25px auto 28px;
+  padding: 25px 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.linked-node {
+  width: 100%;
+  max-width: 260px;
+  min-width: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(249, 115, 22, 0.5);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm, none);
+}
+
+.linked-node-label {
+  display: block;
+  padding: 9px 14px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.linked-node-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 18px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.linked-node-data {
+  color: var(--text);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.linked-node-pointer {
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.linked-arrow {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 26px;
+}
+
+.linked-null {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 85px;
+  min-height: 42px;
+  padding: 8px 14px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Learning Notes
+========================================================== */
+
+.tutorial-content .learning-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+  margin-top: 22px;
+  padding: 18px 20px;
+  color: var(--text-secondary);
+  background: rgba(249, 115, 22, 0.055);
+  border: 1px solid rgba(249, 115, 22, 0.17);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tutorial-content .learning-note > i {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--primary-light);
+  font-size: 22px;
+}
+
+.tutorial-content .learning-note > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-note strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.tutorial-content .learning-note p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.tutorial-content .learning-note code {
+  padding: 2px 5px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 0;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.92em;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Why Use Stacks?
+========================================================== */
+
+.linked-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.linked-feature {
+  min-width: 0;
+  padding: 23px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.linked-feature:hover {
+  background: rgba(249, 115, 22, 0.035);
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm, none);
+}
+
+.linked-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 17px;
+  color: #fff7ed;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.linked-feature-icon i {
+  font-size: 25px;
+}
+
+.linked-feature h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.linked-feature p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Structure of a Stack
+========================================================== */
+
+.linked-node-parts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+  margin-bottom: 26px;
+}
+
+.linked-node-part {
+  position: relative;
+  min-width: 0;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.linked-node-part:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.linked-part-number {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.linked-part-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 17px;
+  color: #fff7ed;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.linked-part-icon i {
+  font-size: 25px;
+}
+
+.linked-node-part h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.linked-node-part p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.linked-node-part code {
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Code Examples
+========================================================== */
+
+.linked-code-example {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin: 25px 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.linked-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-width: 0;
+  padding: 17px 20px;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.055);
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.linked-code-header i {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 21px;
+}
+
+.linked-code-example pre {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  color: #e5e7eb;
+  background: rgba(0, 0, 0, 0.24);
+  border: 0;
+  border-radius: 0;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.9;
+  tab-size: 4;
+  white-space: pre;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.linked-code-example pre code {
+  display: block;
+  width: max-content;
+  min-width: 100%;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font: inherit;
+  overflow-wrap: normal;
+  white-space: pre;
+}
+
+.linked-code-description {
+  margin: 18px 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.linked-code-description code {
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   LIFO Principle
+========================================================== */
+
+.linked-terms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.linked-term {
+  min-width: 0;
+  padding: 23px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.linked-term:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.linked-term-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.linked-term-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 47px;
+  color: #fff7ed;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.linked-term-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 6px 11px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.17);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.linked-term h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.linked-term p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.linked-head-tail-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 300px;
+  min-width: 0;
+  margin: 35px auto 20px;
+  padding: 24px 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.linked-pointer-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--primary-light);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.linked-pointer-label i {
+  font-size: 19px;
+}
+
+.linked-mini-node {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  max-width: 210px;
+  min-height: 58px;
+  padding: 12px 16px;
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.075);
+  border: 1px solid rgba(249, 115, 22, 0.4);
+  border-radius: var(--radius-md);
+}
+
+.linked-mini-node > span {
+  color: var(--text);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.linked-mini-node small {
+  color: var(--primary-light);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.linked-tail-node {
+  border-color: var(--primary);
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Basic Stack Operations
+========================================================== */
+
+.linked-type-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.linked-type-item {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.3s ease;
+}
+
+.linked-type-item:hover {
+  border-color: var(--primary);
+}
+
+.linked-type-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #fff7ed;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 13px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.linked-type-content {
+  min-width: 0;
+}
+
+.linked-type-content h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.linked-type-content > p {
+  margin: 0 0 18px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.linked-type-content p code {
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+.linked-type-content .linked-code-example {
+  margin-bottom: 0;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Stack vs Queue
+========================================================== */
+
+.linked-operations-card .linked-table-wrapper {
+  width: 100%;
+}
+
+.linked-table-wrapper,
+.linked-complexity-table-wrapper {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.linked-comparison-table,
+.linked-complexity-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: rgba(255, 255, 255, 0.015);
+  text-align: left;
+}
+
+.linked-comparison-table {
+  min-width: 620px;
+}
+
+.linked-complexity-table {
+  min-width: 430px;
+}
+
+.linked-comparison-table th,
+.linked-comparison-table td,
+.linked-complexity-table th,
+.linked-complexity-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+  vertical-align: middle;
+}
+
+.linked-comparison-table th,
+.linked-complexity-table th {
+  color: var(--text);
+  background: rgba(249, 115, 22, 0.09);
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.linked-comparison-table td:first-child,
+.linked-complexity-table td:first-child {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.linked-comparison-table tbody tr:last-child td,
+.linked-complexity-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.linked-comparison-table tbody tr,
+.linked-complexity-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.linked-comparison-table tbody tr:hover,
+.linked-complexity-table tbody tr:hover {
+  background: rgba(249, 115, 22, 0.035);
+}
+
+.linked-comparison-table td code,
+.linked-complexity-table td code {
+  display: inline-block;
+  padding: 3px 6px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  border: 0;
+  border-radius: 5px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.linked-comparison-good,
+.linked-comparison-warning {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.linked-comparison-good {
+  color: #6ee7b7;
+}
+
+.linked-comparison-warning {
+  color: #fdba74;
+}
+
+.linked-complexity-table td:last-child {
+  color: var(--primary-light);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-weight: 900;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Advantages and Disadvantages
+========================================================== */
+
+.linked-pros-cons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+}
+
+.linked-pros,
+.linked-cons {
+  min-width: 0;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.linked-pros {
+  border-top: 3px solid #10b981;
+}
+
+.linked-cons {
+  border-top: 3px solid #ef4444;
+}
+
+.linked-pros-cons-heading {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 18px;
+}
+
+.linked-pros-cons-heading i {
+  flex-shrink: 0;
+  font-size: 24px;
+}
+
+.linked-pros .linked-pros-cons-heading i {
+  color: #6ee7b7;
+}
+
+.linked-cons .linked-pros-cons-heading i {
+  color: #fca5a5;
+}
+
+.linked-pros-cons-heading h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.linked-pros ul,
+.linked-cons ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding-left: 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.linked-pros li,
+.linked-cons li {
+  padding-left: 3px;
+}
+
+.linked-pros li::marker {
+  color: #6ee7b7;
+}
+
+.linked-cons li::marker {
+  color: #fca5a5;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Key Takeaways
+========================================================== */
+
+.linked-takeaways-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.linked-takeaway {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.linked-takeaway > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 27px;
+  height: 27px;
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.09);
+  border-radius: 50%;
+  font-size: 17px;
+}
+
+.linked-takeaway p {
+  min-width: 0;
+  margin: 1px 0 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.linked-takeaway code {
+  color: var(--primary-light);
+  background: rgba(249, 115, 22, 0.08);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Learning Progress
+========================================================== */
+
+.tutorial-content .learning-progress-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+  width: 100%;
+  margin-top: 30px;
+  padding: 28px;
+  background: rgba(38, 22, 10, 0.72);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm, none);
+}
+
+.tutorial-content .learning-progress-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  color: #fff7ed;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: var(--radius-md);
+  font-size: 30px;
+}
+
+.tutorial-content .learning-progress-icon i {
+  font-size: 29px;
+}
+
+.tutorial-content .learning-progress-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.tutorial-content .learning-progress-content h3 {
+  margin: 0 0 9px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.tutorial-content .learning-progress-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.tutorial-content .learning-progress-card > .tutorial-button {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin-left: auto;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Responsive Design - 1000px
+========================================================== */
+
+@media (max-width: 1000px) {
+  .linked-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .linked-feature:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .tutorial-content .learning-progress-card {
+    flex-wrap: wrap;
+  }
+
+  .tutorial-content .learning-progress-content {
+    flex: 1 1 220px;
+  }
+
+  .tutorial-content .learning-progress-card > .tutorial-button {
+    flex: 0 1 auto;
+    margin-left: 0;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Responsive Design - 800px
+========================================================== */
+
+@media (max-width: 800px) {
+  .linked-feature-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .linked-feature:last-child {
+    grid-column: auto;
+  }
+
+  .linked-node-parts,
+  .linked-terms-grid,
+  .linked-pros-cons-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .linked-type-item {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .linked-type-number {
+    width: 42px;
+    height: 42px;
+  }
+
+  .linked-comparison-table th,
+  .linked-comparison-table td,
+  .linked-complexity-table th,
+  .linked-complexity-table td {
+    padding: 13px 15px;
+  }
+
+  .linked-concept-box {
+    gap: 17px;
+    padding: 21px;
+  }
+
+  .linked-feature,
+  .linked-node-part,
+  .linked-term {
+    padding: 20px;
+  }
+
+  .linked-code-example pre {
+    padding: 18px;
+  }
+
+  .tutorial-content .learning-progress-card {
+    gap: 18px;
+    padding: 24px;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Responsive Design - 600px
+========================================================== */
+
+@media (max-width: 600px) {
+  .linked-concept-box {
+    flex-direction: column;
+    gap: 15px;
+    padding: 18px;
+  }
+
+  .linked-concept-icon {
+    width: 54px;
+    height: 54px;
+    flex-basis: 54px;
+    border-radius: 15px;
+    font-size: 27px;
+  }
+
+  .linked-concept-content h3 {
+    font-size: 19px;
+  }
+
+  .linked-concept-content p {
+    font-size: 13px;
+  }
+
+  .linked-example-visual {
+    padding: 18px 10px;
+  }
+
+  .linked-node {
+    max-width: 100%;
+  }
+
+  .linked-node-content {
+    padding: 12px;
+  }
+
+  .linked-node-data {
+    font-size: 17px;
+  }
+
+  .linked-node-pointer {
+    font-size: 11px;
+  }
+
+  .linked-feature-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .linked-feature:last-child {
+    grid-column: auto;
+  }
+
+  .linked-feature {
+    padding: 19px;
+  }
+
+  .linked-node-parts,
+  .linked-terms-grid,
+  .linked-pros-cons-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .linked-node-part,
+  .linked-term {
+    padding: 19px;
+  }
+
+  .linked-head-tail-visual {
+    gap: 8px;
+    padding: 20px 12px;
+  }
+
+  .linked-mini-node {
+    max-width: 100%;
+    padding: 11px 12px;
+  }
+
+  .linked-type-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 13px;
+    padding: 17px;
+  }
+
+  .linked-type-number {
+    width: 38px;
+    height: 38px;
+  }
+
+  .linked-code-example pre {
+    padding: 15px 12px;
+    font-size: 12px;
+  }
+
+  .linked-code-header {
+    padding: 15px;
+  }
+
+  .linked-comparison-table th,
+  .linked-comparison-table td,
+  .linked-complexity-table th,
+  .linked-complexity-table td {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .linked-pros,
+  .linked-cons {
+    padding: 19px;
+  }
+
+  .linked-takeaway {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .linked-takeaway p {
+    font-size: 13px;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* ==========================================================
+   Responsive Design - 400px
+========================================================== */
+
+@media (max-width: 400px) {
+  .linked-concept-box {
+    padding: 16px;
+  }
+
+  .linked-example-visual {
+    gap: 8px;
+    padding: 15px 9px;
+  }
+
+  .linked-node-content {
+    padding: 11px;
+  }
+
+  .linked-node-data {
+    font-size: 15px;
+  }
+
+  .linked-node-pointer {
+    font-size: 10px;
+  }
+
+  .linked-null {
+    min-width: 70px;
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .linked-head-tail-visual {
+    padding: 17px 10px;
+  }
+
+  .linked-mini-node {
+    padding: 10px;
+  }
+
+  .linked-mini-node > span {
+    font-size: 14px;
+  }
+
+  .linked-type-item {
+    padding: 15px;
+  }
+
+  .linked-code-example pre {
+    padding: 13px 10px;
+    font-size: 11px;
+  }
+
+  .linked-code-header {
+    padding: 13px;
+    font-size: 12px;
+  }
+
+  .linked-pros,
+  .linked-cons {
+    padding: 16px;
+  }
+
+  .linked-pros ul,
+  .linked-cons ul {
+    padding-left: 18px;
+    font-size: 13px;
+  }
+}

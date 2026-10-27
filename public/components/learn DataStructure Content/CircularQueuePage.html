@@ -1,0 +1,2672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+        Meta
+    ========================================================== -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mohamed Alwani">
+
+    <meta name="description"
+        content="Learn Circular Queue data structures, circular arrays, enqueue and dequeue operations, JavaScript implementation, and time complexity.">
+
+    <title>Circular Queue - Data Structure Tutorial | DevPath</title>
+
+
+
+    <!-- ==========================================================
+        Favicon
+    ========================================================== -->
+    <link rel="icon" type="image/jpg" href="../../photos/ph10.jpg">
+
+    <!-- ========================================================== -->
+    <!-- Fonts -->
+    <!-- ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- Boxicons -->
+    <!-- ========================================================== -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+
+    <!-- ========================================================== -->
+    <!-- CSS -->
+    <!-- ========================================================== -->
+    <link rel="stylesheet" href="../../Styles/learningPages.css">
+    <link rel="stylesheet" href="../../Styles/learn DataStructure Content/style CircularQueuePage.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        Header => مشترك
+    =========================================================== -->
+    <header class="header">
+
+        <!-- Navbar Container -->
+        <nav class="navbar">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="brand" aria-label="DevPath Home">
+
+                <span class="brand-icon">
+                    <i class="bx bx-code-alt"></i>
+                </span>
+
+                <span class="brand-text">
+                    Dev<span>Path</span>
+                </span>
+
+            </a>
+
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <!-- ////////////////////////////////////////////////////////////// -->
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <!-- Home -->
+                <li>
+
+                    <a href="../../index.html" class="nav-link">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Programming Basics -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Programming Basics
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BasicsCsharb.html">
+                            <i class="bx bx-code-curly"></i>
+                            C#
+                        </a>
+
+                        <a href="../../Pages/DataStructure.html" class="current">
+                            <i class="bx bx-data"></i>
+                            Data Structure
+                        </a>
+
+                        <a href="../../Pages/Algorithem.html">
+                            <i class="bx bx-git-branch"></i>
+                            Algorithm
+                        </a>
+
+                        <a href="../../Pages/ProblemSolving.html">
+                            <i class="bx bx-bulb"></i>
+                            Problem Solving
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Front-End -->
+                <li class="dropdown">
+                    <a href="#" class="nav-link">
+                        Front-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/HTMLPage.html">
+                            <i class="bx bxl-html5"></i>
+                            HTML
+                        </a>
+
+                        <a href="../../Pages/CSSPage.html">
+                            <i class="bx bxl-css3"></i>
+                            CSS
+                        </a>
+
+                        <a href="../../Pages/JavaScriptPage.html">
+                            <i class="bx bxl-javascript"></i>
+                            JavaScript
+                        </a>
+
+                        <a href="../../Pages/BootstrapPage.html">
+                            <i class="bx bxl-bootstrap"></i>
+                            Bootstrap
+                        </a>
+
+                        <a href="../../Pages/TailwindCSSPage.html">
+                            <i class="bx bxl-tailwind-css"></i>
+                            Tailwind CSS
+                        </a>
+
+                        <a href="../../Pages/React-JS_Page.html">
+                            <i class="bx bxl-react"></i>
+                            React JS
+                        </a>
+
+                        <a href="../../Pages/Strapi_Back-End.Html">
+                            <i class=" bx bx-server"></i>
+                            Strapi Back-End
+                        </a>
+
+                    </div>
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Back-End -->
+                <li class="dropdown">
+
+                    <a href="#" class="nav-link">
+                        Back-End
+                        <i class="bx bx-chevron-down"></i>
+                    </a>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="../../Pages/BackEnd-SQL.html">
+                            <i class="bx bx-data"></i>
+                            SQL Server
+                        </a>
+
+                        <a href="../../Pages/BackEnd-EntityFramework.html">
+                            <i class="bx bx-layer"></i>
+                            Entity Framework
+                        </a>
+
+                        <a href="../../Pages/BackEnd-ASP.NET.html">
+                            <i class="bx bx-code-alt"></i>
+                            ASP.NET
+                        </a>
+
+
+                    </div>
+
+                </li>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Contact US -->
+                <a href="../../Pages/ContactUS.html" class="login-btn">
+                    Contact US
+                </a>
+
+
+                <!-- ////////////////////////////////////////////////////////////// -->
+                <!-- ////////////////////////////////////////////////////////////// -->
+
+
+                <!-- Login -->
+                <li>
+
+                    <a href="../../Pages/LoginPage.html" class="login-btn">
+                        <i class="bx bx-log-in"></i>
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Learning Layout
+    =========================================================== -->
+    <main class="learning-page">
+
+        <!-- ======================================================
+            Sidebar => مشترك
+        ======================================================= -->
+        <aside class="learning-sidebar">
+
+            <!-- sidebar-header -->
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+
+                <div>
+                    <span>Programming Basics</span>
+                    <h2>DS Tutorial</h2>
+                </div>
+            </div>
+
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <!-- Introduction -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-book-open"></i>
+                    Introduction
+                </h3>
+
+                <a href="HomePage.html" class="sidebar-link">
+                    <i class="bx bx-home-alt"></i>
+                    DS Home
+                </a>
+
+                <a href="IntroductionPage.html" class="sidebar-link">
+                    <i class="bx bx-info-circle"></i>
+                    DS Intro
+                </a>
+
+                <a href="WhatIsDataStructurePage.html" class="sidebar-link">
+                    <i class="bx bx-question-mark"></i>
+                    What Is DS?
+                </a>
+
+                <a href="ImportanceOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-bulb"></i>
+                    DS Importance
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Fundamentals -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-layer"></i>
+                    Fundamentals
+                </h3>
+
+                <a href="TypesOfDataStructuresPage.html" class="sidebar-link">
+                    <i class="bx bx-category"></i>
+                    DS Types
+                </a>
+
+                <a href="AbstractDataTypesPage.html" class="sidebar-link">
+                    <i class="bx bx-cube"></i>
+                    Abstract Data Types
+                </a>
+
+                <a href="TimeComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-time"></i>
+                    Time Complexity
+                </a>
+
+                <a href="SpaceComplexityPage.html" class="sidebar-link">
+                    <i class="bx bx-memory-card"></i>
+                    Space Complexity
+                </a>
+
+                <a href="BigONotationPage.html" class="sidebar-link">
+                    <i class="bx bx-line-chart"></i>
+                    Big O Notation
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-list-ul"></i>
+                    Linear Data Structures
+                </h3>
+
+
+                <a href="LinkedListsPage.html" class="sidebar-link">
+                    <i class="bx bx-link"></i>
+                    Linked Lists
+                </a>
+
+                <a href="SinglyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-right-arrow-alt"></i>
+                    Singly Linked List
+                </a>
+
+                <a href="DoublyLinkedListPage.html" class="sidebar-link">
+                    <i class="bx bx-transfer"></i>
+                    Doubly Linked List
+                </a>
+
+                <a href="StacksPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Stacks
+                </a>
+
+                <a href="QueuesPage.html" class="sidebar-link">
+                    <i class="bx bx-list-ol"></i>
+                    Queues
+                </a>
+
+                <a href="CircularQueuePage.html" class="sidebar-link active">
+                    <i class="bx bx-refresh"></i>
+                    Circular Queue
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Hashing -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-hash"></i>
+                    Hashing
+                </h3>
+
+                <a href="HashTablesPage.html" class="sidebar-link">
+                    <i class="bx bx-table"></i>
+                    Hash Tables
+                </a>
+
+                <a href="DictionariesPage.html" class="sidebar-link">
+                    <i class="bx bx-book"></i>
+                    Dictionaries
+                </a>
+
+                <a href="HashingTechniquesPage.html" class="sidebar-link">
+                    <i class="bx bx-shuffle"></i>
+                    Hashing Techniques
+                </a>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Non-Linear Data Structures -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-git-branch"></i>
+                    Non-Linear Data Structures
+                </h3>
+
+                <a href="TreesPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Trees
+                </a>
+
+                <a href="BinaryTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-git-branch"></i>
+                    Binary Trees
+                </a>
+
+                <a href="BinarySearchTreesPage.html" class="sidebar-link">
+                    <i class="bx bx-search-alt"></i>
+                    Binary Search Trees
+                </a>
+
+                <a href="HeapsPage.html" class="sidebar-link">
+                    <i class="bx bx-layer"></i>
+                    Heaps
+                </a>
+
+                <a href="GraphsPage.html" class="sidebar-link">
+                    <i class="bx bx-share-alt"></i>
+                    Graphs
+                </a>
+
+                <a href="GraphRepresentationsPage.html" class="sidebar-link">
+                    <i class="bx bx-network-chart"></i>
+                    Graph Representations
+                </a>
+            </div>
+
+
+            <!-- ///////////////////////////////////////////////////////////////// -->
+            <!-- ///////////////////////////////////////////////////////////////// -->
+
+            <!-- Examples & Practice -->
+            <div class="sidebar-section">
+                <h3>
+                    <i class="bx bx-code-block"></i>
+                    Examples & Practice
+                </h3>
+
+                <a href="ExamplesPage.html" class="sidebar-link">
+                    <i class="bx bx-code-curly"></i>
+                    Examples
+                </a>
+
+                <a href="ExercisesPage.html" class="sidebar-link">
+                    <i class="bx bx-pencil"></i>
+                    Exercises
+                </a>
+
+
+                <a href="CertificatePage.html" class="sidebar-link">
+                    <i class="bx bx-award"></i>
+                    Certificate
+                </a>
+            </div>
+
+        </aside>
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- ======================================================
+            Main Tutorial Content
+        ======================================================= -->
+        <section class="tutorial-content">
+
+            <!-- ==================================================
+                Tutorial Header
+            ================================================== -->
+            <section class="tutorial-header">
+
+                <span class="section-badge">
+
+                    <i class="bx bx-data"></i>
+
+                    Data Structure Programming
+
+                </span>
+
+                <h1>
+                    Circular Queue
+                </h1>
+
+                <p>
+                    Learn how Circular Queues reuse memory efficiently,
+                    understand circular array indexing, and implement
+                    Circular Queue operations using JavaScript.
+                </p>
+
+                <div class="tutorial-actions">
+
+                    <a href="QueuesPage.html" class="tutorial-button secondary">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        Previous
+                    </a>
+
+                    <a href="HashTablesPage.html" class="tutorial-button primary">
+                        Next
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+
+
+            </section>
+
+
+            <!-- ==================================================
+                Introduction to Circular Queue
+            ================================================== -->
+            <section class="tutorial-card" id="introduction">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-help-circle"></i>
+                        Introduction
+                    </span>
+
+                    <h2>
+                        What Is a Circular Queue?
+                    </h2>
+
+                    <p>
+                        A Circular Queue is a special type of Queue in which
+                        the last position connects back to the first position,
+                        allowing available array positions to be reused.
+                    </p>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>
+                            Key Concept: Circular Movement
+                        </strong>
+
+                        <p>
+                            Like a regular Queue, a Circular Queue follows
+                            the <strong>FIFO (First In, First Out)</strong>
+                            principle. However, its indexes can wrap around
+                            to the beginning of the array.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="circular-queue-visual-card">
+
+                    <h3>
+                        Imagine a Circular Track
+                    </h3>
+
+                    <div class="circular-queue-track">
+
+                        <div class="circular-queue-track-item cq-item-one">
+                            <span>10</span>
+                        </div>
+
+                        <div class="circular-queue-track-item cq-item-two">
+                            <span>20</span>
+                        </div>
+
+                        <div class="circular-queue-track-item cq-item-three">
+                            <span>30</span>
+                        </div>
+
+                        <div class="circular-queue-track-item cq-item-four">
+                            <span>40</span>
+                        </div>
+
+                        <div class="circular-queue-track-item cq-item-five">
+                            <span>50</span>
+                        </div>
+
+                        <div class="circular-queue-track-item cq-item-six">
+                            <span>60</span>
+                        </div>
+
+                    </div>
+
+                    <p class="example-description">
+                        <i class="bx bx-refresh"></i>
+                        The last position connects to the first.
+                    </p>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+
+                        <strong>
+                            Remember
+                        </strong>
+
+                        <p>
+                            A Circular Queue is still a Queue. It follows
+                            FIFO, but its positions can be reused in a
+                            circular manner.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Why Do We Need a Circular Queue?
+            ================================================== -->
+            <section class="tutorial-card" id="why-circular-queue">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bulb"></i>
+                        Main Concept
+                    </span>
+
+                    <h2>
+                        Why Do We Need a Circular Queue?
+                    </h2>
+
+                    <p>
+                        Understand the limitations of a simple array-based
+                        Queue and how circular indexing helps reuse positions.
+                    </p>
+
+                </div>
+
+                <h3>
+                    The Problem with a Simple Array Queue
+                </h3>
+
+                <p>
+                    Imagine a Queue implemented using an array with five
+                    positions. We insert five elements, then remove the
+                    first three elements.
+                </p>
+
+                <pre class="exercise-code"><code>const queue = [10, 20, 30, 40, 50];
+
+queue.shift();
+queue.shift();
+queue.shift();
+
+console.log(queue);
+// [40, 50]</code></pre>
+
+                <p>
+                    The first three positions become available after removing
+                    their elements. A fixed-size Queue that only advances
+                    its Rear index may fail to reuse those positions without
+                    additional logic.
+                </p>
+
+                <div class="circular-queue-before-after">
+
+                    <div class="circular-queue-state">
+
+                        <h3>
+                            Before Removing Elements
+                        </h3>
+
+                        <div class="circular-queue-cells">
+
+                            <div class="circular-queue-cell">10</div>
+                            <div class="circular-queue-cell">20</div>
+                            <div class="circular-queue-cell">30</div>
+                            <div class="circular-queue-cell">40</div>
+                            <div class="circular-queue-cell">50</div>
+
+                        </div>
+
+                        <p class="example-description">
+                            All positions are occupied.
+                        </p>
+
+                    </div>
+
+                    <div class="circular-queue-state">
+
+                        <h3>
+                            After Removing Three Elements
+                        </h3>
+
+                        <div class="circular-queue-cells">
+
+                            <div class="circular-queue-cell circular-queue-empty">
+                                Empty
+                            </div>
+
+                            <div class="circular-queue-cell circular-queue-empty">
+                                Empty
+                            </div>
+
+                            <div class="circular-queue-cell circular-queue-empty">
+                                Empty
+                            </div>
+
+                            <div class="circular-queue-cell">40</div>
+                            <div class="circular-queue-cell">50</div>
+
+                        </div>
+
+                        <p class="example-description">
+                            Earlier positions can be reused.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Benefits of a Circular Queue
+                </h3>
+
+                <div class="adt-principles-grid">
+
+                    <article class="adt-principle-card">
+
+                        <div class="adt-principle-icon">
+                            <i class="bx bx-recycle"></i>
+                        </div>
+
+                        <h3>
+                            Reuse Positions
+                        </h3>
+
+                        <p>
+                            Reuses available positions instead of leaving
+                            them unused behind the Front.
+                        </p>
+
+                    </article>
+
+                    <article class="adt-principle-card">
+
+                        <div class="adt-principle-icon">
+                            <i class="bx bx-tachometer"></i>
+                        </div>
+
+                        <h3>
+                            Efficient Operations
+                        </h3>
+
+                        <p>
+                            Enqueue and Dequeue can run in O(1) time
+                            in a properly implemented fixed-size Queue.
+                        </p>
+
+                    </article>
+
+                    <article class="adt-principle-card">
+
+                        <div class="adt-principle-icon">
+                            <i class="bx bx-chip"></i>
+                        </div>
+
+                        <h3>
+                            Fixed Memory
+                        </h3>
+
+                        <p>
+                            Uses a predefined number of array positions
+                            when implemented with fixed capacity.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Circular Queue Structure
+            ================================================== -->
+            <section class="tutorial-card" id="circular-queue-structure">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-grid-alt"></i>
+                        Structure
+                    </span>
+
+                    <h2>
+                        Circular Queue Structure
+                    </h2>
+
+                    <p>
+                        Understand Front, Rear, Size, and Capacity,
+                        the values used to manage a Circular Queue.
+                    </p>
+
+                </div>
+
+                <div class="adt-components-list">
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">
+                            01
+                        </span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-log-in"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>
+                                Front
+                            </h3>
+
+                            <p>
+                                The index of the first element that will
+                                be removed from the Queue.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">
+                            02
+                        </span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-log-out"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>
+                                Rear
+                            </h3>
+
+                            <p>
+                                The index of the last inserted element.
+                                It can wrap around to the beginning.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">
+                            03
+                        </span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-list-ol"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>
+                                Size
+                            </h3>
+
+                            <p>
+                                The number of elements currently stored
+                                in the Queue.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">
+                            04
+                        </span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-expand"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>
+                                Capacity
+                            </h3>
+
+                            <p>
+                                The maximum number of elements that a
+                                fixed-size Queue can hold.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Example: A Queue with Five Positions
+                </h3>
+
+                <div class="circular-queue-array-visual">
+
+                    <div class="circular-queue-indexes">
+
+                        <span>Index 0</span>
+                        <span>Index 1</span>
+                        <span>Index 2</span>
+                        <span>Index 3</span>
+                        <span>Index 4</span>
+
+                    </div>
+
+                    <div class="circular-queue-cells">
+
+                        <div class="circular-queue-cell cq-active-front">
+                            10
+                            <small>Front</small>
+                        </div>
+
+                        <div class="circular-queue-cell">20</div>
+
+                        <div class="circular-queue-cell">30</div>
+
+                        <div class="circular-queue-cell cq-active-rear">
+                            40
+                            <small>Rear</small>
+                        </div>
+
+                        <div class="circular-queue-cell circular-queue-empty">
+                            Empty
+                        </div>
+
+                    </div>
+
+                    <div class="operation-list">
+
+                        <div class="operation-item">
+                            <span class="operation-name">Front</span>
+                            <span class="operation-description">0</span>
+                        </div>
+
+                        <div class="operation-item">
+                            <span class="operation-name">Rear</span>
+                            <span class="operation-description">3</span>
+                        </div>
+
+                        <div class="operation-item">
+                            <span class="operation-name">Size</span>
+                            <span class="operation-description">4</span>
+                        </div>
+
+                        <div class="operation-item">
+                            <span class="operation-name">Capacity</span>
+                            <span class="operation-description">5</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>
+                            Implementation Note
+                        </strong>
+
+                        <p>
+                            In our implementation, we store
+                            <code>front</code> and <code>size</code>.
+                            The Rear index is calculated when needed,
+                            making it easier to manage empty and full states.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Circular Indexing
+            ================================================== -->
+            <section class="tutorial-card" id="circular-indexing">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-refresh"></i>
+                        Core Concept
+                    </span>
+
+                    <h2>
+                        Circular Indexing
+                    </h2>
+
+                    <p>
+                        Learn how the modulo operator allows an index
+                        to return to the beginning of an array.
+                    </p>
+
+                </div>
+
+                <p>
+                    Instead of increasing an index indefinitely, we use
+                    the modulo operator <code>%</code> to wrap it around
+                    when it reaches the array length.
+                </p>
+
+                <div class="adt-definition">
+
+                    <div class="adt-definition-icon">
+                        <i class="bx bx-math"></i>
+                    </div>
+
+                    <div class="adt-definition-content">
+
+                        <h3>
+                            Circular Index Formula
+                        </h3>
+
+                        <p>
+                            <code>(currentIndex + 1) % capacity</code>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Understanding the Modulo Operator
+                </h3>
+
+                <pre class="exercise-code"><code>console.log(1 % 5); // 1
+console.log(2 % 5); // 2
+console.log(3 % 5); // 3
+console.log(4 % 5); // 4
+console.log(5 % 5); // 0</code></pre>
+
+                <p>
+                    When the next index reaches <code>5</code> and
+                    the capacity is <code>5</code>, the result becomes
+                    <code>0</code>. This returns the index to the first
+                    position.
+                </p>
+
+                <div class="circular-queue-wraparound">
+
+                    <h3>
+                        Visualizing the Wraparound
+                    </h3>
+
+                    <div class="circular-queue-wrap-cells">
+
+                        <div class="circular-queue-wrap-cell">
+                            <span>0</span>
+                            <strong>Start</strong>
+                        </div>
+
+                        <div class="circular-queue-wrap-cell">
+                            <span>1</span>
+                        </div>
+
+                        <div class="circular-queue-wrap-cell">
+                            <span>2</span>
+                        </div>
+
+                        <div class="circular-queue-wrap-cell">
+                            <span>3</span>
+                        </div>
+
+                        <div class="circular-queue-wrap-cell cq-wrap-last">
+                            <span>4</span>
+                            <strong>Last</strong>
+                        </div>
+
+                    </div>
+
+                    <p class="example-description">
+                        <i class="bx bx-left-arrow-alt"></i>
+                        The next index returns to 0.
+                    </p>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>
+                            Remember
+                        </strong>
+
+                        <p>
+                            The formula
+                            <code>(index + 1) % capacity</code>
+                            moves to the next position and wraps around
+                            when necessary.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Basic Circular Queue Operations
+            ================================================== -->
+            <section class="tutorial-card" id="basic-operations">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-cog"></i>
+                        Operations
+                    </span>
+
+                    <h2>
+                        Basic Circular Queue Operations
+                    </h2>
+
+                    <p>
+                        Explore the main operations used to manage
+                        a Circular Queue.
+                    </p>
+
+                </div>
+
+                <div class="adt-components-list">
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">01</span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-plus-circle"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>Enqueue</h3>
+
+                            <p>
+                                Adds a new element to the Rear. The insertion
+                                position wraps around when necessary.
+                            </p>
+
+                            <pre class="exercise-code"><code>rear = (front + size) % capacity;</code></pre>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">02</span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-minus-circle"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>Dequeue</h3>
+
+                            <p>
+                                Removes the Front element and advances
+                                Front to the next circular position.
+                            </p>
+
+                            <pre class="exercise-code"><code>front = (front + 1) % capacity;</code></pre>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">03</span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-show"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>Peek</h3>
+
+                            <p>
+                                Returns the Front element without removing it.
+                            </p>
+
+                            <pre class="exercise-code"><code>return items[front];</code></pre>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">04</span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-list-check"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>isEmpty</h3>
+
+                            <p>
+                                Checks whether the Queue contains no elements.
+                            </p>
+
+                            <pre class="exercise-code"><code>return size === 0;</code></pre>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">05</span>
+
+                        <div class="component-icon">
+                            <i class="bx bx-fullscreen"></i>
+                        </div>
+
+                        <div class="component-content">
+
+                            <h3>isFull</h3>
+
+                            <p>
+                                Checks whether the Queue has reached its
+                                maximum capacity.
+                            </p>
+
+                            <pre class="exercise-code"><code>return size === capacity;</code></pre>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Enqueue Operation
+            ================================================== -->
+            <section class="tutorial-card" id="enqueue-operation">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-plus-circle"></i>
+                        Operation 01
+                    </span>
+
+                    <h2>
+                        Enqueue Operation
+                    </h2>
+
+                    <p>
+                        Learn how to insert an element into a Circular Queue.
+                    </p>
+
+                </div>
+
+                <div class="adt-components-list">
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">01</span>
+
+                        <div class="component-content">
+                            <h3>Check Capacity</h3>
+                            <p>Check whether the Queue is full.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">02</span>
+
+                        <div class="component-content">
+                            <h3>Calculate Rear</h3>
+                            <p>
+                                Calculate the insertion index using
+                                <code>(front + size) % capacity</code>.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">03</span>
+
+                        <div class="component-content">
+                            <h3>Insert Element</h3>
+                            <p>Store the new element at the calculated index.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">04</span>
+
+                        <div class="component-content">
+                            <h3>Update Size</h3>
+                            <p>Increase Size by one.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <pre class="exercise-code"><code>enqueue(element) {
+    if (this.isFull()) {
+        return false;
+    }
+
+    const rear = (this.front + this.size) % this.capacity;
+
+    this.items[rear] = element;
+    this.size++;
+
+    return true;
+}</code></pre>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>
+                            Important
+                        </strong>
+
+                        <p>
+                            The formula
+                            <code>(front + size) % capacity</code>
+                            calculates the position where the next element
+                            should be inserted.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Dequeue Operation
+            ================================================== -->
+            <section class="tutorial-card" id="dequeue-operation">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-minus-circle"></i>
+                        Operation 02
+                    </span>
+
+                    <h2>
+                        Dequeue Operation
+                    </h2>
+
+                    <p>
+                        Learn how to remove the first element without
+                        shifting the remaining elements.
+                    </p>
+
+                </div>
+
+                <div class="adt-components-list">
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">01</span>
+
+                        <div class="component-content">
+                            <h3>Check Queue State</h3>
+                            <p>Check whether the Queue is empty.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">02</span>
+
+                        <div class="component-content">
+                            <h3>Save the Front Element</h3>
+                            <p>
+                                Read and save the element at the Front index.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">03</span>
+
+                        <div class="component-content">
+                            <h3>Advance Front</h3>
+                            <p>
+                                Move Front using
+                                <code>(front + 1) % capacity</code>.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">04</span>
+
+                        <div class="component-content">
+                            <h3>Update Size</h3>
+                            <p>Decrease Size and return the removed element.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <pre class="exercise-code"><code>dequeue() {
+    if (this.isEmpty()) {
+        return undefined;
+    }
+
+    const removedElement = this.items[this.front];
+
+    this.items[this.front] = undefined;
+    this.front = (this.front + 1) % this.capacity;
+
+    this.size--;
+
+    return removedElement;
+}</code></pre>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>
+                            Important
+                        </strong>
+
+                        <p>
+                            Dequeue moves the Front index instead of shifting
+                            all the remaining elements. This allows the
+                            operation to run in O(1) time.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Implementing Circular Queue in JavaScript
+            ================================================== -->
+            <section class="tutorial-card" id="implementation">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-code-alt"></i>
+                        Implementation
+                    </span>
+
+                    <h2>
+                        Implementing Circular Queue in JavaScript
+                    </h2>
+
+                    <p>
+                        Combine the previous operations into a reusable
+                        JavaScript class.
+                    </p>
+
+                </div>
+
+                <pre class="exercise-code"><code>class CircularQueue {
+    constructor(capacity) {
+        if (!Number.isInteger(capacity) || capacity <= 0) {
+            throw new Error("Capacity must be a positive integer.");
+        }
+
+        this.items = new Array(capacity);
+        this.capacity = capacity;
+        this.front = 0;
+        this.size = 0;
+    }
+
+    // Check whether the Queue is empty
+    isEmpty() {
+        return this.size === 0;
+    }
+
+    // Check whether the Queue is full
+    isFull() {
+        return this.size === this.capacity;
+    }
+
+    // Return the current number of elements
+    getSize() {
+        return this.size;
+    }
+
+    // Add an element to the Rear
+    enqueue(element) {
+        if (this.isFull()) {
+            return false;
+        }
+
+        const rear = (this.front + this.size) % this.capacity;
+
+        this.items[rear] = element;
+        this.size++;
+
+        return true;
+    }
+
+    // Remove and return the Front element
+    dequeue() {
+        if (this.isEmpty()) {
+            return undefined;
+        }
+
+        const removedElement = this.items[this.front];
+
+        this.items[this.front] = undefined;
+        this.front = (this.front + 1) % this.capacity;
+
+        this.size--;
+
+        return removedElement;
+    }
+
+    // Return the Front element without removing it
+    peek() {
+        if (this.isEmpty()) {
+            return undefined;
+        }
+
+        return this.items[this.front];
+    }
+
+    // Return the Queue elements in FIFO order
+    toArray() {
+        const result = [];
+
+        for (let i = 0; i < this.size; i++) {
+            const index = (this.front + i) % this.capacity;
+            result.push(this.items[index]);
+        }
+
+        return result;
+    }
+
+    // Display the Queue elements
+    print() {
+        console.log(this.toArray());
+    }
+}</code></pre>
+
+                <h3>
+                    Using the Circular Queue Class
+                </h3>
+
+                <pre class="exercise-code"><code>const queue = new CircularQueue(3);
+
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
+
+queue.print();
+// [10, 20, 30]
+
+console.log(queue.isFull());
+// true
+
+console.log(queue.dequeue());
+// 10
+
+queue.enqueue(40);
+
+queue.print();
+// [20, 30, 40]
+
+console.log(queue.peek());
+// 20
+
+console.log(queue.getSize());
+// 3</code></pre>
+
+                <div class="operation-list">
+
+                    <div class="operation-item">
+
+                        <span class="operation-name">
+                            <code>new CircularQueue(3)</code>
+                        </span>
+
+                        <span class="operation-description">
+                            Creates a Queue with three available positions.
+                        </span>
+
+                    </div>
+
+                    <div class="operation-item">
+
+                        <span class="operation-name">
+                            <code>enqueue()</code>
+                        </span>
+
+                        <span class="operation-description">
+                            Adds elements until the Queue becomes full.
+                        </span>
+
+                    </div>
+
+                    <div class="operation-item">
+
+                        <span class="operation-name">
+                            <code>dequeue()</code>
+                        </span>
+
+                        <span class="operation-description">
+                            Removes 10 and advances Front.
+                        </span>
+
+                    </div>
+
+                    <div class="operation-item">
+
+                        <span class="operation-name">
+                            <code>toArray()</code>
+                        </span>
+
+                        <span class="operation-description">
+                            Returns elements in FIFO order, even after wraparound.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-bulb"></i>
+
+                    <div>
+
+                        <strong>
+                            Key Observation
+                        </strong>
+
+                        <p>
+                            After removing <code>10</code>, inserting
+                            <code>40</code> reuses the available array position.
+                            The logical Queue order becomes
+                            <code>[20, 30, 40]</code>.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Circular Queue vs Linear Queue
+            ================================================== -->
+            <section class="tutorial-card" id="circular-vs-linear">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Comparison
+                    </span>
+
+                    <h2>
+                        Circular Queue vs Linear Queue
+                    </h2>
+
+                    <p>
+                        Compare how both Queue implementations manage
+                        their array positions.
+                    </p>
+
+                </div>
+
+                <div class="adt-comparison">
+
+                    <div class="adt-comparison-card">
+
+                        <div class="comparison-card-icon">
+                            <i class="bx bx-list-ol"></i>
+                        </div>
+
+                        <h3>
+                            Linear Queue
+                        </h3>
+
+                        <span class="comparison-label">
+                            Linear Movement
+                        </span>
+
+                        <ul>
+                            <li>Positions are arranged in a line.</li>
+                            <li>A simple fixed-array implementation may leave earlier positions unused.</li>
+                            <li>Extra logic may be needed to reuse freed positions.</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="adt-comparison-card">
+
+                        <div class="comparison-card-icon">
+                            <i class="bx bx-refresh"></i>
+                        </div>
+
+                        <h3>
+                            Circular Queue
+                        </h3>
+
+                        <span class="comparison-label">
+                            Circular Movement
+                        </span>
+
+                        <ul>
+                            <li>The last position wraps around to the first.</li>
+                            <li>Freed positions can be reused.</li>
+                            <li>Front and Rear move using circular indexing.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-info-circle"></i>
+
+                    <div>
+
+                        <strong>
+                            Important Difference
+                        </strong>
+
+                        <p>
+                            A Circular Queue does not need to shift all
+                            remaining elements after Dequeue. Both approaches
+                            can be implemented efficiently, but circular
+                            indexing makes fixed-array position reuse easier.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Circular Queue Time Complexity
+            ================================================== -->
+            <section class="tutorial-card" id="time-complexity">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-tachometer"></i>
+                        Performance
+                    </span>
+
+                    <h2>
+                        Circular Queue Time Complexity
+                    </h2>
+
+                    <p>
+                        Understand the time complexity of the main operations.
+                    </p>
+
+                </div>
+
+                <div class="adt-components-list">
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">01</span>
+
+                        <div class="component-content">
+
+                            <h3>
+                                Enqueue
+                            </h3>
+
+                            <p>
+                                <code>O(1)</code> — calculates an index
+                                and stores one element.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">02</span>
+
+                        <div class="component-content">
+
+                            <h3>
+                                Dequeue
+                            </h3>
+
+                            <p>
+                                <code>O(1)</code> — reads one element
+                                and advances Front.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">03</span>
+
+                        <div class="component-content">
+
+                            <h3>
+                                Peek
+                            </h3>
+
+                            <p>
+                                <code>O(1)</code> — accesses the Front
+                                element directly.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">04</span>
+
+                        <div class="component-content">
+
+                            <h3>
+                                isEmpty and isFull
+                            </h3>
+
+                            <p>
+                                <code>O(1)</code> — compare Size with
+                                zero or Capacity.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="adt-component-item">
+
+                        <span class="component-number">05</span>
+
+                        <div class="component-content">
+
+                            <h3>
+                                toArray
+                            </h3>
+
+                            <p>
+                                <code>O(n)</code> — visits every element
+                                to create a new array.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="adt-principles-grid">
+
+                    <article class="adt-principle-card">
+
+                        <div class="adt-principle-icon">
+                            <i class="bx bx-bolt-circle"></i>
+                        </div>
+
+                        <h3>
+                            O(1)
+                        </h3>
+
+                        <p>
+                            The main Queue operations take constant time.
+                        </p>
+
+                    </article>
+
+                    <article class="adt-principle-card">
+
+                        <div class="adt-principle-icon">
+                            <i class="bx bx-list-ul"></i>
+                        </div>
+
+                        <h3>
+                            O(n)
+                        </h3>
+
+                        <p>
+                            Converting all Queue elements into a new array
+                            requires visiting each element.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Applications of Circular Queue
+            ================================================== -->
+            <section class="tutorial-card" id="applications">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-world"></i>
+                        Applications
+                    </span>
+
+                    <h2>
+                        Applications of Circular Queue
+                    </h2>
+
+                    <p>
+                        Discover where Circular Queues and circular buffers
+                        are useful in real-world applications.
+                    </p>
+
+                </div>
+
+                <div class="adt-examples-grid">
+
+                    <article class="adt-small-card">
+
+                        <div class="adt-small-icon">
+                            <i class="bx bx-memory-card"></i>
+                        </div>
+
+                        <h3>
+                            Buffer Management
+                        </h3>
+
+                        <p>
+                            Stores incoming and outgoing data while
+                            reusing available memory positions.
+                        </p>
+
+                    </article>
+
+                    <article class="adt-small-card">
+
+                        <div class="adt-small-icon">
+                            <i class="bx bx-time-five"></i>
+                        </div>
+
+                        <h3>
+                            Round-Robin Scheduling
+                        </h3>
+
+                        <p>
+                            Helps process tasks in rotation, returning
+                            unfinished tasks to the end of the cycle.
+                        </p>
+
+                    </article>
+
+                    <article class="adt-small-card">
+
+                        <div class="adt-small-icon">
+                            <i class="bx bx-microphone"></i>
+                        </div>
+
+                        <h3>
+                            Streaming Data
+                        </h3>
+
+                        <p>
+                            Temporarily stores incoming audio and
+                            other streaming data.
+                        </p>
+
+                    </article>
+
+                    <article class="adt-small-card">
+
+                        <div class="adt-small-icon">
+                            <i class="bx bx-chip"></i>
+                        </div>
+
+                        <h3>
+                            Embedded Systems
+                        </h3>
+
+                        <p>
+                            Provides predictable memory usage in
+                            resource-constrained systems.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Advantages and Disadvantages
+            ================================================== -->
+            <section class="tutorial-card" id="advantages-disadvantages">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-git-compare"></i>
+                        Pros & Cons
+                    </span>
+
+                    <h2>
+                        Advantages and Disadvantages
+                    </h2>
+
+                    <p>
+                        Review the strengths and limitations of
+                        a Circular Queue.
+                    </p>
+
+                </div>
+
+                <div class="adt-comparison">
+
+                    <div class="adt-comparison-card">
+
+                        <div class="comparison-card-icon">
+                            <i class="bx bx-check-circle"></i>
+                        </div>
+
+                        <h3>
+                            Advantages
+                        </h3>
+
+                        <ul>
+                            <li>Reuses empty positions in a fixed array.</li>
+                            <li>Supports O(1) Enqueue and Dequeue.</li>
+                            <li>Avoids shifting elements during removal.</li>
+                            <li>Works well for fixed-size buffers.</li>
+                            <li>Supports repeated scheduling cycles.</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="adt-comparison-card">
+
+                        <div class="comparison-card-icon">
+                            <i class="bx bx-error-circle"></i>
+                        </div>
+
+                        <h3>
+                            Disadvantages
+                        </h3>
+
+                        <ul>
+                            <li>Index calculations require careful implementation.</li>
+                            <li>A fixed-capacity Queue cannot accept elements when full.</li>
+                            <li>Empty and full states must be handled correctly.</li>
+                            <li>Resizing requires additional logic if capacity must grow.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Key Takeaways
+            ================================================== -->
+            <section class="tutorial-card" id="key-takeaways">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-bookmark-check"></i>
+                        Summary
+                    </span>
+
+                    <h2>
+                        Key Takeaways
+                    </h2>
+
+                    <p>
+                        Review the most important concepts before moving
+                        to the next lesson.
+                    </p>
+
+                </div>
+
+                <div class="adt-takeaways-list">
+
+                    <div class="adt-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            A Circular Queue follows the
+                            <strong>FIFO</strong> principle.
+                        </p>
+
+                    </div>
+
+                    <div class="adt-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            The last array position connects logically
+                            back to the first position.
+                        </p>
+
+                    </div>
+
+                    <div class="adt-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            The modulo operator <code>%</code> is used
+                            to calculate circular indexes.
+                        </p>
+
+                    </div>
+
+                    <div class="adt-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Front, Size, and Capacity help manage
+                            the Queue's state.
+                        </p>
+
+                    </div>
+
+                    <div class="adt-takeaway-item">
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <p>
+                            Enqueue, Dequeue, Peek, isEmpty, and isFull
+                            run in <code>O(1)</code> time in this implementation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="learning-note">
+
+                    <i class="bx bx-brain"></i>
+
+                    <div>
+
+                        <strong>
+                            Quick Reminder
+                        </strong>
+
+                        <p>
+                            Use <code>(index + 1) % capacity</code>
+                            whenever an index needs to move forward
+                            and wrap around at the end of the array.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                Exercises => Shared
+            ================================================== -->
+            <section class="tutorial-card" id="practice">
+
+                <div class="section-heading left">
+
+                    <span class="section-badge">
+                        <i class="bx bx-task"></i>
+                        Practice
+                    </span>
+
+                    <h2>
+                        Circular Queue Exercises
+                    </h2>
+
+                    <p>
+                        Test your understanding of circular indexing,
+                        the modulo operator, and the FIFO principle.
+                    </p>
+
+                </div>
+
+                <!-- Exercise Example -->
+                <div class="exercise-preview" data-correct-answer="B">
+
+                    <div class="exercise-preview-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Exercise Example
+                            </span>
+
+                            <h3>
+                                Understand Circular Indexing
+                            </h3>
+
+                        </div>
+
+                        <span class="exercise-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <p class="exercise-question">
+                        A Circular Queue has a capacity of
+                        <code>5</code>. The current index is
+                        <code>4</code>. What will be the next index?
+                    </p>
+
+                    <!-- Exercise Code -->
+                    <pre class="exercise-code"><code>const capacity = 5;
+const currentIndex = 4;
+
+const nextIndex = (currentIndex + 1) % capacity;
+
+console.log(nextIndex);</code></pre>
+
+                    <!-- Answer Example -->
+                    <div class="exercise-code">
+
+                        <span>Answer:</span>
+
+                        <span class="exercise-answer-slot" id="exerciseAnswer">
+                            ?
+                        </span>
+
+                    </div>
+
+                    <!-- Answer Options -->
+                    <div class="exercise-options">
+
+                        <button type="button" class="exercise-option" data-answer="A">
+                            5
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="B">
+                            0
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="C">
+                            4
+                        </button>
+
+                        <button type="button" class="exercise-option" data-answer="D">
+                            1
+                        </button>
+
+                    </div>
+
+                    <!-- Answer Result -->
+                    <p class="exercise-result" id="exerciseResult" aria-live="polite"></p>
+
+                </div>
+
+                <!-- All Exercises Button -->
+                <div class="exercise-action">
+
+                    <a href="ExercisesPage.html" class="content-button">
+                        See All Data Structure Exercises
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                    Bottom Navigation
+                ================================================== -->
+            <nav class="tutorial-bottom-actions" aria-label="Lesson navigation">
+
+                <a href="QueuesPage.html" class="tutorial-button secondary">
+                    <i class="bx bx-left-arrow-alt"></i>
+                    Previous
+                </a>
+
+                <a href="HashTablesPage.html" class="tutorial-button primary">
+                    Next
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </nav>
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Footer => مشترك
+    =========================================================== -->
+    <footer class="footer">
+
+        <!-- footer-container -->
+        <div class="footer-container">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+
+                <a href="../../index.html" class="brand">
+
+
+                    <span class="brand-icon">
+
+                        <i class="bx bx-code-alt"></i>
+
+                    </span>
+
+
+                    <span class="brand-text">
+
+                        Dev<span>Path</span>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Learn programming step by step and build the skills
+                    you need for your development journey.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bx bxl-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="bx bxl-tiktok"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bx bxl-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="WhatsApp">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming Basics -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Programming Basics
+                </h3>
+
+
+                <a href="../../Pages/BasicsCsharb.html">
+                    C#
+                </a>
+
+
+                <a href="../../Pages/DataStructure.html">
+                    Data Structure
+                </a>
+
+
+                <a href="../../Pages/Algorithem.html">
+                    Algorithm
+                </a>
+
+
+                <a href="../../Pages/ProblemSolving.html">
+                    Problem Solving
+                </a>
+
+            </div>
+
+
+            <!-- Front-End -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Front-End
+                </h3>
+
+
+                <a href="../../Pages/HTMLPage.html">
+                    HTML
+                </a>
+
+
+                <a href="../../Pages/CSSPage.html">
+                    CSS
+                </a>
+
+
+                <a href="../../Pages/JavaScriptPage.html">
+                    JavaScript
+                </a>
+
+                <a href="../../Pages/TailwindCSSPage.html">
+                    Tailwind CSS
+                </a>
+
+                <a href="../../Pages/React-JS_Page.html">
+                    React JS
+                </a>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    More
+                </h3>
+
+
+                <a href="../../Pages/LoginPage.html">
+                    Login
+                </a>
+
+
+                <a href="../../Pages/AboutPlatform.html">
+                    About Platform
+                </a>
+
+
+                <a href="../../Pages/ContactUS.html">
+                    Contact US
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 DevPath. All rights reserved.
+                • Built for developers.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        Back To Top => مشترك
+    =========================================================== -->
+    <i class="bx bxs-up-arrow-square" id="start" aria-label="Back to top" role="button" tabindex="0"></i>
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <!-- ==========================================================
+        JavaScript
+    =========================================================== -->
+    <script src="../../JavaScript/global.js"></script>
+    <script src="../../JavaScript/Exercise_Example-WithPageContent.js"></script>
+</body>
+
+</html>
